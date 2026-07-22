@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media — John Manuel Barrios</title>
+    <meta name="description" content="Selected media coverage, interviews, and research features for John Manuel Barrios.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #1f1d1b;
+            --text-light:      #5c5854;
+            --surface:         #faf9f7;
+            --surface-elevated: #ffffff;
+            --border:          #e8e6e2;
+            --shadow-sm:       0 1px 3px rgba(0,53,107,0.06);
+            --shadow-md:       0 4px 12px rgba(0,53,107,0.08);
+            --radius-sm:       6px;
+            --radius-md:       10px;
+            --transition:      0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-body);
+            background: var(--surface);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color var(--transition), border-color var(--transition), background var(--transition); }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--yale-blue) 0%, var(--yale-blue-mid) 50%, var(--yale-accent) 100%);
+            background-size: 200% 100%;
+        }
+
+        header {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.02em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 1.75rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 0;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition), border-color var(--transition);
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--yale-blue);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .page-hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.25rem 1.5rem 1.75rem;
+        }
+
+        .page-hero .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--yale-accent);
+            margin-bottom: 0.65rem;
+        }
+
+        .page-hero h1 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-hero .lede {
+            max-width: 40rem;
+            color: var(--text-light);
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3.5rem;
+        }
+
+        .section-block { margin-bottom: 2.75rem; }
+
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--yale-gray-warm);
+            margin-bottom: 1rem;
+            padding-bottom: 0.55rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .media-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-item {
+            display: grid;
+            grid-template-columns: 7.5rem 1fr;
+            gap: 1rem 1.5rem;
+            padding: 1.35rem 0;
+            border-bottom: 1px solid var(--border);
+            align-items: start;
+        }
+        .media-item:last-child { border-bottom: none; }
+
+        .media-meta {
+            padding-top: 0.2rem;
+        }
+
+        .media-outlet {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--yale-accent);
+            line-height: 1.35;
+        }
+
+        .media-date {
+            display: block;
+            margin-top: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--yale-gray-light);
+        }
+
+        .media-body h3 {
+            font-size: 1.12rem;
+            line-height: 1.35;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .media-body h3 a {
+            color: var(--yale-blue);
+        }
+        .media-body h3 a:hover { color: var(--yale-accent); }
+
+        .media-body p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            max-width: 44rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .media-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--yale-gray-warm);
+        }
+
+        .media-type i { font-size: 0.7rem; color: var(--yale-blue-mid); }
+
+        footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface-elevated);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        @media (max-width: 720px) {
+            .media-item {
+                grid-template-columns: 1fr;
+                gap: 0.35rem;
+            }
+            .media-date { display: inline; margin-left: 0.5rem; }
+            .media-outlet::after { content: none; }
+        }
+
+        @media (max-width: 640px) {
+            .nav-toggle { display: block; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 64px; left: 0; right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(12px);
+                padding: 1rem 1.5rem;
+                gap: 0.5rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+            nav ul.show { display: flex; }
+            .header-inner { position: relative; }
+            .page-hero h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="index.html">John Manuel Barrios</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('show')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="code.html">Code</a></li>
+                    <li><a href="media.html" class="active">Media</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="eyebrow">Selected coverage</div>
+        <h1>Media</h1>
+        <p class="lede">
+            Interviews, research features, and commentary covering work on entrepreneurship,
+            labor markets, disclosure, and the economics of the firm.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <main class="content">
+
+        <section class="section-block">
+            <h2 class="section-label">Recent features</h2>
+            <ul class="media-list">
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Yale Insights</span>
+                        <span class="media-date">Feb 2026</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://insights.som.yale.edu/insights/remote-work-is-linked-to-decline-in-financial-misconduct" target="_blank" rel="noopener">Remote Work Is Linked to a Decline in Financial Misconduct</a></h3>
+                        <p>Coverage of research showing that firms better positioned for remote work saw sharp declines in financial misconduct during the pandemic—likely because remote arrangements raised the cost of sustaining collusion.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Research feature</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Yale Insights</span>
+                        <span class="media-date">Oct 2025</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://insights.som.yale.edu/insights/the-price-of-trust-how-conflicts-of-interest-threaten-the-marketplace-of-ideas" target="_blank" rel="noopener">The Price of Trust: How Conflicts of Interest Threaten the Marketplace of Ideas</a></h3>
+                        <p>Feature on experimental evidence that disclosed conflicts of interest erode trust in the institutions meant to produce independent knowledge.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Research feature</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Yale Insights</span>
+                        <span class="media-date">Aug 2025</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://insights.som.yale.edu/insights/in-the-wake-of-the-pandemic-flexible-work-arrangements-made-workers-less-likely-to-start" target="_blank" rel="noopener">Flexible Work Arrangements Made Workers Less Likely to Start Their Own Businesses</a></h3>
+                        <p>Discussion of how employer-provided flexibility after COVID-19 changed who starts businesses—and dampened one traditional draw of entrepreneurship.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Research feature</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">First Alert 4</span>
+                        <span class="media-date">Feb 2024</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.firstalert4.com/2024/02/12/local-workers-say-theyre-getting-squeezed-delivery-services/" target="_blank" rel="noopener">Local Workers Say They’re Getting Squeezed on Delivery Services</a></h3>
+                        <p>Television interview on how delivery-platform economics have tightened for gig workers relative to the heavily subsidized early years of the industry.</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Interview</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-label">Press &amp; commentary</h2>
+            <ul class="media-list">
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">St. Louis Post-Dispatch</span>
+                        <span class="media-date">Apr 2021</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.stltoday.com/business/columns/david-nicklaus/nicklaus-hawleys-attack-on-big-tech-will-harm-innovation/article_7c142377-af73-5594-aca6-17125d8ec1de.html" target="_blank" rel="noopener">Nicklaus: Hawley’s Attack on Big Tech Will Harm Innovation</a></h3>
+                        <p>Column citing research on how aggressive antitrust proposals aimed at large platforms can discourage entrepreneurship and reduce U.S. competitiveness.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Press mention</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">City Journal</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.city-journal.org/article/stop-punishing-gig-workers-california" target="_blank" rel="noopener">Stop Punishing Gig Workers, California</a></h3>
+                        <p>Commentary drawing on research that gig platforms can cushion unemployment spells and limit human-capital depreciation between traditional jobs.</p>
+                        <span class="media-type"><i class="fa-solid fa-pen"></i> Commentary</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">ProMarket</span>
+                        <span class="media-date">Jun 2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.promarket.org/2020/06/02/how-were-the-ppps-660-billion-dollars-for-small-and-medium-firms-allocated/" target="_blank" rel="noopener">How Were the PPP’s $660 Billion for Small and Medium Firms Allocated?</a></h3>
+                        <p>Essay (with Minnis, Minnis, and Sijthoff) assessing whether Paycheck Protection Program funds were distributed as the program’s payroll-based design intended.</p>
+                        <span class="media-type"><i class="fa-solid fa-pen"></i> Commentary</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Barron’s</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.barrons.com/articles/small-businesses-without-prior-debt-are-at-risk-of-missing-the-rescue-51586369598" target="_blank" rel="noopener">Many Small Businesses Are at Risk of Missing the Rescue</a></h3>
+                        <p>Coverage of how firms without prior banking relationships were at greater risk of missing early rounds of pandemic relief lending.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Press mention</span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Chicago Booth Review</span>
+                        <span class="media-date">2019</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/review/why-some-companies-might-not-want-outsource-tax-planning" target="_blank" rel="noopener">Why Some Companies Might Not Want to Outsource Tax Planning</a></h3>
+                        <p>Feature on research with John Gallemore showing that firm-specific tax human capital—not generic outsourcing—drives effective tax outcomes.</p>
+                        <span class="media-type"><i class="fa-solid fa-newspaper"></i> Research feature</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-label">Chicago Booth Review · interviews &amp; video</h2>
+            <ul class="media-list">
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Chicago Booth Review</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/review/did-paycheck-protection-program-work-designed" target="_blank" rel="noopener">Did the Paycheck Protection Program Work as Designed?</a></h3>
+                        <p>Video interview arguing that PPP allocations tracked payroll—and that critiques should focus on program design rather than execution.</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Video interview · <a href="https://www.youtube.com/watch?v=L0d6wIw94Bk" target="_blank" rel="noopener">YouTube</a></span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Chicago Booth Review</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/review/how-voter-participation-predicts-adherence-social-distancing" target="_blank" rel="noopener">How Voter Participation Predicts Adherence to Social Distancing</a></h3>
+                        <p>Discussion of civic-capital research (with Benmelech, Hochberg, Sapienza, and Zingales): where institutional trust is higher, voluntary compliance with distancing was stronger.</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Video interview · <a href="https://www.youtube.com/watch?v=eeH-mVC04Hw" target="_blank" rel="noopener">YouTube</a></span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Chicago Booth Review</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/review/why-partisanship-affected-americans-pandemic-perceptions" target="_blank" rel="noopener">Why Partisanship Affected Americans’ Pandemic Perceptions</a></h3>
+                        <p>Interview on how political identity shaped COVID-19 risk perceptions and social-distancing behavior early in the pandemic.</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Video interview · <a href="https://www.youtube.com/watch?v=9z200_GzGCM" target="_blank" rel="noopener">YouTube</a></span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Chicago Booth Review</span>
+                        <span class="media-date">2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/review/how-gig-economy-could-support-pandemic-recovery" target="_blank" rel="noopener">How the Gig Economy Could Support Pandemic Recovery</a></h3>
+                        <p>Conversation on gig platforms as a bridge for displaced workers—preserving schedules and skills while traditional employment recovers.</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Video interview · <a href="https://www.youtube.com/watch?v=t_NbfFUKv5w" target="_blank" rel="noopener">YouTube</a></span>
+                    </div>
+                </li>
+                <li class="media-item">
+                    <div class="media-meta">
+                        <span class="media-outlet">Stigler Center</span>
+                        <span class="media-date">May 2020</span>
+                    </div>
+                    <div class="media-body">
+                        <h3><a href="https://www.chicagobooth.edu/research/stigler/events/may-28-2020-economic-effects-of-covid-19-workshop" target="_blank" rel="noopener">Economic Effects of COVID-19 Workshop</a></h3>
+                        <p>Workshop session presenting early evidence on the economic implications of COVID-19 (with Allcott and Zingales among other participants).</p>
+                        <span class="media-type"><i class="fa-solid fa-video"></i> Webinar · <a href="https://www.youtube.com/watch?v=cyc0ECG6Uz0" target="_blank" rel="noopener">YouTube</a></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <p style="color: var(--text-light); font-size: 0.9rem; max-width: 40rem;">
+            Research has also been covered by <em>The Economist</em>, the <em>Wall Street Journal</em>, <em>Fortune</em>, and other outlets.
+            For paper-level links, see the <a href="research.html">Research</a> page.
+        </p>
+
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>
