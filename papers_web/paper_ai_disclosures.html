@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signals or Smoke — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Signal vs Smoke diagram -->
+                <!-- Information source -->
+                <circle cx="100" cy="100" r="15" fill="#00356b"/>
+                <text x="100" y="105" text-anchor="middle" font-size="11" fill="white" font-weight="600">AI</text>
+
+                <!-- Disclosure split -->
+                <path d="M 120 80 L 180 50" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 120 120 L 180 150" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <!-- Signal path (top) -->
+                <rect x="190" y="30" width="140" height="40" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="260" y="58" text-anchor="middle" font-size="12" fill="#00356b" font-weight="600">Real AI Implementation</text>
+
+                <!-- Smoke path (bottom) -->
+                <rect x="190" y="130" width="140" height="40" fill="none" stroke="#bd5319" stroke-width="2" rx="2"/>
+                <text x="260" y="158" text-anchor="middle" font-size="12" fill="#bd5319" font-weight="600">Empty AI Disclosures</text>
+
+                <!-- Market reaction -->
+                <path d="M 350 50 L 450 80" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 350 150 L 450 120" stroke="#bd5319" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Market assessment -->
+                <circle cx="500" cy="100" r="30" fill="none" stroke="#00356b" stroke-width="2.5"/>
+                <text x="500" y="105" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Investor</text>
+                <text x="500" y="118" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Assessment</text>
+
+                <!-- Informativeness test -->
+                <path d="M 540 100 L 600 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <rect x="610" y="80" width="80" height="40" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="650" y="105" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Information Value</text>
+            </svg>
+            <div class="header-content">
+                <h1>Signals or Smoke? The Determinants and Informativeness of Corporate AI Disclosures</h1>
+                <p class="tagline">Distinguishing genuine AI initiatives from marketing narratives</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, John Campbell, Ryan Grant Johnson, Christine Liu</p>
+            <p><strong>Status:</strong> Revision Requested: <em>Review of Accounting Studies</em></p>
+            <p><strong>Research Area:</strong> Corporate Governance & Disclosure</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.
+            </p>
+            <p>
+                Our findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation—these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation—these "smoke" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-microchip"></i> Substantive vs. Marketing AI</h3>
+                <p>AI disclosures fall into distinct categories: genuine implementation (backed by R&D spending and talent acquisition) versus marketing-focused narratives with minimal substantive content.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-bar"></i> Disclosure Determinants</h3>
+                <p>Firm characteristics such as industry, size, and prior profitability predict AI disclosure intensity, with some disclosures driven by investor relations strategy rather than operational reality.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-circle-question"></i> Information Value</h3>
+                <p>Substantive AI disclosures are associated with measurable operational outcomes and future stock returns, while generic disclosures show weak information content.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-warning"></i> Market Mispricing Risk</h3>
+                <p>Investors may not fully distinguish high-quality from low-quality AI disclosures in the short term, creating potential for mispricing of companies making hollow AI claims.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper addresses an important and timely question about information quality in AI-related corporate disclosures. As AI becomes a central element of corporate narratives and investor expectations, understanding the difference between substantive AI initiatives and marketing narratives is crucial for market efficiency.
+            </p>
+            <p>
+                Our findings have implications for investors seeking to distinguish genuine AI leadership from hype, for regulators considering enhanced disclosure requirements around AI, and for researchers studying how firms respond to investor pressure for narrative alignment with technological trends.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, John Campbell, Ryan Grant Johnson, and Christine Liu. "Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures." <em>Review of Accounting Studies</em> (Revision Requested).
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

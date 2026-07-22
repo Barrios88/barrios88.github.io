@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Under Pressure — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Crisis/Pressure and accounting treatment -->
+                <!-- Crisis trigger -->
+                <circle cx="80" cy="100" r="25" fill="none" stroke="#bd5319" stroke-width="2.5"/>
+                <text x="80" y="105" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="600">Crisis</text>
+
+                <!-- Firm accounting choices -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <path d="M 110 100 L 170 100" stroke="#bd5319" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <rect x="190" y="75" width="120" height="50" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="250" y="105" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Accounting Rules</text>
+
+                <!-- Two accounting scenarios -->
+                <path d="M 220 135 L 220 160" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 280 135 L 280 160" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Conservative accounting -->
+                <circle cx="220" cy="180" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+                <text x="220" y="183" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Conservative</text>
+
+                <!-- Flexible accounting -->
+                <circle cx="280" cy="180" r="20" fill="none" stroke="#bd5319" stroke-width="2" stroke-dasharray="3,3"/>
+                <text x="280" y="183" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Flexible</text>
+
+                <!-- Outcomes -->
+                <!-- Bond pricing -->
+                <text x="400" y="50" font-size="11" fill="#00356b" font-weight="600">Bond Price Impacts:</text>
+
+                <circle cx="430" cy="100" r="30" fill="none" stroke="#00356b" stroke-width="2"/>
+                <text x="430" y="100" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Conservative</text>
+                <text x="430" y="113" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Maintains Value</text>
+
+                <circle cx="520" cy="100" r="30" fill="none" stroke="#bd5319" stroke-width="2" stroke-dasharray="2,2"/>
+                <text x="520" y="100" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Flexible</text>
+                <text x="520" y="113" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Value Drops</text>
+
+                <!-- Firm investment -->
+                <path d="M 460 150 L 490 150" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <circle cx="570" cy="150" r="30" fill="none" stroke="#00356b" stroke-width="2"/>
+                <text x="570" y="150" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Higher Firm</text>
+                <text x="570" y="163" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Investment</text>
+
+                <!-- Flexible leads to less investment -->
+                <path d="M 550 100 L 570 130" stroke="#bd5319" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+            </svg>
+            <div class="header-content">
+                <h1>Accounting Under Pressure: How Accounting Rules Shape Bond Prices and Firm Investment</h1>
+                <p class="tagline">Theory and evidence on accounting choices during financial crises</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Andreas Neuhierl, Linda Schilling</p>
+            <p><strong>Research Area:</strong> Financial Reporting & Measurement</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We develop a theoretical model and provide empirical evidence on how accounting rules affect firm behavior during financial crises. Specifically, we examine how firms' accounting choices—particularly conservatism versus flexibility—influence bond pricing, which in turn affects corporate investment decisions and real economic outcomes.
+            </p>
+            <p>
+                Our theoretical analysis shows that during crises, conservative accounting that forces recognition of losses improves creditor information and reduces bond yield spreads, but may temporarily reduce firm willingness to invest. Flexible accounting that defers loss recognition may temporarily maintain favorable bond pricing but creates information risk that eventually manifests in higher yields and reduced investment. Our empirical evidence from multiple financial crises supports these predictions, suggesting that accounting rules have important consequences for credit markets and investment decisions beyond their immediate disclosure effects.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-balance-scale"></i> Accounting Conservatism Effect</h3>
+                <p>Conservative accounting that forces early loss recognition during crises ultimately reduces bond yield spreads by providing creditors with accurate information about firm conditions.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Investment Consequences</h3>
+                <p>Bond pricing effects from accounting choices directly affect firm investment decisions, with firms that maintain favorable bond pricing showing higher capital investment.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-warning"></i> Information Risk Premium</h3>
+                <p>Flexible accounting that defers loss recognition creates information risk that bondholders eventually price in through higher yield spreads, leading to later investment reductions.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-gears"></i> Real Economic Effects</h3>
+                <p>Accounting rule choices during crises have measurable effects on firm investment, employment, and economic activity beyond immediate disclosure and signaling effects.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper contributes to understanding the real economic consequences of accounting rule choices. Rather than treating accounting as purely a disclosure mechanism, we demonstrate how accounting rules affect credit market equilibrium and firm investment decisions during crises.
+            </p>
+            <p>
+                Our findings have important implications for accounting standard-setting during crises, for understanding how regulatory policy affects financial stability, and for evaluating the trade-offs between different approaches to loss recognition and disclosure. The results suggest that accounting policy choices have first-order effects on credit markets and real economic outcomes, particularly during periods of uncertainty and financial stress.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Andreas Neuhierl, and Linda Schilling. "Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises." Working Paper.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

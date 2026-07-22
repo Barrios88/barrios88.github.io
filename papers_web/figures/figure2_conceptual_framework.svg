@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900px" height="580px" viewBox="0 0 900 580" version="1.1">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        text { font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .title { font-size: 18px; font-weight: bold; fill: #00356b; }
+        .subtitle { font-size: 13px; fill: #63605b; }
+        .stage-label { font-size: 12px; font-weight: 600; fill: #00356b; }
+        .data-source { font-size: 10px; fill: #63605b; }
+        .source-label { font-size: 11px; font-weight: 600; fill: #00356b; }
+      ]]>
+    </style>
+    <!-- Arrow marker for connections -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#63605b" />
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="900" height="580" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Risk Perceptions and Politics: COVID-19 Conceptual Framework</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="50" text-anchor="middle" class="subtitle">Causal chain from political identity to health and economic outcomes</text>
+
+  <!-- ===== STAGE 1: POLITICAL IDENTITY ===== -->
+  <rect x="30" y="90" width="160" height="90" rx="8" fill="#f9f7f4" stroke="#00356b" stroke-width="2.5"/>
+  <text x="110" y="125" text-anchor="middle" class="stage-label" fill="#00356b">POLITICAL</text>
+  <text x="110" y="145" text-anchor="middle" class="stage-label" fill="#00356b">IDENTITY</text>
+
+  <!-- Stage 1 data source -->
+  <text x="110" y="165" text-anchor="middle" class="data-source">2016 Trump Vote Share</text>
+
+  <!-- ===== Arrow 1 → 2 ===== -->
+  <line x1="190" y1="135" x2="240" y2="135" stroke="#63605b" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== STAGE 2: MEDIA CONSUMPTION ===== -->
+  <rect x="240" y="90" width="160" height="90" rx="8" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2.5"/>
+  <text x="320" y="120" text-anchor="middle" class="stage-label" fill="#1a4f8a">MEDIA</text>
+  <text x="320" y="140" text-anchor="middle" class="stage-label" fill="#1a4f8a">CONSUMPTION</text>
+
+  <!-- Stage 2 data sources -->
+  <text x="320" y="160" text-anchor="middle" class="data-source">Fox News vs MSNBC</text>
+  <text x="320" y="173" text-anchor="middle" class="data-source">Search Share Ratio</text>
+
+  <!-- ===== Arrow 2 → 3 ===== -->
+  <line x1="400" y1="135" x2="450" y2="135" stroke="#63605b" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== STAGE 3: RISK PERCEPTION ===== -->
+  <rect x="450" y="90" width="160" height="90" rx="8" fill="#f9f7f4" stroke="#bd5319" stroke-width="2.5"/>
+  <text x="530" y="120" text-anchor="middle" class="stage-label" fill="#bd5319">RISK</text>
+  <text x="530" y="140" text-anchor="middle" class="stage-label" fill="#bd5319">PERCEPTION</text>
+
+  <!-- Stage 3 data sources -->
+  <text x="530" y="160" text-anchor="middle" class="data-source">Google COVID-19 Searches</text>
+  <text x="530" y="173" text-anchor="middle" class="data-source">Unemployment Searches</text>
+
+  <!-- ===== Arrow 3 → 4 ===== -->
+  <line x1="610" y1="135" x2="660" y2="135" stroke="#63605b" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== STAGE 4: BEHAVIORAL RESPONSE ===== -->
+  <rect x="660" y="90" width="160" height="90" rx="8" fill="#f9f7f4" stroke="#00356b" stroke-width="2.5"/>
+  <text x="740" y="115" text-anchor="middle" class="stage-label" fill="#00356b">BEHAVIORAL</text>
+  <text x="740" y="135" text-anchor="middle" class="stage-label" fill="#00356b">RESPONSE</text>
+
+  <!-- Stage 4 data sources -->
+  <text x="740" y="160" text-anchor="middle" class="data-source">Mobility Changes</text>
+  <text x="740" y="173" text-anchor="middle" class="data-source">Non-Essential Visits</text>
+
+  <!-- ===== Arrow 4 → 5 ===== -->
+  <line x1="820" y1="135" x2="840" y2="135" stroke="#63605b" stroke-width="2.5"/>
+  <polygon points="840,135 850,135 845,140" fill="#63605b"/>
+
+  <!-- ===== STAGE 5: HEALTH OUTCOMES (implicit) ===== -->
+  <text x="855" y="140" font-size="11px" font-weight="600" fill="#00356b">HEALTH</text>
+  <text x="855" y="155" font-size="11px" font-weight="600" fill="#00356b">OUTCOMES</text>
+
+  <!-- ===== MEDIATING MECHANISMS &amp; FINDINGS ===== -->
+
+  <!-- Finding 1: Trump voters show lower risk perception -->
+  <g>
+    <rect x="30" y="220" width="280" height="110" rx="6" fill="#f9f7f4" stroke="#b0ada7" stroke-width="1.5"/>
+    <text x="170" y="240" text-anchor="middle" font-size="11px" font-weight="600" fill="#00356b">KEY FINDING 1: Risk Perception</text>
+    <text x="50" y="260" font-size="10px" fill="#63605b">• Higher Trump vote share → lower risk</text>
+    <text x="50" y="275" font-size="10px" fill="#63605b">  perception (controlling for case counts)</text>
+    <text x="50" y="290" font-size="10px" fill="#63605b">• 1 SD increase in Trump vote share</text>
+    <text x="50" y="305" font-size="10px" fill="#63605b">  mutes effect by 7.8%</text>
+    <text x="50" y="320" font-size="10px" fill="#63605b">• High Trump counties lag in response</text>
+  </g>
+
+  <!-- Finding 2: Political partisanship affects spending -->
+  <g>
+    <rect x="330" y="220" width="280" height="110" rx="6" fill="#f9f7f4" stroke="#b0ada7" stroke-width="1.5"/>
+    <text x="470" y="240" text-anchor="middle" font-size="11px" font-weight="600" fill="#00356b">KEY FINDING 2: Behavioral Response</text>
+    <text x="350" y="260" font-size="10px" fill="#63605b">• High Trump vote share counties show</text>
+    <text x="350" y="275" font-size="10px" fill="#63605b">  40% muted response to case increases</text>
+    <text x="350" y="290" font-size="10px" fill="#63605b">• Reduced non-essential visits and daily</text>
+    <text x="350" y="305" font-size="10px" fill="#63605b">  distance traveled compared to effect size</text>
+    <text x="350" y="320" font-size="10px" fill="#63605b">• Effect persists despite state directives</text>
+  </g>
+
+  <!-- Finding 3: Media exposure channel -->
+  <g>
+    <rect x="630" y="220" width="240" height="110" rx="6" fill="#f9f7f4" stroke="#b0ada7" stroke-width="1.5"/>
+    <text x="750" y="240" text-anchor="middle" font-size="11px" font-weight="600" fill="#00356b">KEY FINDING 3: Media Channel</text>
+    <text x="650" y="260" font-size="10px" fill="#63605b">• Fox News to MSNBC search ratio</text>
+    <text x="650" y="275" font-size="10px" fill="#63605b">  associated with divergent risk</text>
+    <text x="650" y="290" font-size="10px" fill="#63605b">  perceptions and responses</text>
+    <text x="650" y="305" font-size="10px" fill="#63605b">• Response slope flips after CPAC</text>
+    <text x="650" y="320" font-size="10px" fill="#63605b">  announcement</text>
+  </g>
+
+  <!-- ===== DATA SOURCES PANEL ===== -->
+  <g>
+    <rect x="30" y="360" width="840" height="190" rx="6" fill="#f9f7f4" stroke="#b0ada7" stroke-width="1.5"/>
+
+    <!-- Data Sources Title -->
+    <text x="50" y="380" font-size="12px" font-weight="bold" fill="#00356b">DATA SOURCES &amp; MEASURES</text>
+
+    <!-- Column 1: Election &amp; Media Data -->
+    <text x="50" y="405" font-size="10px" font-weight="600" fill="#1a4f8a">POLITICAL &amp; MEDIA:</text>
+    <text x="60" y="420" font-size="9px" fill="#63605b">• 2016 U.S. Presidential Election Results</text>
+    <text x="60" y="432" font-size="9px" fill="#63605b">• Nielsen DMA-level Media Consumption</text>
+    <text x="60" y="444" font-size="9px" fill="#63605b">• Google Search Share: Fox vs MSNBC</text>
+
+    <!-- Column 2: Risk Perception Data -->
+    <text x="320" y="405" font-size="10px" font-weight="600" fill="#bd5319">RISK PERCEPTION:</text>
+    <text x="330" y="420" font-size="9px" fill="#63605b">• Google Health Trends (COVID-19 searches)</text>
+    <text x="330" y="432" font-size="9px" fill="#63605b">• Google Trends (unemployment searches)</text>
+    <text x="330" y="444" font-size="9px" fill="#63605b">• Search volume as proxy for attention</text>
+
+    <!-- Column 3: Behavioral Response Data -->
+    <text x="620" y="405" font-size="10px" font-weight="600" fill="#00356b">BEHAVIORAL RESPONSE:</text>
+    <text x="630" y="420" font-size="9px" fill="#63605b">• Unacast: County-level mobility data</text>
+    <text x="630" y="432" font-size="9px" fill="#63605b">• SafeGraph: POI visits by category</text>
+    <text x="630" y="444" font-size="9px" fill="#63605b">• Non-essential business traffic counts</text>
+
+    <!-- Row 2 of data sources -->
+    <text x="50" y="465" font-size="10px" font-weight="600" fill="#63605b">CONTROL VARIABLES:</text>
+    <text x="60" y="480" font-size="9px" fill="#63605b">• Daily COVID-19 cases &amp; deaths by county</text>
+    <text x="60" y="492" font-size="9px" fill="#63605b">• County population &amp; population density</text>
+    <text x="60" y="504" font-size="9px" fill="#63605b">• Share of population age 60+</text>
+    <text x="60" y="516" font-size="9px" fill="#63605b">• Share of employment doing telework</text>
+
+    <text x="350" y="465" font-size="10px" font-weight="600" fill="#63605b">TIME PERIOD:</text>
+    <text x="360" y="480" font-size="9px" fill="#63605b">• February 29 – April 30, 2020</text>
+    <text x="360" y="492" font-size="9px" fill="#63605b">• County-level analysis</text>
+    <text x="360" y="504" font-size="9px" fill="#63605b">• DMA-level analysis</text>
+    <text x="360" y="516" font-size="9px" fill="#63605b">• Event-time specifications</text>
+
+    <text x="640" y="465" font-size="10px" font-weight="600" fill="#63605b">EMPIRICAL APPROACH:</text>
+    <text x="650" y="480" font-size="9px" fill="#63605b">• County fixed effects specifications</text>
+    <text x="650" y="492" font-size="9px" fill="#63605b">• DMA fixed effects</text>
+    <text x="650" y="504" font-size="9px" fill="#63605b">• Event-time regressions</text>
+    <text x="650" y="516" font-size="9px" fill="#63605b">• Cross-county within-state variation</text>
+  </g>
+
+  <!-- Source citation -->
+  <text x="450" y="570" text-anchor="middle" font-size="9px" fill="#b0ada7" font-style="italic">Barrios &amp; Hochberg (2021), Journal of Financial Economics, Vol. 142</text>
+
+</svg>

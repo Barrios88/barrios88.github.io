@@ -1,0 +1,164 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #00356b; }
+      .heading { font-size: 14px; font-weight: 600; fill: #00356b; }
+      .subheading { font-size: 13px; font-weight: 600; fill: #1a4f8a; }
+      .body-text { font-size: 12px; fill: #3a3632; }
+      .small-text { font-size: 11px; fill: #63605b; }
+      .label-text { font-size: 12px; fill: #f9f7f4; font-weight: 500; }
+      .highlight { font-weight: 600; fill: #bd5319; }
+    </style>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1a4f8a" />
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+    <linearGradient id="grad-light-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d1e4f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b3d0e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-light-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe8d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd4b3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#f9f7f4"/>
+
+  <!-- Main Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">
+    Mechanism: How PE Enters Accounting Through Dual-Entity Structures
+  </text>
+
+  <!-- ============================================ LEFT SIDE: BARRIERS ============================================ -->
+
+  <!-- Section Header: Regulatory Barriers -->
+  <text x="90" y="65" text-anchor="middle" class="heading">Ownership Restrictions</text>
+  <rect x="20" y="75" width="140" height="150" fill="url(#grad-light-blue)" stroke="#00356b" stroke-width="2" rx="4"/>
+
+  <text x="90" y="95" text-anchor="middle" class="subheading">Partnership Law</text>
+  <text x="30" y="115" class="body-text">• External equity prohibited</text>
+  <text x="30" y="132" class="body-text">• Personal liability requirement</text>
+  <text x="30" y="149" class="body-text">• Partner control only</text>
+  <text x="30" y="166" class="body-text">• State licensing restrictions</text>
+  <text x="30" y="183" class="body-text">• PCAOB independence rules</text>
+  <text x="30" y="200" class="body-text">• Audit function insulated</text>
+
+  <!-- ============================================ MIDDLE: TRANSACTION STRUCTURE ============================================ -->
+
+  <!-- Arrow from barriers to structure -->
+  <path d="M 160 150 L 240 150" stroke="#1a4f8a" stroke-width="2.5" marker-end="url(#arrowhead-blue)"/>
+
+  <!-- Central Box: Dual Entity Structure -->
+  <rect x="240" y="70" width="180" height="300" fill="#ffffff" stroke="#bd5319" stroke-width="2.5" rx="6"/>
+
+  <text x="330" y="92" text-anchor="middle" class="heading" fill="#bd5319">PE Deal Structure</text>
+  <text x="330" y="110" text-anchor="middle" class="highlight">Dual-Entity Model</text>
+
+  <!-- Top entity: CPA Partnership -->
+  <rect x="255" y="125" width="150" height="70" fill="url(#grad-light-blue)" stroke="#00356b" stroke-width="2" rx="4"/>
+  <text x="330" y="145" text-anchor="middle" class="subheading">CPA Partnership</text>
+  <text x="265" y="165" class="small-text">• Licensed audit practice</text>
+  <text x="265" y="180" class="small-text">• Partnership governance</text>
+  <text x="265" y="195" class="small-text">• Regulatory compliant</text>
+
+  <!-- Bottom entity: Non-CPA Advisory Platform -->
+  <rect x="255" y="215" width="150" height="90" fill="url(#grad-light-orange)" stroke="#bd5319" stroke-width="2" rx="4"/>
+  <text x="330" y="235" text-anchor="middle" class="subheading" fill="#bd5319">Non-CPA Advisory</text>
+  <text x="265" y="255" class="small-text">• Tax services</text>
+  <text x="265" y="270" class="small-text">• Valuation services</text>
+  <text x="265" y="285" class="small-text">• Consulting / Strategy</text>
+  <text x="265" y="300" class="small-text">• Fully PE-owned</text>
+
+  <!-- Connecting arrow -->
+  <path d="M 330 195 L 330 215" stroke="#00356b" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+  <text x="345" y="207" class="small-text" fill="#00356b">shared</text>
+  <text x="345" y="220" class="small-text" fill="#00356b">platform</text>
+
+  <!-- ============================================ RIGHT SIDE: OUTCOMES ============================================ -->
+
+  <!-- Arrow from structure to outcomes -->
+  <path d="M 420 220 L 480 220" stroke="#bd5319" stroke-width="2.5" marker-end="url(#arrowhead-orange)"/>
+  <text x="450" y="210" text-anchor="middle" class="body-text" fill="#bd5319" font-weight="600">Operational Control</text>
+
+  <!-- Outcomes section -->
+  <rect x="480" y="70" width="180" height="300" fill="url(#grad-light-orange)" stroke="#bd5319" stroke-width="2.5" rx="6"/>
+
+  <text x="570" y="92" text-anchor="middle" class="heading" fill="#bd5319">Post-PE Effects</text>
+  <text x="570" y="110" text-anchor="middle" class="highlight">Market Consolidation</text>
+
+  <!-- Effect 1: Platform Building -->
+  <rect x="495" y="125" width="150" height="70" fill="#ffffff" stroke="#bd5319" stroke-width="1.5" rx="3"/>
+  <text x="570" y="145" text-anchor="middle" class="subheading" fill="#bd5319">Platform Building</text>
+  <text x="505" y="162" class="small-text">• Roll-up strategy</text>
+  <text x="505" y="177" class="small-text">• Cross-state M&amp;A</text>
+  <text x="505" y="192" class="small-text">• +47.6pp M&amp;A boost</text>
+
+  <!-- Effect 2: Service Expansion -->
+  <rect x="495" y="215" width="150" height="70" fill="#ffffff" stroke="#bd5319" stroke-width="1.5" rx="3"/>
+  <text x="570" y="235" text-anchor="middle" class="subheading" fill="#bd5319">Service Expansion</text>
+  <text x="505" y="252" class="small-text">• Non-audit revenue +13.2pp</text>
+  <text x="505" y="267" class="small-text">• Advisory services growth</text>
+  <text x="505" y="282" class="small-text">• Employment expansion</text>
+
+  <!-- Effect 3: Market Power -->
+  <rect x="495" y="305" width="150" height="70" fill="#ffffff" stroke="#bd5319" stroke-width="1.5" rx="3"/>
+  <text x="570" y="325" text-anchor="middle" class="subheading" fill="#bd5319">Market Power</text>
+  <text x="505" y="342" class="small-text">• ERISA fee increase +7%</text>
+  <text x="505" y="357" class="small-text">• Labor concentration ↑</text>
+  <text x="505" y="372" class="small-text">• Entry barriers rise</text>
+
+  <!-- ============================================ BOTTOM: MECHANISM FLOW ============================================ -->
+
+  <!-- Mechanism box spanning full width -->
+  <rect x="40" y="400" width="820" height="100" fill="url(#grad-light-blue)" stroke="#00356b" stroke-width="2" rx="6"/>
+
+  <text x="450" y="422" text-anchor="middle" class="heading">Three Channels: How PE Creates Market Power in Accounting</text>
+
+  <!-- Channel 1: M&amp;A and Consolidation -->
+  <g id="channel1">
+    <circle cx="140" cy="460" r="20" fill="#00356b" opacity="0.3" stroke="#00356b" stroke-width="2"/>
+    <text x="140" y="465" text-anchor="middle" class="label-text" font-weight="700">1</text>
+    <text x="140" y="485" text-anchor="middle" class="body-text" font-weight="600">M&amp;A &amp;</text>
+    <text x="140" y="500" text-anchor="middle" class="body-text" font-weight="600">Consolidation</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 165 460 L 210 460" stroke="#00356b" stroke-width="2"/>
+
+  <!-- Channel explanation 1 -->
+  <text x="215" y="455" class="body-text">PE capital enables roll-ups that integrate</text>
+  <text x="215" y="470" class="body-text">fragmented local practices into platforms</text>
+
+  <!-- Channel 2: Labor Market Concentration -->
+  <g id="channel2">
+    <circle cx="520" cy="460" r="20" fill="#1a4f8a" opacity="0.3" stroke="#1a4f8a" stroke-width="2"/>
+    <text x="520" y="465" text-anchor="middle" class="label-text" font-weight="700">2</text>
+    <text x="520" y="485" text-anchor="middle" class="body-text" font-weight="600">Labor</text>
+    <text x="520" y="500" text-anchor="middle" class="body-text" font-weight="600">Concentration</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 545 460 L 590 460" stroke="#1a4f8a" stroke-width="2"/>
+
+  <!-- Channel explanation 2 -->
+  <text x="595" y="455" class="body-text">Consolidated firms become dominant local</text>
+  <text x="595" y="470" class="body-text">employers, reducing competition for talent</text>
+
+  <!-- Channel 3: Pricing Power -->
+  <g id="channel3">
+    <circle cx="800" cy="460" r="20" fill="#bd5319" opacity="0.3" stroke="#bd5319" stroke-width="2"/>
+    <text x="800" y="465" text-anchor="middle" class="label-text" font-weight="700">3</text>
+    <text x="800" y="485" text-anchor="middle" class="body-text" font-weight="600">Pricing</text>
+    <text x="800" y="500" text-anchor="middle" class="body-text" font-weight="600">Power</text>
+  </g>
+
+  <!-- Context note -->
+  <text x="55" y="485" class="small-text" font-style="italic">
+    Despite ownership restrictions, dual-entity structures allow PE to:
+  </text>
+
+</svg>

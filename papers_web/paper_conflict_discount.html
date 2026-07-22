@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflict-of-Interest Discount — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Marketplace of ideas with conflict filtering -->
+                <!-- Neutral speaker -->
+                <circle cx="100" cy="100" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+                <text x="100" y="105" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Neutral</text>
+
+                <!-- Conflicted speaker -->
+                <circle cx="100" cy="50" r="20" fill="none" stroke="#bd5319" stroke-width="2"/>
+                <text x="100" y="55" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Conflicted</text>
+
+                <!-- Information flow -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <path d="M 130 100 L 200 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 130 50 L 200 50" stroke="#bd5319" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Market assessment -->
+                <rect x="220" y="75" width="120" height="50" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="280" y="105" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Market Assessment</text>
+
+                <!-- Discount application -->
+                <path d="M 350 100 L 420 100" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+                <text x="385" y="85" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Discount</text>
+
+                <!-- Credibility weights -->
+                <circle cx="500" cy="100" r="30" fill="none" stroke="#bd5319" stroke-width="2.5"/>
+                <text x="500" y="100" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="600">Lower</text>
+                <text x="500" y="113" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="600">Credibility</text>
+
+                <!-- Neutral full credibility -->
+                <circle cx="500" cy="50" r="30" fill="none" stroke="#00356b" stroke-width="2.5"/>
+                <text x="500" y="50" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Full</text>
+                <text x="500" y="63" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Credibility</text>
+
+                <!-- Impact on ideas -->
+                <path d="M 540 100 L 600 100" stroke="#bd5319" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 540 50 L 600 50" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <rect x="620" y="75" width="120" height="50" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="680" y="100" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Idea Impact &</text>
+                <text x="680" y="113" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Influence</text>
+            </svg>
+            <div class="header-content">
+                <h1>The Conflict-of-Interest Discount in the Marketplace of Ideas</h1>
+                <p class="tagline">How disclosure of conflicts reduces credibility and influence in public discourse</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Filippo Lancieri, Joshua Levy, Shashank Singh, Tommaso Valletti, Luigi Zingales</p>
+            <p><strong>Research Area:</strong> Political Economy & Social Capital</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4979205" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w33645" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> NBER
+            </a>
+            <a href="../papers/2024-barrios-conflict-discount.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine how conflicts of interest (CoI)—financial, professional, or ideological stakes held by authors—affect the perceived credibility of economics research. Using a randomized survey of economists and the US public, we investigate how audiences react to research findings when the author is revealed to have interests in the outcome.
+            </p>
+            <p>
+                Our findings reveal a significant "conflict-of-interest discount" in the marketplace of ideas: disclosure of conflicts reduces trust in research findings by 28%, with substantial variation by conflict type. We model the "CoI Discount," estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-percent"></i> Conflict Discount Magnitude</h3>
+                <p>Disclosure of conflicts of interest reduces the value of academic papers by 39% on average, with substantial variation by conflict type: monetary conflicts reduce trust by 27%, data-access conflicts by 20-52%, and ideological conflicts by 17%. The discount is most pronounced for papers relying on gated data with a right to review (58%), and lowest for academic conflicts (13%).</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Credibility Assessment</h3>
+                <p>Audiences substantially downgrade perceived speaker credibility and expertise when conflicts are disclosed. On average, conflict-of-interest disclosure reduces trust in research by approximately 28-30% across different respondent groups, regardless of the validity of the underlying argument.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-balance-scale"></i> Type of Conflict Matters</h3>
+                <p>Financial conflicts produce larger credibility reductions than professional conflicts, and undisclosed conflicts discovered later produce even larger discount effects.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-warning"></i> Information Environment Effects</h3>
+                <p>Conflict disclosures reduce idea influence more in less informed audiences, suggesting that disclosure creates asymmetric information effects on belief formation.</p>
+            </div>
+
+            <!-- Figure 1: Key Results Breakdown -->
+            <div style="margin: 2rem 0; background: #ffffff; padding: 1.5rem; border: 1px solid #d4d0c8; border-radius: 3px;">
+                <h3 style="font-size: 1.1rem; color: #00356b; margin-bottom: 1rem; text-align: center;">Figure 1: Conflict Discount by Type</h3>
+                <img src="figures/conflict_discount_results.svg" alt="Figure 1: Conflict Discount by Type" style="width: 100%; height: auto; max-width: 900px; margin: 0 auto; display: block;">
+            </div>
+
+            <!-- Figure 2: Mechanism Diagram -->
+            <div style="margin: 2rem 0; background: #ffffff; padding: 1.5rem; border: 1px solid #d4d0c8; border-radius: 3px;">
+                <h3 style="font-size: 1.1rem; color: #00356b; margin-bottom: 1rem; text-align: center;">Figure 2: Mechanism—How Conflicts Reduce Research Credibility</h3>
+                <img src="figures/conflict_discount_mechanism.svg" alt="Figure 2: Conflict Discount Mechanism" style="width: 100%; height: auto; max-width: 900px; margin: 0 auto; display: block;">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper contributes to understanding how disclosure requirements affect information markets and public discourse. We demonstrate that requiring conflict disclosure, while important for transparency, creates substantial credibility costs that may reduce the influence of ideas from interested parties.
+            </p>
+            <p>
+                Our findings have implications for understanding corporate communications policy, expert witness credibility, scientific disclosure requirements, and media coverage of interested parties. The results suggest that disclosure requirements involve meaningful trade-offs between transparency and the ability of interested parties to participate effectively in public discourse.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Filippo Lancieri, Joshua Levy, Shashank Singh, Tommaso Valletti, and Luigi Zingales. "The Conflict-of-Interest Discount in the Marketplace of Ideas." Working Paper, January 2026.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4979205" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2024-barrios-conflict-discount.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

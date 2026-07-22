@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #00356b; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #63605b; }
+      .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #3a3632; }
+      .value { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #00356b; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #63605b; }
+      .grid-line { stroke: #e8e6e1; stroke-width: 1; }
+      .bar-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #3a3632; }
+      .bar-value { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; font-weight: 600; fill: white; }
+    </style>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="50" y="35" class="title">Determinants of Foreign Director Appointments</text>
+  <text x="50" y="55" class="subtitle">Gravity Model Results: Elasticities and Effects (38 countries, 169,472 directors)</text>
+
+  <!-- Left Panel: Core Homophily Factors -->
+  <rect x="40" y="90" width="420" height="550" fill="white" stroke="#d4d0c8" stroke-width="1" rx="4"/>
+
+  <text x="60" y="115" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #00356b;">
+    Homophily Factors (Elasticities)
+  </text>
+
+  <!-- Factor 1: Cultural Proximity -->
+  <rect x="60" y="135" width="380" height="70" fill="#f0f4f8" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="75" y="155" class="label" style="font-weight: 600;">Cultural Proximity</text>
+  <text x="75" y="175" class="label">Shared language, religion, values</text>
+
+  <!-- Bar for Cultural Proximity -->
+  <rect x="75" y="185" width="240" height="12" fill="#00356b" rx="2" filter="url(#shadow)"/>
+  <text x="320" y="195" class="value">+0.47***</text>
+  <text x="75" y="210" class="subtitle" style="font-size: 11px;">40-60% increase in appointment likelihood</text>
+
+  <!-- Factor 2: Common Legal Origin -->
+  <rect x="60" y="225" width="380" height="70" fill="#f0f4f8" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="75" y="245" class="label" style="font-weight: 600;">Common Legal Origin</text>
+  <text x="75" y="265" class="label">Similar institutional frameworks</text>
+
+  <!-- Bar for Legal Origin -->
+  <rect x="75" y="275" width="185" height="12" fill="#1a4f8a" rx="2" filter="url(#shadow)"/>
+  <text x="268" y="285" class="value">+0.36***</text>
+  <text x="75" y="300" class="subtitle" style="font-size: 11px;">28% increase in appointment probability</text>
+
+  <!-- Factor 3: Colonial Ties -->
+  <rect x="60" y="315" width="380" height="70" fill="#f0f4f8" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="75" y="335" class="label" style="font-weight: 600;">Colonial History &amp; Ties</text>
+  <text x="75" y="355" class="label">Historical connections and networks</text>
+
+  <!-- Bar for Colonial Ties -->
+  <rect x="75" y="365" width="160" height="12" fill="#3977b8" rx="2" filter="url(#shadow)"/>
+  <text x="241" y="375" class="value">+0.31***</text>
+  <text x="75" y="390" class="subtitle" style="font-size: 11px;">24% increase in appointment probability</text>
+
+  <!-- Factor 4: Geographic Proximity -->
+  <rect x="60" y="405" width="380" height="70" fill="#f0f4f8" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="75" y="425" class="label" style="font-weight: 600;">Geographic Distance</text>
+  <text x="75" y="445" class="label">Physical proximity between countries</text>
+
+  <!-- Bar for Geographic Distance (negative) -->
+  <rect x="75" y="455" width="95" height="12" fill="#e67e22" rx="2" filter="url(#shadow)"/>
+  <text x="176" y="465" class="value">−0.18***</text>
+  <text x="75" y="480" class="subtitle" style="font-size: 11px;">Distance reduces appointment likelihood</text>
+
+  <!-- Model Specification -->
+  <rect x="60" y="515" width="380" height="110" fill="#faf8f5" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="75" y="535" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #00356b;">
+    Model Specification
+  </text>
+  <text x="75" y="558" class="subtitle">Estimation Method: Poisson Pseudo-Maximum Likelihood</text>
+  <text x="75" y="575" class="subtitle">Sample: 38 countries, 2000-2013</text>
+  <text x="75" y="592" class="subtitle">Units: 169,472 foreign directors, 26,940 boards</text>
+  <text x="75" y="609" class="subtitle">Significance: *** p &lt; 0.01 level</text>
+
+  <!-- Right Panel: Conditioning Effects -->
+  <rect x="490" y="90" width="460" height="550" fill="white" stroke="#d4d0c8" stroke-width="1" rx="4"/>
+
+  <text x="510" y="115" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #00356b;">
+    Differential Effects by Governance Quality
+  </text>
+
+  <!-- Weak Governance Context -->
+  <rect x="510" y="140" width="420" height="130" fill="#fff3e0" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="530" y="160" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #d97706;">
+    Weak Governance Countries
+  </text>
+
+  <g id="weak-gov-effects">
+    <text x="530" y="185" class="label">Cultural Proximity Effect:</text>
+    <rect x="530" y="193" width="280" height="10" fill="#d97706" rx="2" filter="url(#shadow)"/>
+    <text x="820" y="202" class="value" style="fill: #d97706;">+0.62***</text>
+
+    <text x="530" y="225" class="label">Homophily Effect Size: Stronger</text>
+    <text x="530" y="245" class="subtitle" style="font-size: 11px;">Firms rely more on cultural cues when</text>
+    <text x="530" y="260" class="subtitle" style="font-size: 11px;">institutional quality is low</text>
+  </g>
+
+  <!-- Strong Governance Context -->
+  <rect x="510" y="295" width="420" height="130" fill="#e0f2fe" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="530" y="315" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #0284c7;">
+    Strong Governance Countries
+  </text>
+
+  <g id="strong-gov-effects">
+    <text x="530" y="340" class="label">Cultural Proximity Effect:</text>
+    <rect x="530" y="348" width="170" height="10" fill="#0284c7" rx="2" filter="url(#shadow)"/>
+    <text x="710" y="357" class="value" style="fill: #0284c7;">+0.28***</text>
+
+    <text x="530" y="380" class="label">Homophily Effect Size: Weaker</text>
+    <text x="530" y="400" class="subtitle" style="font-size: 11px;">Stronger institutions enable more</text>
+    <text x="530" y="415" class="subtitle" style="font-size: 11px;">merit-based director selection</text>
+  </g>
+
+  <!-- Time Trend -->
+  <rect x="510" y="450" width="420" height="105" fill="#fef3c7" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+  <text x="530" y="470" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #92400e;">
+    Temporal Pattern: 2000-2013
+  </text>
+
+  <text x="530" y="495" class="label">• Foreign directors increased from 10% to 19%</text>
+  <text x="530" y="515" class="label">• Homophily effect remains stable over time</text>
+  <text x="530" y="535" class="subtitle" style="font-size: 11px;">Despite globalization, cultural proximity continues</text>
+  <text x="530" y="550" class="subtitle" style="font-size: 11px;">to drive cross-border board appointments</text>
+
+  <!-- Footer with note -->
+  <text x="50" y="685" class="subtitle" style="font-size: 10px;">
+    Note: Coefficients represent elasticities from Poisson gravity model. Controls include destination GDP, origin GDP, total bilateral trade. *** p &lt; 0.01.
+  </text>
+</svg>

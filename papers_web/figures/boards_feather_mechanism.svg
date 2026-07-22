@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #00356b; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #3a3632; }
+      .small-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #63605b; }
+      .box-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #f9f7f4; }
+      .arrow { fill: #00356b; }
+    </style>
+    <filter id="dropshadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+    </marker>
+    <marker id="arrowhead-accent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="450" y="35" class="title" text-anchor="middle">
+    Mechanism: How Cultural Proximity Drives Foreign Director Selection
+  </text>
+
+  <!-- ===== SUPPLY SIDE (Left) ===== -->
+
+  <!-- Supply of Foreign Directors Box -->
+  <rect x="40" y="80" width="180" height="100" rx="8" fill="#e8f1f7" stroke="#1a4f8a" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="130" y="105" class="box-title" text-anchor="middle" style="fill: #1a4f8a; font-weight: 600;">Supply of Foreign</text>
+  <text x="130" y="125" class="box-title" text-anchor="middle" style="fill: #1a4f8a; font-weight: 600;">Directors</text>
+
+  <text x="55" y="150" class="small-text">• Director networks</text>
+  <text x="55" y="166" class="small-text">• International mobility</text>
+  <text x="55" y="182" class="small-text">• Cultural background</text>
+
+  <!-- ===== DEMAND SIDE (Right) ===== -->
+
+  <!-- Demand for Foreign Directors Box -->
+  <rect x="680" y="80" width="180" height="100" rx="8" fill="#fef3c7" stroke="#92400e" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="770" y="105" class="box-title" text-anchor="middle" style="fill: #92400e; font-weight: 600;">Demand for Foreign</text>
+  <text x="770" y="125" class="box-title" text-anchor="middle" style="fill: #92400e; font-weight: 600;">Directors</text>
+
+  <text x="695" y="150" class="small-text">• Board diversity goals</text>
+  <text x="695" y="166" class="small-text">• Skill requirements</text>
+  <text x="695" y="182" class="small-text">• Firm needs</text>
+
+  <!-- ===== CULTURAL PROXIMITY (Center) ===== -->
+
+  <!-- Central Hub: Cultural Proximity -->
+  <rect x="350" y="60" width="200" height="140" rx="8" fill="#00356b" stroke="#00356b" stroke-width="2" filter="url(#dropshadow)"/>
+
+  <text x="450" y="95" class="box-title" text-anchor="middle" style="fill: #f9f7f4; font-size: 14px;">Cultural &amp;</text>
+  <text x="450" y="115" class="box-title" text-anchor="middle" style="fill: #f9f7f4; font-size: 14px;">Institutional</text>
+  <text x="450" y="135" class="box-title" text-anchor="middle" style="fill: #f9f7f4; font-size: 14px;">Proximity</text>
+
+  <text x="450" y="160" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #f9f7f4; text-anchor: middle;">
+    Language, Religion, Legal System
+  </text>
+  <text x="450" y="176" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #f9f7f4; text-anchor: middle;">
+    Colonial History, Governance Standards
+  </text>
+
+  <!-- Arrows: Supply to Cultural Proximity -->
+  <line x1="220" y1="130" x2="350" y2="130" stroke="#1a4f8a" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="280" y="118" class="small-text" text-anchor="middle" style="fill: #1a4f8a;">Directors from</text>
+  <text x="280" y="133" class="small-text" text-anchor="middle" style="fill: #1a4f8a;">similar countries</text>
+
+  <!-- Arrows: Demand to Cultural Proximity -->
+  <line x1="680" y1="130" x2="550" y2="130" stroke="#92400e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="620" y="118" class="small-text" text-anchor="middle" style="fill: #92400e;">Firms select</text>
+  <text x="620" y="133" class="small-text" text-anchor="middle" style="fill: #92400e;">culturally-fit directors</text>
+
+  <!-- ===== MATCHING OUTCOME (Bottom Center) ===== -->
+
+  <!-- Matching Arrow -->
+  <line x1="450" y1="210" x2="450" y2="250" stroke="#bd5319" stroke-width="3" marker-end="url(#arrowhead-accent)"/>
+  <text x="480" y="232" class="small-text" style="fill: #bd5319; font-weight: 600;">Director Selection</text>
+  <text x="480" y="247" class="small-text" style="fill: #bd5319; font-weight: 600;">Process</text>
+
+  <!-- Matched Pair Box -->
+  <rect x="320" y="260" width="260" height="90" rx="8" fill="#fff8e7" stroke="#bd5319" stroke-width="2" filter="url(#dropshadow)"/>
+  <text x="450" y="285" class="title" text-anchor="middle" style="font-size: 14px;">Homophily Outcome</text>
+  <text x="450" y="310" class="subtitle" text-anchor="middle">Foreign directors appointed from culturally</text>
+  <text x="450" y="330" class="subtitle" text-anchor="middle">similar countries at higher rates than random</text>
+  <text x="450" y="345" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #bd5319; text-anchor: middle;">
+    Effect: +40-60% appointment probability
+  </text>
+
+  <!-- ===== OUTCOMES (Bottom Row) ===== -->
+
+  <!-- Left Outcome: Board Effects -->
+  <rect x="40" y="390" width="200" height="80" rx="8" fill="#dbeafe" stroke="#0284c7" stroke-width="1.5" filter="url(#dropshadow)"/>
+  <text x="140" y="413" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #0284c7; text-anchor: middle;">
+    Board Effects
+  </text>
+  <text x="50" y="438" class="small-text">✓ Better attendance</text>
+  <text x="50" y="453" class="small-text">✓ More committee work</text>
+  <text x="50" y="468" class="small-text">✓ Active participation</text>
+
+  <!-- Center Outcome: Firm Performance -->
+  <rect x="350" y="390" width="200" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" filter="url(#dropshadow)"/>
+  <text x="450" y="413" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #16a34a; text-anchor: middle;">
+    Performance
+  </text>
+  <text x="360" y="438" class="small-text">✓ Improved firm outcomes</text>
+  <text x="360" y="453" class="small-text">✓ Effective governance</text>
+  <text x="360" y="468" class="small-text">✓ Better communication</text>
+
+  <!-- Right Outcome: Trade-offs -->
+  <rect x="660" y="390" width="200" height="80" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" filter="url(#dropshadow)"/>
+  <text x="760" y="413" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #dc2626; text-anchor: middle;">
+    Trade-offs &amp; Limits
+  </text>
+  <text x="670" y="438" class="small-text">⚠ Limited perspective diversity</text>
+  <text x="670" y="453" class="small-text">⚠ Perpetuates existing networks</text>
+  <text x="670" y="468" class="small-text">⚠ May limit fresh viewpoints</text>
+
+  <!-- Arrows from Homophily to Outcomes -->
+  <line x1="290" y1="350" x2="140" y2="390" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="350" x2="450" y2="390" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="350" x2="760" y2="390" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+</svg>

@@ -1,0 +1,134 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 Z" fill="#00356b"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 Z" fill="#bd5319"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 Z" fill="#d9534f"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="35" font-size="24" font-weight="700" text-anchor="middle" fill="#00356b">
+    Experimental Design: The Ethical Noise Mechanism
+  </text>
+
+  <!-- ============ STAGE FLOW (Top Row) ============ -->
+  <!-- Stage 1: Seller observes -->
+  <rect x="40" y="70" width="140" height="80" rx="6" fill="#f9f7f4" stroke="#00356b" stroke-width="2"/>
+  <text x="110" y="95" font-size="13" font-weight="700" text-anchor="middle" fill="#00356b">Stage 1</text>
+  <text x="110" y="115" font-size="11" text-anchor="middle" fill="#3a3632">Seller observes</text>
+  <text x="110" y="132" font-size="11" text-anchor="middle" fill="#3a3632">true asset value v</text>
+
+  <!-- Arrow -->
+  <path d="M 180 110 L 220 110" stroke="#1a4f8a" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Stage 2: Seller issues report -->
+  <rect x="220" y="70" width="140" height="80" rx="6" fill="#f9f7f4" stroke="#00356b" stroke-width="2"/>
+  <text x="290" y="95" font-size="13" font-weight="700" text-anchor="middle" fill="#00356b">Stage 2</text>
+  <text x="290" y="115" font-size="11" text-anchor="middle" fill="#3a3632">Seller reports value r</text>
+  <text x="290" y="132" font-size="11" text-anchor="middle" fill="#3a3632">(may misreport)</text>
+
+  <!-- Arrow -->
+  <path d="M 360 110 L 400 110" stroke="#1a4f8a" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Stage 2b: TREATMENT SPLIT -->
+  <!-- No Ethics (top branch) -->
+  <g>
+    <rect x="400" y="40" width="130" height="50" rx="4" fill="#ffffff" stroke="#63605b" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="465" y="60" font-size="10" font-weight="600" text-anchor="middle" fill="#3a3632">Control</text>
+    <text x="465" y="75" font-size="9" text-anchor="middle" fill="#63605b">No ethics statement</text>
+  </g>
+
+  <!-- Ethics (bottom branch) -->
+  <g>
+    <rect x="400" y="100" width="130" height="50" rx="4" fill="#fff5f0" stroke="#bd5319" stroke-width="2"/>
+    <text x="465" y="120" font-size="10" font-weight="600" text-anchor="middle" fill="#bd5319">Treatment</text>
+    <text x="465" y="135" font-size="9" text-anchor="middle" fill="#3a3632">Ethics statement</text>
+  </g>
+
+  <!-- Arrow to both branches -->
+  <path d="M 400 75 L 380 65" stroke="#1a4f8a" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <path d="M 400 125 L 380 125" stroke="#bd5319" stroke-width="2" fill="none" marker-end="url(#arrow-accent)"/>
+
+  <!-- Arrow down to Stage 3 -->
+  <path d="M 465 150 L 465 190" stroke="#1a4f8a" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+  <path d="M 465 150 L 465 190" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrow-accent)" stroke-dasharray="5,5"/>
+
+  <!-- Stage 3: Bidders observe and bid -->
+  <rect x="400" y="190" width="140" height="80" rx="6" fill="#f9f7f4" stroke="#bd5319" stroke-width="2"/>
+  <text x="470" y="215" font-size="13" font-weight="700" text-anchor="middle" fill="#bd5319">Stage 3</text>
+  <text x="470" y="235" font-size="11" text-anchor="middle" fill="#3a3632">Bidders observe report,</text>
+  <text x="470" y="252" font-size="11" text-anchor="middle" fill="#3a3632">estimate v, and bid</text>
+
+  <!-- Arrow to auction -->
+  <path d="M 540 230 L 580 230" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 4: First-price auction -->
+  <circle cx="620" cy="230" r="35" fill="#fff5f0" stroke="#bd5319" stroke-width="2"/>
+  <text x="620" y="235" font-size="28" text-anchor="middle" fill="#bd5319">⚡</text>
+
+  <!-- ============ KEY MECHANISM BOX (Left side) ============ -->
+  <rect x="30" y="280" width="340" height="180" rx="8" fill="#f9f7f4" stroke="#00356b" stroke-width="2"/>
+  <text x="200" y="305" font-size="14" font-weight="700" text-anchor="middle" fill="#00356b">
+    Baseline Condition (No Ethics)
+  </text>
+
+  <!-- Row 1: Seller behavior -->
+  <rect x="45" y="325" width="310" height="55" rx="4" fill="white" stroke="#00356b" stroke-width="1.5"/>
+  <text x="55" y="345" font-size="11" font-weight="600" fill="#3a3632">Seller misreporting:</text>
+  <text x="55" y="362" font-size="10" fill="#3a3632">Reports are biased (v + bias). Misreporting involves</text>
+  <text x="55" y="377" font-size="10" fill="#3a3632">quadratic cost to seller.</text>
+
+  <!-- Row 2: Bidder response -->
+  <rect x="45" y="387" width="310" height="55" rx="4" fill="white" stroke="#bd5319" stroke-width="1.5"/>
+  <text x="55" y="407" font-size="11" font-weight="600" fill="#bd5319">Bidder overbidding:</text>
+  <text x="55" y="424" font-size="10" fill="#3a3632">
+    <tspan x="55">Bidders don't fully correct for bias. Winning bidders</tspan>
+    <tspan x="55" dy="15">overbid by average of <tspan font-weight="700">$11.87</tspan></tspan>
+  </text>
+
+  <!-- ============ MECHANISM BOX (Right side) ============ -->
+  <rect x="530" y="280" width="340" height="180" rx="8" fill="#fff5f0" stroke="#bd5319" stroke-width="2"/>
+  <text x="700" y="305" font-size="14" font-weight="700" text-anchor="middle" fill="#bd5319">
+    Treatment Condition (With Ethics Statement)
+  </text>
+
+  <!-- Row 1: Seller behavior -->
+  <rect x="545" y="325" width="310" height="55" rx="4" fill="white" stroke="#00356b" stroke-width="1.5"/>
+  <text x="555" y="345" font-size="11" font-weight="600" fill="#00356b">Seller behavior:</text>
+  <text x="555" y="362" font-size="10" fill="#3a3632">
+    <tspan x="555">✓ <tspan font-weight="700">NO CHANGE</tspan> in misreporting. Ethics statement is</tspan>
+  </text>
+  <text x="575" y="377" font-size="10" fill="#3a3632">cheap talk; sellers still misreport.</text>
+
+  <!-- Row 2: Bidder response - the key effect -->
+  <rect x="545" y="387" width="310" height="55" rx="4" fill="white" stroke="#d9534f" stroke-width="2"/>
+  <text x="555" y="407" font-size="11" font-weight="600" fill="#d9534f">↗ Bidder belief shift:</text>
+  <text x="555" y="424" font-size="10" fill="#3a3632">
+    <tspan x="555">Bidders place MORE weight on reports. Overbidding</tspan>
+    <tspan x="555" dy="15">WORSENS. Slower learning about seller's strategy.</tspan>
+  </text>
+
+  <!-- ============ ETHICAL NOISE DEFINITION (Bottom) ============ -->
+  <rect x="30" y="470" width="840" height="0" rx="0" fill="none"/>
+
+  <!-- Divider line -->
+  <line x1="30" y1="475" x2="870" y2="475" stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Footnote -->
+  <text x="50" y="485" font-size="10" fill="#63605b">
+    <tspan font-weight="600">Ethical Noise:</tspan> Shifts in bidder beliefs WITHOUT corresponding shifts in seller behavior.
+  </text>
+  <text x="50" y="500" font-size="10" fill="#63605b">
+    Disclosure interventions that aim to enhance ethical conduct can paradoxically disadvantage the other party
+    by creating inflated beliefs about honesty.
+  </text>
+
+</svg>

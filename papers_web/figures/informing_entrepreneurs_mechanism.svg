@@ -1,0 +1,89 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg" width="900" height="550" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1a4f8a"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#63605b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="550" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#00356b">Mechanism: How Do IPOs Spur Entrepreneurship?</text>
+  <text x="450" y="50" text-anchor="middle" font-size="12" fill="#63605b">Distinguishing between two competing channels</text>
+
+  <!-- ═══════════ IPO EVENT BOX ═══════════ -->
+  <rect x="310" y="70" width="280" height="55" fill="#00356b" rx="6"/>
+  <text x="450" y="93" text-anchor="middle" font-size="15" font-weight="700" fill="#f9f7f4">Local IPO Event</text>
+  <text x="450" y="111" text-anchor="middle" font-size="11" fill="#d4cfc8">Firm goes public in the county</text>
+
+  <!-- Arrows down to two channels -->
+  <path d="M 380 125 L 225 170" stroke="#63605b" stroke-width="2.5" fill="none" marker-end="url(#arr-gray)"/>
+  <path d="M 520 125 L 675 170" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arr-orange)"/>
+
+  <!-- ═══════════ LEFT CHANNEL: Signal of Success ═══════════ -->
+  <rect x="40" y="170" width="370" height="135" fill="#ffffff" stroke="#63605b" stroke-width="2" rx="6"/>
+  <rect x="41" y="171" width="368" height="28" fill="#eae8e4" rx="5"/>
+  <text x="225" y="192" text-anchor="middle" font-size="14" font-weight="700" fill="#63605b">Channel 1: Signal of Success</text>
+
+  <text x="60" y="222" font-size="12" fill="#3a3632">"An IPO signals that the local economy is</text>
+  <text x="60" y="239" font-size="12" fill="#3a3632">doing well, inspiring others to start businesses"</text>
+
+  <text x="60" y="268" font-size="11" fill="#63605b" font-weight="600">Predictions:</text>
+  <text x="60" y="284" font-size="11" fill="#63605b">Effects should extend to spinoffs;</text>
+  <text x="60" y="298" font-size="11" fill="#63605b">EDGAR downloads should not matter</text>
+
+  <!-- ═══════════ RIGHT CHANNEL: Direct Information ═══════════ -->
+  <rect x="490" y="170" width="370" height="135" fill="#ffffff" stroke="#bd5319" stroke-width="2" rx="6"/>
+  <rect x="491" y="171" width="368" height="28" fill="#fdf0e8" rx="5"/>
+  <text x="675" y="192" text-anchor="middle" font-size="14" font-weight="700" fill="#bd5319">Channel 2: Direct Information</text>
+
+  <text x="510" y="222" font-size="12" fill="#3a3632">"IPO disclosures (S-1 filings) provide actionable</text>
+  <text x="510" y="239" font-size="12" fill="#3a3632">market intelligence, reducing entrepreneurial uncertainty"</text>
+
+  <text x="510" y="268" font-size="11" fill="#bd5319" font-weight="600">Predictions:</text>
+  <text x="510" y="284" font-size="11" fill="#3a3632">Effects concentrated in private-to-public IPOs;</text>
+  <text x="510" y="298" font-size="11" fill="#3a3632">EDGAR downloads and S-1 richness amplify effect</text>
+
+  <!-- ═══════════ EVIDENCE SECTION ═══════════ -->
+  <text x="450" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#00356b">Evidence</text>
+  <line x1="200" y1="348" x2="700" y2="348" stroke="#d4cfc8" stroke-width="1.5"/>
+
+  <!-- Evidence Row 1 -->
+  <rect x="40" y="360" width="395" height="48" fill="#f5f3f0" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="60" y="388" font-size="11" font-weight="600" fill="#00356b">Private-to-Public vs. Spinoff IPOs</text>
+  <text x="350" y="388" text-anchor="end" font-size="12" font-weight="700" fill="#63605b">Spinoffs: No effect</text>
+
+  <rect x="465" y="360" width="395" height="48" fill="#fdf0e8" stroke="#bd5319" stroke-width="1" rx="4"/>
+  <text x="485" y="388" font-size="11" font-weight="600" fill="#00356b">Private-to-Public IPOs Only</text>
+  <text x="810" y="388" text-anchor="end" font-size="12" font-weight="700" fill="#bd5319">Significant effect</text>
+
+  <!-- Evidence Row 2 -->
+  <rect x="40" y="420" width="395" height="48" fill="#f5f3f0" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="60" y="448" font-size="11" font-weight="600" fill="#00356b">EDGAR Downloads in IPO Counties</text>
+  <text x="350" y="448" text-anchor="end" font-size="12" font-weight="700" fill="#63605b">Signal: indifferent</text>
+
+  <rect x="465" y="420" width="395" height="48" fill="#fdf0e8" stroke="#bd5319" stroke-width="1" rx="4"/>
+  <text x="485" y="448" font-size="11" font-weight="600" fill="#00356b">High Downloads Amplify Effect</text>
+  <text x="810" y="448" text-anchor="end" font-size="12" font-weight="700" fill="#bd5319">Consistent with info</text>
+
+  <!-- ═══════════ CONCLUSION BOX ═══════════ -->
+  <rect x="100" y="486" width="700" height="48" fill="#ffffff" stroke="#00356b" stroke-width="2" rx="5"/>
+
+  <text x="250" y="515" text-anchor="middle" font-size="13" fill="#63605b">Signal of Success:</text>
+  <text x="370" y="515" text-anchor="middle" font-size="14" font-weight="700" fill="#63605b">Weak support</text>
+
+  <line x1="450" y1="492" x2="450" y2="528" stroke="#d4cfc8" stroke-width="1"/>
+
+  <text x="555" y="515" text-anchor="middle" font-size="13" fill="#bd5319">Direct Information:</text>
+  <text x="690" y="515" text-anchor="middle" font-size="14" font-weight="700" fill="#bd5319">Strong support</text>
+
+  <!-- Footer -->
+  <text x="450" y="546" text-anchor="middle" font-size="10" fill="#63605b" font-style="italic">Evidence from archival analysis and field survey of 503 entrepreneurs. IV: NASDAQ returns during book-building phase.</text>
+</svg>

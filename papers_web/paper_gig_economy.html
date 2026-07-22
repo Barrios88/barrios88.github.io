@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching with a Parachute — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #3a3632;
+            --text-light:      #6b6560;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', 'Georgia', serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.01em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.15rem 0;
+            border-bottom: 1.5px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--yale-rule);
+        }
+
+        .paper-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .paper-meta strong {
+            color: var(--text-body);
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--yale-blue-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            color: var(--text-body);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--yale-blue);
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-body);
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        @media (max-width: 600px) {
+            .paper-header h1 { font-size: 1.7rem; }
+            .action-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="paper-header">
+            <h1>Launching with a Parachute: The Gig Economy and Entrepreneurial Entry</h1>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> John Manuel Barrios, Yael V. Hochberg, and Hanyi Yi</p>
+                <p><strong>Published in:</strong> <em>Journal of Financial Economics</em>, Vol. 144, No. 1 (2022)</p>
+                <p><strong>Research Area:</strong> Entrepreneurship & New Business Formation</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3557279" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w27183" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> View on NBER
+            </a>
+            <a href="../papers/2022-barrios-launching-parachute.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine how the rise of the gig economy affects entrepreneurial entry by providing aspiring entrepreneurs with a flexible "safety net" during the risky early stages of new venture creation. Using the staggered entry of Uber across U.S. cities as a natural experiment, we find that gig economy platforms significantly increase entrepreneurship rates, particularly among individuals who face high opportunity costs and income uncertainty.
+            </p>
+            <p>
+                Our identification strategy exploits variation in Uber's entry timing across 195 U.S. cities between 2009 and 2016. We find that Uber's entry increases new business registrations by 3-5%, with larger effects in cities with higher pre-existing entrepreneurship rates. The mechanism operates through reduced downside risk: gig work provides a flexible income source that entrepreneurs can use to smooth consumption while building their businesses, effectively functioning as a "parachute" that makes the leap into entrepreneurship less risky.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="figures/figure1_main_results.svg" alt="Main Results: Effect of Ridesharing Platform Entry on New Business Registrations"
+                     style="max-width: 100%; height: auto; border: 1px solid var(--yale-rule); border-radius: 4px; padding: 1rem; background: white;">
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; font-style: italic;">
+                    Figure 1: Coefficient estimates and 95% confidence intervals from difference-in-differences models showing the effect of gig platform entry on new business registrations across different sample specifications.
+                </p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-rocket"></i> Increased Entrepreneurial Entry</h3>
+                <p>Uber's entry into a city increased new business registrations by 3-5%, representing thousands of additional new ventures annually across affected markets.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-umbrella"></i> Safety Net Mechanism</h3>
+                <p>Gig economy work acts as a flexible safety net, allowing entrepreneurs to earn supplemental income while building their businesses, thus reducing the financial risk of entrepreneurship.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-users"></i> Heterogeneous Effects</h3>
+                <p>The entrepreneurship boost was strongest among individuals with high opportunity costs, minorities, and those in areas with limited access to traditional financing or unemployment insurance.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-building"></i> Long-Term Business Formation</h3>
+                <p>The effect persists over time, suggesting that gig platforms enable sustained increases in entrepreneurial activity rather than just temporary experimentation.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Causal Mechanism & Identification</h2>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="figures/figure2_mechanism.svg" alt="Causal Mechanism: How Gig Platforms Promote Entrepreneurship"
+                     style="max-width: 100%; height: auto; border: 1px solid var(--yale-rule); border-radius: 4px; padding: 1rem; background: white;">
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; font-style: italic;">
+                    Figure 2: Conceptual framework showing how gig platform entry reduces entrepreneurial downside risk through income smoothing, with the identification strategy and key mechanisms.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper contributes to several literatures. First, it provides the first large-scale empirical evidence on how labor market flexibility affects entrepreneurial entry. While prior work has focused on health insurance, unemployment benefits, and other social safety nets, we show that private-sector innovations in labor markets can have similar effects by reducing entrepreneurial risk.
+            </p>
+            <p>
+                Second, we contribute to the growing literature on the gig economy by documenting an important positive externality: beyond providing employment opportunities for gig workers themselves, these platforms facilitate broader entrepreneurial activity. This suggests that the social value of gig platforms may extend beyond the direct labor market effects typically studied.
+            </p>
+            <p>
+                Third, our findings inform debates about entrepreneurship policy and economic dynamism. The results suggest that policies or institutions that provide income flexibility and downside risk protection can promote entrepreneurship without requiring direct government intervention or subsidies.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Policy Implications</h2>
+            <p>
+                Our findings have important implications for understanding the broader economic effects of the gig economy. While much policy debate has focused on labor protections and worker classification, our results highlight a significant positive externality: gig platforms promote entrepreneurship by reducing downside risk for aspiring business owners.
+            </p>
+            <p>
+                The results also suggest that labor market flexibility can be an important driver of economic dynamism. Policies that enable workers to more easily combine multiple income sources may promote entrepreneurship without requiring direct subsidies or government programs. This has implications for debates about work arrangements, independent contracting, and the future of work.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, J. M., Hochberg, Y. V., & Yi, H. (2022). Launching with a parachute: The gig economy and entrepreneurial entry. <em>Journal of Financial Economics</em>, 144(1), 22-43.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2022-barrios-launching-parachute.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>

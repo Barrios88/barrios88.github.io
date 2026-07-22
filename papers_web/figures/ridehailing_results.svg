@@ -1,0 +1,157 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #00356b; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #3a3632; }
+      .data-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; font-weight: 500; }
+      .legend-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; }
+      .value-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #00356b; font-weight: 600; }
+      .note-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #63605b; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#ffffff"/>
+
+  <!-- Top Title -->
+  <text x="50" y="40" class="title-text">Key Findings: Ridehailing and Traffic Fatalities</text>
+
+  <!-- Panel A: Overall Effect on Fatalities -->
+  <g id="panel-a">
+    <!-- Panel label -->
+    <text x="50" y="85" class="axis-label" font-weight="600">A. Effect on Fatal Accidents and Fatalities</text>
+
+    <!-- Y-axis -->
+    <line x1="70" y1="250" x2="70" y2="420" stroke="#63605b" stroke-width="1.5"/>
+    <!-- X-axis -->
+    <line x1="70" y1="420" x2="480" y2="420" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Y-axis labels and ticks -->
+    <line x1="65" y1="420" x2="70" y2="420" stroke="#63605b" stroke-width="1"/>
+    <text x="45" y="425" class="axis-label" text-anchor="end">0%</text>
+
+    <line x1="65" y1="366" x2="70" y2="366" stroke="#63605b" stroke-width="1"/>
+    <text x="45" y="371" class="axis-label" text-anchor="end">1%</text>
+
+    <line x1="65" y1="313" x2="70" y2="313" stroke="#63605b" stroke-width="1"/>
+    <text x="45" y="318" class="axis-label" text-anchor="end">2%</text>
+
+    <line x1="65" y1="259" x2="70" y2="259" stroke="#63605b" stroke-width="1"/>
+    <text x="45" y="264" class="axis-label" text-anchor="end">3%</text>
+
+    <!-- Axis label -->
+    <text x="20" y="340" class="axis-label" text-anchor="middle" transform="rotate(-90, 20, 340)">Change in Fatalities</text>
+
+    <!-- Bars: Total Accidents and Total Fatalities -->
+    <rect x="100" y="300" width="60" height="120" fill="#00356b" opacity="0.8"/>
+    <text x="130" y="440" class="data-label" text-anchor="middle">Total Accidents</text>
+    <text x="130" y="290" class="value-text" text-anchor="middle">3.0%</text>
+
+    <rect x="200" y="300" width="60" height="120" fill="#1a4f8a" opacity="0.8"/>
+    <text x="230" y="440" class="data-label" text-anchor="middle">Total Fatalities</text>
+    <text x="230" y="290" class="value-text" text-anchor="middle">3.0%</text>
+
+    <!-- CI ranges shown as error bars -->
+    <line x1="130" y1="276" x2="130" y2="336" stroke="#00356b" stroke-width="2" opacity="0.6"/>
+    <line x1="122" y1="276" x2="138" y2="276" stroke="#00356b" stroke-width="1.5" opacity="0.6"/>
+    <line x1="122" y1="336" x2="138" y2="336" stroke="#00356b" stroke-width="1.5" opacity="0.6"/>
+
+    <line x1="230" y1="276" x2="230" y2="336" stroke="#1a4f8a" stroke-width="2" opacity="0.6"/>
+    <line x1="222" y1="276" x2="238" y2="276" stroke="#1a4f8a" stroke-width="1.5" opacity="0.6"/>
+    <line x1="222" y1="336" x2="238" y2="336" stroke="#1a4f8a" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Range note -->
+    <text x="100" y="465" class="note-text">Range: 2%-4% depending on specification</text>
+  </g>
+
+  <!-- Panel B: Effects by Type -->
+  <g id="panel-b">
+    <!-- Panel label -->
+    <text x="520" y="85" class="axis-label" font-weight="600">B. Fatalities by Road User Type</text>
+
+    <!-- Y-axis -->
+    <line x1="540" y1="250" x2="540" y2="420" stroke="#63605b" stroke-width="1.5"/>
+    <!-- X-axis -->
+    <line x1="540" y1="420" x2="950" y2="420" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Y-axis labels and ticks -->
+    <line x1="535" y1="420" x2="540" y2="420" stroke="#63605b" stroke-width="1"/>
+    <text x="515" y="425" class="axis-label" text-anchor="end">0%</text>
+
+    <line x1="535" y1="366" x2="540" y2="366" stroke="#63605b" stroke-width="1"/>
+    <text x="515" y="371" class="axis-label" text-anchor="end">1%</text>
+
+    <line x1="535" y1="313" x2="540" y2="313" stroke="#63605b" stroke-width="1"/>
+    <text x="515" y="318" class="axis-label" text-anchor="end">2%</text>
+
+    <line x1="535" y1="259" x2="540" y2="259" stroke="#63605b" stroke-width="1"/>
+    <text x="515" y="264" class="axis-label" text-anchor="end">3%</text>
+
+    <!-- Axis label -->
+    <text x="490" y="340" class="axis-label" text-anchor="middle" transform="rotate(-90, 490, 340)">Change in Fatalities</text>
+
+    <!-- Bars: Occupants and Pedestrians -->
+    <rect x="570" y="305" width="60" height="115" fill="#bd5319" opacity="0.8"/>
+    <text x="600" y="440" class="data-label" text-anchor="middle">Vehicle</text>
+    <text x="600" y="456" class="data-label" text-anchor="middle">Occupants</text>
+    <text x="600" y="290" class="value-text" text-anchor="middle">2.8%</text>
+
+    <rect x="670" y="300" width="60" height="120" fill="#a0461a" opacity="0.8"/>
+    <text x="700" y="440" class="data-label" text-anchor="middle">Pedestrians &amp;</text>
+    <text x="700" y="456" class="data-label" text-anchor="middle">Cyclists</text>
+    <text x="700" y="290" class="value-text" text-anchor="middle">3.2%</text>
+
+    <!-- CI ranges -->
+    <line x1="600" y1="280" x2="600" y2="340" stroke="#bd5319" stroke-width="2" opacity="0.6"/>
+    <line x1="592" y1="280" x2="608" y2="280" stroke="#bd5319" stroke-width="1.5" opacity="0.6"/>
+    <line x1="592" y1="340" x2="608" y2="340" stroke="#bd5319" stroke-width="1.5" opacity="0.6"/>
+
+    <line x1="700" y1="276" x2="700" y2="336" stroke="#a0461a" stroke-width="2" opacity="0.6"/>
+    <line x1="692" y1="276" x2="708" y2="276" stroke="#a0461a" stroke-width="1.5" opacity="0.6"/>
+    <line x1="692" y1="336" x2="708" y2="336" stroke="#a0461a" stroke-width="1.5" opacity="0.6"/>
+
+    <text x="570" y="465" class="note-text">Effects similar across road user types</text>
+  </g>
+
+  <!-- Panel C: Mechanisms -->
+  <g id="panel-c">
+    <!-- Panel label -->
+    <text x="50" y="535" class="axis-label" font-weight="600">C. Proposed Mechanisms</text>
+
+    <!-- Mechanism boxes -->
+    <!-- VMT -->
+    <rect x="50" y="560" width="140" height="100" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="4"/>
+    <text x="120" y="585" class="data-label" text-anchor="middle" font-weight="600">Vehicle Miles</text>
+    <text x="120" y="605" class="data-label" text-anchor="middle" font-weight="600">Traveled (VMT)</text>
+    <text x="120" y="632" class="value-text" text-anchor="middle" font-size="14">Increases</text>
+    <circle cx="130" cy="575" r="4" fill="#1a4f8a"/>
+
+    <!-- Congestion -->
+    <rect x="230" y="560" width="140" height="100" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="4"/>
+    <text x="300" y="585" class="data-label" text-anchor="middle" font-weight="600">Traffic</text>
+    <text x="300" y="605" class="data-label" text-anchor="middle" font-weight="600">Congestion</text>
+    <text x="300" y="632" class="value-text" text-anchor="middle" font-size="14">Worsens</text>
+    <circle cx="310" cy="575" r="4" fill="#1a4f8a"/>
+
+    <!-- Behavioral -->
+    <rect x="410" y="560" width="140" height="100" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="4"/>
+    <text x="480" y="585" class="data-label" text-anchor="middle" font-weight="600">Driver</text>
+    <text x="480" y="605" class="data-label" text-anchor="middle" font-weight="600">Behavior Change</text>
+    <text x="480" y="632" class="value-text" text-anchor="middle" font-size="14">Distraction</text>
+    <circle cx="490" cy="575" r="4" fill="#1a4f8a"/>
+
+    <!-- Arrow from mechanisms to outcome -->
+    <text x="610" y="610" class="data-label" text-anchor="start" font-weight="600">↓</text>
+    <text x="610" y="590" class="axis-label" text-anchor="start" font-size="11">Results in:</text>
+
+    <!-- Outcome box -->
+    <rect x="610" y="560" width="340" height="100" fill="#ffe6d5" stroke="#bd5319" stroke-width="2" rx="4"/>
+    <text x="780" y="585" class="data-label" text-anchor="middle" font-weight="600">3% Increase in Traffic Fatalities</text>
+    <text x="780" y="610" class="value-text" text-anchor="middle" font-size="14">$5.33B – $13.24B Annual Cost</text>
+    <text x="780" y="632" class="note-text" text-anchor="middle">Benefits of drunk-driving reduction</text>
+    <text x="780" y="648" class="note-text" text-anchor="middle">do not offset congestion/VMT effects</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="50" y="690" class="note-text">Source: Barrios, Hochberg &amp; Yi (JOM, 2023). Error bars show 95% confidence intervals from difference-in-differences estimates.</text>
+</svg>

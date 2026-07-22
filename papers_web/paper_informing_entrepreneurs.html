@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informing Entrepreneurs? Initial Public Offerings and New Business Formation — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #3a3632;
+            --text-light:      #6b6560;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', 'Georgia', serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.01em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.15rem 0;
+            border-bottom: 1.5px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--yale-rule);
+        }
+
+        .paper-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .paper-meta strong {
+            color: var(--text-body);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .badge-wp {
+            background: var(--yale-blue-mid);
+            color: var(--white);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--yale-blue-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            color: var(--text-body);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--yale-blue);
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-body);
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        @media (max-width: 600px) {
+            .paper-header h1 { font-size: 1.7rem; }
+            .action-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="paper-header">
+            <h1>Informing Entrepreneurs? Initial Public Offerings and New Business Formation
+                <span class="badge badge-accepted" style="background: #2d6a4f; color: #fff;">Accepted</span>
+            </h1>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> John Manuel Barrios, Jung Ho Choi, Yael V. Hochberg, Jinhwan Kim, and Miao Liu</p>
+                <p><strong>Affiliations:</strong> Yale SOM &amp; NBER; Stanford University; Rice University &amp; NBER; Stanford University; Boston College</p>
+                <p><strong>Journal:</strong> <em>Journal of Accounting Research</em> (Accepted)</p>
+                <p><strong>Research Area:</strong> Entrepreneurship, Financial Disclosures, Real Effects of IPOs</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the vital role of IPOs in conveying crucial information, whether through signaling potential success or providing direct information.
+            </p>
+            <p>
+                Moreover, our research indicates that these effects extend beyond mere "signaling of success" and are largely driven by the valuable information transmitted by the IPO itself. Specifically, new business registrations are significantly influenced by the extent of EDGAR downloads related to the IPO firm's public disclosures and the informational content within the IPO firm's S-1 disclosure. A comprehensive field survey further supports these conclusions, affirming the presence of information spillovers from local IPOs that positively impact new business formation.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> IPOs Spur Local Entrepreneurship</h3>
+                <p>A local IPO increases new for-profit business registrations by 1&ndash;4% in the following quarter, translating to 4&ndash;15 additional new businesses per quarter per county. The effect is identified using a difference-in-differences design with county and quarter-year fixed effects.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Stronger Under Uncertainty</h3>
+                <p>The positive link between local IPOs and entrepreneurship is more pronounced in areas where ex-ante economic uncertainty, measured by wage growth volatility, is notably high. This is consistent with IPOs reducing uncertainty about local business prospects.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-file-contract"></i> Driven by Direct Information, Not Just Signaling</h3>
+                <p>The effect is concentrated around private-to-public IPOs (not spinoffs from existing public companies), is magnified in counties with high levels of S-1 downloads from EDGAR, and is stronger when S-1 filings are richer in informational content. These patterns point to the direct information channel as the primary mechanism.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-people-group"></i> Survey Confirmation</h3>
+                <p>A field survey of 503 entrepreneurs confirms the archival findings: nearly half of respondents report that information from local IPOs positively influenced their decision to pursue entrepreneurship, with entrepreneurs actively seeking information from SEC filings, company websites, and media coverage.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Figures</h2>
+            <div style="margin: 1.5rem 0;">
+                <img src="figures/informing_entrepreneurs_results.svg" alt="Figure 1: Key Results — IPOs and New Business Formation" style="width: 100%; max-width: 1000px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--yale-rule); border-radius: 3px;">
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem; text-align: center;">
+                    <strong>Figure 1.</strong> Local IPOs increase new business registrations by 1&ndash;4%, with stronger effects under high uncertainty and in counties with greater EDGAR download activity around the IPO firm's filings.
+                </p>
+            </div>
+            <div style="margin: 2rem 0;">
+                <img src="figures/informing_entrepreneurs_mechanism.svg" alt="Figure 2: Mechanism — Information Spillovers" style="width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--yale-rule); border-radius: 3px;">
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem; text-align: center;">
+                    <strong>Figure 2.</strong> Two channels link IPOs to local entrepreneurship: a "signal of success" channel and a "direct information" channel through public disclosures. The evidence favors the direct information mechanism as the primary driver.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This study makes several contributions to the literature. First, it provides new, causal evidence on the effects of IPOs on local entrepreneurial activity, and the importance of information spillovers in driving these effects. While prior work has studied IPO spillovers on established firms' investment decisions, this paper examines the extensive margin of new business formation&mdash;showing that public firm information disclosures have positive externalities that also affect firm entry.
+            </p>
+            <p>
+                Second, the findings provide a first insight into the process through which potential entrepreneurs obtain relevant information when deciding to launch a new venture. The paper contributes to existing research on the externalities from public firm disclosures by showing that IPO filings serve as a source of actionable business intelligence for would-be entrepreneurs&mdash;reducing uncertainty about demand, supply, and cost conditions in a local market.
+            </p>
+            <p>
+                Third, the paper combines archival evidence with a field survey of 503 entrepreneurs, providing both econometric identification and firsthand confirmation that information from IPO disclosures catalyzes entrepreneurial activity. Entrepreneurs actively seek guidance on product market conditions, operational strategies, technologies, valuation, and potential funding opportunities from IPO-related disclosures.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Identification Strategy</h2>
+            <p>
+                The paper addresses the endogeneity of IPO activity using an instrumental variable approach motivated by Bernstein (2015). The instrument leverages returns on the NASDAQ index during the book-building phase immediately following a firm's IPO filing. Market fluctuations during this phase affect the likelihood of IPO completion but are unlikely to have a lasting impact on the long-term economic activities of the county where the IPO occurs. Using the instrumented IPOs, the authors continue to observe a positive relationship between IPOs and new business registrations. Entropy balancing matching provides additional robustness.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John M., Jung Ho Choi, Yael V. Hochberg, Jinhwan Kim, and Miao Liu. "Informing Entrepreneurs? Initial Public Offerings and New Business Formation." Journal of Accounting Research, forthcoming. Available at SSRN: https://ssrn.com/abstract=3640736.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download Paper
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>

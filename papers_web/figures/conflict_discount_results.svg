@@ -1,0 +1,109 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .chart-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #00356b; }
+      .chart-subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #63605b; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; }
+      .axis-value { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #63605b; }
+      .bar-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 500; fill: #ffffff; }
+      .legend-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="650" fill="#f9f7f4"/>
+
+  <!-- Title Section -->
+  <text x="500" y="40" text-anchor="middle" class="chart-title">Conflict-of-Interest Discount by Type</text>
+  <text x="500" y="60" text-anchor="middle" class="chart-subtitle">Average reduction in research credibility and value when conflicts are disclosed</text>
+
+  <!-- Y-axis -->
+  <line x1="80" y1="100" x2="80" y2="520" stroke="#d4d0c8" stroke-width="1.5"/>
+  <!-- X-axis -->
+  <line x1="80" y1="520" x2="950" y2="520" stroke="#d4d0c8" stroke-width="1.5"/>
+
+  <!-- Y-axis grid lines and labels -->
+  <line x1="75" y1="520" x2="950" y2="520" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="525" text-anchor="end" class="axis-value">0%</text>
+
+  <line x1="75" y1="460" x2="950" y2="460" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="465" text-anchor="end" class="axis-value">10%</text>
+
+  <line x1="75" y1="400" x2="950" y2="400" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="405" text-anchor="end" class="axis-value">20%</text>
+
+  <line x1="75" y1="340" x2="950" y2="340" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="345" text-anchor="end" class="axis-value">30%</text>
+
+  <line x1="75" y1="280" x2="950" y2="280" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="285" text-anchor="end" class="axis-value">40%</text>
+
+  <line x1="75" y1="220" x2="950" y2="220" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="225" text-anchor="end" class="axis-value">50%</text>
+
+  <line x1="75" y1="160" x2="950" y2="160" stroke="#d4d0c8" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+  <text x="65" y="165" text-anchor="end" class="axis-value">60%</text>
+
+  <!-- Y-axis label -->
+  <text x="20" y="310" text-anchor="middle" class="axis-label" transform="rotate(-90 20 310)">Credibility Reduction</text>
+
+  <!-- Bar 1: Overall Average (39%) - Yale Blue -->
+  <g>
+    <rect x="130" y="234" width="70" height="286" fill="#00356b" rx="3"/>
+    <text x="165" y="510" text-anchor="middle" class="axis-label" font-weight="600">Overall</text>
+    <text x="165" y="525" text-anchor="middle" class="axis-label" font-weight="500">Average</text>
+    <!-- Percentage label -->
+    <text x="165" y="220" text-anchor="middle" class="bar-label" font-weight="700" font-size="16">39%</text>
+  </g>
+
+  <!-- Bar 2: Gated Data (58%) - Accent Color -->
+  <g>
+    <rect x="240" y="92" width="70" height="428" fill="#bd5319" rx="3"/>
+    <text x="275" y="510" text-anchor="middle" class="axis-label" font-weight="600">Gated Data</text>
+    <text x="275" y="525" text-anchor="middle" class="axis-label" font-weight="500">(Right to Review)</text>
+    <!-- Percentage label -->
+    <text x="275" y="58" text-anchor="middle" class="bar-label" font-weight="700" font-size="16">58%</text>
+  </g>
+
+  <!-- Bar 3: Monetary (27%) - Mid Blue -->
+  <g>
+    <rect x="350" y="388" width="70" height="132" fill="#1a4f8a" rx="3"/>
+    <text x="385" y="510" text-anchor="middle" class="axis-label" font-weight="600">Monetary</text>
+    <text x="385" y="525" text-anchor="middle" class="axis-label" font-weight="500">Conflicts</text>
+    <!-- Percentage label -->
+    <text x="385" y="374" text-anchor="middle" class="bar-label" font-weight="700" font-size="16">27%</text>
+  </g>
+
+  <!-- Bar 4: Ideological (17%) - Lighter shade -->
+  <g>
+    <rect x="460" y="452" width="70" height="68" fill="#5a8fc2" rx="3"/>
+    <text x="495" y="510" text-anchor="middle" class="axis-label" font-weight="600">Ideological</text>
+    <text x="495" y="525" text-anchor="middle" class="axis-label" font-weight="500">(Political)</text>
+    <!-- Percentage label -->
+    <text x="495" y="438" text-anchor="middle" class="bar-label" font-weight="700" font-size="16">17%</text>
+  </g>
+
+  <!-- Bar 5: Academic (13%) - Lightest shade -->
+  <g>
+    <rect x="570" y="478" width="70" height="42" fill="#8db3d6" rx="3"/>
+    <text x="605" y="510" text-anchor="middle" class="axis-label" font-weight="600">Academic</text>
+    <text x="605" y="525" text-anchor="middle" class="axis-label" font-weight="500">Conflicts</text>
+    <!-- Percentage label -->
+    <text x="605" y="464" text-anchor="middle" class="bar-label" font-weight="700" font-size="16">13%</text>
+  </g>
+
+  <!-- Data Access / Proprietary (20-52% range) - shown as range bar -->
+  <g>
+    <rect x="680" y="234" width="70" height="286" fill="#d4b5a0" rx="3" opacity="0.7"/>
+    <text x="715" y="510" text-anchor="middle" class="axis-label" font-weight="600">Data Access</text>
+    <text x="715" y="525" text-anchor="middle" class="axis-label" font-weight="500">(Proprietary)</text>
+    <!-- Range label -->
+    <text x="715" y="220" text-anchor="middle" class="bar-label" font-weight="700" font-size="14">20-52%</text>
+  </g>
+
+  <!-- Key insights box -->
+  <rect x="120" y="570" width="800" height="60" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5" rx="3"/>
+  <text x="140" y="590" class="axis-label" font-weight="600" fill="#00356b">Key Insight:</text>
+  <text x="140" y="610" class="axis-label" fill="#3a3632">Gated data conflicts generate the largest discount (58%), while academic conflicts show the smallest effect (13%). The overall average 39% discount demonstrates substantial credibility reduction across all conflict types.</text>
+
+</svg>

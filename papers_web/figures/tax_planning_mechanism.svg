@@ -1,0 +1,145 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #00356b; }
+      .box-title { font-size: 13px; font-weight: 600; fill: #00356b; }
+      .box-text { font-size: 11px; fill: #3a3632; }
+      .label { font-size: 11px; font-weight: 500; fill: #63605b; }
+      .arrow-label { font-size: 10px; fill: #bd5319; font-weight: 600; }
+      .box-fill { fill: #f9f7f4; stroke: #00356b; stroke-width: 2; }
+      .process-box { fill: #ffffff; stroke: #1a4f8a; stroke-width: 2; }
+      .outcome-box { fill: #ffffff; stroke: #bd5319; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+    </marker>
+    <marker id="arrowhead-accent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="white"/>
+
+  <!-- Title -->
+  <text x="450" y="35" class="title" text-anchor="middle">Labor Market Channel: Tax Planning Knowledge Diffusion Mechanism</text>
+
+  <!-- ===== STAGE 1: ORIGIN FIRM ===== -->
+
+  <!-- Origin Firm Box -->
+  <rect x="30" y="75" width="160" height="100" class="box-fill" rx="4"/>
+  <text x="110" y="95" class="box-title" text-anchor="middle">Origin Firm</text>
+  <text x="110" y="112" class="box-text" text-anchor="middle">• Tax-Aggressive</text>
+  <text x="110" y="127" class="box-text" text-anchor="middle">• Low ETR</text>
+  <text x="110" y="142" class="box-text" text-anchor="middle">• Specialized Tax</text>
+  <text x="110" y="157" class="box-text" text-anchor="middle">Knowledge</text>
+
+  <!-- ===== STAGE 2: EMPLOYEE MOBILITY ===== -->
+
+  <!-- Employee Movement Arrow and Box -->
+  <path d="M 195 125 L 290 125" stroke="#00356b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Employee/Movement Box -->
+  <rect x="300" y="75" width="160" height="100" class="process-box" rx="4"/>
+  <text x="380" y="95" class="box-title" text-anchor="middle">Employee</text>
+  <text x="380" y="112" class="box-text" text-anchor="middle">• Carries tacit</text>
+  <text x="380" y="127" class="box-text" text-anchor="middle">knowledge</text>
+  <text x="380" y="142" class="box-text" text-anchor="middle">• Tax expertise</text>
+  <text x="380" y="157" class="box-text" text-anchor="middle">• Strategies</text>
+
+  <!-- Movement label -->
+  <text x="245" y="115" class="arrow-label" text-anchor="middle">Hiring</text>
+  <text x="245" y="130" class="arrow-label" text-anchor="middle">Event</text>
+
+  <!-- ===== STAGE 3: DESTINATION FIRM ===== -->
+
+  <!-- Destination Firm Arrow -->
+  <path d="M 465 125 L 560 125" stroke="#00356b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Destination Firm Box -->
+  <rect x="570" y="75" width="160" height="100" class="process-box" rx="4"/>
+  <text x="650" y="95" class="box-title" text-anchor="middle">Destination Firm</text>
+  <text x="650" y="112" class="box-text" text-anchor="middle">• Adopts new</text>
+  <text x="650" y="127" class="box-text" text-anchor="middle">tax strategies</text>
+  <text x="650" y="142" class="box-text" text-anchor="middle">• Integrates</text>
+  <text x="650" y="157" class="box-text" text-anchor="middle">knowledge</text>
+
+  <!-- Transfer label -->
+  <text x="520" y="115" class="arrow-label" text-anchor="middle">Knowledge</text>
+  <text x="520" y="130" class="arrow-label" text-anchor="middle">Transfer</text>
+
+  <!-- ===== STAGE 4: OUTCOMES ===== -->
+
+  <!-- Outcome Arrow -->
+  <path d="M 735 125 L 800 190" stroke="#bd5319" stroke-width="3" fill="none" marker-end="url(#arrowhead-accent)"/>
+
+  <!-- Outcome Box -->
+  <rect x="750" y="200" width="130" height="95" class="outcome-box" rx="4"/>
+  <text x="815" y="218" class="box-title" text-anchor="middle" fill="#bd5319">Tax Outcomes</text>
+  <text x="815" y="235" class="box-text" text-anchor="middle">• Lower ETR</text>
+  <text x="815" y="250" class="box-text" text-anchor="middle">(-2 to -3.7%)</text>
+  <text x="815" y="265" class="box-text" text-anchor="middle">• Better tax</text>
+  <text x="815" y="280" class="box-text" text-anchor="middle">planning</text>
+
+  <!-- ===== MODERATORS AND CONSTRAINTS ===== -->
+
+  <!-- Industry Box (Moderator) -->
+  <rect x="30" y="230" width="160" height="80" class="box-fill" rx="4"/>
+  <text x="110" y="250" class="box-title" text-anchor="middle">Industry Match</text>
+  <text x="110" y="267" class="box-text" text-anchor="middle">• Same industry</text>
+  <text x="110" y="282" class="box-text" text-anchor="middle">stronger effect</text>
+  <text x="110" y="297" class="box-text" text-anchor="middle">• Context-specific</text>
+
+  <!-- Connecting line from Industry to Employee -->
+  <path d="M 110 230 L 380 175" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <text x="230" y="200" class="label">Moderator</text>
+
+  <!-- Employee Experience Box (Moderator) -->
+  <rect x="300" y="230" width="160" height="80" class="box-fill" rx="4"/>
+  <text x="380" y="250" class="box-title" text-anchor="middle">Employee</text>
+  <text x="380" y="265" class="box-title" text-anchor="middle">Characteristics</text>
+  <text x="380" y="282" class="box-text" text-anchor="middle">• Director-level role</text>
+  <text x="380" y="297" class="box-text" text-anchor="middle">• Stronger effect</text>
+
+  <!-- Connecting line from Employee Char to Destination -->
+  <path d="M 380 230 L 650 175" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <text x="500" y="200" class="label">Moderator</text>
+
+  <!-- Timeline Box (Bottom) -->
+  <rect x="570" y="230" width="160" height="80" class="box-fill" rx="4"/>
+  <text x="650" y="250" class="box-title" text-anchor="middle">Effect Timeline</text>
+  <text x="650" y="267" class="box-text" text-anchor="middle">• Effect emerges</text>
+  <text x="650" y="282" class="box-text" text-anchor="middle">in year 1-3</text>
+  <text x="650" y="297" class="box-text" text-anchor="middle">• Persistent effect</text>
+
+  <!-- Connecting line from Timeline to Outcomes -->
+  <path d="M 730 270 L 750 265" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <text x="735" y="288" class="label">Timing</text>
+
+  <!-- ===== BOTTOM: KEY EVIDENCE ===== -->
+
+  <!-- Evidence Box 1 -->
+  <rect x="30" y="360" width="270" height="100" class="box-fill" rx="4"/>
+  <text x="165" y="380" class="box-title" text-anchor="middle">Key Empirical Findings</text>
+  <text x="40" y="400" class="box-text">• Hiring from tax-aggressive firm reduces</text>
+  <text x="40" y="415" class="box-text">destination ETR by 2-3.7 percentage points</text>
+  <text x="40" y="430" class="box-text">• Effect robust across specifications &amp;</text>
+  <text x="40" y="445" class="box-text">definitions of tax-aggressive status</text>
+
+  <!-- Evidence Box 2 -->
+  <rect x="320" y="360" width="270" height="100" class="box-fill" rx="4"/>
+  <text x="455" y="380" class="box-title" text-anchor="middle">Mechanism Evidence</text>
+  <text x="330" y="400" class="box-text">• No pre-hiring trends in destination firm</text>
+  <text x="330" y="415" class="box-text">• Industry-specific knowledge (industry</text>
+  <text x="330" y="430" class="box-text">match increases effect by ~1%)</text>
+  <text x="330" y="445" class="box-text">• Effect stronger for senior employees</text>
+
+  <!-- Evidence Box 3 -->
+  <rect x="610" y="360" width="260" height="100" class="box-fill" rx="4"/>
+  <text x="740" y="380" class="box-title" text-anchor="middle">Sample &amp; Methods</text>
+  <text x="620" y="400" class="box-text">• Data: S&amp;P 1500 firms (1995–2018)</text>
+  <text x="620" y="415" class="box-text">• Tax employee movements tracked</text>
+  <text x="620" y="430" class="box-text">• Event study design</text>
+  <text x="620" y="445" class="box-text">• Stacked regression approach</text>
+
+</svg>

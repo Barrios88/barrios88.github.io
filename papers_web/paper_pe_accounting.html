@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financializing the Professions - John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-orange: #bd5319;
+            --cream: #f9f7f4;
+            --white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-medium: #5a5a5a;
+            --text-light: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: var(--yale-blue);
+            font-weight: 600;
+        }
+
+        nav {
+            background: var(--white);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-brand {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        .nav-brand a {
+            color: var(--yale-blue);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--yale-blue);
+        }
+
+        .paper-header {
+            background: var(--cream);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .network-svg {
+            width: 100%;
+            max-width: 800px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        .paper-header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .paper-header h1 {
+            font-size: 2.25rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--yale-blue);
+        }
+
+        .authors {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            margin-bottom: 0.5rem;
+        }
+
+        .venue {
+            font-size: 1rem;
+            color: var(--yale-orange);
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--cream);
+        }
+
+        .abstract-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        .key-findings {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--yale-blue);
+        }
+
+        .key-findings h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--yale-blue);
+        }
+
+        .key-findings ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-findings li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .key-findings li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--yale-orange);
+            font-weight: bold;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cream);
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yale-blue);
+            color: var(--white);
+            padding: 0.875rem 1.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 53, 107, 0.2);
+        }
+
+        .download-btn:hover {
+            background: var(--yale-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(189, 83, 25, 0.3);
+        }
+
+        footer {
+            background: var(--cream);
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #002244;
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        @media (max-width: 768px) {
+            .paper-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">John Manuel Barrios</a>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../research.html">Research</a></li>
+                <li><a href="../cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="paper-header">
+        <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Traditional professional firm (left) - simple structure -->
+            <circle cx="150" cy="100" r="35" fill="none" stroke="#00356b" stroke-width="2.5"/>
+            <text x="150" y="105" text-anchor="middle" fill="#00356b" font-size="14" font-weight="600">CPA</text>
+            <text x="150" y="155" text-anchor="middle" fill="#5a5a5a" font-size="12">Traditional</text>
+
+            <!-- Arrow showing transformation -->
+            <path d="M 220 100 L 310 100" stroke="#bd5319" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            <text x="265" y="90" text-anchor="middle" fill="#bd5319" font-size="13" font-weight="600">PE Acquisition</text>
+
+            <!-- Arrow marker definition -->
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+                </marker>
+            </defs>
+
+            <!-- PE-backed firm (right) - complex hierarchical structure -->
+            <circle cx="450" cy="60" r="25" fill="#bd5319" opacity="0.9"/>
+            <text x="450" y="65" text-anchor="middle" fill="white" font-size="12" font-weight="600">PE</text>
+
+            <!-- Connections from PE to multiple entities -->
+            <line x1="450" y1="85" x2="380" y2="130" stroke="#bd5319" stroke-width="2.5" opacity="0.7"/>
+            <line x1="450" y1="85" x2="450" y2="130" stroke="#bd5319" stroke-width="2.5" opacity="0.7"/>
+            <line x1="450" y1="85" x2="520" y2="130" stroke="#bd5319" stroke-width="2.5" opacity="0.7"/>
+            <line x1="450" y1="85" x2="590" y2="130" stroke="#bd5319" stroke-width="2.5" opacity="0.7"/>
+
+            <!-- Multiple acquired firms -->
+            <circle cx="380" cy="140" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+            <text x="380" y="145" text-anchor="middle" fill="#00356b" font-size="11" font-weight="500">Firm A</text>
+
+            <circle cx="450" cy="140" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+            <text x="450" y="145" text-anchor="middle" fill="#00356b" font-size="11" font-weight="500">Firm B</text>
+
+            <circle cx="520" cy="140" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+            <text x="520" y="145" text-anchor="middle" fill="#00356b" font-size="11" font-weight="500">Firm C</text>
+
+            <circle cx="590" cy="140" r="20" fill="none" stroke="#00356b" stroke-width="2"/>
+            <text x="590" y="145" text-anchor="middle" fill="#00356b" font-size="11" font-weight="500">Firm D</text>
+
+            <text x="485" y="180" text-anchor="middle" fill="#5a5a5a" font-size="12">Financialized</text>
+        </svg>
+
+        <div class="paper-header-content">
+            <h1>Financializing the Professions: The Rise of Private Equity in Accounting</h1>
+            <p class="authors">Inna Abramova (London Business School) and John Manuel Barrios (Yale School of Management & NBER)</p>
+            <p class="venue">Journal of Financial Economics (Revision Requested)</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="action-buttons">
+            <a href="../papers/2023-barrios-pe-audit-firms.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-file-pdf"></i> Download Paper
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="abstract-section">
+            <h2>Overview</h2>
+            <p class="abstract-text">
+                Private equity has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. This paper studies these issues using accounting-industry data from 1999–2024 that links more than 3,000 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power.
+            </p>
+        </section>
+
+        <div class="key-findings">
+            <h3>Key Research Questions</h3>
+            <ul>
+                <li><strong>Market Transformation:</strong> How has private equity reshaped the structure and ownership of the accounting profession?</li>
+                <li><strong>Service Quality:</strong> What happens to audit quality and professional service standards when accounting firms are acquired by private equity?</li>
+                <li><strong>Client Impact:</strong> How do PE-backed accounting firms differ in their treatment of clients, pricing strategies, and service offerings?</li>
+                <li><strong>Professional Independence:</strong> Does PE ownership affect the professional independence and ethical standards traditionally associated with accounting firms?</li>
+                <li><strong>Regulatory Implications:</strong> What are the implications for financial reporting quality and regulatory oversight when professional services become financialized?</li>
+            </ul>
+        </div>
+
+        <section>
+            <h2>Research Context</h2>
+            <p class="abstract-text">
+                The accounting profession has historically been organized around partnerships and professional norms emphasizing independence and quality. State-level ownership restrictions and PCAOB regulations establish boundary conditions for financial capital in accounting, with the attest function insulated from direct external control. However, adjacent segments such as tax, valuation, and advisory services provide channels through which capital can reshape the broader organization of expertise. PE investment in accounting has accelerated sharply since 2020, coinciding with rising technology and compliance costs, partner retirements, and liquidity pressures among mid-sized firms. This expansion occurs through both direct acquisitions of CPA-licensed practices and through acquisitions of non-CPA affiliates providing tax, valuation, and advisory services—structures that allow PE investors to consolidate operational control while navigating ownership restrictions. These developments raise fundamental questions about whether PE-induced consolidation and operational restructuring reshape competition and professional independence in markets traditionally organized around reputation and regulation.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Results</h2>
+            <p class="abstract-text">
+                The paper presents comprehensive evidence of PE's rapid expansion in accounting and its measurable effects on market structure, competition, and pricing. The analysis documents over 3,600 PE transactions between 1999 and 2024, with dramatic acceleration after 2020. Using event-study methods, the research shows that PE-backed firms exhibit significantly higher growth rates in non-audit revenues, larger employment expansions, and substantially increased likelihood of pursuing acquisitions. Most tellingly, in the highly standardized market for ERISA plan audits—where regulation constrains both scope and effort—PE investment raises professional fees by approximately 7%, evidence consistent with increased market power rather than enhanced service complexity.
+            </p>
+            <img src="figures/pe_accounting_results.svg" alt="Figure 1: PE Accounting Key Results" style="width: 100%; max-width: 1000px; height: auto; margin: 2rem auto; display: block; border: 1px solid #e0e0e0; border-radius: 8px;">
+            <p style="text-align: center; font-size: 0.9rem; color: #5a5a5a; margin-top: 1rem;">
+                <strong>Figure 1.</strong> PE transactions accelerate sharply after 2020, reaching over 300 deals in recent years. Post-PE firms exhibit sustained growth in non-audit services, significantly elevated M&A probabilities, and measurable fee increases in standardized audit segments.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mechanism: Circumventing Ownership Restrictions</h2>
+            <p class="abstract-text">
+                A central question in the paper is how PE capital penetrates a sector explicitly regulated to prevent external ownership and control. The answer lies in deal-structuring innovation. PE sponsors navigate state partnership law and PCAOB regulations through dual-entity structures that preserve the licensed audit partnership while consolidating operational control through a separately owned non-CPA advisory platform. This structure—combining a regulated CPA partnership with a financialized non-CPA tax, valuation, and advisory affiliate—permits PE investors to control platform strategy, capital allocation, and acquisitions without directly owning the audit function. Through this mechanism, PE can orchestrate roll-ups, standardize operations, implement cost-reduction strategies, and pursue consolidation, all while formally respecting audit-firm licensing boundaries. The result is a hybrid organizational form that marries financial engineering with professional expertise, creating scale and operational efficiency that the traditional partnership model struggles to achieve.
+            </p>
+            <img src="figures/pe_accounting_mechanism.svg" alt="Figure 2: PE Accounting Mechanism" style="width: 100%; max-width: 900px; height: auto; margin: 2rem auto; display: block; border: 1px solid #e0e0e0; border-radius: 8px;">
+            <p style="text-align: center; font-size: 0.9rem; color: #5a5a5a; margin-top: 1rem;">
+                <strong>Figure 2.</strong> Dual-entity structure: PE investments create a holding company controlling a non-CPA advisory platform while maintaining partnership governance of the licensed audit firm. This structure enables consolidation, service expansion, and pricing power while navigating ownership restrictions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Significance</h2>
+            <p class="abstract-text">
+                This research contributes to understanding how external capital reshapes professional services built on licensing, personal liability, and reputational capital. The paper extends a growing literature on the real effects of private equity by examining a sector traditionally viewed as insulated from financial ownership. The results show that PE can penetrate professional services through structural innovation and deal-design strategies, even in the presence of formal regulatory restrictions on direct ownership. The findings have important implications for regulators, professional standard-setters, and policymakers concerned with maintaining the quality and independence of accounting services. By linking PE transactions, audit-firm information, and ERISA pricing data, the study provides the first integrated analysis of how external ownership affects input markets, consolidation dynamics, and pricing power in professional services. The research agenda extends beyond auditing to other professional sectors (tax, valuation, advisory) where the potential for market power through consolidation may be even greater.
+            </p>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2023-barrios-pe-audit-firms.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download Paper
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid #e0e0e0; text-align: center; padding: 1.5rem 2rem; font-size: 0.78rem; color: #b0ada7; background: var(--white);">
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+</body>
+</html>

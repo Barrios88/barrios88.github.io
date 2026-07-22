@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Planning Knowledge Diffusion — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        .figure-container {
+            margin: 2.5rem 0;
+            padding: 1.5rem;
+            background: white;
+            border: 1px solid var(--yale-rule);
+            border-radius: 4px;
+        }
+
+        .figure-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--yale-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .figure-svg {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+            border: 1px solid var(--yale-rule);
+            border-radius: 3px;
+        }
+
+        .figure-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-style: italic;
+            border-top: 1px solid var(--yale-rule);
+            padding-top: 0.75rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Knowledge flow diagram -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <!-- Firms moving knowledge arrows -->
+                <path d="M 100 50 L 150 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 150 100 L 200 140" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 200 140 L 280 160" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 280 160 L 380 140" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 380 140 L 450 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 450 100 L 520 80" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 520 80 L 600 90" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 600 90 L 670 130" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Nodes -->
+                <circle cx="100" cy="50" r="12" fill="#00356b"/>
+                <circle cx="150" cy="100" r="10" fill="#00356b"/>
+                <circle cx="200" cy="140" r="10" fill="#00356b"/>
+                <circle cx="280" cy="160" r="10" fill="#00356b"/>
+                <circle cx="380" cy="140" r="11" fill="#00356b"/>
+                <circle cx="450" cy="100" r="10" fill="#00356b"/>
+                <circle cx="520" cy="80" r="10" fill="#00356b"/>
+                <circle cx="600" cy="90" r="10" fill="#00356b"/>
+                <circle cx="670" cy="130" r="12" fill="#00356b"/>
+            </svg>
+            <div class="header-content">
+                <h1>Tax Planning Knowledge Diffusion via the Labor Market</h1>
+                <p class="tagline">How worker mobility transfers tax expertise across firms</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, John Gallemore</p>
+            <p><strong>Published in:</strong> <em>Management Science</em>, Vol. 70, No. 2 (February 2024), pp. 1194-1215</p>
+            <p><strong>Research Area:</strong> Taxation & Regulatory Economics</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3837396" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2023-barrios-tax-planning-knowledge-diffusion.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine how tax planning knowledge diffuses across firms through the labor market. Using comprehensive data on executive movements and tax planning outcomes, we investigate whether firms learn tax strategies from competitors by hiring employees who previously worked at firms with superior tax planning practices.
+            </p>
+            <p>
+                Our evidence suggests that worker mobility is an important channel for knowledge transfer in tax planning. Firms that hire executives from highly effective tax planning firms subsequently adopt more sophisticated tax strategies and achieve better tax outcomes. This effect is strongest when the hiring firm operates in the same industry as the origin firm, suggesting that industry-specific tax knowledge transfers most effectively through labor market channels.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-arrow-right-arrow-left"></i> Worker Mobility Effect</h3>
+                <p>Firms hiring executives from high-performing tax planning firms subsequently improve their own tax outcomes, suggesting direct knowledge transfer through labor markets.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-industry"></i> Industry Specificity</h3>
+                <p>Knowledge transfer is strongest within industries, indicating that tax strategies are industry-specific and require contextual understanding for effective implementation.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Quantifiable Impact</h3>
+                <p>Hiring from a high-tax-expertise firm is associated with measurable improvements in effective tax rates and tax planning sophistication.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-network-wired"></i> Spillover Effects</h3>
+                <p>Tax knowledge diffusion through worker mobility creates positive spillovers that benefit not only the hiring firm but also competitors in the labor market.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Results & Methodology</h2>
+
+            <div class="figure-container">
+                <div class="figure-title">Figure 1: Effect of Hiring from Tax-Aggressive Firms on Destination Firm's Effective Tax Rate</div>
+                <img src="figures/tax_planning_results.svg" alt="Figure 1: Tax Planning Results" class="figure-svg" style="width: 100%; height: auto;">
+                <div class="figure-note">
+                    <strong>Interpretation:</strong> The left panel shows that hiring an employee from a tax-aggressive firm reduces the destination firm's cash effective tax rate (ETR) by 2.0 to 3.7 percentage points, depending on model specification. All effects are statistically significant (*** p&lt;0.01 or ** p&lt;0.05). The right panel demonstrates robustness across alternative specifications and definitions of "tax-aggressive" status, with coefficients ranging from -2.2% to -3.7%. This suggests strong and consistent evidence that tax planning knowledge transfers through employee mobility.
+                </div>
+            </div>
+
+            <div class="figure-container">
+                <div class="figure-title">Figure 2: Labor Market Channel for Tax Planning Knowledge Diffusion</div>
+                <img src="figures/tax_planning_mechanism.svg" alt="Figure 2: Tax Planning Mechanism" class="figure-svg" style="width: 100%; height: auto;">
+                <div class="figure-note">
+                    <strong>Mechanism:</strong> The diagram illustrates the four-stage process by which tax planning knowledge diffuses through labor markets: (1) Origin firm develops specialized tax expertise and achieves low effective tax rates; (2) Employee with this tacit knowledge is hired by destination firm; (3) Knowledge transfer occurs, enabling adoption of new tax strategies; (4) Destination firm achieves improved tax outcomes. Industry match and employee seniority moderate the strength of this effect.
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper contributes to our understanding of knowledge transfer mechanisms in corporate practice. We demonstrate that the labor market is a critical channel through which firms acquire and implement specialized expertise, particularly in technical domains like tax planning where knowledge is often tacit and embedded in experienced professionals.
+            </p>
+            <p>
+                Our findings have implications for understanding the role of human capital in firm performance and for analyzing how competitive advantages are sustained or eroded through labor market dynamics. The results suggest that controlling the mobility of tax professionals may be an important concern for firms seeking to maintain tax planning advantages.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, and John Gallemore. "Tax Planning Knowledge Diffusion via the Labor Market." <em>Management Science</em>, Vol. 70, No. 2 (February 2024), pp. 1194-1215.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3837396" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2023-barrios-tax-planning-knowledge-diffusion.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

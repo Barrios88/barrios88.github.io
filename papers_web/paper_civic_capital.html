@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Capital and Social Distancing — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #3a3632;
+            --text-light:      #6b6560;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', 'Georgia', serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.01em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.15rem 0;
+            border-bottom: 1.5px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--yale-rule);
+        }
+
+        .paper-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .paper-meta strong {
+            color: var(--text-body);
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--yale-blue-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            color: var(--text-body);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--yale-blue);
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-body);
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        @media (max-width: 600px) {
+            .paper-header h1 { font-size: 1.7rem; }
+            .action-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="paper-header">
+            <h1>Civic Capital and Social Distancing during the COVID-19 Pandemic</h1>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> John Manuel Barrios, Efraim Benmelech, Yael V. Hochberg, Paola Sapienza, and Luigi Zingales</p>
+                <p><strong>Published in:</strong> <em>Journal of Public Economics</em>, Vol. 193 (2021)</p>
+                <p><strong>Research Area:</strong> Political Economy & Social Capital</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3613417" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w27320" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> View on NBER
+            </a>
+            <a href="../papers/2021-barrios-civic-capital-social-distancing.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We study the role of civic capital in facilitating collective action during the early stages of the COVID-19 pandemic. Using real-time cellphone location data and variation in social distancing recommendations across U.S. counties, we examine whether areas with higher civic capital exhibited greater compliance with social distancing guidelines when formal enforcement was limited.
+            </p>
+            <p>
+                We find that counties with higher civic capital—measured by voter turnout, census response rates, and participation in community organizations—experienced significantly larger reductions in mobility and greater social distancing compliance following public health recommendations. A one-standard-deviation increase in civic capital is associated with a 10-15% greater reduction in movement. These effects are largest in the early weeks of the pandemic, before the widespread adoption of formal restrictions, suggesting that civic capital enables communities to coordinate on socially beneficial behaviors even without enforcement.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-handshake"></i> Civic Capital Drives Compliance</h3>
+                <p>Communities with higher civic capital showed 10-15% greater reductions in mobility and stronger adherence to social distancing recommendations, even before mandatory restrictions.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-clock"></i> Early Response Advantage</h3>
+                <p>The civic capital effect was strongest in the critical early weeks of the pandemic, when voluntary compliance was most important for slowing disease spread.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-hospital"></i> Health Outcomes</h3>
+                <p>Higher civic capital areas experienced slower initial growth rates of COVID-19 cases and deaths, suggesting that collective action had real public health consequences.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-users-between-lines"></i> Substitute for Enforcement</h3>
+                <p>Civic capital acted as a substitute for formal enforcement mechanisms, with the strongest effects observed where government capacity or willingness to enforce restrictions was limited.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Figures</h2>
+
+            <div style="margin: 2rem 0; background: var(--yale-cream); padding: 1.5rem; border-radius: 3px; border: 1px solid var(--yale-rule);">
+                <h3 style="color: var(--yale-blue); font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600;">Figure 1: Key Empirical Results</h3>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Summary of regression coefficients and aggregate effects showing how civic capital measures translate into social distancing compliance during the COVID-19 pandemic. The four panels illustrate: (1) regression coefficients for state mandates and national guidelines; (2) aggregate effects comparing low and high civic capital counties; (3) mask usage patterns by civic capital level; and (4) individual-level effects of trust in others on social contact reductions.
+                </p>
+                <img src="figures/civic_capital_results.svg" alt="Figure 1: Key Empirical Results" style="width: 100%; max-width: 900px; height: auto; border: 1px solid var(--yale-rule); border-radius: 2px;">
+            </div>
+
+            <div style="margin: 2rem 0; background: var(--yale-cream); padding: 1.5rem; border-radius: 3px; border: 1px solid var(--yale-rule);">
+                <h3 style="color: var(--yale-blue); font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600;">Figure 2: Civic Capital Mechanism</h3>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Conceptual diagram of how civic capital measures translate into pandemic behavioral responses. Civic capital—aggregated from voter participation, census response, and community organization density—shapes behavioral outcomes through two primary mechanisms: (1) individuals internalizing externalities (caring about community welfare), and (2) mutual expectations that others will also comply with social norms.
+                </p>
+                <img src="figures/civic_capital_mechanism.svg" alt="Figure 2: Civic Capital Mechanism" style="width: 100%; max-width: 900px; height: auto; border: 1px solid var(--yale-rule); border-radius: 2px;">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper makes several contributions to our understanding of civic capital and collective action. First, we provide large-scale empirical evidence that civic capital facilitates coordination on socially beneficial behaviors during crises. While prior research has documented correlations between civic capital and various social outcomes, the pandemic provides a unique natural experiment where the returns to collective action were clear and immediate.
+            </p>
+            <p>
+                Second, we demonstrate that civic capital can act as a substitute for formal enforcement and government capacity. This has important implications for understanding how communities respond to crises and for evaluating policies that rely on voluntary compliance. The results suggest that investments in civic capital may have important option value during emergencies when formal institutions are overwhelmed or slow to respond.
+            </p>
+            <p>
+                Third, we contribute to the growing literature on the political economy of the COVID-19 pandemic. Our findings show that beyond partisan politics and policy choices, underlying social capital shapes how communities respond to public health threats. This heterogeneity in collective action capacity has important implications for pandemic preparedness and response strategies.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Measurement and Identification</h2>
+            <p>
+                We measure civic capital using three complementary proxies: historical voter turnout rates (2016 presidential election), census mail-in response rates (2010 census), and density of community organizations (from the County Business Patterns database). These measures capture different dimensions of civic engagement and cooperative behavior.
+            </p>
+            <p>
+                Our identification strategy exploits the timing of public health recommendations and the availability of real-time mobility data from cellphone pings. We use a difference-in-differences approach comparing mobility changes in high versus low civic capital counties before and after social distancing recommendations, controlling for a rich set of demographic, economic, and political characteristics.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Policy Implications</h2>
+            <p>
+                Our findings highlight the importance of social capital for crisis response and pandemic preparedness. Policies that strengthen civic institutions and community engagement may have important positive externalities during emergencies by facilitating voluntary compliance with public health measures.
+            </p>
+            <p>
+                The results also suggest that public health communication strategies should be tailored to account for variation in civic capital across communities. In areas with lower civic capital, more intensive enforcement or stronger incentives may be necessary to achieve similar levels of compliance. Understanding this heterogeneity can improve the effectiveness and equity of pandemic response policies.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Efraim Benmelech, Yael V. Hochberg, Paola Sapienza, and Luigi Zingales. "Civic Capital and Social Distancing during the COVID-19 Pandemic." <em>Journal of Public Economics</em> 193 (2021): 104310.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2021-barrios-civic-capital-social-distancing.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>

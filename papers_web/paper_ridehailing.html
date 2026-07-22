@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cost of Convenience — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Road/traffic network with increasing density -->
+                <line x1="50" y1="100" x2="200" y2="100" stroke="#00356b" stroke-width="4"/>
+                <line x1="200" y1="80" x2="350" y2="80" stroke="#00356b" stroke-width="3.5"/>
+                <line x1="200" y1="100" x2="350" y2="100" stroke="#00356b" stroke-width="3.5"/>
+                <line x1="200" y1="120" x2="350" y2="120" stroke="#00356b" stroke-width="3.5"/>
+
+                <line x1="350" y1="60" x2="500" y2="60" stroke="#bd5319" stroke-width="3"/>
+                <line x1="350" y1="80" x2="500" y2="80" stroke="#bd5319" stroke-width="3"/>
+                <line x1="350" y1="100" x2="500" y2="100" stroke="#bd5319" stroke-width="3"/>
+                <line x1="350" y1="120" x2="500" y2="120" stroke="#bd5319" stroke-width="3"/>
+                <line x1="350" y1="140" x2="500" y2="140" stroke="#bd5319" stroke-width="3"/>
+
+                <line x1="500" y1="50" x2="650" y2="50" stroke="#bd5319" stroke-width="2.5"/>
+                <line x1="500" y1="70" x2="650" y2="70" stroke="#bd5319" stroke-width="2.5"/>
+                <line x1="500" y1="90" x2="650" y2="90" stroke="#bd5319" stroke-width="2.5"/>
+                <line x1="500" y1="110" x2="650" y2="110" stroke="#bd5319" stroke-width="2.5"/>
+                <line x1="500" y1="130" x2="650" y2="130" stroke="#bd5319" stroke-width="2.5"/>
+                <line x1="500" y1="150" x2="650" y2="150" stroke="#bd5319" stroke-width="2.5"/>
+
+                <circle cx="200" cy="100" r="8" fill="#00356b"/>
+                <circle cx="350" cy="100" r="8" fill="#bd5319"/>
+                <circle cx="500" cy="100" r="8" fill="#bd5319"/>
+            </svg>
+            <div class="header-content">
+                <h1>The Cost of Convenience: Ridehailing and Traffic Fatalities</h1>
+                <p class="tagline">Quantifying the unintended public safety consequences of transportation innovation</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Yael V. Hochberg, and Hanyi Yi</p>
+            <p><strong>Published in:</strong> <em>Journal of Operations Management</em>, Vol. 69 (2023): 823-855</p>
+            <p><strong>Research Area:</strong> Market Structure & Antitrust</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3361227" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w26783" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> NBER Working Paper
+            </a>
+            <a href="../papers/2022-barrios-cost-convenience-ridehailing.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine the impact of ridehailing services (Uber and Lyft) on traffic fatalities using variation in the timing of ridehailing entry across U.S. cities. While proponents argue that ridehailing reduces drunk driving by providing convenient alternatives to driving under the influence, the net effect on traffic safety depends on how ridehailing affects overall vehicle miles traveled (VMT) and traffic congestion.
+            </p>
+            <p>
+                Using difference-in-differences analysis exploiting staggered entry timing, we find that ridehailing entry is associated with approximately 3% increase in total traffic fatalities and fatal accidents (2-4% range). This increase is driven primarily by higher fatality rates in cities with greater ridehailing penetration and during peak usage hours. The evidence suggests that increased VMT and congestion from ridehailing services offset any reduction in drunk-driving incidents, resulting in a net increase in traffic deaths. Back-of-the-envelope estimates suggest an annual cost of approximately $5.33 billion to $13.24 billion in human lives.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-arrow-trend-up"></i> Increased Traffic Fatalities</h3>
+                <p>Ridehailing entry is associated with approximately 3% increase in fatal accidents and fatalities (2-4% range), with larger effects in cities with higher ridehailing adoption rates.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-clock"></i> Time Patterns</h3>
+                <p>The fatality increase is concentrated during evening and weekend hours when ridehailing usage peaks, suggesting the effect operates through increased traffic volume.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-road"></i> Mechanism</h3>
+                <p>Evidence points to increased vehicle miles traveled (VMT) and traffic congestion as the primary mechanisms, overwhelming any drunk-driving reduction benefits.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-scale-unbalanced"></i> Policy Trade-offs</h3>
+                <p>The findings reveal an important externality: individual convenience gains from ridehailing impose collective public safety costs through increased traffic exposure.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Results and Mechanisms</h2>
+
+            <div style="margin: 1.5rem 0; background: var(--yale-cream); padding: 1.5rem; border-radius: 4px; border-left: 3px solid var(--yale-blue);">
+                <h3 style="color: var(--yale-blue); margin-bottom: 1rem;">Figure 1: Key Results</h3>
+                <img src="figures/ridehailing_results.svg" alt="Figure 1: Ridehailing Key Results" style="width: 100%; height: auto; border: 1px solid #d4d0c8; border-radius: 2px;">
+                <p style="font-size: 0.9rem; color: #63605b; margin-top: 0.75rem; font-style: italic;">
+                    This figure shows the main quantitative findings: a 3% increase in fatal accidents and fatalities for both vehicle occupants and pedestrians, with mechanisms through vehicle miles traveled, traffic congestion, and behavioral effects.
+                </p>
+            </div>
+
+            <div style="margin: 1.5rem 0; background: var(--yale-cream); padding: 1.5rem; border-radius: 4px; border-left: 3px solid var(--yale-blue);">
+                <h3 style="color: var(--yale-blue); margin-bottom: 1rem;">Figure 2: Causal Mechanism Diagram</h3>
+                <img src="figures/ridehailing_mechanism.svg" alt="Figure 2: Ridehailing Mechanism" style="width: 100%; height: auto; border: 1px solid #d4d0c8; border-radius: 2px;">
+                <p style="font-size: 0.9rem; color: #63605b; margin-top: 0.75rem; font-style: italic;">
+                    This diagram illustrates the causal channels through which ridehailing entry increases fatalities: increased vehicle miles traveled (VMT), traffic congestion, and driver behavioral changes. While ridehailing reduces drunk driving, the net effect is an increase in fatalities due to the magnitude of VMT and congestion effects.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Yael V. Hochberg, and Hanyi Yi. "The Cost of Convenience: Ridehailing and Traffic Fatalities." <em>Journal of Operations Management</em> 69 (2023): 823-855.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2022-barrios-cost-convenience-ridehailing.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

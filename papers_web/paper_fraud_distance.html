@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud at a Distance — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- In-person collusion → Remote work → Disrupted coordination → Lower misconduct -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <!-- In-person / collusion -->
+                <rect x="40" y="60" width="110" height="80" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="95" y="95" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">In-Person</text>
+                <text x="95" y="110" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Collusion</text>
+                <text x="95" y="165" text-anchor="middle" font-size="8" fill="#00356b" font-weight="600">Coordination, trust</text>
+
+                <path d="M 150 100 L 210 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Remote work -->
+                <rect x="230" y="60" width="100" height="80" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="280" y="105" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Remote Work</text>
+                <text x="280" y="165" text-anchor="middle" font-size="8" fill="#00356b" font-weight="600">WFH shift (COVID)</text>
+
+                <path d="M 330 100 L 390 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Disrupted coordination -->
+                <rect x="400" y="55" width="120" height="50" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="460" y="82" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Higher coordination cost,</text>
+                <text x="460" y="95" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">auditable channels</text>
+
+                <path d="M 460 110 L 460 145" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+
+                <!-- Lower misconduct -->
+                <circle cx="460" cy="170" r="32" fill="none" stroke="#00356b" stroke-width="2.5"/>
+                <text x="460" y="165" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Lower</text>
+                <text x="460" y="180" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Misconduct</text>
+            </svg>
+            <div class="header-content">
+                <h1>Fraud at a Distance? How Remote Work Shapes Financial Misconduct</h1>
+                <p class="tagline">Collusion, coordination costs, and why remote work reduced financial misconduct</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Jessie Jianwen Guo, Yanping Zhu</p>
+            <p><strong>Research Area:</strong> Financial Misconduct; Remote Work; Collusion; Corporate Governance</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2026-barrios-fraud-distance.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <figure class="paper-summary-fig" style="max-width: 100%; margin: 2rem 0;">
+            <img src="figures/fraud_distance_results.svg" alt="Figure 1: Key results showing misconduct decline, faster detection, and cross-sectional heterogeneity" style="width: 100%; height: auto; max-width: 900px; margin: 0 auto; display: block;">
+            <figcaption style="font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; text-align: center;">
+                <strong>Figure 1: Key Results.</strong> Panel A shows misconduct decline from Q1 to Q3 WFH feasibility (~2pp); Panel B shows 52% faster detection for high-WFH firms; Panel C shows cross-sectional effects in high-teamwork, strong-controls, and weak-culture firms.
+            </figcaption>
+        </figure>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                Financial misconduct is usually a team activity. It depends on coordination among insiders—face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.
+            </p>
+            <p>
+                Firms that could operate more remotely experienced large post-2020 declines in misconduct. The result holds for Rule 10b-5 class actions, fraudulent restatements, and discretionary accruals; we measure misconduct in the year committed, not detected. The decline is consistent with remote work disrupting the “technology of collusion”: physical separation raises coordination costs, moves communication onto auditable channels, and weakens the informal glue that sustains illicit cooperation. Cross-sectional tests support this mechanism—stronger declines in teamwork-intensive firms, firms with effective internal controls (where fraud typically requires collusion to override safeguards), and firms with weaker pre-COVID employee perceptions of culture and leadership. Detection lags also fell for high-WFH firms, and we find no evidence that monitoring of financial reporting weakened. Overall, financial misconduct is sensitive to organizational structure; remote work made collusion harder and misconduct fell.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Declines in Misconduct</h3>
+                <p>Firms with higher pre-COVID work-from-home feasibility saw large post-2020 declines in financial misconduct. The result appears across 10b-5 lawsuits, fraudulent restatements, and discretionary accruals, and is robust to alternative WFH measures.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-people-group"></i> Collusion, Not Monitoring</h3>
+                <p>Fraud is a team activity. Remote work disrupts collusion—it separates potential co-conspirators, shifts talk onto auditable digital channels, and raises the cost of coordinating and sustaining illicit agreements. The data point to this mechanism rather than to a simple “weaker oversight” story.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> Cross-Section: Where Collusion Mattered Most</h3>
+                <p>The decline in misconduct is nearly twice as large in high-teamwork firms. It is also stronger in firms with effective internal controls (SOX 302/404), where overriding safeguards usually requires collusion, and in firms with weaker pre-COVID employee perceptions of leadership and culture—settings that relied more on in-person relational coordination.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-clock"></i> Detection and Incidence</h3>
+                <p>Detection lags fell: time from fraud onset to class-action filing dropped by approximately 52 percent for high-WFH firms after 2020. Discretionary accruals (a continuous misreporting proxy that does not depend on ex post discovery) also declined. We find no evidence that monitoring of financial reporting weakened for these firms. The pattern is consistent with a real drop in misreporting, not a change in detection.</p>
+            </div>
+        </section>
+
+        <figure class="paper-mechanism-fig" style="max-width: 100%; margin: 3rem 0;">
+            <img src="figures/fraud_distance_mechanism.svg" alt="Figure 2: Fraud Distance Mechanism" style="width: 100%; height: auto; max-width: 900px; margin: 0 auto; display: block;">
+            <figcaption style="font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; text-align: center;">
+                <strong>Figure 2: Mechanism.</strong> Remote work shifts firms from in-person coordination to digital-only work, which raises coordination costs, moves communication onto auditable channels, and weakens informal trust. These three channels combine to make collusion harder, reducing financial misconduct by approximately 2 percentage points.
+            </figcaption>
+        </figure>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                We show that financial misconduct is sensitive to how the firm is organized. Fraud is often collusive; remote work raises the cost of that collusion. The result is new evidence that the organizational setting—not only incentives and governance—has first-order effects on fraud, and that the feasibility of coordination shapes the incidence of misreporting.
+            </p>
+            <p>
+                We also introduce a firm-level measure of WFH feasibility (combining LinkUp job postings and Revelio Labs workforce data with O*NET teleworkability), which varies by firm even within industry and location. That measure strengthens identification and is of use for future work on how remote work affects firm behavior and capital markets.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Jessie Jianwen Guo, and Yanping Zhu. "Fraud at a Distance? How Remote Work Shapes Financial Misconduct." Working Paper.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2026-barrios-fraud-distance.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

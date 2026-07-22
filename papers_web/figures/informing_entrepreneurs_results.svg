@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" width="1000" height="620">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #00356b; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #63605b; }
+      .panel-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #00356b; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #63605b; }
+      .data-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; }
+      .note-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #63605b; font-style: italic; }
+      .bar-value { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; }
+      .grid { stroke: #e8e3db; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="620" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" class="title">Key Results: IPOs and Local Entrepreneurship</text>
+  <text x="500" y="55" text-anchor="middle" class="subtitle">Difference-in-differences at the U.S. county-quarter level</text>
+
+  <!-- ═══════════ Panel A: Business Registration Effect ═══════════ -->
+  <rect x="40" y="80" width="290" height="260" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+  <text x="185" y="105" text-anchor="middle" class="panel-title">(A) New Business Registrations</text>
+
+  <!-- Y-axis -->
+  <line x1="90" y1="130" x2="90" y2="300" stroke="#63605b" stroke-width="1.5"/>
+  <line x1="90" y1="300" x2="305" y2="300" stroke="#63605b" stroke-width="1.5"/>
+
+  <!-- Grid -->
+  <line x1="90" y1="266" x2="305" y2="266" class="grid" stroke-dasharray="3,3"/>
+  <line x1="90" y1="232" x2="305" y2="232" class="grid" stroke-dasharray="3,3"/>
+  <line x1="90" y1="198" x2="305" y2="198" class="grid" stroke-dasharray="3,3"/>
+  <line x1="90" y1="164" x2="305" y2="164" class="grid" stroke-dasharray="3,3"/>
+
+  <!-- Y labels -->
+  <text x="82" y="304" text-anchor="end" class="axis-label">0%</text>
+  <text x="82" y="236" text-anchor="end" class="axis-label">+2%</text>
+  <text x="82" y="168" text-anchor="end" class="axis-label">+4%</text>
+
+  <!-- Baseline bar -->
+  <rect x="120" y="230" width="60" height="70" fill="#00356b" rx="3" opacity="0.35"/>
+  <text x="150" y="222" text-anchor="middle" class="bar-value" fill="#00356b">Baseline</text>
+
+  <!-- Post-IPO bar showing +1% to +4% range -->
+  <rect x="230" y="164" width="60" height="136" fill="#bd5319" rx="3" opacity="0.2"/>
+  <rect x="230" y="232" width="60" height="68" fill="#bd5319" rx="3"/>
+  <text x="260" y="156" text-anchor="middle" class="bar-value" fill="#bd5319">+1% to +4%</text>
+
+  <!-- X labels -->
+  <text x="150" y="318" text-anchor="middle" class="axis-label">No Local IPO</text>
+  <text x="260" y="318" text-anchor="middle" class="axis-label">Post-IPO Quarter</text>
+
+  <!-- ═══════════ Panel B: Uncertainty Interaction ═══════════ -->
+  <rect x="355" y="80" width="290" height="260" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+  <text x="500" y="105" text-anchor="middle" class="panel-title">(B) Stronger Under Uncertainty</text>
+
+  <!-- Low uncertainty row -->
+  <text x="375" y="147" class="axis-label" font-weight="500">Low Economic Uncertainty</text>
+  <rect x="375" y="158" width="80" height="22" fill="#1a4f8a" rx="2"/>
+  <text x="465" y="174" class="data-label" fill="#1a4f8a">Small</text>
+
+  <!-- High uncertainty row -->
+  <text x="375" y="215" class="axis-label" font-weight="500">High Economic Uncertainty</text>
+  <rect x="375" y="226" width="155" height="22" fill="#bd5319" rx="2"/>
+  <text x="540" y="242" class="data-label" fill="#bd5319">Large</text>
+
+  <!-- Insight box -->
+  <rect x="370" y="275" width="260" height="50" fill="#fff3e0" stroke="#d97633" stroke-width="1" rx="3"/>
+  <text x="500" y="296" text-anchor="middle" class="note-text" fill="#92400e" font-style="normal" font-weight="600">IPOs reduce uncertainty</text>
+  <text x="500" y="312" text-anchor="middle" class="note-text" fill="#3a3632">Effect strongest where uncertainty is highest</text>
+
+  <!-- ═══════════ Panel C: Information Channel Evidence ═══════════ -->
+  <rect x="670" y="80" width="290" height="260" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+  <text x="815" y="105" text-anchor="middle" class="panel-title">(C) Direct Information Channel</text>
+
+  <!-- Evidence items -->
+  <rect x="690" y="125" width="250" height="55" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="815" y="149" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">EDGAR Downloads</text>
+  <text x="815" y="170" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#bd5319">Rise in IPO counties</text>
+
+  <rect x="690" y="195" width="250" height="55" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="815" y="219" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">S-1 Content Richness</text>
+  <text x="815" y="240" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#bd5319">Amplifies effect</text>
+
+  <rect x="690" y="265" width="250" height="55" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="815" y="289" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">Private-to-Public IPOs</text>
+  <text x="815" y="310" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#bd5319">Concentrated effect</text>
+
+  <!-- ═══════════ Panel D: Survey Evidence ═══════════ -->
+  <rect x="40" y="365" width="920" height="120" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+  <text x="500" y="393" text-anchor="middle" class="panel-title">(D) Field Survey of 503 Entrepreneurs</text>
+
+  <rect x="65" y="408" width="265" height="58" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="197" y="430" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">Awareness of Local IPOs</text>
+  <text x="197" y="453" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#00356b">2.07 IPOs known (avg.)</text>
+
+  <rect x="368" y="408" width="265" height="58" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="500" y="430" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">IPO Info Influenced Decision</text>
+  <text x="500" y="453" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#bd5319">~50% of respondents</text>
+
+  <rect x="670" y="408" width="265" height="58" fill="#f0f4f8" stroke="#d4cfc8" stroke-width="1" rx="4"/>
+  <text x="803" y="430" text-anchor="middle" class="axis-label" font-weight="600" fill="#00356b">Information Sources Used</text>
+  <text x="803" y="453" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#00356b">Media, SEC filings, websites</text>
+
+  <!-- ═══════════ Key Takeaway ═══════════ -->
+  <rect x="120" y="515" width="760" height="55" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5" rx="4"/>
+  <text x="500" y="537" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#00356b">Key Finding</text>
+  <text x="500" y="557" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#3a3632">Local IPOs increase entrepreneurship by 1-4%, driven by information spillovers from public disclosures</text>
+
+  <!-- Footer -->
+  <text x="500" y="608" text-anchor="middle" class="note-text">Data: Startup Cartography Project (business registrations), EDGAR (SEC filings), Google Trends, field survey. SSRN 3640736.</text>
+</svg>

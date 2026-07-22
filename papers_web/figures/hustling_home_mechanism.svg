@@ -1,0 +1,147 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      .title { font-size: 22px; font-weight: bold; font-family: 'Helvetica Neue', Arial, sans-serif; }
+      .subtitle { font-size: 13px; font-style: italic; font-family: 'Helvetica Neue', Arial, sans-serif; }
+      .box-title { font-size: 14px; font-weight: bold; font-family: 'Helvetica Neue', Arial, sans-serif; }
+      .box-text { font-size: 12px; font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.5; }
+      .arrow-label { font-size: 11px; font-weight: 600; font-family: 'Helvetica Neue', Arial, sans-serif; }
+      .mechanism-label { font-size: 10px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+    </marker>
+    <marker id="arrowhead-accent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title" fill="#00356b">
+    How WFH Potential Affects Entrepreneurial Entry:
+  </text>
+  <text x="450" y="60" text-anchor="middle" class="title" fill="#00356b">
+    The Substitution Mechanism
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="83" text-anchor="middle" class="subtitle" fill="#63605b">
+    Telework potential reduces the non-pecuniary advantage of entrepreneurship
+  </text>
+
+  <!-- ===== TOP ROW: PRE-PANDEMIC SCENARIO ===== -->
+
+  <!-- Pre-pandemic header -->
+  <text x="100" y="120" class="subtitle" fill="#00356b" font-weight="bold" font-size="13px">PRE-PANDEMIC BASELINE</text>
+
+  <!-- Box 1: High Telework Potential -->
+  <rect x="30" y="135" width="200" height="110" rx="5" fill="#f9f7f4" stroke="#00356b" stroke-width="2"/>
+  <text x="130" y="160" text-anchor="middle" class="box-title" fill="#00356b">High Telework Potential</text>
+  <text x="50" y="185" class="box-text" fill="#3a3632">
+    <tspan x="50" dy="0">• Jobs can be done</tspan>
+    <tspan x="50" dy="16">  from home</tspan>
+    <tspan x="50" dy="16">• Latent flexibility</tspan>
+    <tspan x="50" dy="16">• Workers aware</tspan>
+  </text>
+
+  <!-- Arrow 1a: Pre-pandemic path -->
+  <path d="M 230 190 L 310 190" stroke="#00356b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="270" y="180" text-anchor="middle" class="mechanism-label" fill="#00356b" font-weight="600">But not realized</text>
+
+  <!-- Box 2: Entrepreneurship Advantage (Pre-pandemic) -->
+  <rect x="310" y="135" width="200" height="110" rx="5" fill="#f9f7f4" stroke="#00356b" stroke-width="2"/>
+  <text x="410" y="160" text-anchor="middle" class="box-title" fill="#00356b">Entrepreneurship Advantage</text>
+  <text x="330" y="185" class="box-text" fill="#3a3632">
+    <tspan x="330" dy="0">• Flexibility in scheduling</tspan>
+    <tspan x="330" dy="16">• Control over work</tspan>
+    <tspan x="330" dy="16">• Autonomy valued</tspan>
+    <tspan x="330" dy="16">• Key attraction for entry</tspan>
+  </text>
+
+  <!-- Arrow 1b: To entrepreneurship -->
+  <path d="M 510 190 L 590 190" stroke="#00356b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="550" y="180" text-anchor="middle" class="mechanism-label" fill="#00356b" font-weight="600">Increases</text>
+
+  <!-- Box 3: Outcome (Pre-pandemic) -->
+  <rect x="590" y="135" width="190" height="110" rx="5" fill="#d4d0c8" stroke="#00356b" stroke-width="2"/>
+  <text x="685" y="160" text-anchor="middle" class="box-title" fill="#00356b">Higher Entry</text>
+  <text x="610" y="185" class="box-text" fill="#3a3632">
+    <tspan x="610" dy="0">• 14% more</tspan>
+    <tspan x="610" dy="16">  businesses per</tspan>
+    <tspan x="610" dy="16">  SD of telework</tspan>
+    <tspan x="610" dy="16">  potential</tspan>
+  </text>
+
+  <!-- Finding highlight 1 -->
+  <rect x="800" y="135" width="80" height="110" rx="5" fill="#f9f7f4" stroke="#bd5319" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="840" y="160" text-anchor="middle" class="box-title" fill="#bd5319">Pre-Pandemic</text>
+  <text x="820" y="185" class="box-text" fill="#3a3632" font-weight="bold">
+    <tspan x="820" dy="0">β = 0.14***</tspan>
+  </text>
+
+  <!-- ===== BOTTOM ROW: PANDEMIC SCENARIO ===== -->
+
+  <!-- Pandemic header -->
+  <text x="100" y="275" class="subtitle" fill="#00356b" font-weight="bold" font-size="13px">DURING PANDEMIC: WFH REALIZED</text>
+
+  <!-- Box 4: Realized WFH -->
+  <rect x="30" y="290" width="200" height="110" rx="5" fill="#f9f7f4" stroke="#bd5319" stroke-width="2"/>
+  <text x="130" y="315" text-anchor="middle" class="box-title" fill="#bd5319">Realized WFH in Traditional Employment</text>
+  <text x="50" y="340" class="box-text" fill="#3a3632">
+    <tspan x="50" dy="0">• COVID-19 shock</tspan>
+    <tspan x="50" dy="16">• Stay-at-home mandates</tspan>
+    <tspan x="50" dy="16">• Broad adoption of remote work</tspan>
+    <tspan x="50" dy="16">• Latent → actual flexibility</tspan>
+  </text>
+
+  <!-- Arrow 2a: Realized -->
+  <path d="M 230 345 L 310 345" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-accent)"/>
+  <text x="270" y="335" text-anchor="middle" class="mechanism-label" fill="#bd5319" font-weight="600">Substitutes for</text>
+
+  <!-- Box 5: Entrepreneurship Disadvantage (Pandemic) -->
+  <rect x="310" y="290" width="200" height="110" rx="5" fill="#f9f7f4" stroke="#bd5319" stroke-width="2"/>
+  <text x="410" y="315" text-anchor="middle" class="box-title" fill="#bd5319">Entrepreneurship Disadvantage</text>
+  <text x="330" y="340" class="box-text" fill="#3a3632">
+    <tspan x="330" dy="0">• Traditional jobs now offer</tspan>
+    <tspan x="330" dy="16">  flexibility too</tspan>
+    <tspan x="330" dy="16">• Main advantage eroded</tspan>
+    <tspan x="330" dy="16">• Less incentive to exit</tspan>
+  </text>
+
+  <!-- Arrow 2b: Reduces entry -->
+  <path d="M 510 345 L 590 345" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-accent)"/>
+  <text x="550" y="335" text-anchor="middle" class="mechanism-label" fill="#bd5319" font-weight="600">Reduces</text>
+
+  <!-- Box 6: Outcome (Pandemic) -->
+  <rect x="590" y="290" width="190" height="110" rx="5" fill="#f9f7f4" stroke="#bd5319" stroke-width="2"/>
+  <text x="685" y="315" text-anchor="middle" class="box-title" fill="#bd5319">Lower Entry Growth</text>
+  <text x="610" y="340" class="box-text" fill="#3a3632">
+    <tspan x="610" dy="0">• 7.2% smaller increase</tspan>
+    <tspan x="610" dy="16">  in new businesses</tspan>
+    <tspan x="610" dy="16">• ~8,000 fewer firms/qtr</tspan>
+    <tspan x="610" dy="16">  nationally</tspan>
+  </text>
+
+  <!-- Finding highlight 2 -->
+  <rect x="800" y="290" width="80" height="110" rx="5" fill="#f9f7f4" stroke="#bd5319" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="840" y="315" text-anchor="middle" class="box-title" fill="#bd5319">Substitution</text>
+  <text x="820" y="340" class="box-text" fill="#3a3632" font-weight="bold">
+    <tspan x="820" dy="0">β = -0.072***</tspan>
+  </text>
+
+  <!-- ===== BOTTOM: KEY INSIGHTS ===== -->
+
+  <!-- Insight box -->
+  <rect x="30" y="415" width="850" height="45" rx="5" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5"/>
+  <text x="55" y="437" class="box-text" fill="#3a3632" font-weight="bold">
+    <tspan x="55" dy="0">KEY INSIGHT:</tspan>
+  </text>
+  <text x="200" y="437" class="box-text" fill="#3a3632">
+    <tspan x="200" dy="0">When employers provide flexibility through WFH, entrepreneurship loses one of its primary non-pecuniary advantages.</tspan>
+    <tspan x="200" dy="16">This substitution effect is strongest for workers who value flexibility most—particularly women.</tspan>
+  </text>
+
+</svg>

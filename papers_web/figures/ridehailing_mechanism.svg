@@ -1,0 +1,132 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 20px; font-weight: 600; fill: #00356b; }
+      .subtitle-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #3a3632; }
+      .body-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; }
+      .label-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #00356b; font-weight: 600; }
+      .note-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #63605b; }
+      .arrow-line { stroke: #1a4f8a; stroke-width: 2.5; fill: none; }
+      .benefit-arrow { stroke: #2d7c4e; stroke-width: 2.5; fill: none; stroke-dasharray: 5,3; }
+      .arrowhead { fill: #1a4f8a; }
+      .benefit-arrowhead { fill: #2d7c4e; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" class="arrowhead"/>
+    </marker>
+    <marker id="benefit-arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" class="benefit-arrowhead"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#ffffff"/>
+
+  <!-- Main Title -->
+  <text x="450" y="30" class="title-text" text-anchor="middle">Mechanism: How Ridehailing Increases Traffic Fatalities</text>
+
+  <!-- LEFT SIDE: SHOCKS/ENTRY -->
+  <g id="entry-box">
+    <rect x="20" y="70" width="150" height="80" fill="#f9f7f4" stroke="#00356b" stroke-width="2.5" rx="6"/>
+    <text x="95" y="95" class="label-text" text-anchor="middle">Ridehailing</text>
+    <text x="95" y="115" class="label-text" text-anchor="middle">Entry</text>
+    <text x="95" y="135" class="body-text" text-anchor="middle" font-size="10">(Uber/Lyft)</text>
+  </g>
+
+  <!-- MIDDLE LAYER: MECHANISMS -->
+
+  <!-- Mechanism 1: VMT Channel -->
+  <g id="vmt-channel">
+    <!-- Arrow from entry to VMT -->
+    <path d="M 170 90 L 250 120" class="arrow-line" marker-end="url(#arrowhead)"/>
+
+    <!-- VMT Box -->
+    <rect x="250" y="70" width="150" height="80" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="6"/>
+    <text x="325" y="95" class="label-text" text-anchor="middle">Vehicle Miles</text>
+    <text x="325" y="115" class="label-text" text-anchor="middle">Traveled (VMT)</text>
+    <text x="325" y="135" class="body-text" text-anchor="middle" font-size="10">↑ Increases</text>
+
+    <!-- Explanation -->
+    <g id="vmt-detail">
+      <rect x="250" y="160" width="150" height="80" fill="#f9f7f4" stroke="#63605b" stroke-width="1" stroke-dasharray="3,2" rx="4"/>
+      <text x="325" y="178" class="subtitle-text" text-anchor="middle" font-size="11">Why VMT rises:</text>
+      <text x="258" y="200" class="body-text">• Drivers search for</text>
+      <text x="265" y="214" class="body-text">fares between rides</text>
+      <text x="258" y="228" class="body-text">• Substitution from</text>
+      <text x="265" y="242" class="body-text">transit/walking</text>
+    </g>
+  </g>
+
+  <!-- Mechanism 2: Congestion Channel -->
+  <g id="congestion-channel">
+    <!-- Arrow from entry to Congestion -->
+    <path d="M 170 110 L 520 140" class="arrow-line" marker-end="url(#arrowhead)"/>
+
+    <!-- Congestion Box -->
+    <rect x="520" y="70" width="150" height="80" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="6"/>
+    <text x="595" y="95" class="label-text" text-anchor="middle">Traffic</text>
+    <text x="595" y="115" class="label-text" text-anchor="middle">Congestion</text>
+    <text x="595" y="135" class="body-text" text-anchor="middle" font-size="10">↑ Worsens</text>
+
+    <!-- Explanation -->
+    <g id="congestion-detail">
+      <rect x="520" y="160" width="150" height="80" fill="#f9f7f4" stroke="#63605b" stroke-width="1" stroke-dasharray="3,2" rx="4"/>
+      <text x="595" y="178" class="subtitle-text" text-anchor="middle" font-size="11">Network effects:</text>
+      <text x="528" y="200" class="body-text">• More vehicles on</text>
+      <text x="535" y="214" class="body-text">roads, slower speeds</text>
+      <text x="528" y="228" class="body-text">• Concentrated in</text>
+      <text x="535" y="242" class="body-text">urban rush hours</text>
+    </g>
+  </g>
+
+  <!-- Mechanism 3: Behavioral Channel -->
+  <g id="behavioral-channel">
+    <!-- Arrow from entry to Behavior -->
+    <path d="M 170 130 L 790 140" class="arrow-line" marker-end="url(#arrowhead)"/>
+
+    <!-- Behavioral Box -->
+    <rect x="790" y="70" width="80" height="80" fill="#f9f7f4" stroke="#1a4f8a" stroke-width="2" rx="6"/>
+    <text x="830" y="95" class="label-text" text-anchor="middle" font-size="12">Driver</text>
+    <text x="830" y="115" class="label-text" text-anchor="middle" font-size="12">Behavior</text>
+    <text x="830" y="135" class="body-text" text-anchor="middle" font-size="10">Changes</text>
+  </g>
+
+  <!-- BOTTOM LAYER: MEDIATING CHANNELS -->
+
+  <!-- From VMT to Fatalities -->
+  <path d="M 325 250 L 360 280" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="335" y="265" class="note-text" fill="#1a4f8a">↑ Exposure</text>
+
+  <!-- From Congestion to Fatalities -->
+  <path d="M 595 250 L 560 280" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="575" y="265" class="note-text" fill="#1a4f8a">↓ Speed</text>
+
+  <!-- From Behavior to Fatalities -->
+  <path d="M 830 150 L 500 280" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="670" y="215" class="note-text" fill="#1a4f8a">Distraction, phone use</text>
+
+  <!-- OUTCOME BOX -->
+  <g id="outcome">
+    <rect x="350" y="290" width="180" height="90" fill="#ffe6d5" stroke="#bd5319" stroke-width="2.5" rx="6"/>
+    <text x="440" y="318" class="label-text" text-anchor="middle" font-size="14">Traffic Fatalities</text>
+    <text x="440" y="338" class="label-text" text-anchor="middle" font-size="14">↑ 3%</text>
+    <text x="440" y="355" class="body-text" text-anchor="middle" font-size="11">(2%-4% range)</text>
+    <text x="440" y="372" class="body-text" text-anchor="middle" font-size="11">$5.33B–$13.24B/year</text>
+  </g>
+
+  <!-- COUNTERVAILING BENEFIT (shown with dashed line) -->
+  <g id="benefit-channel">
+    <path d="M 170 110 Q 100 150 95 280" class="benefit-arrow" marker-end="url(#benefit-arrowhead)"/>
+    <rect x="20" y="280" width="140" height="80" fill="#f9f7f4" stroke="#2d7c4e" stroke-width="1.5" stroke-dasharray="3,2" rx="4"/>
+    <text x="90" y="305" class="body-text" text-anchor="middle" font-weight="600">Benefit:</text>
+    <text x="90" y="325" class="body-text" text-anchor="middle" font-size="11">↓ Drunk Driving</text>
+    <text x="90" y="345" class="note-text" text-anchor="middle" font-size="10">(offset by net</text>
+    <text x="90" y="358" class="note-text" text-anchor="middle" font-size="10">fatality increase)</text>
+  </g>
+
+  <!-- Bottom Note -->
+  <rect x="20" y="400" width="860" height="60" fill="#f9f7f4" stroke="#d4d0c8" stroke-width="1" rx="4"/>
+  <text x="450" y="420" class="subtitle-text" text-anchor="middle" font-size="12" font-weight="500">Key Finding</text>
+  <text x="450" y="440" class="body-text" text-anchor="middle" font-size="11">Increased VMT and congestion dominate any reduction in drunk-driving incidents,</text>
+  <text x="450" y="455" class="body-text" text-anchor="middle" font-size="11">resulting in a net increase in traffic fatalities. Effects concentrated in evening/weekend hours.</text>
+</svg>

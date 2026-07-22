@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1100 850" width="1100" height="850" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title and background -->
+  <defs>
+    <style type="text/css">
+      * { font-family: 'Helvetica Neue', Arial, sans-serif; }
+      .title { font-size: 24px; font-weight: bold; fill: #00356b; }
+      .subtitle { font-size: 16px; fill: #63605b; }
+      .box-title { font-size: 14px; font-weight: bold; fill: #f9f7f4; }
+      .box-text { font-size: 12px; fill: #f9f7f4; }
+      .outcome-text { font-size: 12px; fill: #f9f7f4; }
+      .data-text { font-size: 11px; fill: #63605b; }
+      .pathway-label { font-size: 13px; font-weight: bold; }
+      .blue-pathway { fill: #00356b; }
+      .orange-pathway { fill: #bd5319; }
+      .arrow { stroke-width: 2.5; fill: none; }
+    </style>
+
+    <!-- Arrow markers -->
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00356b"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#bd5319"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1100" height="850" fill="#f9f7f4"/>
+
+  <!-- Title Section -->
+  <text x="550" y="35" class="title" text-anchor="middle">
+    Two Mechanisms: How Financial Reporting Affects Productivity
+  </text>
+  <text x="550" y="58" class="subtitle" text-anchor="middle">
+    Measurement Matters: Financial Reporting and Productivity — Barrios, Fujiy, Lisowsky, and Minnis
+  </text>
+
+  <!-- ===== STARTING POINT: Audits/Financial Reporting ===== -->
+  <g>
+    <!-- Box: Financial Reporting / Audits -->
+    <rect x="380" y="80" width="340" height="90" rx="8" fill="#00356b" stroke="#00356b" stroke-width="2"/>
+    <text x="550" y="108" class="box-title" text-anchor="middle">Financial Reporting Quality</text>
+    <text x="550" y="128" class="box-text" text-anchor="middle">External Audits &amp; Certified Reviews</text>
+    <text x="550" y="148" class="box-text" text-anchor="middle" font-size="11">(high-quality reporting standards)</text>
+  </g>
+
+  <!-- ===== LEFT PATHWAY: MANAGERIAL TECHNOLOGY (BLUE) ===== -->
+
+  <!-- Pathway 1 Label -->
+  <text x="120" y="210" class="pathway-label blue-pathway">PATHWAY 1: Managerial Technology Channel</text>
+
+  <!-- Arrow from start to Pathway 1, Box 1 -->
+  <line x1="420" y1="170" x2="280" y2="230" class="arrow" stroke="#00356b" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 1: Information Quality -->
+  <g>
+    <rect x="60" y="230" width="320" height="100" rx="8" fill="#1a4f8a" stroke="#00356b" stroke-width="2"/>
+    <text x="220" y="258" class="box-title" text-anchor="middle">Improved Information Quality</text>
+    <text x="220" y="278" class="box-text" text-anchor="middle" font-size="11">Audits enhance precision of</text>
+    <text x="220" y="295" class="box-text" text-anchor="middle" font-size="11">internal financial information</text>
+    <text x="220" y="315" class="box-text" text-anchor="middle" font-size="11">available to managers</text>
+  </g>
+
+  <!-- Arrow: Box 1 → Box 2 -->
+  <line x1="220" y1="330" x2="220" y2="380" class="arrow" stroke="#00356b" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 2: Better Decisions -->
+  <g>
+    <rect x="60" y="380" width="320" height="100" rx="8" fill="#1a4f8a" stroke="#00356b" stroke-width="2"/>
+    <text x="220" y="408" class="box-title" text-anchor="middle">Better Managerial Decisions</text>
+    <text x="220" y="428" class="box-text" text-anchor="middle" font-size="11">Managers allocate resources more</text>
+    <text x="220" y="445" class="box-text" text-anchor="middle" font-size="11">efficiently, respond to market</text>
+    <text x="220" y="462" class="box-text" text-anchor="middle" font-size="11">conditions with greater precision</text>
+  </g>
+
+  <!-- Arrow: Box 2 → Box 3 -->
+  <line x1="220" y1="480" x2="220" y2="530" class="arrow" stroke="#00356b" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 3: Heterogeneous Effects -->
+  <g>
+    <rect x="50" y="530" width="340" height="120" rx="8" fill="#1a4f8a" stroke="#00356b" stroke-width="2"/>
+    <text x="220" y="558" class="box-title" text-anchor="middle">Heterogeneous Effects</text>
+    <text x="220" y="578" class="box-text" text-anchor="middle" font-size="11">Stronger in competitive industries,</text>
+    <text x="220" y="595" class="box-text" text-anchor="middle" font-size="11">low-margin sectors, younger firms</text>
+    <text x="220" y="615" class="box-text" text-anchor="middle" font-size="11">Complements management</text>
+    <text x="220" y="632" class="box-text" text-anchor="middle" font-size="11">practices (+2.2% interaction effect)</text>
+  </g>
+
+  <!-- ===== RIGHT PATHWAY: MEASUREMENT BIAS REDUCTION (ORANGE) ===== -->
+
+  <!-- Pathway 2 Label -->
+  <text x="720" y="210" class="pathway-label orange-pathway">PATHWAY 2: Measurement Bias Reduction Channel</text>
+
+  <!-- Arrow from start to Pathway 2, Box 1 -->
+  <line x1="680" y1="170" x2="820" y2="230" class="arrow" stroke="#bd5319" marker-end="url(#arrowOrange)"/>
+
+  <!-- Box 1: Tax Incentives and Underreporting -->
+  <g>
+    <rect x="720" y="230" width="320" height="100" rx="8" fill="#d97e3d" stroke="#bd5319" stroke-width="2"/>
+    <text x="880" y="258" class="box-title" text-anchor="middle">Tax Incentives Create Bias</text>
+    <text x="880" y="278" class="box-text" text-anchor="middle" font-size="11">Firms underreport production</text>
+    <text x="880" y="295" class="box-text" text-anchor="middle" font-size="11">levels to minimize tax liabilities,</text>
+    <text x="880" y="315" class="box-text" text-anchor="middle" font-size="11">creating measurement distortion</text>
+  </g>
+
+  <!-- Arrow: Box 1 → Box 2 -->
+  <line x1="880" y1="330" x2="880" y2="380" class="arrow" stroke="#bd5319" marker-end="url(#arrowOrange)"/>
+
+  <!-- Box 2: Audits Constrain Underreporting -->
+  <g>
+    <rect x="730" y="380" width="300" height="100" rx="8" fill="#d97e3d" stroke="#bd5319" stroke-width="2"/>
+    <text x="880" y="408" class="box-title" text-anchor="middle">Audits Constrain Underreporting</text>
+    <text x="880" y="428" class="box-text" text-anchor="middle" font-size="11">External auditors identify and</text>
+    <text x="880" y="445" class="box-text" text-anchor="middle" font-size="11">prevent misreporting of production</text>
+    <text x="880" y="462" class="box-text" text-anchor="middle" font-size="11">levels and income</text>
+  </g>
+
+  <!-- Arrow: Box 2 → Box 3 -->
+  <line x1="880" y1="480" x2="880" y2="530" class="arrow" stroke="#bd5319" marker-end="url(#arrowOrange)"/>
+
+  <!-- Box 3: Reduces Measurement Distortion -->
+  <g>
+    <rect x="730" y="530" width="300" height="120" rx="8" fill="#d97e3d" stroke="#bd5319" stroke-width="2"/>
+    <text x="880" y="558" class="box-title" text-anchor="middle">Reduced Measurement Bias</text>
+    <text x="880" y="578" class="box-text" text-anchor="middle" font-size="11">Effect is 2× stronger in</text>
+    <text x="880" y="595" class="box-text" text-anchor="middle" font-size="11">high-tax states (e.g., California)</text>
+    <text x="880" y="615" class="box-text" text-anchor="middle" font-size="11">compared to low-tax states</text>
+    <text x="880" y="632" class="box-text" text-anchor="middle" font-size="11">(e.g., Texas)</text>
+  </g>
+
+  <!-- ===== COMBINED OUTCOMES ===== -->
+
+  <!-- Arrows converging to outcomes -->
+  <line x1="220" y1="650" x2="380" y2="705" class="arrow" stroke="#00356b" marker-end="url(#arrowBlue)"/>
+  <line x1="880" y1="650" x2="720" y2="705" class="arrow" stroke="#bd5319" marker-end="url(#arrowOrange)"/>
+
+  <!-- Combined Outcomes Box -->
+  <g>
+    <rect x="330" y="705" width="440" height="100" rx="8" fill="#63605b" stroke="#00356b" stroke-width="2"/>
+    <text x="550" y="730" class="outcome-text" text-anchor="middle" font-weight="bold">Combined Effects on Firm Outcomes</text>
+    <text x="550" y="752" class="outcome-text" text-anchor="middle" font-size="12">+6.3% survival premium  •  10-20% of TFP dispersion explained</text>
+    <text x="550" y="772" class="outcome-text" text-anchor="middle" font-size="12">+2.5-3% true productivity gains  •  +10-12% TFP improvement with audits</text>
+  </g>
+
+  <!-- ===== DATA SOURCES FOOTER ===== -->
+  <text x="30" y="800" class="data-text" font-weight="bold">Data Sources:</text>
+  <text x="30" y="820" class="data-text" font-size="10">
+    U.S. Census Bureau (MOPS 2021)  •  IRS Tax Returns (2008-2010)  •  Sageworks Financial Records (2002-2008)
+  </text>
+
+</svg>

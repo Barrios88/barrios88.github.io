@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staggeringly Problematic — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Timeline with staggered treatment -->
+                <!-- Time axis -->
+                <line x1="50" y1="100" x2="750" y2="100" stroke="#00356b" stroke-width="2"/>
+
+                <!-- Pre-treatment period -->
+                <rect x="50" y="85" width="100" height="30" fill="none" stroke="#00356b" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <text x="100" y="120" text-anchor="middle" font-size="10" fill="#00356b">Pre-period</text>
+
+                <!-- First treatment at t1 -->
+                <line x1="180" y1="90" x2="180" y2="110" stroke="#00356b" stroke-width="2"/>
+                <circle cx="180" cy="100" r="8" fill="#00356b"/>
+                <text x="180" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₁</text>
+
+                <!-- Group 1 treated -->
+                <rect x="190" y="60" width="80" height="20" fill="#00356b" opacity="0.3" rx="2"/>
+                <text x="230" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 1</text>
+
+                <!-- Second treatment at t2 -->
+                <line x1="370" y1="90" x2="370" y2="110" stroke="#00356b" stroke-width="2"/>
+                <circle cx="370" cy="100" r="8" fill="#00356b"/>
+                <text x="370" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₂</text>
+
+                <!-- Group 2 treated -->
+                <rect x="380" y="60" width="80" height="20" fill="#00356b" opacity="0.5" rx="2"/>
+                <text x="420" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 2</text>
+
+                <!-- Third treatment at t3 -->
+                <line x1="560" y1="90" x2="560" y2="110" stroke="#00356b" stroke-width="2"/>
+                <circle cx="560" cy="100" r="8" fill="#00356b"/>
+                <text x="560" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₃</text>
+
+                <!-- Group 3 treated -->
+                <rect x="570" y="60" width="80" height="20" fill="#00356b" opacity="0.7" rx="2"/>
+                <text x="610" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 3</text>
+
+                <!-- Parallel trends assumption issue -->
+                <path d="M 190 140 Q 280 130 370 140" stroke="#bd5319" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
+                <text x="280" y="160" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Contamination Risk</text>
+            </svg>
+            <div class="header-content">
+                <h1>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</h1>
+                <p class="tagline">Understanding methodological challenges in difference-in-differences designs</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Published in:</strong> <em>Journal of Financial Reporting</em> (Revision Requested)</p>
+            <p><strong>Research Area:</strong> Financial Reporting & Measurement</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                Staggered difference-in-differences (DiD) designs—where different units receive treatment at different times—are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.
+            </p>
+            <p>
+                We provide a comprehensive primer for accounting researchers on staggered DiD designs. We explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. Our goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> TWFE Bias in Staggered Settings</h3>
+                <p>Standard two-way fixed effects estimation can produce biased and inconsistent estimates when treatment timing varies across units, a problem often ignored in accounting applications.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-diagram-project"></i> Negative Weights Problem</h3>
+                <p>TWFE estimation in staggered designs creates negative weights on treatment effects for some groups, implicitly comparing treated and control units in ways that violate researcher intent.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-lightbulb"></i> Alternative Approaches</h3>
+                <p>Newer methodologies like local treatment effects, heterogeneity-robust estimators, and event-study approaches provide valid alternatives to TWFE in staggered settings.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-book"></i> Practical Guidance</h3>
+                <p>We provide empirical examples demonstrating how different estimation approaches yield different results, and offer practical guidance for researchers on method selection.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This primer addresses a critical methodological issue facing accounting research. As staggered DiD designs become more prevalent in studying regulatory changes, tax reforms, and other policy variations, understanding their statistical properties is essential for drawing valid inferences.
+            </p>
+            <p>
+                Our paper is not primarily a methodological contribution, but rather a comprehensive introduction to important econometric challenges that many accounting researchers may not be aware of. By raising awareness of these issues and providing practical guidance on alternative approaches, we aim to improve the methodological rigor of future accounting research using staggered designs.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel. "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers." <em>Journal of Financial Reporting</em> (Revision Requested).
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

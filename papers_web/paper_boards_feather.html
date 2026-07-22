@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boards of a Feather — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        /* Network-style visual header */
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Network nodes and connections -->
+                <line x1="100" y1="100" x2="250" y2="60" stroke="#00356b" stroke-width="2"/>
+                <line x1="100" y1="100" x2="250" y2="140" stroke="#00356b" stroke-width="2"/>
+                <line x1="250" y1="60" x2="400" y2="80" stroke="#00356b" stroke-width="2"/>
+                <line x1="250" y1="60" x2="400" y2="120" stroke="#00356b" stroke-width="2"/>
+                <line x1="250" y1="140" x2="400" y2="120" stroke="#00356b" stroke-width="2"/>
+                <line x1="400" y1="80" x2="550" y2="100" stroke="#00356b" stroke-width="2"/>
+                <line x1="400" y1="120" x2="550" y2="100" stroke="#00356b" stroke-width="2"/>
+                <line x1="550" y1="100" x2="700" y2="80" stroke="#00356b" stroke-width="2"/>
+                <line x1="550" y1="100" x2="700" y2="120" stroke="#00356b" stroke-width="2"/>
+
+                <circle cx="100" cy="100" r="15" fill="#00356b"/>
+                <circle cx="250" cy="60" r="12" fill="#00356b"/>
+                <circle cx="250" cy="140" r="12" fill="#00356b"/>
+                <circle cx="400" cy="80" r="10" fill="#00356b"/>
+                <circle cx="400" cy="120" r="10" fill="#00356b"/>
+                <circle cx="550" cy="100" r="12" fill="#00356b"/>
+                <circle cx="700" cy="80" r="10" fill="#00356b"/>
+                <circle cx="700" cy="120" r="10" fill="#00356b"/>
+            </svg>
+            <div class="header-content">
+                <h1>Boards of a Feather: Homophily in Foreign Director Appointments Around the World</h1>
+                <p class="tagline">How cultural similarity shapes global corporate governance networks</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Pietro Bianchi, Helena Isidro, and Dhananjay Nanda</p>
+            <p><strong>Published in:</strong> <em>Journal of Accounting Research</em>, Vol. 60, No. 4 (2022)</p>
+            <p><strong>Research Area:</strong> Corporate Governance & Disclosure</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241195" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2021-barrios-boards-feather.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine patterns of homophily—the tendency to associate with similar others—in foreign director appointments across 38 countries. Using a comprehensive dataset of international board appointments, we investigate whether firms preferentially appoint foreign directors from culturally similar countries and explore the implications of this homophily for board effectiveness and firm outcomes.
+            </p>
+            <p>
+                Our findings reveal strong homophily patterns: firms are significantly more likely to appoint foreign directors from countries that share linguistic, religious, or colonial ties. This cultural matching is economically meaningful, with cultural proximity increasing appointment probability by 40-60%. We find that culturally similar foreign directors are associated with greater board attendance, more active committee participation, and improved firm performance, suggesting that cultural fit facilitates effective cross-border governance.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-diagram-project"></i> Cultural Homophily Patterns</h3>
+                <p>Firms show strong preferences for foreign directors from culturally similar countries, with cultural proximity increasing appointment probability by 40-60%.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-earth-americas"></i> Global Network Effects</h3>
+                <p>Cultural homophily creates distinct global governance networks, with directors clustering along linguistic, religious, and historical colonial connections.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-handshake"></i> Performance Benefits</h3>
+                <p>Culturally matched foreign directors show higher engagement (better attendance, more committee work) and are associated with improved firm performance.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-scale-unbalanced"></i> Trade-offs</h3>
+                <p>While cultural fit improves effectiveness, it may limit diversity of perspectives and perpetuate existing governance networks rather than bringing fresh viewpoints.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Empirical Results</h2>
+
+            <figure style="margin: 2rem 0; text-align: center;">
+                <img src="figures/boards_feather_results.svg" alt="Figure 1: Determinants of Foreign Director Appointments - Gravity Model Results" style="max-width: 100%; height: auto; border: 1px solid #d4d0c8; border-radius: 4px; padding: 1rem; background: white;">
+                <figcaption style="margin-top: 1rem; font-size: 0.92rem; color: #63605b; font-style: italic;">
+                    <strong>Figure 1.</strong> Determinants of Foreign Director Appointments. Gravity model estimates showing elasticities for key homophily factors (cultural proximity, legal origin, colonial ties) and their differential effects by governance quality. Sample: 38 countries, 169,472 foreign directors across 26,940 boards, 2000-2013. *** p &lt; 0.01.
+                </figcaption>
+            </figure>
+
+            <p>
+                Our gravity model results reveal that cultural and institutional proximity are significant determinants of foreign director appointments, even after controlling for economic factors like GDP and bilateral trade. Cultural proximity shows the strongest effect, with an elasticity of +0.47, implying a 40-60% increase in the probability of appointing a foreign director from a culturally similar country. Common legal origin and colonial history also significantly predict director appointments, with elasticities of +0.36 and +0.31 respectively.
+            </p>
+
+            <p>
+                Importantly, we find that the strength of homophily effects varies systematically by governance context. In countries with weak institutional quality, the effect of cultural proximity is substantially larger (+0.62) compared to strong governance countries (+0.28). This suggests that firms rely more heavily on cultural cues when formal institutional safeguards are limited. Despite globalization and increasing international trade over our sample period (2000-2013), the homophily effect remains stable, indicating that cultural factors continue to shape cross-border board appointments regardless of overall increases in foreign director prevalence.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Conceptual Framework & Mechanisms</h2>
+
+            <figure style="margin: 2rem 0; text-align: center;">
+                <img src="figures/boards_feather_mechanism.svg" alt="Figure 2: Mechanism Diagram - How Cultural Proximity Drives Foreign Director Selection" style="max-width: 100%; height: auto; border: 1px solid #d4d0c8; border-radius: 4px; padding: 1rem; background: white;">
+                <figcaption style="margin-top: 1rem; font-size: 0.92rem; color: #63605b; font-style: italic;">
+                    <strong>Figure 2.</strong> Conceptual Framework: How Cultural Proximity Drives Foreign Director Selection. The diagram illustrates the supply and demand sides of director appointments, with cultural and institutional proximity acting as a matching mechanism. Culturally similar directors are appointed at higher rates, leading to differential board engagement and firm performance outcomes, with potential trade-offs in terms of cognitive diversity.
+                </figcaption>
+            </figure>
+
+            <p>
+                The mechanism underlying our results operates through both supply and demand channels. On the supply side, directors are more likely to seek opportunities in culturally familiar markets where they can leverage existing networks and language skills. On the demand side, firms find it easier to evaluate and trust directors from culturally similar countries, as they share similar governance frameworks, business practices, and communication styles.
+            </p>
+
+            <p>
+                This cultural matching facilitates director effectiveness in several ways. Directors from culturally similar countries show better attendance at board meetings, take more active roles in committees, and are more likely to participate in board discussions. These behavioral differences translate into measurable firm performance improvements. However, the mechanism also reveals important trade-offs: the same cultural proximity that improves director engagement may reduce the diversity of perspectives on the board, potentially limiting the board's ability to challenge management groupthink or identify blind spots in firm strategy.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper contributes to our understanding of how cultural factors shape corporate governance in global markets. First, we provide systematic evidence that cultural homophily extends to boardroom appointments, documenting that the "birds of a feather" principle operates even in professional contexts where meritocracy might be expected to dominate.
+            </p>
+            <p>
+                Second, we show that this homophily has real consequences for board functioning and firm outcomes. The positive association between cultural match and director effectiveness suggests that cultural fit facilitates communication and collaboration, though it may come at the cost of reduced cognitive diversity.
+            </p>
+            <p>
+                Third, our findings have implications for understanding international business networks and the globalization of corporate governance. The clustering of cross-border appointments along cultural lines suggests that governance globalization follows predictable cultural patterns rather than creating fully integrated global governance markets.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Pietro Bianchi, Helena Isidro, and Dhananjay Nanda. "Boards of a Feather: Homophily in Foreign Director Appointments Around the World." <em>Journal of Accounting Research</em>, vol. 60, no. 4 (September 2022): 1271-1320.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2021-barrios-boards-feather.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

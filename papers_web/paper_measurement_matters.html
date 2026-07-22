@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Matters — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Measurement framework -->
+                <!-- Input nodes -->
+                <circle cx="100" cy="70" r="10" fill="#00356b"/>
+                <text x="100" y="100" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Input</text>
+                <text x="100" y="112" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Quality</text>
+
+                <circle cx="100" cy="130" r="10" fill="#00356b"/>
+                <text x="100" y="160" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Process</text>
+                <text x="100" y="172" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Efficiency</text>
+
+                <!-- Processing/Accounting -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                </defs>
+
+                <path d="M 115 70 L 200 70" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 115 130 L 200 130" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <rect x="210" y="50" width="100" height="80" fill="none" stroke="#00356b" stroke-width="2.5" rx="2"/>
+                <text x="260" y="95" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Financial</text>
+                <text x="260" y="108" text-anchor="middle" font-size="11" fill="#00356b" font-weight="600">Reporting</text>
+
+                <!-- Output measures -->
+                <path d="M 320 100 L 400 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <circle cx="450" cy="100" r="35" fill="none" stroke="#00356b" stroke-width="2.5"/>
+                <text x="450" y="100" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Measured</text>
+                <text x="450" y="113" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Productivity</text>
+
+                <!-- Actual outcomes -->
+                <path d="M 495 100 L 570 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <circle cx="630" cy="100" r="35" fill="none" stroke="#bd5319" stroke-width="2.5"/>
+                <text x="630" y="100" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="600">True</text>
+                <text x="630" y="113" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="600">Productivity</text>
+
+                <!-- Gap arrow -->
+                <path d="M 570 130 Q 600 150 630 130" stroke="#bd5319" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+                <text x="600" y="165" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Measurement Gap</text>
+            </svg>
+            <div class="header-content">
+                <h1>Measurement Matters: Financial Reporting and Productivity</h1>
+                <p class="tagline">How accounting choices affect measures of firm productivity and performance</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Brian C. Fujiy, Petro Lisowsky, Michael Minnis</p>
+            <p><strong>Research Area:</strong> Financial Reporting & Measurement</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w34536" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> NBER
+            </a>
+            <a href="../papers/2024-barrios-measurement-matters.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine how differences in financial reporting practices shape firm productivity. Using comprehensive data from the U.S. Census Bureau, tax return data from the Internal Revenue Service (IRS), and detailed financial records from Sageworks, we find that variation in reporting quality explains 10-20 percent of intra-industry total factor productivity dispersion. Leveraging new audit questions in the U.S. Census Bureau's 2021 Management and Organizational Practices Survey (MOPS), we find evidence of complementarity between the effects of financial audits and management practices to drive firm productivity.
+            </p>
+            <p>
+                We then examine the underlying mechanisms. First, audits function as a managerial technology, improving the precision of internal information and raising efficiency, with stronger effects in competitive, low-margin industries and among younger firms. Second, exploiting cross-state variation in tax incentives, we show that audits constrain underreporting and mitigate the downward bias in measured productivity. Together, these results highlight the underrated importance of financial reporting quality driving firm productivity.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="figures/figure_1_key_results.svg" alt="Key quantitative results: reporting quality explains 10-20% of TFP dispersion and audit effects" style="max-width: 100%; height: auto; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <p style="font-size: 0.9rem; color: #6b6560; margin-top: 0.8rem;"><strong>Figure 1.</strong> Left: Financial reporting quality accounts for 15% of TFP dispersion (within 10-20% range), comparable to IT investments and management practices. Right: Both audits and management practices independently improve productivity by 2.5-3% and profitability by 0.7-0.9%.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-ruler"></i> Reporting Quality Explains Productivity Dispersion</h3>
+                <p>Financial reporting quality accounts for approximately 10-20 percent of intra-industry total factor productivity (TFP) dispersion between the 10th and 90th percentiles, comparable to other major drivers like IT investments and management practices.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-balance-scale"></i> Complementarity with Management Practices</h3>
+                <p>Audits and structured management practices each independently improve productivity and profitability (2.5-3.5% and 2.7-3.4% respectively), with positive interaction effects when combined, suggesting they reinforce one another.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Audits as Managerial Technology</h3>
+                <p>External audits improve firm decision-making by enhancing information precision, with stronger effects in competitive industries and among younger firms that benefit disproportionately from external discipline and guidance.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-building-columns"></i> Tax Incentives and Measurement Bias</h3>
+                <p>Audits constrain underreporting driven by tax minimization incentives. The audit effect on measured productivity is nearly twice as strong in high-tax states, indicating audits reduce measurement bias from tax-motivated misreporting.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This paper identifies financial reporting quality as a significant and underexplored determinant of firm-level productivity, filling a gap in the economics and management literature. Using three distinct and independently compiled datasets on private U.S. firms, the research documents that financial measurement quality—proxied by external audits and adherence to high-quality reporting standards—explains a substantial portion of productivity dispersion comparable to well-documented drivers such as management practices and technology adoption.
+            </p>
+            <p>
+                The findings reveal two distinct mechanisms: audits enhance actual firm productivity by improving managerial information quality and decision-making (particularly in competitive industries and younger firms), and they also reduce measurement bias by constraining tax-motivated underreporting. The paper reframes financial reporting not as a passive compliance function but as an active managerial technology with direct implications for operational efficiency and firm performance. These insights bridge the economics and accounting literatures, offering broader perspectives on the determinants of firm-level productivity heterogeneity.
+            </p>
+
+            <div style="margin: 2.5rem 0; text-align: center;">
+                <img src="figures/figure_2_mechanisms.svg" alt="Two mechanisms: audits as managerial technology and measurement bias reduction" style="max-width: 100%; height: auto; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <p style="font-size: 0.9rem; color: #6b6560; margin-top: 0.8rem;"><strong>Figure 2.</strong> Conceptual framework showing two complementary mechanisms. Left mechanism (blue): Audits improve internal information quality, leading to better managerial decisions and true productivity gains (+2.5-3%), with stronger effects in competitive industries and younger firms. Right mechanism (orange): Tax incentives create manager discretion to underreport, creating measurement bias; audits constrain this underreporting. The effect is 2× larger in high-tax states, confirming the bias-reduction channel. Both mechanisms are validated across three independent data sources (Census MOPS, IRS, Sageworks).</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Brian C. Fujiy, Petro Lisowsky, and Michael Minnis. "Measurement Matters: Financial Reporting and Productivity." Working Paper.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2024-barrios-measurement-matters.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>

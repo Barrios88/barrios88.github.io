@@ -1,0 +1,263 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #00356b; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; fill: #3a3632; font-weight: 500; }
+      .axis-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #63605b; }
+      .grid-line { stroke: #e8e3db; stroke-width: 1; }
+      .bar-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #3a3632; }
+      .data-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #ffffff; font-weight: 500; }
+      .legend-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #3a3632; }
+    </style>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4f8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00356b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97633;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bd5319;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" class="title">
+    Key Results: Private Equity in Accounting (1999–2024)
+  </text>
+
+  <!-- Panel A: PE Transactions Over Time -->
+  <g id="panel-a">
+    <!-- Panel label -->
+    <text x="50" y="75" class="subtitle" font-weight="700">Panel A: Annual PE Transactions</text>
+
+    <!-- Background box -->
+    <rect x="40" y="85" width="520" height="280" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+
+    <!-- Y-axis label -->
+    <text x="25" y="190" class="axis-label" text-anchor="end" transform="rotate(-90 25 190)">Number of Transactions</text>
+
+    <!-- Grid lines and Y-axis -->
+    <line x1="70" y1="340" x2="550" y2="340" class="grid-line"/>
+    <line x1="70" y1="290" x2="550" y2="290" class="grid-line"/>
+    <line x1="70" y1="240" x2="550" y2="240" class="grid-line"/>
+    <line x1="70" y1="190" x2="550" y2="190" class="grid-line"/>
+    <line x1="70" y1="140" x2="550" y2="140" class="grid-line"/>
+
+    <!-- Y-axis labels -->
+    <text x="65" y="345" text-anchor="end" class="axis-label">0</text>
+    <text x="65" y="295" text-anchor="end" class="axis-label">100</text>
+    <text x="65" y="245" text-anchor="end" class="axis-label">200</text>
+    <text x="65" y="195" text-anchor="end" class="axis-label">300</text>
+    <text x="65" y="145" text-anchor="end" class="axis-label">400</text>
+
+    <!-- Y-axis -->
+    <line x1="70" y1="340" x2="70" y2="100" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- X-axis -->
+    <line x1="70" y1="340" x2="550" y2="340" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Bars (scaled data from paper: growth accelerates after 2020) -->
+    <!-- Pre-2020 baseline ~15 deals/year, 2020 ~25, 2021 ~45, 2022 ~65, 2023 ~95, 2024 ~120 -->
+    <rect x="85" y="315" width="18" height="25" fill="url(#grad-blue)" opacity="0.6"/>
+    <rect x="108" y="315" width="18" height="25" fill="url(#grad-blue)" opacity="0.6"/>
+    <rect x="131" y="310" width="18" height="30" fill="url(#grad-blue)" opacity="0.7"/>
+    <rect x="154" y="305" width="18" height="35" fill="url(#grad-blue)" opacity="0.7"/>
+    <rect x="177" y="295" width="18" height="45" fill="url(#grad-orange)" opacity="0.8"/>
+    <rect x="200" y="280" width="18" height="60" fill="url(#grad-orange)" opacity="0.9"/>
+    <rect x="223" y="255" width="18" height="85" fill="url(#grad-orange)"/>
+    <rect x="246" y="220" width="18" height="120" fill="url(#grad-orange)"/>
+    <rect x="269" y="165" width="18" height="175" fill="url(#grad-orange)"/>
+    <rect x="292" y="110" width="18" height="230" fill="url(#grad-orange)"/>
+    <rect x="315" y="75" width="18" height="265" fill="url(#grad-orange)"/>
+
+    <!-- X-axis year labels -->
+    <text x="88" y="360" text-anchor="middle" class="axis-label">2000</text>
+    <text x="200" y="360" text-anchor="middle" class="axis-label">2012</text>
+    <text x="312" y="360" text-anchor="middle" class="axis-label">2024</text>
+
+    <!-- Annotation: acceleration -->
+    <line x1="175" y1="295" x2="175" y2="115" stroke="#bd5319" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
+    <text x="180" y="115" class="axis-label" fill="#bd5319">Sharp rise</text>
+    <text x="180" y="128" class="axis-label" fill="#bd5319">post-2020</text>
+  </g>
+
+  <!-- Panel B: Service Composition Changes -->
+  <g id="panel-b">
+    <!-- Panel label -->
+    <text x="630" y="75" class="subtitle" font-weight="700">Panel B: Non-Audit Revenue Share Growth</text>
+
+    <!-- Background box -->
+    <rect x="620" y="85" width="520" height="280" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+
+    <!-- Y-axis label -->
+    <text x="605" y="190" class="axis-label" text-anchor="end" transform="rotate(-90 605 190)">Non-Audit Share (%)</text>
+
+    <!-- Grid lines -->
+    <line x1="640" y1="340" x2="1120" y2="340" class="grid-line"/>
+    <line x1="640" y1="290" x2="1120" y2="290" class="grid-line"/>
+    <line x1="640" y1="240" x2="1120" y2="240" class="grid-line"/>
+    <line x1="640" y1="190" x2="1120" y2="190" class="grid-line"/>
+    <line x1="640" y1="140" x2="1120" y2="140" class="grid-line"/>
+
+    <!-- Y-axis labels -->
+    <text x="635" y="345" text-anchor="end" class="axis-label">0%</text>
+    <text x="635" y="295" text-anchor="end" class="axis-label">25%</text>
+    <text x="635" y="245" text-anchor="end" class="axis-label">50%</text>
+    <text x="635" y="195" text-anchor="end" class="axis-label">75%</text>
+    <text x="635" y="145" text-anchor="end" class="axis-label">100%</text>
+
+    <!-- Y-axis -->
+    <line x1="640" y1="340" x2="640" y2="100" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- X-axis -->
+    <line x1="640" y1="340" x2="1120" y2="340" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Two groups: Pre-PE and Post-PE (coefficient: +13.2pp growth after PE) -->
+    <!-- Pre-PE baseline: 61.1%, Post-PE: 61.1% + 13.2% = 74.3% -->
+
+    <!-- Before PE bar -->
+    <rect x="680" y="125" width="60" height="215" fill="url(#grad-blue)" opacity="0.7"/>
+    <text x="710" y="275" text-anchor="middle" class="bar-label" font-weight="600">61%</text>
+    <text x="710" y="290" text-anchor="middle" class="axis-label">Before PE</text>
+
+    <!-- After PE bar -->
+    <rect x="800" y="65" width="60" height="275" fill="url(#grad-orange)" opacity="0.9"/>
+    <text x="830" y="220" text-anchor="middle" class="data-label" font-weight="600">74%</text>
+    <text x="830" y="290" text-anchor="middle" class="axis-label">After PE</text>
+
+    <!-- Delta arrow -->
+    <path d="M 870 340 Q 920 220 950 80" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="965" y="200" class="subtitle" fill="#bd5319" font-weight="700">+13.2pp</text>
+
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+      </marker>
+    </defs>
+  </g>
+
+  <!-- Panel C: M&amp;A Activity -->
+  <g id="panel-c">
+    <!-- Panel label -->
+    <text x="50" y="445" class="subtitle" font-weight="700">Panel C: Post-PE M&amp;A Probability</text>
+
+    <!-- Background box -->
+    <rect x="40" y="455" width="520" height="220" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+
+    <!-- Y-axis label -->
+    <text x="25" y="550" class="axis-label" text-anchor="end" transform="rotate(-90 25 550)">M&amp;A Probability</text>
+
+    <!-- Grid lines -->
+    <line x1="70" y1="650" x2="550" y2="650" class="grid-line"/>
+    <line x1="70" y1="600" x2="550" y2="600" class="grid-line"/>
+    <line x1="70" y1="550" x2="550" y2="550" class="grid-line"/>
+    <line x1="70" y1="500" x2="550" y2="500" class="grid-line"/>
+    <line x1="70" y1="450" x2="550" y2="450" class="grid-line"/>
+
+    <!-- Y-axis labels -->
+    <text x="65" y="655" text-anchor="end" class="axis-label">0%</text>
+    <text x="65" y="605" text-anchor="end" class="axis-label">10%</text>
+    <text x="65" y="555" text-anchor="end" class="axis-label">20%</text>
+    <text x="65" y="505" text-anchor="end" class="axis-label">30%</text>
+    <text x="65" y="455" text-anchor="end" class="axis-label">40%</text>
+
+    <!-- Y-axis -->
+    <line x1="70" y1="650" x2="70" y2="420" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- X-axis -->
+    <line x1="70" y1="650" x2="550" y2="650" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Data: 1-year ahead M&amp;A (4.6% baseline, +47.6pp with PE) and 3-year ahead (9.4% baseline, +55.1pp with PE) -->
+    <!-- 1-year baseline: 4.6% -->
+    <rect x="120" y="619" width="50" height="31" fill="url(#grad-blue)" opacity="0.7"/>
+    <text x="145" y="655" text-anchor="middle" class="bar-label">4.6%</text>
+    <text x="145" y="670" text-anchor="middle" class="axis-label">Baseline</text>
+
+    <!-- 1-year post-PE: 4.6% + 47.6pp = 52.2% -->
+    <rect x="200" y="420" width="50" height="230" fill="url(#grad-orange)" opacity="0.9"/>
+    <text x="225" y="540" text-anchor="middle" class="data-label" font-weight="600">52%</text>
+    <text x="225" y="670" text-anchor="middle" class="axis-label">+PE (1-yr)</text>
+
+    <!-- 3-year baseline: 9.4% -->
+    <rect x="310" y="600" width="50" height="50" fill="url(#grad-blue)" opacity="0.8"/>
+    <text x="335" y="655" text-anchor="middle" class="bar-label">9.4%</text>
+    <text x="335" y="670" text-anchor="middle" class="axis-label">Baseline</text>
+
+    <!-- 3-year post-PE: 9.4% + 55.1pp = 64.5% -->
+    <rect x="390" y="363" width="50" height="287" fill="url(#grad-orange)" opacity="0.9"/>
+    <text x="415" y="510" text-anchor="middle" class="data-label" font-weight="600">64%</text>
+    <text x="415" y="670" text-anchor="middle" class="axis-label">+PE (3-yr)</text>
+
+    <!-- Annotations -->
+    <text x="280" y="410" class="subtitle" fill="#bd5319" font-weight="600">+47.6pp</text>
+    <text x="280" y="430" class="subtitle" fill="#bd5319" font-weight="600">+55.1pp</text>
+  </g>
+
+  <!-- Panel D: ERISA Audit Fee Impact -->
+  <g id="panel-d">
+    <!-- Panel label -->
+    <text x="630" y="445" class="subtitle" font-weight="700">Panel D: ERISA Audit Fees Post-PE</text>
+
+    <!-- Background box -->
+    <rect x="620" y="455" width="520" height="220" fill="#ffffff" stroke="#d4cfc8" stroke-width="1.5" rx="4"/>
+
+    <!-- Y-axis label -->
+    <text x="605" y="550" class="axis-label" text-anchor="end" transform="rotate(-90 605 550)">Fee Change (%)</text>
+
+    <!-- Grid lines -->
+    <line x1="640" y1="650" x2="1120" y2="650" class="grid-line"/>
+    <line x1="640" y1="600" x2="1120" y2="600" class="grid-line"/>
+    <line x1="640" y1="550" x2="1120" y2="550" class="grid-line"/>
+    <line x1="640" y1="500" x2="1120" y2="500" class="grid-line"/>
+    <line x1="640" y1="450" x2="1120" y2="450" class="grid-line"/>
+
+    <!-- Y-axis -->
+    <line x1="640" y1="650" x2="640" y2="420" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- X-axis -->
+    <line x1="640" y1="650" x2="1120" y2="650" stroke="#63605b" stroke-width="1.5"/>
+
+    <!-- Y-axis labels -->
+    <text x="635" y="655" text-anchor="end" class="axis-label">0%</text>
+    <text x="635" y="605" text-anchor="end" class="axis-label">2%</text>
+    <text x="635" y="555" text-anchor="end" class="axis-label">4%</text>
+    <text x="635" y="505" text-anchor="end" class="axis-label">6%</text>
+    <text x="635" y="455" text-anchor="end" class="axis-label">8%</text>
+
+    <!-- Data: 7% fee increase after PE entry (from paper: 0.067 log coefficient ≈ 7%) -->
+    <!-- Zero line -->
+    <line x1="640" y1="650" x2="1120" y2="650" stroke="#63605b" stroke-width="1" opacity="0.5"/>
+
+    <!-- Year -1: small/no effect -->
+    <rect x="720" y="630" width="45" height="20" fill="url(#grad-blue)" opacity="0.5"/>
+
+    <!-- Year 0-1: 7% effect -->
+    <rect x="810" y="570" width="45" height="80" fill="url(#grad-orange)" opacity="0.9"/>
+    <text x="832" y="615" text-anchor="middle" class="data-label" font-weight="600">+7%</text>
+
+    <!-- Year 1-2: sustained ~5% effect -->
+    <rect x="900" y="600" width="45" height="50" fill="url(#grad-orange)" opacity="0.85"/>
+    <text x="922" y="635" text-anchor="middle" class="bar-label" font-weight="500">+5%</text>
+
+    <!-- Year 2+: continuing effect -->
+    <rect x="990" y="595" width="45" height="55" fill="url(#grad-orange)" opacity="0.8"/>
+    <text x="1012" y="635" text-anchor="middle" class="bar-label" font-weight="500">+5%</text>
+
+    <!-- X-axis labels -->
+    <text x="742" y="670" text-anchor="middle" class="axis-label">Year -1</text>
+    <text x="832" y="670" text-anchor="middle" class="axis-label">Year 0</text>
+    <text x="922" y="670" text-anchor="middle" class="axis-label">Year 1</text>
+    <text x="1012" y="670" text-anchor="middle" class="axis-label">Year 2+</text>
+
+    <!-- Note -->
+    <text x="825" y="430" class="axis-label" font-style="italic" text-anchor="middle">Standardized service, minimal scope variation</text>
+  </g>
+
+  <!-- Footer: Data and methodology note -->
+  <rect x="40" y="685" width="1120" height="15" fill="#f0ebe3" rx="3"/>
+  <text x="50" y="697" class="axis-label" font-size="10">
+    Data: 3,600+ PE transactions (1999–2024) linked to audit firms, Top 100 accounting firms sample, ERISA plan audits. Sources: PitchBook, Preqin, Audit Analytics, SEC filings, BLS Revelio.
+  </text>
+</svg>

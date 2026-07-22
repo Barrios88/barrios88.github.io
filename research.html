@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #1f1d1b;
+            --text-light:      #5c5854;
+            --surface:         #faf9f7;
+            --surface-elevated: #ffffff;
+            --border:          #e8e6e2;
+            --shadow-sm:       0 1px 3px rgba(0,53,107,0.06);
+            --shadow-md:       0 4px 12px rgba(0,53,107,0.08);
+            --shadow-lg:       0 12px 40px rgba(0,53,107,0.1);
+            --shadow-xl:       0 20px 60px rgba(0,53,107,0.12);
+            --radius-sm:       6px;
+            --radius-md:       10px;
+            --radius-lg:       16px;
+            --transition:      0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-body);
+            background: var(--surface);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color var(--transition), border-color var(--transition), background var(--transition); }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--yale-blue) 0%, var(--yale-blue-mid) 50%, var(--yale-accent) 100%);
+        }
+
+        header {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.02em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2.25rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 0;
+            border-bottom: 2px solid transparent;
+            transition: color var(--transition), border-color var(--transition);
+        }
+        nav a:hover, nav a.active { color: var(--yale-blue); border-bottom-color: var(--yale-blue); }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--yale-blue);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .page-title-area {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 1.5rem;
+        }
+        .page-title-area h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+        .page-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* ── Modern Theme Navigation ── */
+        .theme-nav-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 2rem;
+        }
+
+        .theme-nav-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--yale-gray-light);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .theme-nav-container {
+            display: flex;
+            gap: 0.75rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) var(--surface);
+        }
+
+        .theme-nav-container::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .theme-nav-container::-webkit-scrollbar-track {
+            background: var(--surface);
+        }
+
+        .theme-nav-container::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 2px;
+        }
+
+        .theme-nav-item {
+            flex-shrink: 0;
+            padding: 0.65rem 1.1rem;
+            border-radius: var(--radius-lg);
+            background: var(--surface-elevated);
+            border: 1.5px solid var(--border);
+            color: var(--text-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-nav-item:hover {
+            border-color: var(--yale-blue);
+            background: rgba(0,53,107,0.04);
+            color: var(--yale-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .theme-nav-item.active {
+            background: linear-gradient(135deg, var(--yale-blue) 0%, var(--yale-blue-mid) 100%);
+            border-color: var(--yale-blue);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(0,53,107,0.2);
+        }
+
+        .theme-nav-item i {
+            font-size: 0.9rem;
+        }
+
+        /* ── Content ── */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3.5rem;
+        }
+
+        /* ── Collapse sections ── */
+        .collapse-section {
+            margin-bottom: 1.25rem;
+            background: var(--surface-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+        .collapse-section:hover { box-shadow: var(--shadow-md); border-color: var(--yale-blue); }
+        .collapse-section.is-open .collapse-trigger { border-bottom-color: var(--border); background: rgba(0,53,107,0.025); }
+        .collapse-section.is-open .collapse-chevron { transform: rotate(180deg); }
+
+        .collapse-trigger {
+            width: 100%;
+            padding: 1.35rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            background: none;
+            border: none;
+            border-bottom: 1px solid transparent;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            transition: background var(--transition);
+        }
+        .collapse-trigger:hover { background: rgba(0,53,107,0.02); }
+        .collapse-trigger:focus-visible { outline: 2px solid var(--yale-blue); outline-offset: -2px; }
+
+        .collapse-trigger-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            flex: 1;
+            min-width: 0;
+        }
+        .collapse-trigger-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--yale-blue) 0%, var(--yale-blue-mid) 100%);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .collapse-trigger-title {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .collapse-trigger-title h3 {
+            font-size: 1.1rem;
+            color: var(--yale-blue);
+        }
+        .collapse-count {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--yale-gray-light);
+            background: var(--surface);
+            padding: 0.25rem 0.55rem;
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+        }
+
+        .collapse-chevron {
+            color: var(--yale-gray-warm);
+            font-size: 0.85rem;
+            transition: transform var(--transition-slow);
+            flex-shrink: 0;
+        }
+
+        .collapse-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-slow);
+        }
+        .collapse-content-inner {
+            padding: 0.5rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Paper Cards ── */
+        .paper-card {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            transition: background var(--transition), transform var(--transition);
+        }
+        .paper-card:last-child { border-bottom: none; }
+        .paper-card:hover { background: rgba(0,53,107,0.015); }
+
+        .paper-card-layout {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 1.25rem;
+            align-items: start;
+        }
+
+        .paper-figure-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            background: var(--yale-cream);
+            border: 1px solid var(--border);
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition), transform var(--transition);
+        }
+
+        .paper-card:hover .paper-figure-container {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .paper-figure {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform var(--transition);
+            padding: 8px;
+        }
+
+        .paper-card:hover .paper-figure {
+            transform: scale(1.02);
+        }
+
+        .paper-figure-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--yale-blue) 0%, var(--yale-blue-mid) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.5rem;
+            opacity: 0.85;
+            transition: opacity var(--transition);
+        }
+
+        .paper-card:hover .paper-figure-placeholder {
+            opacity: 0.95;
+        }
+
+        .paper-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .paper-title {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .paper-title a { color: var(--yale-blue); transition: color var(--transition); }
+        .paper-title a:hover { color: var(--yale-accent); }
+
+        .paper-title-link {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .page-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--surface);
+            color: var(--yale-blue);
+            border: 1.5px solid var(--border);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            transition: all var(--transition);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .page-icon:hover {
+            background: var(--yale-blue);
+            color: var(--white);
+            border-color: var(--yale-blue);
+            transform: scale(1.1);
+        }
+
+        .paper-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+        }
+
+        .paper-authors { color: var(--text-light); }
+        .paper-venue { color: var(--yale-gray-warm); }
+        .paper-venue .journal-name { font-style: italic; }
+        .paper-note { font-size: 0.78rem; color: var(--yale-accent); font-weight: 500; }
+
+        .paper-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.35rem;
+        }
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--yale-gray-warm);
+            padding: 0.35rem 0.65rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            transition: all var(--transition);
+        }
+        .paper-link:hover {
+            color: var(--white);
+            background: var(--yale-blue);
+            border-color: var(--yale-blue);
+            transform: translateY(-1px);
+        }
+
+        .badge {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-sm);
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .badge-award { background: #ff6b35; color: var(--white); }
+        .badge-lead { background: var(--yale-blue); color: var(--white); }
+        .badge-accepted { background: #2d6a4f; color: var(--white); }
+        .badge-rr { background: #ffa500; color: var(--white); }
+
+        footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface-elevated);
+            text-align: center;
+            padding: 1.5rem 1.5rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .page-title-area h1 { font-size: 1.75rem; }
+            .paper-card-layout { grid-template-columns: 120px 1fr; gap: 1rem; }
+            .paper-figure-container { aspect-ratio: 4 / 3; }
+        }
+
+        @media (max-width: 640px) {
+            .nav-toggle { display: block; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 64px; left: 0; right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(12px);
+                padding: 1rem 1.5rem;
+                gap: 0.5rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+            nav ul.show { display: flex; }
+            .header-inner { position: relative; }
+            .page-title-area { padding: 1.75rem 1rem 1rem; }
+            .page-title-area h1 { font-size: 1.5rem; }
+            .theme-nav-container { gap: 0.5rem; }
+            .theme-nav-item { font-size: 0.75rem; padding: 0.55rem 0.85rem; }
+            .collapse-trigger { padding: 1rem 1rem; font-size: 1rem; }
+            .collapse-trigger-icon { width: 36px; height: 36px; font-size: 1rem; }
+            .collapse-trigger-left { gap: 0.7rem; }
+            .paper-card { padding: 1rem; }
+            .paper-card-layout { grid-template-columns: 100px 1fr; gap: 0.8rem; }
+            .paper-figure-container { aspect-ratio: 4 / 3; }
+            .paper-title { font-size: 0.95rem; }
+            .page-icon { width: 24px; height: 24px; font-size: 0.65rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="index.html">John Manuel Barrios</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('show')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-title-area">
+        <h1>Research by Theme</h1>
+        <div class="page-subtitle">Explore research across labor economics, entrepreneurship, political economy, and corporate governance. Click <i class="fa-solid fa-globe" style="font-size:0.9rem; margin: 0 0.3rem;"></i> for interactive paper pages.</div>
+    </div>
+
+    <!-- Modern Theme Navigation -->
+    <div class="theme-nav-wrap">
+        <label class="theme-nav-label">Navigate by theme</label>
+        <div class="theme-nav-container" id="theme-nav-container">
+            <button type="button" class="theme-nav-item active" data-section="0" onclick="researchNav.selectTheme(0)" aria-label="Labor Markets & Professional Services">
+                <i class="fa-solid fa-briefcase"></i> Labor Markets
+            </button>
+            <button type="button" class="theme-nav-item" data-section="1" onclick="researchNav.selectTheme(1)" aria-label="Entrepreneurship & New Business Formation">
+                <i class="fa-solid fa-rocket"></i> Entrepreneurship
+            </button>
+            <button type="button" class="theme-nav-item" data-section="2" onclick="researchNav.selectTheme(2)" aria-label="Political Economy & Social Capital">
+                <i class="fa-solid fa-landmark"></i> Political Economy
+            </button>
+            <button type="button" class="theme-nav-item" data-section="3" onclick="researchNav.selectTheme(3)" aria-label="Corporate Governance & Disclosure">
+                <i class="fa-solid fa-building"></i> Governance
+            </button>
+            <button type="button" class="theme-nav-item" data-section="4" onclick="researchNav.selectTheme(4)" aria-label="Taxation & Regulatory Economics">
+                <i class="fa-solid fa-scale-balanced"></i> Taxation
+            </button>
+            <button type="button" class="theme-nav-item" data-section="5" onclick="researchNav.selectTheme(5)" aria-label="Financial Reporting & Measurement">
+                <i class="fa-solid fa-chart-line"></i> Reporting
+            </button>
+            <button type="button" class="theme-nav-item" data-section="6" onclick="researchNav.selectTheme(6)" aria-label="Market Structure & Antitrust">
+                <i class="fa-solid fa-gavel"></i> Antitrust
+            </button>
+            <button type="button" class="theme-nav-item" data-section="7" onclick="researchNav.selectTheme(7)" aria-label="Ethics & Corporate Misconduct">
+                <i class="fa-solid fa-shield-halved"></i> Ethics
+            </button>
+        </div>
+    </div>
+
+    <main class="content">
+        <!-- Labor Markets & Professional Services -->
+        <div class="collapse-section is-open" data-section="0">
+            <button type="button" class="collapse-trigger" aria-expanded="true" aria-controls="collapse-content-0" id="collapse-trigger-0" onclick="researchCollapse.toggle(0)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-briefcase"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Labor Markets & Professional Services</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">2 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-0" role="region" aria-labelledby="collapse-trigger-0">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/licensing_results.svg" alt="Licensing results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_licensing.html">Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule</a></span>
+                                    <a href="papers_web/paper_licensing.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span class="badge badge-lead">Lead Article</span>
+                                    <span class="badge badge-award">Award</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-venue"><span class="journal-name">Journal of Accounting Research</span>, 60(1) (2022)</div>
+                                    <div class="paper-note">AAA-AACSB-RRBM Award for Research Impacting Societal Challenges, 2025</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2893909" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_licensing.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/pe_accounting_results.svg" alt="Private Equity in Accounting results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_pe_accounting.html">Financializing the Professions: The Rise of Private Equity in Accounting</a></span>
+                                    <a href="papers_web/paper_pe_accounting.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="badge badge-rr">R&R</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Inna Abramova</div>
+                                    <div class="paper-note">Revision Requested: <em>Journal of Financial Economics</em></div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5922622" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w34575" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_pe_accounting.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Entrepreneurship & New Business Formation -->
+        <div class="collapse-section" data-section="1">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-1" id="collapse-trigger-1" onclick="researchCollapse.toggle(1)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-rocket"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Entrepreneurship & New Business Formation</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">3 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-1" role="region" aria-labelledby="collapse-trigger-1">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/figure1_main_results.svg" alt="Gig Economy results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_gig_economy.html">Launching with a Parachute: The Gig Economy and Entrepreneurial Entry</a></span>
+                                    <a href="papers_web/paper_gig_economy.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Yael V. Hochberg and Livia Hanyi Yi</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Financial Economics</span>, 144(1) (2021)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3557279" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w27183" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_gig_economy.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/informing_entrepreneurs_mechanism.svg" alt="IPO and Entrepreneurship mechanism" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_informing_entrepreneurs.html">Informing Entrepreneurs? Initial Public Offerings and New Business Formation</a></span>
+                                    <a href="papers_web/paper_informing_entrepreneurs.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="badge badge-accepted">Accepted</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Jung Ho Choi, Yael V. Hochberg, Jinhwan Kim & Miao Liu</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Accounting Research</span> (Accepted)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_informing_entrepreneurs.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/hustling_home_results.svg" alt="Work from Home results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_hustling_home.html">Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry</a></span>
+                                    <a href="papers_web/paper_hustling_home.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Yael V. Hochberg and Livia Hanyi Yi</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032374" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w33237" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_hustling_home.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Political Economy & Social Capital -->
+        <div class="collapse-section" data-section="2">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-2" id="collapse-trigger-2" onclick="researchCollapse.toggle(2)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-landmark"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Political Economy & Social Capital</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">3 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-2" role="region" aria-labelledby="collapse-trigger-2">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/civic_capital_results.svg" alt="Civic Capital results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_civic_capital.html">Civic Capital and Social Distancing during the COVID-19 Pandemic</a></span>
+                                    <a href="papers_web/paper_civic_capital.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Efraim Benmelech, Yael V. Hochberg, Paola Sapienza & Luigi Zingales</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Public Economics</span>, 193 (2021)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3613417" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w27320" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_civic_capital.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/figure1_behavioral_divergence.svg" alt="Risk Politics results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_risk_politics.html">Risk Perceptions and Politics: Evidence from the COVID-19 Pandemic</a></span>
+                                    <a href="papers_web/paper_risk_politics.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Yael V. Hochberg</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Financial Economics</span>, 142(2) (2021)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://doi.org/10.1016/j.jfineco.2021.05.008" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Journal</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w27008" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_risk_politics.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/conflict_discount_results.svg" alt="Conflict of Interest results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_conflict_discount.html">The Conflict-of-Interest Discount in the Marketplace of Ideas</a></span>
+                                    <a href="papers_web/paper_conflict_discount.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Felipo Lancieri, Joshua Levy, Shashank Singh, Tommaso Valletti & Luigi Zingales</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4979205" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w33645" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_conflict_discount.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corporate Governance & Disclosure -->
+        <div class="collapse-section" data-section="3">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-3" id="collapse-trigger-3" onclick="researchCollapse.toggle(3)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Corporate Governance & Disclosure</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">2 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-3" role="region" aria-labelledby="collapse-trigger-3">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/boards_feather_results.svg" alt="Boards of a Feather results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_boards_feather.html">Boards of a Feather: Homophily in Foreign Director Appointments Around the World</a></span>
+                                    <a href="papers_web/paper_boards_feather.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Pietro Bianchi, Helena Isidro, and Dhananjay Nanda</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Accounting Research</span>, 60(4) (2022)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241195" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_boards_feather.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-microchip"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_ai_disclosures.html">Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures</a></span>
+                                    <a href="papers_web/paper_ai_disclosures.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="badge badge-rr">R&R</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with John Campbell, Ryan Grant Johnson, and Christine Liu</div>
+                                    <div class="paper-note">Revision Requested: <em>Review of Accounting Studies</em></div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_ai_disclosures.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taxation & Regulatory Economics -->
+        <div class="collapse-section" data-section="4">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-4" id="collapse-trigger-4" onclick="researchCollapse.toggle(4)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Taxation & Regulatory Economics</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">5 items</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-4" role="region" aria-labelledby="collapse-trigger-4">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/tax_planning_results.svg" alt="Tax Planning results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_tax_planning.html">Tax Planning Knowledge Diffusion via the Labor Market</a></span>
+                                    <a href="papers_web/paper_tax_planning.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with John Gallemore</div>
+                                    <div class="paper-venue"><span class="journal-name">Management Science</span> (2022)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3837396" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_tax_planning.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-diagram-project"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_regulatory_spillovers.html">Spillovers from Regulatory Fragmentation: Evidence from Corporate Tax Burdens</a></span>
+                                    <a href="papers_web/paper_regulatory_spillovers.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="badge badge-rr">R&R</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with John Gallemore and Yongzhou Lin</div>
+                                    <div class="paper-note">Revision Requested: <em>The Accounting Review</em></div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4950361" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_regulatory_spillovers.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-handshake"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_regulation_consensus.html">More Constraints, More Consensus? How Regulation Shapes Investor Information Asymmetry</a></span>
+                                    <a href="papers_web/paper_regulation_consensus.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Zachary Kaplan and Yongzhou Lin</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4932162" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_regulation_consensus.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-percent"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link">Taxation in Venture Capital</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-venue">in <span class="journal-name">The Palgrave Encyclopedia of Private Equity</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-gavel"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link">Balancing Flexibility and Integrity: Reforming Licensing in Accounting and Financial Advising</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-venue">in <span class="journal-name">Reforming Occupational Licensing in the US</span>, Springer Nature Switzerland, 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial Reporting & Measurement -->
+        <div class="collapse-section" data-section="5">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-5" id="collapse-trigger-5" onclick="researchCollapse.toggle(5)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Financial Reporting & Measurement</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">3 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-5" role="region" aria-labelledby="collapse-trigger-5">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/figure_1_key_results.svg" alt="Measurement Matters results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_measurement_matters.html">Measurement Matters: Financial Reporting and Productivity</a></span>
+                                    <a href="papers_web/paper_measurement_matters.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Brian C. Fujiy, Petro Lisowsky, and Michael Minnis</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w34536" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_measurement_matters.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-wave-square"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_accounting_pressure.html">Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises</a></span>
+                                    <a href="papers_web/paper_accounting_pressure.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Andreas Neuhierl and Linda Schilling</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_accounting_pressure.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <div class="paper-figure-placeholder"><i class="fa-solid fa-timeline"></i></div>
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_staggered_did.html">Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</a></span>
+                                    <a href="papers_web/paper_staggered_did.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <span class="badge badge-rr">R&R</span>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-note">Revision Requested: <em>Journal of Financial Reporting</em></div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_staggered_did.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Structure & Antitrust -->
+        <div class="collapse-section" data-section="6">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-6" id="collapse-trigger-6" onclick="researchCollapse.toggle(6)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-gavel"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Market Structure & Antitrust</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">3 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-6" role="region" aria-labelledby="collapse-trigger-6">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/figure1_key_results.svg" alt="Midnight Mergers results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_midnight_mergers.html">A New Era of Midnight Mergers: Antitrust Risk and Investor Disclosures</a></span>
+                                    <a href="papers_web/paper_midnight_mergers.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Thomas Wollmann</div>
+                                    <div class="paper-venue"><span class="journal-name">American Economic Journal: Microeconomics</span>, 16(4) (2024)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4076302" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w29655" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_midnight_mergers.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/misaligned_control_results.svg" alt="Misaligned Control results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_misaligned_control.html">Misaligned Measures of Control: Private Equity's Antitrust Loophole</a></span>
+                                    <a href="papers_web/paper_misaligned_control.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Aslihan Asil and Thomas G. Wollmann</div>
+                                    <div class="paper-venue"><span class="journal-name">Virginia Law & Business Review</span> (2023)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4400139" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_misaligned_control.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/ridehailing_results.svg" alt="Ridehailing results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_ridehailing.html">The Cost of Convenience: Ridehailing and Traffic Fatalities</a></span>
+                                    <a href="papers_web/paper_ridehailing.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Yael V. Hochberg and Livia Hanyi Yi</div>
+                                    <div class="paper-venue"><span class="journal-name">Journal of Operations Management</span>, 69(5) (2022)</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3361227" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="https://www.nber.org/papers/w26783" target="_blank" rel="noopener"><i class="fa-solid fa-building-columns"></i> NBER</a>
+                                    <a class="paper-link" href="papers_web/paper_ridehailing.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethics & Corporate Misconduct -->
+        <div class="collapse-section" data-section="7">
+            <button type="button" class="collapse-trigger" aria-expanded="false" aria-controls="collapse-content-7" id="collapse-trigger-7" onclick="researchCollapse.toggle(7)">
+                <span class="collapse-trigger-left">
+                    <span class="collapse-trigger-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span class="collapse-trigger-title">
+                        <h3>Ethics & Corporate Misconduct</h3>
+                    </span>
+                </span>
+                <span class="collapse-count">2 papers</span>
+                <i class="fa-solid fa-chevron-down collapse-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="collapse-content" id="collapse-content-7" role="region" aria-labelledby="collapse-trigger-7">
+                <div class="collapse-content-inner">
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/ethics_illusions_results.svg" alt="Ethics and Illusions results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_ethics_illusions.html">Ethics and Illusions: How Ethical Declarations Shape Market Behavior</a></span>
+                                    <a href="papers_web/paper_ethics_illusions.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Jeremy Bertomeu, Radhika Lunawat, & Ibrahima Sall</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801695" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_ethics_illusions.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-card">
+                        <div class="paper-card-layout">
+                            <div class="paper-figure-container">
+                                <img src="papers_web/figures/fraud_distance_results.svg" alt="Fraud and Remote Work results" class="paper-figure" loading="lazy">
+                            </div>
+                            <div class="paper-content">
+                                <div class="paper-title">
+                                    <span class="paper-title-link"><a href="papers_web/paper_fraud_distance.html">Fraud at a Distance? How Remote Work Shapes Financial Misconduct</a></span>
+                                    <a href="papers_web/paper_fraud_distance.html" class="page-icon" title="View interactive paper page"><i class="fa-solid fa-globe"></i></a>
+                                </div>
+                                <div class="paper-meta">
+                                    <div class="paper-authors">with Jessie Jianwen Guo and Yanping Zhu</div>
+                                </div>
+                                <div class="paper-links">
+                                    <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> SSRN</a>
+                                    <a class="paper-link" href="papers_web/paper_fraud_distance.html"><i class="fa-solid fa-globe"></i> Paper Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+    <script>
+        (function () {
+            var sections = document.querySelectorAll('.collapse-section');
+            var MAX_HEIGHT = 3000;
+
+            function setHeight(idx, open) {
+                var section = sections[idx];
+                if (!section) return;
+                var content = section.querySelector('.collapse-content');
+                var trigger = section.querySelector('.collapse-trigger');
+                if (!content || !trigger) return;
+                if (open) {
+                    section.classList.add('is-open');
+                    content.style.maxHeight = MAX_HEIGHT + 'px';
+                    trigger.setAttribute('aria-expanded', 'true');
+                } else {
+                    section.classList.remove('is-open');
+                    content.style.maxHeight = '0';
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            function toggle(idx) {
+                var section = sections[idx];
+                if (!section) return;
+                var isOpen = section.classList.contains('is-open');
+                setHeight(idx, !isOpen);
+            }
+
+            function closeAllExcept(idx) {
+                for (var i = 0; i < sections.length; i++) {
+                    setHeight(i, i === idx);
+                }
+            }
+
+            window.researchCollapse = {
+                toggle: toggle,
+                goToSection: function (idx) {
+                    closeAllExcept(idx);
+                }
+            };
+        })();
+
+        (function () {
+            var navItems = document.querySelectorAll('.theme-nav-item');
+            var sections = document.querySelectorAll('.collapse-section');
+
+            function selectTheme(idx) {
+                navItems.forEach(function (item, i) {
+                    item.classList.toggle('active', i === idx);
+                });
+                if (window.researchCollapse && window.researchCollapse.goToSection) {
+                    window.researchCollapse.goToSection(idx);
+                }
+                var section = sections[idx];
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            window.researchNav = {
+                selectTheme: selectTheme
+            };
+        })();
+    </script>
+
+</body>
+</html>

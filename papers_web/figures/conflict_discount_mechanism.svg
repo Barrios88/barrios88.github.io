@@ -1,0 +1,144 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #00356b; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #63605b; font-weight: 400; }
+      .box-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #00356b; }
+      .box-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #3a3632; }
+      .arrow-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #bd5319; font-weight: 600; }
+      .outcome-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #ffffff; }
+      .legend-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #3a3632; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1a4f8a" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Mechanism: How Conflicts Reduce Research Credibility</text>
+
+  <!-- LEFT COLUMN: CONFLICT TYPES -->
+  <g>
+    <!-- Box 1: Financial/Monetary Conflict -->
+    <rect x="20" y="65" width="160" height="100" fill="#ffffff" stroke="#1a4f8a" stroke-width="2" rx="4"/>
+    <text x="100" y="85" text-anchor="middle" class="box-title">Monetary</text>
+    <text x="100" y="102" text-anchor="middle" class="box-text">Financial interest in</text>
+    <text x="100" y="116" text-anchor="middle" class="box-text">research outcome</text>
+    <text x="100" y="150" text-anchor="middle" class="box-text" font-weight="700" fill="#1a4f8a">27% Discount</text>
+
+    <!-- Box 2: Data-Access Conflict -->
+    <rect x="20" y="190" width="160" height="100" fill="#ffffff" stroke="#bd5319" stroke-width="2" rx="4"/>
+    <text x="100" y="210" text-anchor="middle" class="box-title">Data-Access</text>
+    <text x="100" y="227" text-anchor="middle" class="box-text">Proprietary or gated</text>
+    <text x="100" y="241" text-anchor="middle" class="box-text">data with review rights</text>
+    <text x="100" y="275" text-anchor="middle" class="box-text" font-weight="700" fill="#bd5319">58% Discount</text>
+
+    <!-- Box 3: Ideological Conflict -->
+    <rect x="20" y="315" width="160" height="100" fill="#ffffff" stroke="#5a8fc2" stroke-width="2" rx="4"/>
+    <text x="100" y="335" text-anchor="middle" class="box-title">Ideological</text>
+    <text x="100" y="352" text-anchor="middle" class="box-text">Political/partisan stake</text>
+    <text x="100" y="366" text-anchor="middle" class="box-text">in research findings</text>
+    <text x="100" y="400" text-anchor="middle" class="box-text" font-weight="700" fill="#5a8fc2">17% Discount</text>
+
+    <!-- Box 4: Academic Conflict -->
+    <rect x="20" y="440" width="160" height="100" fill="#ffffff" stroke="#8db3d6" stroke-width="2" rx="4"/>
+    <text x="100" y="460" text-anchor="middle" class="box-title">Academic</text>
+    <text x="100" y="477" text-anchor="middle" class="box-text">Prior publications or</text>
+    <text x="100" y="491" text-anchor="middle" class="box-text">research direction bias</text>
+    <text x="100" y="525" text-anchor="middle" class="box-text" font-weight="700" fill="#8db3d6">13% Discount</text>
+  </g>
+
+  <!-- CENTER COLUMN: MECHANISM BOXES -->
+  <g>
+    <!-- Central mechanism box -->
+    <rect x="240" y="100" width="180" height="280" fill="#f0ecec" stroke="#00356b" stroke-width="2" rx="4" opacity="0.6"/>
+
+    <!-- Disclosure -->
+    <rect x="260" y="120" width="140" height="50" fill="#ffffff" stroke="#00356b" stroke-width="1.5" rx="3"/>
+    <text x="330" y="135" text-anchor="middle" class="box-title" font-size="13">Conflict Disclosed</text>
+    <text x="330" y="155" text-anchor="middle" class="box-text">Audience learns of stake</text>
+
+    <!-- Arrow down -->
+    <path d="M 330 170 L 330 195" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Credibility assessment -->
+    <rect x="260" y="195" width="140" height="50" fill="#ffffff" stroke="#00356b" stroke-width="1.5" rx="3"/>
+    <text x="330" y="210" text-anchor="middle" class="box-title" font-size="13">Credibility Assessment</text>
+    <text x="330" y="230" text-anchor="middle" class="box-text">Trust in findings reduced</text>
+
+    <!-- Arrow down -->
+    <path d="M 330 245 L 330 270" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Belief update -->
+    <rect x="260" y="270" width="140" height="50" fill="#ffffff" stroke="#00356b" stroke-width="1.5" rx="3"/>
+    <text x="330" y="285" text-anchor="middle" class="box-title" font-size="13">Belief Update</text>
+    <text x="330" y="305" text-anchor="middle" class="box-text">Downweight findings</text>
+  </g>
+
+  <!-- RIGHT COLUMN: OUTCOMES -->
+  <g>
+    <!-- Lower research value -->
+    <rect x="490" y="65" width="160" height="90" fill="#bd5319" stroke="#bd5319" stroke-width="2" rx="4"/>
+    <text x="570" y="85" text-anchor="middle" class="outcome-label" font-weight="700">39% Lower Value</text>
+    <text x="570" y="105" text-anchor="middle" class="box-text" fill="#ffffff">Paper worth 39%</text>
+    <text x="570" y="120" text-anchor="middle" class="box-text" fill="#ffffff">less than non-conflicted</text>
+
+    <!-- Reduced influence -->
+    <rect x="490" y="180" width="160" height="90" fill="#5a8fc2" stroke="#5a8fc2" stroke-width="2" rx="4"/>
+    <text x="570" y="200" text-anchor="middle" class="outcome-label" font-weight="700">Reduced Influence</text>
+    <text x="570" y="220" text-anchor="middle" class="box-text" fill="#ffffff">Ideas reach fewer people</text>
+    <text x="570" y="235" text-anchor="middle" class="box-text" fill="#ffffff">in policy &amp; debate</text>
+
+    <!-- Limited market participation -->
+    <rect x="490" y="295" width="160" height="90" fill="#1a4f8a" stroke="#1a4f8a" stroke-width="2" rx="4"/>
+    <text x="570" y="315" text-anchor="middle" class="outcome-label" font-weight="700">Market Access</text>
+    <text x="570" y="335" text-anchor="middle" class="box-text" fill="#ffffff">Conflicted researchers</text>
+    <text x="570" y="350" text-anchor="middle" class="box-text" fill="#ffffff">less effective advocates</text>
+  </g>
+
+  <!-- ARROWS FROM CONFLICTS TO MECHANISM -->
+  <g>
+    <!-- From Monetary -->
+    <path d="M 180 115 Q 210 110 240 130" stroke="#1a4f8a" stroke-width="2" fill="none" marker-end="url(#arrowhead-blue)" opacity="0.6"/>
+
+    <!-- From Data-Access -->
+    <path d="M 180 240 Q 210 240 240 240" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="205" y="235" class="arrow-label">Primary</text>
+
+    <!-- From Ideological -->
+    <path d="M 180 365 Q 210 370 240 330" stroke="#5a8fc2" stroke-width="2" fill="none" marker-end="url(#arrowhead-blue)" opacity="0.6"/>
+
+    <!-- From Academic -->
+    <path d="M 180 490 Q 210 460 240 340" stroke="#8db3d6" stroke-width="2" fill="none" marker-end="url(#arrowhead-blue)" opacity="0.6"/>
+  </g>
+
+  <!-- ARROWS FROM MECHANISM TO OUTCOMES -->
+  <g>
+    <!-- To Lower Value -->
+    <path d="M 420 140 L 490 110" stroke="#bd5319" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="445" y="125" class="arrow-label">Reduces</text>
+
+    <!-- To Influence -->
+    <path d="M 420 225 L 490 225" stroke="#5a8fc2" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-blue)"/>
+    <text x="445" y="218" class="arrow-label">Weakens</text>
+
+    <!-- To Market -->
+    <path d="M 420 310 L 490 340" stroke="#1a4f8a" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-blue)"/>
+    <text x="445" y="330" class="arrow-label">Limits</text>
+  </g>
+
+  <!-- BOTTOM LEGEND -->
+  <g>
+    <rect x="20" y="455" width="820" height="40" fill="#ffffff" stroke="#d4d0c8" stroke-width="1" rx="3"/>
+
+    <text x="40" y="475" class="legend-text" font-weight="600">Key Mechanism:</text>
+    <text x="180" y="475" class="legend-text">Disclosure of conflicts activates skepticism • Credibility assessment downweights findings • Results in 28-39% credibility reduction • Effect stronger when conflict undermines researcher independence</text>
+  </g>
+
+</svg>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hustling from Home? — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #3a3632;
+            --text-light:      #6b6560;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', 'Georgia', serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.01em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.15rem 0;
+            border-bottom: 1.5px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--yale-rule);
+        }
+
+        .paper-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .paper-meta strong {
+            color: var(--text-body);
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--yale-blue-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            color: var(--text-body);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--yale-blue);
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-body);
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        @media (max-width: 600px) {
+            .paper-header h1 { font-size: 1.7rem; }
+            .action-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="paper-header">
+            <h1>Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry</h1>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> John Manuel Barrios, Yael V. Hochberg, and Hanyi Livia Yi</p>
+                <p><strong>Research Area:</strong> Entrepreneurship & New Business Formation</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032374" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="https://www.nber.org/papers/w33237" target="_blank" class="btn">
+                <i class="fa-solid fa-building-columns"></i> View on NBER
+            </a>
+            <a href="../papers/2024-barrios-hustling-home.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <figure class="paper-summary-fig" style="max-width: 100%; margin: 2rem 0;">
+            <img src="figures/hustling_home_results.svg" alt="Key Results Dashboard" style="width: 100%; height: auto; border-radius: 3px; border: 1px solid var(--yale-rule); padding: 1rem; background: var(--white);">
+            <figcaption style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem;"><strong>Figure 1:</strong> Key Results—Telework Potential and Entrepreneurial Entry. Panel A shows pre-pandemic baseline correlation (0.14 coefficient). Panel B presents difference-in-differences estimates of the substitution effect during the pandemic (-0.072 in strictest specification). Panel C shows 2SLS estimates of realized WFH effects. Panel D reveals significantly larger negative effects on women-led business formation. Panel E displays survey evidence on flexibility preferences and entrepreneurial intent.</figcaption>
+        </figure>
+
+        <figure class="paper-summary-fig" style="max-width: 100%; margin: 2rem 0;">
+            <img src="figures/hustling_home_mechanism.svg" alt="WFH Substitution Mechanism" style="width: 100%; height: auto; border-radius: 3px; border: 1px solid var(--yale-rule); padding: 1rem; background: var(--white);">
+            <figcaption style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem;"><strong>Figure 2:</strong> The Substitution Mechanism. Before the pandemic, high-telework-potential areas saw more entrepreneurial entry (14% effect) because entrepreneurship's primary advantage—flexibility and autonomy—was unique. When COVID-19 mandates realized widespread WFH in traditional employment, this advantage eroded, reducing entrepreneurial entry by 7.2% in high-telework-potential areas. The mechanism reveals how employer-provided flexibility competes directly with entrepreneurship's non-pecuniary appeal.</figcaption>
+        </figure>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We study how the expansion of work-from-home (WFH) affects entrepreneurial entry using the COVID-19 pandemic as a natural experiment. Widespread adoption of WFH increased overall entrepreneurial entry but generated a clear substitution effect: areas with higher ex ante telework potential experienced notably smaller increases in new business registrations.
+            </p>
+            <p>
+                We propose and test a conceptual framework that emphasizes the substitution between employer-provided flexibility and entrepreneurship's traditional advantage in offering autonomy and flexibility. When traditional employment offers comparable flexibility through remote work, the incentive to leave for entrepreneurship in search of those non-pecuniary benefits falls. We find empirical evidence consistent with the model. Effects are larger for those primarily motivated by flexibility, such as women. Survey evidence further confirms that employer-provided flexibility reduces entrepreneurial intent. The analysis uses zip-code-level data on new business registrations from the Startup Cartography Project and measures of pre-pandemic telework potential (Dingel and Neiman 2020; Gupta et al. 2022).
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-arrow-right-arrow-left"></i> Substitution Effect</h3>
+                <p>While entrepreneurship increased overall during the pandemic, regions with greater pre-pandemic telework potential saw comparatively smaller increases in new business registrations. Where WFH was easier to implement and more likely realized, the rise in new business launches was muted—consistent with employer-provided flexibility substituting for flexibility that would otherwise have been sought through entrepreneurship.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-wifi"></i> Internet and Realized WFH</h3>
+                <p>Regions with both high telework potential and better internet connectivity (FCC download speeds) saw even larger relative declines in entrepreneurial entry. A 2SLS strategy that instruments for realized WFH using pre-pandemic potential and pandemic timing confirms that areas with greater actual shifts into remote work had markedly smaller increases in new business formation.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Heterogeneity: "Double Deterrent"</h3>
+                <p>The substitution effect is stronger in economically disadvantaged regions (lower pre-pandemic incomes, weaker labor growth, higher out-migration). In these areas, a one standard deviation increase in telework potential corresponds to an additional 1–4% decline in new business registrations. When both pecuniary returns and autonomy-driven motivations for entrepreneurship are weak, flexibility in traditional employment more strongly deters entry.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-person-dress"></i> Gender-Differential Effects</h3>
+                <p>In states where founder gender can be inferred, high–WFH-potential areas saw significantly larger declines in women-led business formation than in men-led. The gap is not present pre-pandemic, pointing to the pandemic-era WFH shift as the driver. Women disproportionately value flexibility; once traditional employment offers it via WFH, entrepreneurship's advantage as a source of flexibility diminishes.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-comments"></i> Survey Evidence</h3>
+                <p>Survey evidence confirms that employer-provided flexibility reduces entrepreneurial intent, consistent with the substitution mechanism.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                We provide evidence that employer-provided WFH flexibility substitutes for one of the main non-pecuniary benefits of entrepreneurship—autonomy and control over work—thereby reducing entrepreneurial entry where WFH is most feasible. The paper speaks to the broad spectrum of U.S. entrepreneurial activity (Startup Cartography Project), which is dominated by small, traditional businesses often motivated by flexibility rather than high growth. For such entrants, expanded WFH in traditional jobs can suppress new business formation; for more growth-oriented or innovation-driven ventures, WFH may instead act as a safety net that enables experimentation while employed. We also document that the substitution effect is particularly pronounced for women and in regions that could benefit most from new business creation, with implications for policy and for the long-run effects of remote work on entrepreneurial dynamism.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Yael V. Hochberg, and Hanyi Livia Yi. "Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry." NBER Working Paper 33237. Working Paper.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032374" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2024-barrios-hustling-home.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>

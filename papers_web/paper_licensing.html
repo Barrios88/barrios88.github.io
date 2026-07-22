@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue:       #00356b;
+            --yale-blue-dark:  #002244;
+            --yale-blue-mid:   #1a4f8a;
+            --yale-gray-warm:  #63605b;
+            --yale-gray-light: #b0ada7;
+            --yale-cream:      #f9f7f4;
+            --yale-rule:       #d4d0c8;
+            --yale-accent:     #bd5319;
+            --white:           #ffffff;
+            --text-body:       #3a3632;
+            --text-light:      #6b6560;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', 'Georgia', serif;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        /* ── Top Bar ── */
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        /* ── Header ── */
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            letter-spacing: -0.01em;
+        }
+        .site-name a { color: var(--yale-blue); }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: var(--yale-gray-warm);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.15rem 0;
+            border-bottom: 1.5px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: var(--yale-blue);
+            border-bottom-color: var(--yale-blue);
+        }
+
+        /* ── Content ── */
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--yale-rule);
+        }
+
+        .paper-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .paper-meta strong {
+            color: var(--text-body);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .badge-award {
+            background: var(--yale-accent);
+            color: var(--white);
+        }
+
+        .badge-lead {
+            background: var(--yale-blue);
+            color: var(--white);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--yale-blue-dark);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,53,107,0.05);
+            color: var(--yale-blue);
+        }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            color: var(--text-body);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--yale-blue);
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-body);
+            margin: 1rem 0;
+        }
+
+        /* ── Footer ── */
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: var(--yale-gray-light);
+        }
+        footer a { color: var(--yale-gray-warm); }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .paper-header h1 { font-size: 1.7rem; }
+            .action-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="paper-header">
+            <h1>Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule
+                <span class="badge badge-lead">Lead Article</span>
+                <span class="badge badge-award">Award</span>
+            </h1>
+            <div class="paper-meta">
+                <p><strong>Authors:</strong> John Manuel Barrios</p>
+                <p><strong>Published in:</strong> <em>Journal of Accounting Research</em>, Vol. 60, No. 1 (2022)</p>
+                <p><strong>Award:</strong> AAA-AACSB-RRBM Award for Research Impacting Societal Challenges, 2025</p>
+                <p><strong>Research Area:</strong> Professional Regulation & Labor Markets</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2893909" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                I examine the effects of occupational licensing on the quality of certified public accountants (CPAs). I exploit the staggered adoption of the 150-hour rule, which increases the educational requirements for a CPA license. The analysis shows that the rule decreases the number of entrants into the profession, reducing both low- and high-quality candidates. Labor market proxies for quality find no difference between 150-hour rule CPAs and the rest.
+            </p>
+            <p>
+                Moreover, rule CPAs exit public accounting at similar rates and have comparable writing quality to their nonrule counterparts. Overall, these findings are consistent with the theoretical argument that increases in licensing requirements restrict the supply of entrants and do little to improve quality in the labor market.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-chart-line"></i> Reduced Entry into the Profession</h3>
+                <p>The 150-hour requirement led to a 15% reduction in the number of first-time CPA candidates. Critically, this reduction came from both low-ability and high-ability candidates, suggesting the extra year of education was costly even for strong students with high opportunity costs of time.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> No Improvement in Labor Market Quality</h3>
+                <p>Labor market proxies for individual quality—time to promotion and tenure at firm—find no significant difference between rule and nonrule CPAs. Comparing rule audit partners to nonrule audit partners likewise shows no difference in time to achieving partnership.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-right-from-bracket"></i> No Change in Professional Commitment</h3>
+                <p>Rule CPAs exit public accounting at similar rates and on comparable timelines to their nonrule counterparts. Written communication quality, measured from résumé job descriptions, is also comparable across groups.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-gavel"></i> Supply Restriction Without Quality Gains</h3>
+                <p>The findings are consistent with the Friedman view that licensing requirements restrict the supply of entrants and extract rents for incumbents, rather than the public-interest view that licensing enhances professional quality.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Figures</h2>
+            <div style="margin: 1.5rem 0;">
+                <img src="figures/licensing_results.svg" alt="Figure 1: Key Results — 150-Hour Rule" style="width: 100%; max-width: 1000px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--yale-rule); border-radius: 3px;">
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem; text-align: center;">
+                    <strong>Figure 1.</strong> The 150-hour rule reduced first-time CPA candidates by 15%, affecting both low- and high-ability test-takers, while labor market proxies for quality detect no improvement in career outcomes.
+                </p>
+            </div>
+            <div style="margin: 2rem 0;">
+                <img src="figures/licensing_mechanism.svg" alt="Figure 2: Mechanism — Licensing and Quality" style="width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--yale-rule); border-radius: 3px;">
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem; text-align: center;">
+                    <strong>Figure 2.</strong> The 150-hour rule increased the cost of entry, reducing both low- and high-type candidates. Labor market outcomes and professional commitment measures show no accompanying quality improvement — consistent with supply restriction and rent extraction rather than quality enhancement.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                This study makes several contributions to the literature on occupational licensing, professional regulation, and labor markets. First, it comprehensively examines the rule's effect on the accounting labor market. Using a stricter difference-in-differences design at the university level, the paper extends prior studies by documenting that the reduction in supply does not come solely from fewer low-type candidates but also from fewer high-type candidates — rendering inference on quality from pass rates alone inconclusive.
+            </p>
+            <p>
+                Second, the paper's novel data and measures illustrate a promising approach for capturing differences in the quality of individual auditors and CPAs. The use of CPAs' résumés and labor market measures of individual career outcomes offers a path forward to separate the effects of auditor human capital from that of the firm's employees.
+            </p>
+            <p>
+                Third, the paper contributes to the broader economics literature on occupational licensing, which affects nearly 30% of the U.S. labor force. The rule's supply reductions combined with the lack of a quality effect cast doubt on the benefits of licensing restrictions in U.S. labor markets. The rule serves as an ideal setting for providing insights on the costs and benefits of changes in mandatory general education in other high-skilled professions such as law and medicine.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Policy Implications</h2>
+            <p>
+                The findings have important implications for professional licensing policy. The evidence that the 150-hour requirement reduces entry — including high-ability candidates — without improving measurable quality suggests that educational credentialing requirements should be carefully scrutinized. The additional year of education appears costly even for strong candidates, potentially because of their higher opportunity cost of time.
+            </p>
+            <p>
+                The null quality result is informative: labor market proxies for quality, professional commitment, and communication skills all fail to show improvement. This is consistent with the view that the rule functions primarily as a barrier that restricts supply and generates rents for incumbents, rather than enhancing the quality of the profession as its proponents claimed.
+            </p>
+            <p>
+                More broadly, the paper speaks to ongoing debates about occupational licensing in the United States, where nearly 30% of workers require licenses. The relative merits of increased mandatory educational requirements for other highly skilled licensed professions — such as law and medicine — have also come under criticism. The 150-hour rule serves as an ideal setting for understanding the costs and benefits of changes in mandatory general education requirements.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel. "Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule." <em>Journal of Accounting Research</em> 60, no. 1 (2022): 3-43.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2893909" target="_blank" class="btn">
+                <i class="fa-solid fa-download"></i> Download Paper
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios &middot; Yale School of Management
+    </footer>
+
+</body>
+</html>

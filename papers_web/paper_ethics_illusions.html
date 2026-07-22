@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethics and Illusions — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section {
+            margin: 2.5rem 0;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Ethics statement → seller behavior (little change) vs bidders (belief shift) → ethical noise -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
+                    </marker>
+                    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+                    </marker>
+                </defs>
+
+                <rect x="50" y="70" width="120" height="60" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="110" y="98" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">Ethical Statement</text>
+                <text x="110" y="112" text-anchor="middle" font-size="9" fill="#00356b">(seller must sign)</text>
+
+                <path d="M 170 100 L 230 100" stroke="#00356b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+                <!-- Two branches -->
+                <rect x="250" y="45" width="100" height="42" fill="none" stroke="#00356b" stroke-width="2" rx="2"/>
+                <text x="300" y="68" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Sellers: misreporting</text>
+                <text x="300" y="80" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">unchanged</text>
+
+                <rect x="250" y="115" width="100" height="42" fill="none" stroke="#bd5319" stroke-width="2" rx="2"/>
+                <text x="300" y="138" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Bidders: more weight</text>
+                <text x="300" y="150" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">on reports, bid more</text>
+
+                <path d="M 350 66 L 410 100" stroke="#00356b" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+                <path d="M 350 146 L 410 100" stroke="#bd5319" stroke-width="1.5" fill="none" marker-end="url(#arrowhead2)"/>
+
+                <circle cx="470" cy="100" r="42" fill="none" stroke="#00356b" stroke-width="2" stroke-dasharray="2,2"/>
+                <text x="470" y="92" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">Ethical noise:</text>
+                <text x="470" y="105" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">belief shifts without</text>
+                <text x="470" y="118" text-anchor="middle" font-size="9" fill="#00356b" font-weight="600">behavior shifts</text>
+            </svg>
+            <div class="header-content">
+                <h1>Ethics and Illusions: How Ethical Declarations Shape Market Behavior</h1>
+                <p class="tagline">Laboratory evidence on misreporting, belief shifts, and "ethical noise"</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John Manuel Barrios, Jeremy Bertomeu, Radhika Lunawat, Ibrahima Sall</p>
+            <p><strong>Research Area:</strong> Misreporting; experiment; ethics; capital markets</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801695" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2024-barrios-ethics-illusions.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We study how ethical declarations shape market behavior in a laboratory setting. A privately informed seller observes an asset value and issues a report before a first-price auction. Bidders see the report and submit bids. Misreporting is costly to the seller (quadratic in the bias). In one treatment, sellers must sign an ethical statement that the report is truthful before trading; refusal ends the round with no trade. The design is pre-registered; roles rotate and matching is random.
+            </p>
+            <p>
+                Signing an ethical statement does not meaningfully reduce sellers’ misreporting. It shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when the ethical statement is present, learn more slowly about the seller’s strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. We introduce "ethical noise": shifts in beliefs without corresponding shifts in behavior that distort market outcomes.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-scale-balanced"></i> No Meaningful Change in Seller Behavior</h3>
+                <p>Requiring sellers to sign an ethical statement does not meaningfully reduce misreporting. Seller reporting behavior is similar with or without the intervention. The statement is effectively cheap talk in the experiment.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-arrow-trend-up"></i> Belief Shifts and Surplus</h3>
+                <p>When the ethical statement is present, bidders place more weight on reports and bid more aggressively. Surplus moves toward sellers. So the intervention changes bidders’ beliefs and the terms of trade, not sellers’ conduct.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-brain"></i> Bidders Don’t Fully Undo Bias; Slower Learning</h3>
+                <p>Bidders do not fully correct for reporting bias. In the baseline, winning bidders overbid by an average of $11.87. When the ethical statement is present, bidders learn more slowly about the seller’s strategic behavior. Disproportionately, auction winners are bidders who assumed the seller was honest.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-wave-square"></i> Ethical Noise</h3>
+                <p>We define "ethical noise" as shifts in beliefs without corresponding shifts in behavior that distort market outcomes. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. A structural counterfactual suggests markets would be more price-efficient if bidders rationally internalized the distribution of lying costs.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Figures</h2>
+            <p style="margin-bottom: 2rem; font-size: 0.94rem; text-align: left;">
+                The figures below visualize the experimental results and mechanism. Figure 1 shows the key treatment effects on seller misreporting, bidder overbidding, and bidder learning. Figure 2 illustrates the experimental design and how ethical declarations create "ethical noise" in market outcomes.
+            </p>
+
+            <div style="margin: 2rem 0; padding: 1.5rem; background: var(--yale-cream); border-radius: 4px; border-left: 3px solid var(--yale-blue);">
+                <h3 style="font-size: 1.05rem; color: var(--yale-blue); margin-bottom: 1rem; font-weight: 600;">Figure 1: Key Results and Treatment Effects</h3>
+                <img src="figures/ethics_illusions_results.svg" alt="Figure 1: Ethics Illusions Key Results" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                <p style="font-size: 0.88rem; color: var(--text-light); text-align: center; margin-top: 1rem;">
+                    <strong>Left:</strong> Seller misreporting shows no significant change across treatments. <strong>Middle & Right:</strong> Bidder overbidding worsens with ethics statement; learning slows. Baseline overbidding: $11.87 per winning bid.
+                </p>
+            </div>
+
+            <div style="margin: 2rem 0; padding: 1.5rem; background: var(--yale-cream); border-radius: 4px; border-left: 3px solid var(--yale-blue);">
+                <h3 style="font-size: 1.05rem; color: var(--yale-blue); margin-bottom: 1rem; font-weight: 600;">Figure 2: Experimental Design and Ethical Noise Mechanism</h3>
+                <img src="figures/ethics_illusions_mechanism.svg" alt="Figure 2: Ethics Illusions Mechanism" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                <p style="font-size: 0.88rem; color: var(--text-light); text-align: center; margin-top: 1rem;">
+                    <strong>Top:</strong> Four-stage experimental flow from seller observation through first-price auction. <strong>Bottom:</strong> Comparison of control (no ethics) vs. treatment (ethics statement required) conditions. The key finding: ethical statements don’t change seller behavior but shift bidder beliefs upward, creating "ethical noise" that disadvantages bidders.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                We provide laboratory evidence on how ethical declarations affect a canonical misreporting setting: a seller reports, then bidders compete in a first-price auction. The intervention (mandatory ethical statement) does not improve reporting; it shifts bidders’ beliefs and worsens outcomes for them. That is the "ethical noise" mechanism. The result is relevant for disclosure policy: interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage counterparties who place too much weight on the declaration.
+            </p>
+            <p>
+                We estimate a structural model of heterogeneous lying costs and show that price efficiency would be higher if bidders rationally internalized the distribution of seller types. The design is pre-registered (Open Science Framework). The paper speaks to the gap between rational-expectations benchmarks, where biased reports are fully undone, and actual inference in markets with heterogeneous ethics.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John Manuel, Jeremy Bertomeu, Radhika Lunawat, and Ibrahima Sall. "Ethics and Illusions: How Ethical Declarations Shape Market Behavior." Working Paper.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801695" target="_blank" class="btn">
+                <i class="fa-solid fa-file-lines"></i> View on SSRN
+            </a>
+            <a href="../papers/2024-barrios-ethics-illusions.pdf" target="_blank" class="btn-secondary btn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>
