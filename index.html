@@ -372,6 +372,90 @@
             .header-inner { position: relative; }
             .hero { padding: 2rem 1rem; }
             .profile { padding: 1.5rem 1rem; }
+            .news-card { padding: 1.25rem; }
+        }
+
+        /* ── New research announcement ── */
+        .news-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 0.5rem;
+        }
+
+        .news-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.25rem;
+            align-items: center;
+            background: var(--surface-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: 1.35rem 1.5rem;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .news-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: rgba(0,53,107,0.25);
+        }
+
+        .news-badge {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--white);
+            background: var(--yale-blue);
+            padding: 0.35rem 0.65rem;
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+        }
+
+        .news-body h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            line-height: 1.35;
+        }
+
+        .news-body h2 a { color: var(--yale-blue); }
+        .news-body h2 a:hover { color: var(--yale-accent); }
+
+        .news-body p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .news-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--yale-blue);
+            padding: 0.45rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            white-space: nowrap;
+            transition: color var(--transition), border-color var(--transition), background var(--transition);
+        }
+
+        .news-cta:hover {
+            color: var(--yale-blue);
+            border-color: var(--yale-blue);
+            background: rgba(0,53,107,0.04);
+        }
+
+        @media (max-width: 700px) {
+            .news-card {
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+            .news-cta { justify-self: start; }
         }
     </style>
 </head>
@@ -418,6 +502,17 @@
             </div>
         </div>
     </section>
+
+    <div class="news-wrap">
+        <div class="news-card">
+            <span class="news-badge">New Research</span>
+            <div class="news-body">
+                <h2><a href="papers_web/paper_mandated_transparency.html">Mandated Transparency and the Production of Research</a></h2>
+                <p>with Roman Chychyla · JAR’s 2015 data-and-code mandate: plainer writing (~1 Fog grade), more novel work, and a more elite author pool · Preliminary draft</p>
+            </div>
+            <a class="news-cta" href="papers_web/paper_mandated_transparency.html">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
 
     <main class="content">
         <div class="content-grid">

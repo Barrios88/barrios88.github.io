@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandated Transparency and the Production of Research — John Manuel Barrios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --yale-blue: #00356b;
+            --yale-accent: #bd5319;
+            --yale-cream: #f9f7f4;
+            --yale-rule: #d4d0c8;
+            --text-body: #3a3632;
+            --text-light: #6b6560;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
+        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
+        a:hover { color: var(--yale-accent); }
+
+        .topbar { background: var(--yale-blue); height: 4px; }
+
+        header {
+            border-bottom: 1px solid var(--yale-rule);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+
+        .site-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--yale-blue);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a {
+            color: #63605b;
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
+
+        .visual-header {
+            background: var(--yale-cream);
+            padding: 3rem 2rem;
+            position: relative;
+            border-bottom: 3px solid var(--yale-blue);
+            overflow: hidden;
+        }
+
+        .network-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 160px;
+        }
+
+        .network-svg {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: min(420px, 48%);
+            height: auto;
+            opacity: 0.22;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 34rem;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            color: var(--yale-blue);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .header-content .tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        .paper-meta {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--yale-blue);
+        }
+
+        .paper-meta p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0.3rem 0;
+        }
+
+        .paper-meta strong { color: var(--text-body); font-weight: 600; }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            background: var(--yale-blue);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .btn:hover { background: #002244; color: white; }
+
+        .btn-secondary {
+            background: white;
+            color: var(--yale-blue);
+            border: 1px solid var(--yale-blue);
+        }
+
+        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
+
+        .section { margin: 2.5rem 0; }
+
+        .section-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--yale-blue);
+        }
+
+        .section p {
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .key-finding {
+            background: var(--yale-cream);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--yale-blue);
+            border-radius: 2px;
+        }
+
+        .key-finding h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-finding p {
+            margin: 0;
+            font-size: 0.92rem;
+            text-align: left;
+            line-height: 1.65;
+        }
+
+        .figure-block {
+            margin: 2.25rem 0;
+            text-align: center;
+        }
+
+        .figure-block img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--yale-rule);
+            border-radius: 3px;
+            background: white;
+            box-shadow: 0 1px 4px rgba(0,53,107,0.06);
+        }
+
+        .figure-caption {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.85rem;
+            text-align: left;
+            line-height: 1.55;
+        }
+
+        .citation-box {
+            background: var(--yale-cream);
+            padding: 1.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--yale-rule);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.78rem;
+            color: #b0ada7;
+        }
+
+        @media (max-width: 720px) {
+            .network-svg { display: none; }
+            .header-content { max-width: 100%; }
+            .header-content h1 { font-size: 1.45rem; }
+            .content { padding: 2rem 1.25rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="visual-header">
+        <div class="network-container">
+            <svg class="network-svg" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="#00356b"/>
+                    </marker>
+                    <marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                        <polygon points="0 0, 8 3, 0 6" fill="#bd5319"/>
+                    </marker>
+                </defs>
+                <rect x="8" y="72" width="88" height="56" rx="4" fill="#00356b" fill-opacity="0.08" stroke="#00356b" stroke-width="1.75"/>
+                <text x="52" y="94" text-anchor="middle" font-size="11" fill="#00356b" font-weight="700">JAR 2015</text>
+                <text x="52" y="110" text-anchor="middle" font-size="10" fill="#00356b">Data Policy</text>
+
+                <path d="M 100 90 L 132 58" stroke="#00356b" stroke-width="1.75" marker-end="url(#arr)"/>
+                <path d="M 100 110 L 132 142" stroke="#bd5319" stroke-width="1.75" marker-end="url(#arrA)"/>
+
+                <rect x="136" y="28" width="120" height="52" rx="4" fill="none" stroke="#00356b" stroke-width="1.75"/>
+                <text x="196" y="48" text-anchor="middle" font-size="10" fill="#00356b" font-weight="700">Behavioral</text>
+                <text x="196" y="64" text-anchor="middle" font-size="9.5" fill="#63605b">Fog ↓ · hedge ↓</text>
+
+                <rect x="136" y="120" width="120" height="52" rx="4" fill="none" stroke="#bd5319" stroke-width="1.75"/>
+                <text x="196" y="140" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="700">Market</text>
+                <text x="196" y="156" text-anchor="middle" font-size="9.5" fill="#63605b">novelty · sorting</text>
+
+                <path d="M 260 54 L 292 54" stroke="#00356b" stroke-width="1.75" marker-end="url(#arr)"/>
+                <path d="M 260 146 L 292 146" stroke="#bd5319" stroke-width="1.75" marker-end="url(#arrA)"/>
+
+                <rect x="296" y="28" width="112" height="52" rx="4" fill="none" stroke="#00356b" stroke-width="1.75"/>
+                <text x="352" y="50" text-anchor="middle" font-size="10" fill="#00356b" font-weight="700">How written</text>
+                <text x="352" y="66" text-anchor="middle" font-size="9.5" fill="#63605b">framing sections</text>
+
+                <rect x="296" y="120" width="112" height="52" rx="4" fill="none" stroke="#bd5319" stroke-width="1.75"/>
+                <text x="352" y="142" text-anchor="middle" font-size="10" fill="#bd5319" font-weight="700">Who submits</text>
+                <text x="352" y="158" text-anchor="middle" font-size="9.5" fill="#63605b">elite · cited less</text>
+            </svg>
+            <div class="header-content">
+                <h1>Mandated Transparency and the Production of Research</h1>
+                <p class="tagline">When <em>JAR</em> required data sheets and sample-construction code in 2015, what changed—how authors write, or who publishes where?</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="paper-meta">
+            <p><strong>Authors:</strong> John M. Barrios and Roman Chychyla</p>
+            <p><strong>Status:</strong> Preliminary draft</p>
+            <p><strong>Research Area:</strong> Political Economy &amp; Social Capital · Economics of Science</p>
+            <p><strong>Design:</strong> Difference-in-differences around <em>JAR</em>’s January 2015 data- and code-sharing mandate · ~4,600 articles across six journals</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="../papers/2026-barrios-mandated-transparency.pdf" class="btn" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Abstract</h2>
+            <p>
+                We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January&nbsp;1, 2015, the <em>Journal of Accounting Research</em> (<em>JAR</em>) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.
+            </p>
+            <p>
+                Consistent with disclosure disciplining authors, post-mandate <em>JAR</em> abstracts are about one Gunning–Fog grade more readable—roughly one-third of a standard deviation—and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, <em>JAR</em> shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Findings</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-pen-to-square"></i> Behavioral margin: how a given author writes</h3>
+                <p>Post-mandate <em>JAR</em> abstracts fall by about 1.3 Fog points (Δ&nbsp;≈&nbsp;−1.26)—more readable prose—and introduction hedging declines (Δ&nbsp;≈&nbsp;−0.017). Put differently, authors write more plainly and stake fewer qualified claims where they frame and interpret results. The same papers also report fewer headline results and surround each claim with more supporting coefficients. We do not, however, find much evidence that reported test statistics pull away from the just-significant region.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-shuffle"></i> Market margin: who submits and what gets placed</h3>
+                <p>Measured novelty rises at the journal level (intro-document novelty Δ&nbsp;≈&nbsp;+0.011). Once we hold author identity fixed, the novelty change is essentially zero—consistent with selection rather than a given author writing more original papers. Along the same margin, post-mandate <em>JAR</em> authors are about 0.3&nbsp;SD more likely to be at a top-20 UTD department and carry a higher mean <em>h</em>-index (≈0.25&nbsp;SD).</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-quote-left"></i> Citation composition, not just citation counts</h3>
+                <p>Log citations fall after the mandate (Δ&nbsp;≈&nbsp;−0.14). The citations that remain come from more prominent outlets—including a larger share from premier business journals outside accounting. Put differently, the audience shrinks while the marginal reader is drawn from higher-status venues.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-flask"></i> Placebos that separate behavior from composition</h3>
+                <p>Writing effects concentrate in framing sections (abstract, introduction, contribution moves) and are weak in mechanical methods and results sections. They are absent for theory papers exempt from the mandate, and they reappear when <em>Management Science</em> adopts a comparable data-and-code rule—patterns a pure compositional story would not anticipate.</p>
+            </div>
+        </section>
+
+        <div class="figure-block">
+            <img src="figures/mandated-transparency-eventstudy.png" alt="Event-study estimates for novelty, readability, hedging, and citations around the 2015 JAR mandate">
+            <p class="figure-caption">
+                <strong>Figure.</strong> Event-study estimates around the 2015 submission cutoff. Post-mandate <em>JAR</em> papers become more novel and more readable, hedge less in the introduction, and receive fewer citations in raw counts. Pre-period estimates are normalized at <em>t</em>&nbsp;=&nbsp;−1.
+            </p>
+        </div>
+
+        <div class="figure-block">
+            <img src="figures/mandated-transparency-sections.png" alt="Readability and hedging effects by paper section and rhetorical move">
+            <p class="figure-caption">
+                <strong>Figure.</strong> Where the writing changes. Fog declines and hedging declines concentrate in framing and claim-staking text—abstracts, introductions, and contribution and gap moves—rather than in mechanical methodology and results sections.
+            </p>
+        </div>
+
+        <div class="figure-block">
+            <img src="figures/mandated-transparency-selection.png" alt="Author-pool composition shifts after the JAR mandate">
+            <p class="figure-caption">
+                <strong>Figure.</strong> Author-pool composition. Relative to controls, post-mandate <em>JAR</em> authors shift toward top-20 UTD departments and higher mean <em>h</em>-indices; team size, prior top-3 publications, paper length, and career years move little.
+            </p>
+        </div>
+
+        <section class="section">
+            <h2 class="section-heading">Research Contribution</h2>
+            <p>
+                Most of what we know about transparency mandates concerns whether published results can be replicated. Far less is understood about how the anticipation of disclosure changes the research that gets written and the population of researchers who write it. In this paper, we exploit <em>JAR</em>’s 2015 data- and code-sharing policy—adopted unilaterally, on a clean date, while peer accounting journals did not follow—to examine that supply-side question.
+            </p>
+            <p>
+                Our study offers several contributions. First and foremost, we show that a self-certified disclosure rule without an in-house data editor still moves both a behavioral margin—how a given author writes and reports—and a market margin—which authors and projects arrive. Second, we provide a portable template for separating those margins when a single outlet changes disclosure rules: author fixed effects, a second treated journal, within-field theory placebos, and never-treated field benchmarks. Third, we treat the research paper as a disclosure document and measure prose, novelty, reported inference, and citation composition with text-as-data tools. Overall, these results suggest that opening the research pipeline reshapes the market for ideas, not only post-publication auditability.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Citation</h2>
+            <div class="citation-box">
+Barrios, John M., and Roman Chychyla. "Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy." Preliminary draft, 2026.
+            </div>
+        </section>
+
+        <div class="action-buttons">
+            <a href="../papers/2026-barrios-mandated-transparency.pdf" class="btn" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </a>
+            <a href="../research.html" class="btn-secondary btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Research
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 John Manuel Barrios · Yale School of Management
+    </footer>
+
+</body>
+</html>
