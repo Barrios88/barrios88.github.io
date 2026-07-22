@@ -334,6 +334,17 @@ Update these in `index.html` as needed.
 
 ---
 
-**Last Updated**: February 2026  
-**Website Version**: 2.0 (Thematic Organization + Interactive Paper Pages)  
+## Deployment
+
+The site is live at **https://barrios88.github.io/** via GitHub Pages.
+
+- **Repo**: `Barrios88/barrios88.github.io` (renamed from the empty `john.m.barrios.github.io`), serving from the root of `main`.
+- **To publish changes**: commit and `git push` — Pages rebuilds automatically in ~1 minute.
+- **`.nojekyll`** at the root is required: the profile photo `photos/_DSC5475.jpg` starts with an underscore, which Jekyll would otherwise exclude from the published site.
+- **`.gitignore`** keeps working files out of the repo: `papers_text/`, `research_backup.html`, `research copy.html`, root-level CV PDFs (the served CV is `cv/CV_latest.pdf`), and root `/figures/` (unreferenced summary JPGs). Note the anchored `/figures/` — `papers_web/figures/` must stay tracked.
+
+---
+
+**Last Updated**: July 2026  
+**Website Version**: 2.1 (Live on GitHub Pages)  
 **Session notes**: The "Recent Changes (Session Notes for Future Chats)" section above summarizes paper write-up corrections, PDF renaming, new Hustling from Home page, and link fixes so a new chat can continue from here.
