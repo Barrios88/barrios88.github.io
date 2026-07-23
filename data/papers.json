@@ -38,7 +38,7 @@
       "themes": [
         "labor"
       ],
-      "abstract": "Private equity has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. This paper studies these issues using accounting-industry data from 1999\u20132024 that links more than 3,000 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power.",
+      "abstract": "Private equity has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. This paper studies these issues using accounting-industry data from 1999–2024 that links more than 3,000 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power.",
       "note": "Revision Requested: Journal of Financial Economics",
       "figure": "papers_web/figures/pe_accounting_results.svg",
       "links": {
@@ -153,7 +153,7 @@
       "themes": [
         "political-economy"
       ],
-      "abstract": "We study the role of civic capital in facilitating collective action during the early stages of the COVID-19 pandemic. Using real-time cellphone location data and variation in social distancing recommendations across U.S. counties, we examine whether areas with higher civic capital exhibited greater compliance with social distancing guidelines when formal enforcement was limited.\n\nWe find that counties with higher civic capital\u2014measured by voter turnout, census response rates, and participation in community organizations\u2014experienced significantly larger reductions in mobility and greater social distancing compliance following public health recommendations. A one-standard-deviation increase in civic capital is associated with a 10-15% greater reduction in movement. These effects are largest in the early weeks of the pandemic, before the widespread adoption of formal restrictions, suggesting that civic capital enables communities to coordinate on socially beneficial behaviors even without enforcement.",
+      "abstract": "We study the role of civic capital in facilitating collective action during the early stages of the COVID-19 pandemic. Using real-time cellphone location data and variation in social distancing recommendations across U.S. counties, we examine whether areas with higher civic capital exhibited greater compliance with social distancing guidelines when formal enforcement was limited.\n\nWe find that counties with higher civic capital—measured by voter turnout, census response rates, and participation in community organizations—experienced significantly larger reductions in mobility and greater social distancing compliance following public health recommendations. A one-standard-deviation increase in civic capital is associated with a 10-15% greater reduction in movement. These effects are largest in the early weeks of the pandemic, before the widespread adoption of formal restrictions, suggesting that civic capital enables communities to coordinate on socially beneficial behaviors even without enforcement.",
       "note": null,
       "figure": "papers_web/figures/civic_capital_results.svg",
       "links": {
@@ -207,8 +207,8 @@
         "political-economy",
         "reporting"
       ],
-      "abstract": "We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January 1, 2015, the Journal of Accounting Research ( JAR ) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.\n\nConsistent with disclosure disciplining authors, post-mandate JAR abstracts are about one Gunning\u2013Fog grade more readable\u2014roughly one-third of a standard deviation\u2014and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, JAR shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.",
-      "note": "New working paper \u2014 preliminary draft",
+      "abstract": "We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January 1, 2015, the Journal of Accounting Research ( JAR ) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.\n\nConsistent with disclosure disciplining authors, post-mandate JAR abstracts are about one Gunning–Fog grade more readable—roughly one-third of a standard deviation—and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, JAR shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.",
+      "note": "New working paper — preliminary draft",
       "figure": "papers_web/figures/mandated-transparency-eventstudy.png",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7114158",
@@ -237,7 +237,7 @@
       "themes": [
         "political-economy"
       ],
-      "abstract": "We examine how conflicts of interest (CoI)\u2014financial, professional, or ideological stakes held by authors\u2014affect the perceived credibility of economics research. Using a randomized survey of economists and the US public, we investigate how audiences react to research findings when the author is revealed to have interests in the outcome.\n\nOur findings reveal a significant \"conflict-of-interest discount\" in the marketplace of ideas: disclosure of conflicts reduces trust in research findings by 28%, with substantial variation by conflict type. We model the \"CoI Discount,\" estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.",
+      "abstract": "We examine how conflicts of interest (CoI)—financial, professional, or ideological stakes held by authors—affect the perceived credibility of economics research. Using a randomized survey of economists and the US public, we investigate how audiences react to research findings when the author is revealed to have interests in the outcome.\n\nOur findings reveal a significant \"conflict-of-interest discount\" in the marketplace of ideas: disclosure of conflicts reduces trust in research findings by 28%, with substantial variation by conflict type. We model the \"CoI Discount,\" estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.",
       "note": null,
       "figure": "papers_web/figures/conflict_discount_results.svg",
       "links": {
@@ -266,7 +266,7 @@
       "themes": [
         "governance"
       ],
-      "abstract": "We examine patterns of homophily\u2014the tendency to associate with similar others\u2014in foreign director appointments across 38 countries. Using a comprehensive dataset of international board appointments, we investigate whether firms preferentially appoint foreign directors from culturally similar countries and explore the implications of this homophily for board effectiveness and firm outcomes.\n\nOur findings reveal strong homophily patterns: firms are significantly more likely to appoint foreign directors from countries that share linguistic, religious, or colonial ties. This cultural matching is economically meaningful, with cultural proximity increasing appointment probability by 40-60%. We find that culturally similar foreign directors are associated with greater board attendance, more active committee participation, and improved firm performance, suggesting that cultural fit facilitates effective cross-border governance.",
+      "abstract": "We examine patterns of homophily—the tendency to associate with similar others—in foreign director appointments across 38 countries. Using a comprehensive dataset of international board appointments, we investigate whether firms preferentially appoint foreign directors from culturally similar countries and explore the implications of this homophily for board effectiveness and firm outcomes.\n\nOur findings reveal strong homophily patterns: firms are significantly more likely to appoint foreign directors from countries that share linguistic, religious, or colonial ties. This cultural matching is economically meaningful, with cultural proximity increasing appointment probability by 40-60%. We find that culturally similar foreign directors are associated with greater board attendance, more active committee participation, and improved firm performance, suggesting that cultural fit facilitates effective cross-border governance.",
       "note": null,
       "figure": "papers_web/figures/boards_feather_results.svg",
       "links": {
@@ -295,9 +295,9 @@
         "governance",
         "reporting"
       ],
-      "abstract": "We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.\n\nOur findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation\u2014these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation\u2014these \"smoke\" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.",
+      "abstract": "We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.\n\nOur findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation—these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation—these \"smoke\" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.",
       "note": "Under Review (2nd round): Review of Accounting Studies",
-      "figure": null,
+      "figure": "papers_web/figures/ai-disclosures-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107",
         "nber": null,
@@ -351,7 +351,7 @@
       ],
       "abstract": "We examine how regulatory fragmentation across multiple tax jurisdictions creates spillover effects on corporate tax burdens. Using variation in tax policy adoption across states and countries, we study how firms operating in multiple jurisdictions face cumulative compliance costs and coordinated taxation that often results in higher overall tax burdens than would occur under harmonized systems.\n\nOur findings reveal significant spillover effects: firms operating in more regulatory fragmented environments face substantially higher effective tax rates and compliance costs. These effects are particularly pronounced for smaller firms with less sophisticated tax planning capacity. Additionally, we document that jurisdictions often fail to coordinate tax policies, leading to double-taxation and compliance burden spillovers that systematically disadvantage multi-jurisdictional operations.",
       "note": "Under Review (2nd round): The Accounting Review",
-      "figure": null,
+      "figure": "papers_web/figures/regulatory-spillovers-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4950361",
         "nber": null,
@@ -379,7 +379,7 @@
       ],
       "abstract": "We examine how regulatory constraints affect investor information asymmetry. Using variation in regulatory stringency across industries and regions, we investigate whether more stringent regulation reduces divergence in investor beliefs about firm value by constraining managerial discretion and harmonizing information disclosure.\n\nOur findings reveal a non-monotonic relationship: moderate regulatory constraints reduce information asymmetry by limiting managerial discretion and improving disclosure standardization. However, extremely stringent regulation can increase asymmetry by creating complexity and compliance costs that limit information flow to smaller investors. The relationship is strongest in industries where regulatory constraints directly affect core business operations and decision-making.",
       "note": null,
-      "figure": null,
+      "figure": "papers_web/figures/regulation-consensus-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4932162",
         "nber": null,
@@ -405,7 +405,7 @@
       ],
       "abstract": null,
       "note": null,
-      "figure": null,
+      "figure": "papers_web/figures/taxation-venture-capital-summary.svg",
       "links": {
         "ssrn": null,
         "nber": null,
@@ -432,7 +432,7 @@
       ],
       "abstract": null,
       "note": null,
-      "figure": null,
+      "figure": "papers_web/figures/licensing-reform-summary.svg",
       "links": {
         "ssrn": null,
         "nber": null,
@@ -485,9 +485,9 @@
       "themes": [
         "reporting"
       ],
-      "abstract": "We develop a theoretical model and provide empirical evidence on how accounting rules affect firm behavior during financial crises. Specifically, we examine how firms' accounting choices\u2014particularly conservatism versus flexibility\u2014influence bond pricing, which in turn affects corporate investment decisions and real economic outcomes.\n\nOur theoretical analysis shows that during crises, conservative accounting that forces recognition of losses improves creditor information and reduces bond yield spreads, but may temporarily reduce firm willingness to invest. Flexible accounting that defers loss recognition may temporarily maintain favorable bond pricing but creates information risk that eventually manifests in higher yields and reduced investment. Our empirical evidence from multiple financial crises supports these predictions, suggesting that accounting rules have important consequences for credit markets and investment decisions beyond their immediate disclosure effects.",
+      "abstract": "We develop a theoretical model and provide empirical evidence on how accounting rules affect firm behavior during financial crises. Specifically, we examine how firms' accounting choices—particularly conservatism versus flexibility—influence bond pricing, which in turn affects corporate investment decisions and real economic outcomes.\n\nOur theoretical analysis shows that during crises, conservative accounting that forces recognition of losses improves creditor information and reduces bond yield spreads, but may temporarily reduce firm willingness to invest. Flexible accounting that defers loss recognition may temporarily maintain favorable bond pricing but creates information risk that eventually manifests in higher yields and reduced investment. Our empirical evidence from multiple financial crises supports these predictions, suggesting that accounting rules have important consequences for credit markets and investment decisions beyond their immediate disclosure effects.",
       "note": null,
-      "figure": null,
+      "figure": "papers_web/figures/accounting-pressure-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889",
         "nber": null,
@@ -509,8 +509,8 @@
       "themes": [
         "reporting"
       ],
-      "abstract": "Staggered difference-in-differences (DiD) designs\u2014where different units receive treatment at different times\u2014are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.\n\nWe provide a comprehensive primer for accounting researchers on staggered DiD designs. We explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. Our goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.",
-      "figure": null,
+      "abstract": "Staggered difference-in-differences (DiD) designs—where different units receive treatment at different times—are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.\n\nWe provide a comprehensive primer for accounting researchers on staggered DiD designs. We explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. Our goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.",
+      "figure": "papers_web/figures/staggered-did-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859",
         "nber": null,
@@ -562,7 +562,7 @@
       "themes": [
         "antitrust"
       ],
-      "abstract": "We examine how private equity (PE) firms exploit divergences between accounting and economic measures of control to avoid triggering antitrust scrutiny. When PE firms acquire multiple competitors within the same industry, they often structure transactions to maintain formally separate operating units while exercising significant economic control over pricing and strategic decisions.\n\nOur analysis reveals that accounting-based control measures\u2014which focus on voting rights and formal ownership structures\u2014systematically underestimate the economic control that PE firms exercise over portfolio companies. This measurement divergence creates an antitrust loophole: PE firms can coordinate substantially competitive behavior across portfolio companies while technically maintaining separate entities that escape consolidation-based competition metrics.",
+      "abstract": "We examine how private equity (PE) firms exploit divergences between accounting and economic measures of control to avoid triggering antitrust scrutiny. When PE firms acquire multiple competitors within the same industry, they often structure transactions to maintain formally separate operating units while exercising significant economic control over pricing and strategic decisions.\n\nOur analysis reveals that accounting-based control measures—which focus on voting rights and formal ownership structures—systematically underestimate the economic control that PE firms exercise over portfolio companies. This measurement divergence creates an antitrust loophole: PE firms can coordinate substantially competitive behavior across portfolio companies while technically maintaining separate entities that escape consolidation-based competition metrics.",
       "note": null,
       "figure": "papers_web/figures/misaligned_control_results.svg",
       "links": {
@@ -619,7 +619,7 @@
       "themes": [
         "ethics"
       ],
-      "abstract": "We study how ethical declarations shape market behavior in a laboratory setting. A privately informed seller observes an asset value and issues a report before a first-price auction. Bidders see the report and submit bids. Misreporting is costly to the seller (quadratic in the bias). In one treatment, sellers must sign an ethical statement that the report is truthful before trading; refusal ends the round with no trade. The design is pre-registered; roles rotate and matching is random.\n\nSigning an ethical statement does not meaningfully reduce sellers\u2019 misreporting. It shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when the ethical statement is present, learn more slowly about the seller\u2019s strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. We introduce \"ethical noise\": shifts in beliefs without corresponding shifts in behavior that distort market outcomes.",
+      "abstract": "We study how ethical declarations shape market behavior in a laboratory setting. A privately informed seller observes an asset value and issues a report before a first-price auction. Bidders see the report and submit bids. Misreporting is costly to the seller (quadratic in the bias). In one treatment, sellers must sign an ethical statement that the report is truthful before trading; refusal ends the round with no trade. The design is pre-registered; roles rotate and matching is random.\n\nSigning an ethical statement does not meaningfully reduce sellers’ misreporting. It shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when the ethical statement is present, learn more slowly about the seller’s strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. We introduce \"ethical noise\": shifts in beliefs without corresponding shifts in behavior that distort market outcomes.",
       "note": "Revision Requested: Accounting, Organizations and Society",
       "figure": "papers_web/figures/ethics_illusions_results.svg",
       "links": {
@@ -647,7 +647,7 @@
         "ethics",
         "labor"
       ],
-      "abstract": "Financial misconduct is usually a team activity. It depends on coordination among insiders\u2014face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.\n\nFirms that could operate more remotely experienced large post-2020 declines in misconduct. The result holds for Rule 10b-5 class actions, fraudulent restatements, and discretionary accruals; we measure misconduct in the year committed, not detected. The decline is consistent with remote work disrupting the \u201ctechnology of collusion\u201d: physical separation raises coordination costs, moves communication onto auditable channels, and weakens the informal glue that sustains illicit cooperation. Cross-sectional tests support this mechanism\u2014stronger declines in teamwork-intensive firms, firms with effective internal controls (where fraud typically requires collusion to override safeguards), and firms with weaker pre-COVID employee perceptions of culture and leadership. Detection lags also fell for high-WFH firms, and we find no evidence that monitoring of financial reporting weakened. Overall, financial misconduct is sensitive to organizational structure; remote work made collusion harder and misconduct fell.",
+      "abstract": "Financial misconduct is usually a team activity. It depends on coordination among insiders—face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.\n\nFirms that could operate more remotely experienced large post-2020 declines in misconduct. The result holds for Rule 10b-5 class actions, fraudulent restatements, and discretionary accruals; we measure misconduct in the year committed, not detected. The decline is consistent with remote work disrupting the “technology of collusion”: physical separation raises coordination costs, moves communication onto auditable channels, and weakens the informal glue that sustains illicit cooperation. Cross-sectional tests support this mechanism—stronger declines in teamwork-intensive firms, firms with effective internal controls (where fraud typically requires collusion to override safeguards), and firms with weaker pre-COVID employee perceptions of culture and leadership. Detection lags also fell for high-WFH firms, and we find no evidence that monitoring of financial reporting weakened. Overall, financial misconduct is sensitive to organizational structure; remote work made collusion harder and misconduct fell.",
       "note": null,
       "figure": "papers_web/figures/fraud_distance_results.svg",
       "links": {
@@ -679,7 +679,8 @@
       "abstract": null,
       "links": {},
       "doi": null,
-      "featured": false
+      "featured": false,
+      "figure": "papers_web/figures/imitation-innovation-summary.svg"
     },
     {
       "id": "better-in-person",
@@ -697,7 +698,8 @@
       "abstract": null,
       "links": {},
       "doi": null,
-      "featured": false
+      "featured": false,
+      "figure": "papers_web/figures/better-in-person-summary.svg"
     },
     {
       "id": "labor-information-environment",
@@ -720,7 +722,8 @@
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6390718"
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "figure": "papers_web/figures/labor-information-environment-summary.svg"
     },
     {
       "id": "stemming-tide",
@@ -739,7 +742,8 @@
       "abstract": null,
       "links": {},
       "doi": null,
-      "featured": false
+      "featured": false,
+      "figure": "papers_web/figures/stemming-tide-summary.svg"
     },
     {
       "id": "stablecoins",
@@ -757,7 +761,8 @@
       "abstract": null,
       "links": {},
       "doi": null,
-      "featured": false
+      "featured": false,
+      "figure": "papers_web/figures/stablecoins-summary.svg"
     }
   ]
 }

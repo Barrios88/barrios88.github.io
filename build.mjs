@@ -133,8 +133,8 @@ function card(p) {
                 <script type="text/x-bibtex" id="bib-${esc(p.id)}">
 ${bibtex(p)}
                 </script>`;
-  // featured papers with a legacy key figure get a thumbnail column (desktop only)
-  const hasThumb = p.featured && p.figure;
+  // any paper with a figure gets a thumbnail column (desktop only)
+  const hasThumb = !!p.figure;
   const inner = hasThumb
     ? `                <div class="paper-body">\n${body}\n                </div>
                 <a class="paper-thumb" href="${esc(p.links?.page || p.figure)}" tabindex="-1" aria-hidden="true">
