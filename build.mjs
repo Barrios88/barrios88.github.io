@@ -155,12 +155,10 @@ function timeline(sorted) {
   const minY = Math.min(...years), maxY = Math.max(...years);
   const byYear = new Map();
   for (let y = minY; y <= maxY; y++) byYear.set(y, []);
-  // filled dots (published/forthcoming) at the bottom of each stack
-  for (const p of [...sorted].sort((a, b) =>
-    (a.status === 'published' || a.status === 'forthcoming' ? 0 : 1) -
-    (b.status === 'published' || b.status === 'forthcoming' ? 0 : 1))) {
-    byYear.get(p.year).push(p);
-  }
+  // uniform dots: the timeline shows research activity per year, with no
+  // published/unpublished distinction (working papers are current work,
+  // not old papers that failed to publish)
+  for (const p of sorted) byYear.get(p.year).push(p);
   const colW = 42, gap = 15, r = 5, top = 8, labelH = 20;
   const maxStack = Math.max(...[...byYear.values()].map(a => a.length));
   const W = (maxY - minY + 1) * colW, H = top + maxStack * gap + labelH;
@@ -171,10 +169,7 @@ function timeline(sorted) {
     const cx = i * colW + colW / 2;
     byYear.get(y).forEach((p, j) => {
       const cy = baseline - j * gap;
-      const filled = p.status === 'published' || p.status === 'forthcoming';
-      const shape = filled
-        ? `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#00356b"/>`
-        : `<circle cx="${cx}" cy="${cy}" r="${r - 0.7}" fill="#ffffff" stroke="#00356b" stroke-width="1.4"/>`;
+      const shape = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#00356b"/>`;
       dots += `<a href="#${esc(p.id)}" class="tl-dot" data-paper="${esc(p.id)}">${shape}<title>${esc(p.title)} (${p.year})</title></a>`;
     });
     labels += `<text x="${cx}" y="${H - 5}" text-anchor="middle" class="tl-year">${y}</text>`;
