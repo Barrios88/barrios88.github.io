@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "John Manuel Barrios" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: index.html
+        - link "CV" [ref=e8] [cursor=pointer]:
+          - /url: cv.html
+        - link "Research" [ref=e9] [cursor=pointer]:
+          - /url: research.html
+        - link "Teaching" [ref=e10] [cursor=pointer]:
+          - /url: teaching.html
+        - link "AI & Research" [ref=e11] [cursor=pointer]:
+          - /url: ai-research.html
+        - link "Labor & Accounting" [ref=e12] [cursor=pointer]:
+          - /url: labor-accounting.html
+        - link "Code" [ref=e13] [cursor=pointer]:
+          - /url: code.html
+        - link "Media" [ref=e14] [cursor=pointer]:
+          - /url: media.html
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - heading "John Manuel Barrios" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Associate Professor of Accounting, Yale School of Management Faculty Research Fellow, National Bureau of Economic Research
+      - paragraph [ref=e20]: "My work sits at the intersection of accounting, labor economics, entrepreneurship, political economy, and antitrust. I study how accounting information and the rules that govern it shape firms and the people who run them: who enters the profession, who starts a business, how politics colors the way people read and act on the numbers, and how capital market disclosure regulation intersects with antitrust enforcement."
+      - generic [ref=e21]:
+        - link "Email" [ref=e22] [cursor=pointer]:
+          - /url: mailto:john.m.barrios@yale.edu
+        - link "Google Scholar" [ref=e23] [cursor=pointer]:
+          - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - link "SSRN" [ref=e24] [cursor=pointer]:
+          - /url: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2443883
+        - link "NBER" [ref=e25] [cursor=pointer]:
+          - /url: https://www.nber.org/people/john_barrios
+        - link "@barrios_econ" [ref=e26] [cursor=pointer]:
+          - /url: https://twitter.com/barrios_econ
+        - link "Curriculum Vitae" [ref=e27] [cursor=pointer]:
+          - /url: cv/CV_latest.pdf
+    - img "John Manuel Barrios" [ref=e30]
+  - generic [ref=e32]:
+    - generic [ref=e33]: New Working Paper
+    - generic [ref=e34]:
+      - link "Mandated Transparency and the Production of Research" [ref=e36] [cursor=pointer]:
+        - /url: papers_web/paper_mandated_transparency.html
+      - generic [ref=e37]:
+        - text: "with Roman Chychyla · JAR’s 2015 data-and-code mandate: plainer writing, more novel work, and a more elite author pool ·"
+        - link "SSRN" [ref=e38] [cursor=pointer]:
+          - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7114158
+  - main [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: About
+          - paragraph [ref=e44]:
+            - text: I am an Associate Professor of Accounting at the
+            - link "Yale School of Management" [ref=e45] [cursor=pointer]:
+              - /url: https://som.yale.edu/
+            - text: and a Faculty Research Fellow at the
+            - link "National Bureau of Economic Research" [ref=e46] [cursor=pointer]:
+              - /url: https://www.nber.org/
+            - text: in the Political Economy and the Productivity, Innovation, and Entrepreneurship groups.
+          - paragraph [ref=e47]:
+            - text: My research examines new business formation, culture and economic behavior, human capital, financial reporting, regulation, managerial incentives, and corporate governance. My work has been published in leading accounting, economics, and finance journals, including the
+            - emphasis [ref=e48]: Journal of Accounting Research
+            - text: ", the"
+            - emphasis [ref=e49]: Journal of Public Economics
+            - text: ","
+            - emphasis [ref=e50]: "American Economic Journal: Microeconomics"
+            - text: ","
+            - emphasis [ref=e51]: Management Science
+            - text: ", and the"
+            - emphasis [ref=e52]: Journal of Financial Economics
+            - text: ", and has been covered by"
+            - emphasis [ref=e53]: The Economist
+            - text: ", the"
+            - emphasis [ref=e54]: Wall Street Journal
+            - text: ", and"
+            - emphasis [ref=e55]: Fortune
+            - text: ", among others (see"
+            - link "Media" [ref=e56] [cursor=pointer]:
+              - /url: media.html
+            - text: ).
+          - paragraph [ref=e57]:
+            - text: I currently serve as Editor of
+            - emphasis [ref=e58]: Accounting Horizons
+            - text: ", Ad Hoc Advising Editor at the"
+            - emphasis [ref=e59]: Journal of Accounting and Economics
+            - text: ", and Guest Editor for the"
+            - emphasis [ref=e60]: Journal of Labor Economics
+            - text: Symposium on Occupational Licensing. I am one of the co-founders of the
+            - link "Labor and Accounting Group" [ref=e61] [cursor=pointer]:
+              - /url: labor-accounting.html
+            - text: ", a community of researchers working at the intersection of labor economics and accounting, and I frequently present at the American Economic Association Annual Meeting and the NBER Summer Institute."
+          - paragraph [ref=e62]: Before joining Yale SOM, I was an Assistant Professor of Accounting and Fujimori/Mou Faculty Scholar at the University of Chicago Booth School of Business, and an Assistant Professor at the Olin Business School at Washington University in St. Louis.
+          - paragraph [ref=e63]:
+            - text: At Yale SOM, I teach Financial Accounting and Valuation, and
+            - link "The Private Firm CFO" [ref=e64] [cursor=pointer]:
+              - /url: /mgt816-private-firm-cfo/
+            - text: (MGT 816). Outside of academia, I enjoy reading history and politics, cooking, and wine.
+        - generic [ref=e65]:
+          - generic [ref=e66]: Education
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - generic [ref=e69]: Ph.D., Business Administration
+              - generic [ref=e70]: University of Miami, 2015
+            - listitem [ref=e71]:
+              - generic [ref=e72]: M.P.A., Accounting
+              - generic [ref=e73]: University of Miami, 2010
+            - listitem [ref=e74]:
+              - generic [ref=e75]: B.S., Industrial and Labor Relations
+              - generic [ref=e76]: Cornell University, 2009
+      - complementary [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]: Research Interests
+          - list [ref=e80]:
+            - listitem [ref=e81]: Accounting & Disclosure
+            - listitem [ref=e82]: Labor Economics & Human Capital
+            - listitem [ref=e83]: Entrepreneurship
+            - listitem [ref=e84]: Regulation & Political Economy
+            - listitem [ref=e85]: Culture & Economic Behavior
+            - listitem [ref=e86]: Antitrust & Market Structure
+            - listitem [ref=e87]: Corporate Governance
+        - generic [ref=e88]:
+          - generic [ref=e89]: Editorial Roles
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - strong [ref=e92]: Editor
+              - text: ", Accounting Horizons"
+            - listitem [ref=e93]:
+              - strong [ref=e94]: Ad Hoc Advising Editor
+              - text: ", Journal of Accounting & Economics"
+            - listitem [ref=e95]:
+              - strong [ref=e96]: Guest Editor
+              - text: ", Journal of Labor Economics"
+        - generic [ref=e97]:
+          - generic [ref=e98]: Affiliations
+          - list [ref=e99]:
+            - listitem [ref=e100]: Yale School of Management
+            - listitem [ref=e101]: NBER — Productivity, Innovation & Entrepreneurship
+            - listitem [ref=e102]: NBER — Political Economy
+        - generic [ref=e103]:
+          - generic [ref=e104]: AI & Research
+          - generic [ref=e105]:
+            - text: "Using AI responsibly in accounting research: my PhD course on Claude Code and an open-source toolkit of 40 agent skills with a WRDS connector."
+            - link "Explore →" [ref=e106] [cursor=pointer]:
+              - /url: ai-research.html
+        - generic [ref=e107]:
+          - generic [ref=e108]: Labor & Accounting Group
+          - generic [ref=e109]:
+            - text: A community of researchers at the intersection of labor economics and accounting, which I co-founded. The group hosts an annual conference, next at NYU, and is writing the Labor and Accounting Survey.
+            - link "Learn more →" [ref=e110] [cursor=pointer]:
+              - /url: labor-accounting.html
+        - generic [ref=e111]:
+          - generic [ref=e112]: Selected Awards
+          - list [ref=e113]:
+            - listitem [ref=e114]: AAA-AACSB-RRBM Award for Research Impacting Societal Challenges, 2025
+            - listitem [ref=e115]: JAR Excellence in Refereeing, 2020 & 2021
+            - listitem [ref=e116]: KPMG Foundation Scholarship
+        - generic [ref=e117]:
+          - generic [ref=e118]: Contact
+          - generic [ref=e119]:
+            - link "john.m.barrios@yale.edu" [ref=e120] [cursor=pointer]:
+              - /url: mailto:john.m.barrios@yale.edu
+            - text: Yale School of Management 165 Whitney Avenue New Haven, CT 06511
+  - contentinfo [ref=e121]:
+    - generic [ref=e122]:
+      - generic [ref=e123]: © 2026 John Manuel Barrios
+      - generic [ref=e124]:
+        - text: Yale School of Management ·
+        - link "john.m.barrios@yale.edu" [ref=e125] [cursor=pointer]:
+          - /url: mailto:john.m.barrios@yale.edu

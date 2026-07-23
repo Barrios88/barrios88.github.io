@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00356b"/>
+      <stop offset="0.55" stop-color="#00294f"/>
+      <stop offset="1" stop-color="#001d3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="420" fill="url(#bg)"/>
+  <!-- fine grid -->
+  <g stroke="#3d6ea3" stroke-width="1" opacity="0.14">
+    <path d="M0 105 H1600 M0 210 H1600 M0 315 H1600"/>
+    <path d="M200 0 V420 M400 0 V420 M600 0 V420 M800 0 V420 M1000 0 V420 M1200 0 V420 M1400 0 V420"/>
+  </g>
+  <!-- big quiet brace pair, right side -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="2" stroke-linecap="round">
+    <path d="M1210 60 c -34 0 -34 46 -34 76 c 0 40 -10 54 -34 62 c 24 8 34 22 34 62 c 0 30 0 76 34 76" opacity="0.32"/>
+    <path d="M1470 60 c 34 0 34 46 34 76 c 0 40 10 54 34 62 c -24 8 -34 22 -34 62 c 0 30 0 76 -34 76" opacity="0.32"/>
+  </g>
+  <!-- indented code-line blocks between the braces -->
+  <g fill="#6f9cc9">
+    <rect x="1250" y="120" width="150" height="4" rx="2" opacity="0.3"/>
+    <rect x="1280" y="150" width="110" height="4" rx="2" opacity="0.24"/>
+    <rect x="1280" y="180" width="160" height="4" rx="2" opacity="0.2"/>
+    <rect x="1310" y="210" width="90" height="4" rx="2" opacity="0.16"/>
+    <rect x="1280" y="240" width="140" height="4" rx="2" opacity="0.2"/>
+    <rect x="1250" y="270" width="100" height="4" rx="2" opacity="0.24"/>
+  </g>
+  <!-- faint second brace pair + lines, far left low -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="1.6" stroke-linecap="round">
+    <path d="M120 260 c -22 0 -22 30 -22 50 c 0 26 -7 36 -22 41 c 15 5 22 15 22 41 c 0 20 0 50 22 50" opacity="0.16"/>
+  </g>
+  <g fill="#6f9cc9">
+    <rect x="150" y="300" width="120" height="3.6" rx="1.8" opacity="0.14"/>
+    <rect x="174" y="326" width="90" height="3.6" rx="1.8" opacity="0.12"/>
+    <rect x="174" y="352" width="130" height="3.6" rx="1.8" opacity="0.1"/>
+    <rect x="150" y="378" width="80" height="3.6" rx="1.8" opacity="0.12"/>
+  </g>
+  <!-- angle brackets accent -->
+  <g fill="none" stroke="#8fb4d9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M560 180 l -26 24 l 26 24" opacity="0.28"/>
+    <path d="M610 180 l 26 24 l -26 24" opacity="0.28"/>
+    <path d="M596 172 l -16 66" opacity="0.2"/>
+  </g>
+</svg>

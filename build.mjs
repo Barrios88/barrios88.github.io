@@ -122,11 +122,7 @@ function card(p) {
   const authors = p.authors.length ? `\n                <p class="paper-authors">with ${esc(p.authors.join(', ').replace(/, ([^,]*)$/, ' and $1'))}</p>` : '';
   const titleHtml = p.links?.page
     ? `<a href="${esc(p.links.page)}">${esc(p.title)}</a>` : esc(p.title);
-  return `            <article class="paper" id="${esc(p.id)}" style="view-transition-name:p-${esc(p.id)}"
-                data-year="${p.year}" data-status="${esc(p.status)}"${cites}
-                data-themes="${esc((p.themes || []).join(' '))}"
-                data-search="${esc(searchBlob)}">
-                <div class="paper-head">
+  const body = `                <div class="paper-head">
                     <span class="paper-kicker">${esc(kicker(p))}</span>
                     <span class="status-pill status-${esc(p.status)}">${statusLabels[p.status]}</span>${citesBadge}
                 </div>
@@ -136,7 +132,20 @@ function card(p) {
                 </div>
                 <script type="text/x-bibtex" id="bib-${esc(p.id)}">
 ${bibtex(p)}
-                </script>
+                </script>`;
+  // featured papers with a legacy key figure get a thumbnail column (desktop only)
+  const hasThumb = p.featured && p.figure;
+  const inner = hasThumb
+    ? `                <div class="paper-body">\n${body}\n                </div>
+                <a class="paper-thumb" href="${esc(p.links?.page || p.figure)}" tabindex="-1" aria-hidden="true">
+                    <img src="${esc(p.figure)}" alt="${esc(p.title)} — key figure" loading="lazy">
+                </a>`
+    : body;
+  return `            <article class="paper${hasThumb ? ' has-thumb' : ''}" id="${esc(p.id)}" style="view-transition-name:p-${esc(p.id)}"
+                data-year="${p.year}" data-status="${esc(p.status)}"${cites}
+                data-themes="${esc((p.themes || []).join(' '))}"
+                data-search="${esc(searchBlob)}">
+${inner}
             </article>`;
 }
 

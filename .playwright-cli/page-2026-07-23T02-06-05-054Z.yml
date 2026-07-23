@@ -1,0 +1,636 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "John Manuel Barrios" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: index.html
+        - link "CV" [ref=e8] [cursor=pointer]:
+          - /url: cv.html
+        - link "Research" [ref=e9] [cursor=pointer]:
+          - /url: research.html
+        - link "Teaching" [ref=e10] [cursor=pointer]:
+          - /url: teaching.html
+        - link "AI & Research" [ref=e11] [cursor=pointer]:
+          - /url: ai-research.html
+        - link "Labor & Accounting" [ref=e12] [cursor=pointer]:
+          - /url: labor-accounting.html
+        - link "Code" [ref=e13] [cursor=pointer]:
+          - /url: code.html
+        - link "Media" [ref=e14] [cursor=pointer]:
+          - /url: media.html
+  - generic [ref=e16]:
+    - generic [ref=e17]: Research
+    - heading "Publications & Working Papers" [level=1] [ref=e18]
+    - paragraph [ref=e19]: Work at the intersection of labor economics, entrepreneurship, and accounting — published in leading accounting, economics, and finance journals.
+    - paragraph [ref=e20]: 29 papers · 11 published · 1 forthcoming · 5 R&R · 12 working
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - searchbox "Search papers" [ref=e25]
+      - group "Sort papers" [ref=e26]:
+        - generic [ref=e27]: Sort
+        - button "Year" [pressed] [ref=e28] [cursor=pointer]
+        - button "Citations" [ref=e29] [cursor=pointer]
+    - generic [ref=e30]:
+      - group "Filter by theme" [ref=e31]:
+        - button "Labor & Professions 9" [ref=e32] [cursor=pointer]:
+          - text: Labor & Professions
+          - generic [ref=e33]: "9"
+        - button "Entrepreneurship 4" [ref=e34] [cursor=pointer]:
+          - text: Entrepreneurship
+          - generic [ref=e35]: "4"
+        - button "Political Economy 5" [ref=e36] [cursor=pointer]:
+          - text: Political Economy
+          - generic [ref=e37]: "5"
+        - button "Governance 2" [ref=e38] [cursor=pointer]:
+          - text: Governance
+          - generic [ref=e39]: "2"
+        - button "Taxation & Regulation 5" [ref=e40] [cursor=pointer]:
+          - text: Taxation & Regulation
+          - generic [ref=e41]: "5"
+        - button "Reporting & Measurement 9" [ref=e42] [cursor=pointer]:
+          - text: Reporting & Measurement
+          - generic [ref=e43]: "9"
+        - button "Market Structure 3" [ref=e44] [cursor=pointer]:
+          - text: Market Structure
+          - generic [ref=e45]: "3"
+        - button "Ethics & Misconduct 2" [ref=e46] [cursor=pointer]:
+          - text: Ethics & Misconduct
+          - generic [ref=e47]: "2"
+      - group "Filter by status" [ref=e48]:
+        - button "Published 11" [ref=e49] [cursor=pointer]:
+          - text: Published
+          - generic [ref=e50]: "11"
+        - button "Forthcoming 1" [ref=e51] [cursor=pointer]:
+          - text: Forthcoming
+          - generic [ref=e52]: "1"
+        - button "R&R 5" [ref=e53] [cursor=pointer]:
+          - text: R&R
+          - generic [ref=e54]: "5"
+        - button "Working Paper 12" [ref=e55] [cursor=pointer]:
+          - text: Working Paper
+          - generic [ref=e56]: "12"
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e60]: 29 papers
+      - generic [ref=e61]:
+        - text: 2,681 citations ·
+        - link "Google Scholar" [ref=e62] [cursor=pointer]:
+          - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - text: · updated 2026-07-23
+      - generic [ref=e63]:
+        - generic [ref=e64]: Published & forthcoming
+        - generic [ref=e67]: Working & R&R
+        - link "Download all citations (.bib)" [ref=e70] [cursor=pointer]:
+          - /url: barrios.bib
+    - generic "Publication timeline" [ref=e71]:
+      - img "Papers per year, 2021 to 2026" [ref=e72]:
+        - link "Civic Capital and Social Distancing during the COVID-19 Pandemic (2021)" [ref=e73] [cursor=pointer]:
+          - /url: "#civic-capital"
+        - 'link "Launching with a Parachute: The Gig Economy and Entrepreneurial Entry (2021)" [ref=e75] [cursor=pointer]':
+          - /url: "#gig-economy"
+        - 'link "Risk Perceptions and Politics: Evidence from the COVID-19 Pandemic (2021)" [ref=e77] [cursor=pointer]':
+          - /url: "#risk-politics"
+        - link "Better in Person? Does In-Person Screening Affect Who Gets Hired? (2021)" [ref=e79] [cursor=pointer]:
+          - /url: "#better-in-person"
+        - 'link "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers (2021)" [ref=e81] [cursor=pointer]':
+          - /url: "#staggered-did"
+        - 'link "Boards of a Feather: Homophily in Foreign Director Appointments Around the World (2022)" [ref=e83] [cursor=pointer]':
+          - /url: "#boards-feather"
+        - 'link "Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule (2022)" [ref=e85] [cursor=pointer]':
+          - /url: "#licensing"
+        - link "Tax Planning Knowledge Diffusion via the Labor Market (2022)" [ref=e87] [cursor=pointer]:
+          - /url: "#tax-planning"
+        - 'link "The Cost of Convenience: Ridehailing and Traffic Fatalities (2022)" [ref=e89] [cursor=pointer]':
+          - /url: "#ridehailing"
+        - 'link "Misaligned Measures of Control: Private Equity''s Antitrust Loophole (2023)" [ref=e91] [cursor=pointer]':
+          - /url: "#misaligned-control"
+        - 'link "A New Era of Midnight Mergers: Antitrust Risk and Investor Disclosures (2024)" [ref=e93] [cursor=pointer]':
+          - /url: "#midnight-mergers"
+        - 'link "Balancing Flexibility and Integrity: Reforming Licensing in Accounting and Financial Advising (2024)" [ref=e95] [cursor=pointer]':
+          - /url: "#licensing-reform"
+        - 'link "Ethics and Illusions: How Ethical Declarations Shape Market Behavior (2024)" [ref=e97] [cursor=pointer]':
+          - /url: "#ethics-illusions"
+        - link "Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry (2024)" [ref=e99] [cursor=pointer]:
+          - /url: "#hustling-home"
+        - link "More Constraints, More Consensus? How Regulation Shapes Investor Information Asymmetry (2024)" [ref=e101] [cursor=pointer]:
+          - /url: "#regulation-consensus"
+        - 'link "Spillovers from Regulatory Fragmentation: Evidence from Corporate Tax Burdens (2024)" [ref=e103] [cursor=pointer]':
+          - /url: "#regulatory-spillovers"
+        - link "Taxation in Venture Capital (2025)" [ref=e105] [cursor=pointer]:
+          - /url: "#taxation-venture-capital"
+        - 'link "Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises (2025)" [ref=e107] [cursor=pointer]':
+          - /url: "#accounting-pressure"
+        - 'link "Financializing the Professions: The Rise of Private Equity in Accounting (2025)" [ref=e109] [cursor=pointer]':
+          - /url: "#pe-accounting"
+        - link "Imitation or Innovation? Strategic Mimicry in Corporate Earnings Calls (2025)" [ref=e111] [cursor=pointer]:
+          - /url: "#imitation-innovation"
+        - 'link "Measurement Matters: Financial Reporting and Productivity (2025)" [ref=e113] [cursor=pointer]':
+          - /url: "#measurement-matters"
+        - link "Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures (2025)" [ref=e115] [cursor=pointer]:
+          - /url: "#ai-disclosures"
+        - link "The Conflict-of-Interest Discount in the Marketplace of Ideas (2025)" [ref=e117] [cursor=pointer]:
+          - /url: "#conflict-discount"
+        - 'link "Initial Public Offering and New Business Formation: The Role of Public Firm Disclosures (2026)" [ref=e119] [cursor=pointer]':
+          - /url: "#informing-entrepreneurs"
+        - link "Fraud at a Distance? How Remote Work Shapes Financial Misconduct (2026)" [ref=e121] [cursor=pointer]:
+          - /url: "#fraud-distance"
+        - link "Labor and the Corporate Information Environment (2026)" [ref=e123] [cursor=pointer]:
+          - /url: "#labor-information-environment"
+        - 'link "Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy (2026)" [ref=e125] [cursor=pointer]':
+          - /url: "#mandated-transparency"
+        - 'link "One Asset, Two Financial Systems: Stablecoins and the Transmission of Runs between Decentralized and Traditional Finance (2026)" [ref=e127] [cursor=pointer]':
+          - /url: "#stablecoins"
+        - 'link "STEMming the Tide: The Impact of STEM Designation on Accounting Education and the Labor Market (2026)" [ref=e129] [cursor=pointer]':
+          - /url: "#stemming-tide"
+        - generic [ref=e131]: "2021"
+        - generic [ref=e132]: "2022"
+        - generic [ref=e133]: "2023"
+        - generic [ref=e134]: "2024"
+        - generic [ref=e135]: "2025"
+        - generic [ref=e136]: "2026"
+  - main [ref=e137]:
+    - generic [ref=e139]:
+      - article [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: "2026"
+          - generic [ref=e143]: Working Paper
+        - heading [level=3] [ref=e144]:
+          - link "Fraud at a Distance? How Remote Work Shapes Financial Misconduct" [ref=e145] [cursor=pointer]:
+            - /url: papers_web/paper_fraud_distance.html
+        - paragraph [ref=e146]: with Jessie Jianwen Guo and Yanping Zhu
+        - group [ref=e147]:
+          - generic "Abstract" [ref=e148] [cursor=pointer]
+        - generic [ref=e149]:
+          - link "Paper Page" [ref=e150] [cursor=pointer]:
+            - /url: papers_web/paper_fraud_distance.html
+          - link "SSRN" [ref=e151] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040
+          - button "BibTeX" [ref=e152] [cursor=pointer]
+      - article [ref=e153]:
+        - generic [ref=e154]:
+          - generic [ref=e155]: Journal of Accounting Research
+          - generic [ref=e156]: Forthcoming
+          - link "35 citations" [ref=e157] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e158]:
+          - 'link "Initial Public Offering and New Business Formation: The Role of Public Firm Disclosures" [ref=e159] [cursor=pointer]':
+            - /url: papers_web/paper_informing_entrepreneurs.html
+        - paragraph [ref=e160]: with Jung Ho Choi, Yael V. Hochberg, Jinhwan Kim and Miao Liu
+        - paragraph [ref=e161]: Journal of Accounting Research (Accepted)
+        - group [ref=e162]:
+          - generic "Abstract" [ref=e163] [cursor=pointer]
+        - generic [ref=e164]:
+          - link "Paper Page" [ref=e165] [cursor=pointer]:
+            - /url: papers_web/paper_informing_entrepreneurs.html
+          - link "SSRN" [ref=e166] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736
+          - button "BibTeX" [ref=e167] [cursor=pointer]
+      - article [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]: "2026"
+          - generic [ref=e171]: Working Paper
+          - link "8 citations" [ref=e172] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading "Labor and the Corporate Information Environment" [level=3] [ref=e173]
+        - paragraph [ref=e174]: with Jung Ho Choi, Carolyn Deller, Joseph Pacelli and Heidi A. Packard
+        - generic [ref=e175]:
+          - link "SSRN" [ref=e176] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6390718
+          - button "BibTeX" [ref=e177] [cursor=pointer]
+      - article [ref=e178]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: "2026"
+          - generic [ref=e181]: Working Paper
+        - heading [level=3] [ref=e182]:
+          - 'link "Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy" [ref=e183] [cursor=pointer]':
+            - /url: papers_web/paper_mandated_transparency.html
+        - paragraph [ref=e184]: with Roman Chychyla
+        - paragraph [ref=e185]: New working paper — preliminary draft
+        - group [ref=e186]:
+          - generic "Abstract" [ref=e187] [cursor=pointer]
+        - generic [ref=e188]:
+          - link "Paper Page" [ref=e189] [cursor=pointer]:
+            - /url: papers_web/paper_mandated_transparency.html
+          - link "SSRN" [ref=e190] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7114158
+          - link "PDF" [ref=e191] [cursor=pointer]:
+            - /url: papers/2026-barrios-mandated-transparency.pdf
+          - button "BibTeX" [ref=e192] [cursor=pointer]
+      - article [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e195]: "2026"
+          - generic [ref=e196]: Working Paper
+        - 'heading "One Asset, Two Financial Systems: Stablecoins and the Transmission of Runs between Decentralized and Traditional Finance" [level=3] [ref=e197]'
+        - paragraph [ref=e198]: with Christoph Bertsch and Linda M. Schilling
+        - button "BibTeX" [ref=e200] [cursor=pointer]
+      - article [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]: "2026"
+          - generic [ref=e204]: Working Paper
+        - 'heading "STEMming the Tide: The Impact of STEM Designation on Accounting Education and the Labor Market" [level=3] [ref=e205]'
+        - paragraph [ref=e206]: with Ping Gong and Enshuai Yu
+        - paragraph [ref=e207]: Registered Report Proposal
+        - button "BibTeX" [ref=e209] [cursor=pointer]
+      - article [ref=e210]:
+        - generic [ref=e211]:
+          - generic [ref=e212]: "2025"
+          - generic [ref=e213]: Working Paper
+          - link "1 citation" [ref=e214] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e215]:
+          - 'link "Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises" [ref=e216] [cursor=pointer]':
+            - /url: papers_web/paper_accounting_pressure.html
+        - paragraph [ref=e217]: with Andreas Neuhierl and Linda Schilling
+        - group [ref=e218]:
+          - generic "Abstract" [ref=e219] [cursor=pointer]
+        - generic [ref=e220]:
+          - link "Paper Page" [ref=e221] [cursor=pointer]:
+            - /url: papers_web/paper_accounting_pressure.html
+          - link "SSRN" [ref=e222] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889
+          - button "BibTeX" [ref=e223] [cursor=pointer]
+      - article [ref=e224]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: "2025"
+          - generic [ref=e227]: R&R
+          - link "5 citations" [ref=e228] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e229]:
+          - 'link "Financializing the Professions: The Rise of Private Equity in Accounting" [ref=e230] [cursor=pointer]':
+            - /url: papers_web/paper_pe_accounting.html
+        - paragraph [ref=e231]: with Inna Abramova
+        - paragraph [ref=e232]: "Revision Requested: Journal of Financial Economics"
+        - group [ref=e233]:
+          - generic "Abstract" [ref=e234] [cursor=pointer]
+        - generic [ref=e235]:
+          - link "Paper Page" [ref=e236] [cursor=pointer]:
+            - /url: papers_web/paper_pe_accounting.html
+          - link "SSRN" [ref=e237] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5922622
+          - link "NBER" [ref=e238] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w34575
+          - button "BibTeX" [ref=e239] [cursor=pointer]
+      - article [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: "2025"
+          - generic [ref=e243]: R&R
+        - heading "Imitation or Innovation? Strategic Mimicry in Corporate Earnings Calls" [level=3] [ref=e244]
+        - paragraph [ref=e245]: with Khrystyna Bochkay, Roman Chychyla and Sundaresh Ramnath
+        - paragraph [ref=e246]: "Revision Requested: Journal of Accounting and Economics"
+        - button "BibTeX" [ref=e248] [cursor=pointer]
+      - article [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]: "2025"
+          - generic [ref=e252]: Working Paper
+          - link "33 citations" [ref=e253] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e254]:
+          - 'link "Measurement Matters: Financial Reporting and Productivity" [ref=e255] [cursor=pointer]':
+            - /url: papers_web/paper_measurement_matters.html
+        - paragraph [ref=e256]: with Brian C. Fujiy, Petro Lisowsky and Michael Minnis
+        - group [ref=e257]:
+          - generic "Abstract" [ref=e258] [cursor=pointer]
+        - generic [ref=e259]:
+          - link "Paper Page" [ref=e260] [cursor=pointer]:
+            - /url: papers_web/paper_measurement_matters.html
+          - link "SSRN" [ref=e261] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147
+          - link "NBER" [ref=e262] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w34536
+          - button "BibTeX" [ref=e263] [cursor=pointer]
+      - article [ref=e264]:
+        - generic [ref=e265]:
+          - generic [ref=e266]: "2025"
+          - generic [ref=e267]: R&R
+          - link "13 citations" [ref=e268] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e269]:
+          - link "Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures" [ref=e270] [cursor=pointer]:
+            - /url: papers_web/paper_ai_disclosures.html
+        - paragraph [ref=e271]: with John Campbell, Ryan Grant Johnson and Christine Liu
+        - paragraph [ref=e272]: "Under Review (2nd round): Review of Accounting Studies"
+        - group [ref=e273]:
+          - generic "Abstract" [ref=e274] [cursor=pointer]
+        - generic [ref=e275]:
+          - link "Paper Page" [ref=e276] [cursor=pointer]:
+            - /url: papers_web/paper_ai_disclosures.html
+          - link "SSRN" [ref=e277] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107
+          - button "BibTeX" [ref=e278] [cursor=pointer]
+      - article [ref=e279]:
+        - generic [ref=e280]:
+          - generic [ref=e281]: In The Palgrave Encyclopedia of Private Equity · 2025
+          - generic [ref=e282]: Published
+          - link "1 citation" [ref=e283] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading "Taxation in Venture Capital" [level=3] [ref=e284]
+        - button "BibTeX" [ref=e286] [cursor=pointer]
+      - article [ref=e287]:
+        - generic [ref=e288]:
+          - generic [ref=e289]: "2025"
+          - generic [ref=e290]: Working Paper
+          - link "9 citations" [ref=e291] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e292]:
+          - link "The Conflict-of-Interest Discount in the Marketplace of Ideas" [ref=e293] [cursor=pointer]:
+            - /url: papers_web/paper_conflict_discount.html
+        - paragraph [ref=e294]: with Filippo Lancieri, Joshua Levy, Shashank Singh, Tommaso Valletti and Luigi Zingales
+        - group [ref=e295]:
+          - generic "Abstract" [ref=e296] [cursor=pointer]
+        - generic [ref=e297]:
+          - link "Paper Page" [ref=e298] [cursor=pointer]:
+            - /url: papers_web/paper_conflict_discount.html
+          - link "SSRN" [ref=e299] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4979205
+          - link "NBER" [ref=e300] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w33645
+          - button "BibTeX" [ref=e301] [cursor=pointer]
+      - article [ref=e302]:
+        - generic [ref=e303]:
+          - generic [ref=e304]: "American Economic Journal: Microeconomics 16(4) · 2024"
+          - generic [ref=e305]: Published
+          - link "25 citations" [ref=e306] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e307]:
+          - 'link "A New Era of Midnight Mergers: Antitrust Risk and Investor Disclosures" [ref=e308] [cursor=pointer]':
+            - /url: papers_web/paper_midnight_mergers.html
+        - paragraph [ref=e309]: with Thomas G. Wollmann
+        - group [ref=e310]:
+          - generic "Abstract" [ref=e311] [cursor=pointer]
+        - generic [ref=e312]:
+          - link "Paper Page" [ref=e313] [cursor=pointer]:
+            - /url: papers_web/paper_midnight_mergers.html
+          - link "SSRN" [ref=e314] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4076302
+          - link "NBER" [ref=e315] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w29655
+          - button "BibTeX" [ref=e316] [cursor=pointer]
+      - article [ref=e317]:
+        - generic [ref=e318]:
+          - generic [ref=e319]: In Reforming Occupational Licensing in the US, Springer Nature Switzerland · 2024
+          - generic [ref=e320]: Published
+          - link "1 citation" [ref=e321] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - 'heading "Balancing Flexibility and Integrity: Reforming Licensing in Accounting and Financial Advising" [level=3] [ref=e322]'
+        - button "BibTeX" [ref=e324] [cursor=pointer]
+      - article [ref=e325]:
+        - generic [ref=e326]:
+          - generic [ref=e327]: "2024"
+          - generic [ref=e328]: R&R
+        - heading [level=3] [ref=e329]:
+          - 'link "Ethics and Illusions: How Ethical Declarations Shape Market Behavior" [ref=e330] [cursor=pointer]':
+            - /url: papers_web/paper_ethics_illusions.html
+        - paragraph [ref=e331]: with Jeremy Bertomeu, Radhika Lunawat and Ibrahima Sall
+        - paragraph [ref=e332]: "Revision Requested: Accounting, Organizations and Society"
+        - group [ref=e333]:
+          - generic "Abstract" [ref=e334] [cursor=pointer]
+        - generic [ref=e335]:
+          - link "Paper Page" [ref=e336] [cursor=pointer]:
+            - /url: papers_web/paper_ethics_illusions.html
+          - link "SSRN" [ref=e337] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801695
+          - button "BibTeX" [ref=e338] [cursor=pointer]
+      - article [ref=e339]:
+        - generic [ref=e340]:
+          - generic [ref=e341]: "2024"
+          - generic [ref=e342]: Working Paper
+          - link "7 citations" [ref=e343] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e344]:
+          - link "Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry" [ref=e345] [cursor=pointer]:
+            - /url: papers_web/paper_hustling_home.html
+        - paragraph [ref=e346]: with Yael V. Hochberg and Livia Hanyi Yi
+        - group [ref=e347]:
+          - generic "Abstract" [ref=e348] [cursor=pointer]
+        - generic [ref=e349]:
+          - link "Paper Page" [ref=e350] [cursor=pointer]:
+            - /url: papers_web/paper_hustling_home.html
+          - link "SSRN" [ref=e351] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032374
+          - link "NBER" [ref=e352] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w33237
+          - button "BibTeX" [ref=e353] [cursor=pointer]
+      - article [ref=e354]:
+        - generic [ref=e355]:
+          - generic [ref=e356]: "2024"
+          - generic [ref=e357]: Working Paper
+        - heading [level=3] [ref=e358]:
+          - link "More Constraints, More Consensus? How Regulation Shapes Investor Information Asymmetry" [ref=e359] [cursor=pointer]:
+            - /url: papers_web/paper_regulation_consensus.html
+        - paragraph [ref=e360]: with Zachary Kaplan and Yongzhou Lin
+        - group [ref=e361]:
+          - generic "Abstract" [ref=e362] [cursor=pointer]
+        - generic [ref=e363]:
+          - link "Paper Page" [ref=e364] [cursor=pointer]:
+            - /url: papers_web/paper_regulation_consensus.html
+          - link "SSRN" [ref=e365] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4932162
+          - button "BibTeX" [ref=e366] [cursor=pointer]
+      - article [ref=e367]:
+        - generic [ref=e368]:
+          - generic [ref=e369]: "2024"
+          - generic [ref=e370]: R&R
+          - link "3 citations" [ref=e371] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e372]:
+          - 'link "Spillovers from Regulatory Fragmentation: Evidence from Corporate Tax Burdens" [ref=e373] [cursor=pointer]':
+            - /url: papers_web/paper_regulatory_spillovers.html
+        - paragraph [ref=e374]: with John Gallemore and Yongzhou Lin
+        - paragraph [ref=e375]: "Under Review (2nd round): The Accounting Review"
+        - group [ref=e376]:
+          - generic "Abstract" [ref=e377] [cursor=pointer]
+        - generic [ref=e378]:
+          - link "Paper Page" [ref=e379] [cursor=pointer]:
+            - /url: papers_web/paper_regulatory_spillovers.html
+          - link "SSRN" [ref=e380] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4950361
+          - button "BibTeX" [ref=e381] [cursor=pointer]
+      - article [ref=e382]:
+        - generic [ref=e383]:
+          - generic [ref=e384]: Virginia Law & Business Review · 2023
+          - generic [ref=e385]: Published
+          - link "20 citations" [ref=e386] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e387]:
+          - 'link "Misaligned Measures of Control: Private Equity''s Antitrust Loophole" [ref=e388] [cursor=pointer]':
+            - /url: papers_web/paper_misaligned_control.html
+        - paragraph [ref=e389]: with Aslihan Asil and Thomas G. Wollmann
+        - group [ref=e390]:
+          - generic "Abstract" [ref=e391] [cursor=pointer]
+        - generic [ref=e392]:
+          - link "Paper Page" [ref=e393] [cursor=pointer]:
+            - /url: papers_web/paper_misaligned_control.html
+          - link "SSRN" [ref=e394] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4400139
+          - button "BibTeX" [ref=e395] [cursor=pointer]
+      - article [ref=e396]:
+        - generic [ref=e397]:
+          - generic [ref=e398]: Journal of Accounting Research 60(4) · 2022
+          - generic [ref=e399]: Published
+          - link "51 citations" [ref=e400] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e401]:
+          - 'link "Boards of a Feather: Homophily in Foreign Director Appointments Around the World" [ref=e402] [cursor=pointer]':
+            - /url: papers_web/paper_boards_feather.html
+        - paragraph [ref=e403]: with Pietro Bianchi, Helena Isidro and Dhananjay Nanda
+        - group [ref=e404]:
+          - generic "Abstract" [ref=e405] [cursor=pointer]
+        - generic [ref=e406]:
+          - link "Paper Page" [ref=e407] [cursor=pointer]:
+            - /url: papers_web/paper_boards_feather.html
+          - link "SSRN" [ref=e408] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241195
+          - button "BibTeX" [ref=e409] [cursor=pointer]
+      - article [ref=e410]:
+        - generic [ref=e411]:
+          - generic [ref=e412]: Journal of Accounting Research 60(1) · 2022
+          - generic [ref=e413]: Published
+          - link "194 citations" [ref=e414] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e415]:
+          - 'link "Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule" [ref=e416] [cursor=pointer]':
+            - /url: papers_web/paper_licensing.html
+        - paragraph [ref=e417]: Lead Article. AAA-AACSB-RRBM Award for Research Impacting Societal Challenges, 2025
+        - group [ref=e418]:
+          - generic "Abstract" [ref=e419] [cursor=pointer]
+        - generic [ref=e420]:
+          - link "Paper Page" [ref=e421] [cursor=pointer]:
+            - /url: papers_web/paper_licensing.html
+          - link "SSRN" [ref=e422] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2893909
+          - button "BibTeX" [ref=e423] [cursor=pointer]
+      - article [ref=e424]:
+        - generic [ref=e425]:
+          - generic [ref=e426]: Management Science · 2022
+          - generic [ref=e427]: Published
+          - link "71 citations" [ref=e428] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e429]:
+          - link "Tax Planning Knowledge Diffusion via the Labor Market" [ref=e430] [cursor=pointer]:
+            - /url: papers_web/paper_tax_planning.html
+        - paragraph [ref=e431]: with John Gallemore
+        - group [ref=e432]:
+          - generic "Abstract" [ref=e433] [cursor=pointer]
+        - generic [ref=e434]:
+          - link "Paper Page" [ref=e435] [cursor=pointer]:
+            - /url: papers_web/paper_tax_planning.html
+          - link "SSRN" [ref=e436] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3837396
+          - button "BibTeX" [ref=e437] [cursor=pointer]
+      - article [ref=e438]:
+        - generic [ref=e439]:
+          - generic [ref=e440]: Journal of Operations Management 69(5) · 2022
+          - generic [ref=e441]: Published
+          - link "210 citations" [ref=e442] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e443]:
+          - 'link "The Cost of Convenience: Ridehailing and Traffic Fatalities" [ref=e444] [cursor=pointer]':
+            - /url: papers_web/paper_ridehailing.html
+        - paragraph [ref=e445]: with Yael V. Hochberg and Livia Hanyi Yi
+        - group [ref=e446]:
+          - generic "Abstract" [ref=e447] [cursor=pointer]
+        - generic [ref=e448]:
+          - link "Paper Page" [ref=e449] [cursor=pointer]:
+            - /url: papers_web/paper_ridehailing.html
+          - link "SSRN" [ref=e450] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3361227
+          - link "NBER" [ref=e451] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w26783
+          - button "BibTeX" [ref=e452] [cursor=pointer]
+      - article [ref=e453]:
+        - generic [ref=e454]:
+          - generic [ref=e455]: "2021"
+          - generic [ref=e456]: Working Paper
+          - link "9 citations" [ref=e457] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading "Better in Person? Does In-Person Screening Affect Who Gets Hired?" [level=3] [ref=e458]
+        - paragraph [ref=e459]: with Laura Giuliano and Andrew Leone
+        - button "BibTeX" [ref=e461] [cursor=pointer]
+      - article [ref=e462]:
+        - generic [ref=e463]:
+          - generic [ref=e464]: Journal of Public Economics 193 · 2021
+          - generic [ref=e465]: Published
+          - link "637 citations" [ref=e466] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e467]:
+          - link "Civic Capital and Social Distancing during the COVID-19 Pandemic" [ref=e468] [cursor=pointer]:
+            - /url: papers_web/paper_civic_capital.html
+        - paragraph [ref=e469]: with Efraim Benmelech, Yael V. Hochberg, Paola Sapienza and Luigi Zingales
+        - group [ref=e470]:
+          - generic "Abstract" [ref=e471] [cursor=pointer]
+        - generic [ref=e472]:
+          - link "Paper Page" [ref=e473] [cursor=pointer]:
+            - /url: papers_web/paper_civic_capital.html
+          - link "SSRN" [ref=e474] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3613417
+          - link "NBER" [ref=e475] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w27320
+          - button "BibTeX" [ref=e476] [cursor=pointer]
+      - article [ref=e477]:
+        - generic [ref=e478]:
+          - generic [ref=e479]: Journal of Financial Economics 144(1) · 2021
+          - generic [ref=e480]: Published
+          - link "187 citations" [ref=e481] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e482]:
+          - 'link "Launching with a Parachute: The Gig Economy and Entrepreneurial Entry" [ref=e483] [cursor=pointer]':
+            - /url: papers_web/paper_gig_economy.html
+        - paragraph [ref=e484]: with Yael V. Hochberg and Livia Hanyi Yi
+        - group [ref=e485]:
+          - generic "Abstract" [ref=e486] [cursor=pointer]
+        - generic [ref=e487]:
+          - link "Paper Page" [ref=e488] [cursor=pointer]:
+            - /url: papers_web/paper_gig_economy.html
+          - link "SSRN" [ref=e489] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3557279
+          - link "NBER" [ref=e490] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w27183
+          - button "BibTeX" [ref=e491] [cursor=pointer]
+      - article [ref=e492]:
+        - generic [ref=e493]:
+          - generic [ref=e494]: Journal of Financial Economics 142(2) · 2021
+          - generic [ref=e495]: Published
+          - link "839 citations" [ref=e496] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e497]:
+          - 'link "Risk Perceptions and Politics: Evidence from the COVID-19 Pandemic" [ref=e498] [cursor=pointer]':
+            - /url: papers_web/paper_risk_politics.html
+        - paragraph [ref=e499]: with Yael V. Hochberg
+        - group [ref=e500]:
+          - generic "Abstract" [ref=e501] [cursor=pointer]
+        - generic [ref=e502]:
+          - link "Paper Page" [ref=e503] [cursor=pointer]:
+            - /url: papers_web/paper_risk_politics.html
+          - link "NBER" [ref=e504] [cursor=pointer]:
+            - /url: https://www.nber.org/papers/w27008
+          - link "Journal" [ref=e505] [cursor=pointer]:
+            - /url: https://doi.org/10.1016/j.jfineco.2021.05.008
+          - button "BibTeX" [ref=e506] [cursor=pointer]
+      - article [ref=e507]:
+        - generic [ref=e508]:
+          - generic [ref=e509]: "2021"
+          - generic [ref=e510]: Working Paper
+          - link "322 citations" [ref=e511] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=yE9KwEgAAAAJ&hl=en
+        - heading [level=3] [ref=e512]:
+          - 'link "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers" [ref=e513] [cursor=pointer]':
+            - /url: papers_web/paper_staggered_did.html
+        - group [ref=e514]:
+          - generic "Abstract" [ref=e515] [cursor=pointer]
+        - generic [ref=e516]:
+          - link "Paper Page" [ref=e517] [cursor=pointer]:
+            - /url: papers_web/paper_staggered_did.html
+          - link "SSRN" [ref=e518] [cursor=pointer]:
+            - /url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859
+          - link "Code & Slides" [ref=e519] [cursor=pointer]:
+            - /url: code.html
+          - button "BibTeX" [ref=e520] [cursor=pointer]
+  - contentinfo [ref=e521]:
+    - generic [ref=e522]:
+      - generic [ref=e523]: © 2026 John Manuel Barrios
+      - generic [ref=e524]:
+        - text: Yale School of Management ·
+        - link "john.m.barrios@yale.edu" [ref=e525] [cursor=pointer]:
+          - /url: mailto:john.m.barrios@yale.edu
