@@ -1,0 +1,763 @@
+{
+  "$comment": "Single source of truth for research.html. Edit this file, then run `node build.mjs`. Fields: id (slug, used as #anchor), title, authors (coauthors only, excluding Barrios), year (publication year or latest draft year), status: published | forthcoming | rr | working, venue (journal or book title), volume (e.g. '60(1)'), type: 'article' (default) | 'chapter', themes (see themeLabels in build.mjs), abstract (optional full text), note (award / R&R note), figure (legacy card figure path, currently unused by the template), links (only non-null rendered), doi, citations (optional integer, added by the citations pipeline), featured.",
+  "papers": [
+    {
+      "id": "licensing",
+      "title": "Occupational Licensing and Accountant Quality: Evidence from the 150-Hour Rule",
+      "authors": [],
+      "year": 2022,
+      "status": "published",
+      "venue": "Journal of Accounting Research",
+      "volume": "60(1)",
+      "themes": [
+        "labor"
+      ],
+      "abstract": "I examine the effects of occupational licensing on the quality of certified public accountants (CPAs). I exploit the staggered adoption of the 150-hour rule, which increases the educational requirements for a CPA license. The analysis shows that the rule decreases the number of entrants into the profession, reducing both low- and high-quality candidates. Labor market proxies for quality find no difference between 150-hour rule CPAs and the rest.\n\nMoreover, rule CPAs exit public accounting at similar rates and have comparable writing quality to their nonrule counterparts. Overall, these findings are consistent with the theoretical argument that increases in licensing requirements restrict the supply of entrants and do little to improve quality in the labor market.",
+      "note": "Lead Article. AAA-AACSB-RRBM Award for Research Impacting Societal Challenges, 2025",
+      "figure": "papers_web/figures/licensing_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2893909",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_licensing.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": true
+    },
+    {
+      "id": "pe-accounting",
+      "title": "Financializing the Professions: The Rise of Private Equity in Accounting",
+      "authors": [
+        "Inna Abramova"
+      ],
+      "year": 2025,
+      "status": "rr",
+      "venue": null,
+      "themes": [
+        "labor"
+      ],
+      "abstract": "Private equity has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. This paper studies these issues using accounting-industry data from 1999\u20132024 that links more than 3,000 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power.",
+      "note": "Revision Requested: Journal of Financial Economics",
+      "figure": "papers_web/figures/pe_accounting_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5922622",
+        "nber": "https://www.nber.org/papers/w34575",
+        "pdf": null,
+        "page": "papers_web/paper_pe_accounting.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "gig-economy",
+      "title": "Launching with a Parachute: The Gig Economy and Entrepreneurial Entry",
+      "authors": [
+        "Yael V. Hochberg",
+        "Livia Hanyi Yi"
+      ],
+      "year": 2021,
+      "status": "published",
+      "venue": "Journal of Financial Economics",
+      "volume": "144(1)",
+      "themes": [
+        "entrepreneurship"
+      ],
+      "abstract": "We examine how the rise of the gig economy affects entrepreneurial entry by providing aspiring entrepreneurs with a flexible \"safety net\" during the risky early stages of new venture creation. Using the staggered entry of Uber across U.S. cities as a natural experiment, we find that gig economy platforms significantly increase entrepreneurship rates, particularly among individuals who face high opportunity costs and income uncertainty.\n\nOur identification strategy exploits variation in Uber's entry timing across 195 U.S. cities between 2009 and 2016. We find that Uber's entry increases new business registrations by 3-5%, with larger effects in cities with higher pre-existing entrepreneurship rates. The mechanism operates through reduced downside risk: gig work provides a flexible income source that entrepreneurs can use to smooth consumption while building their businesses, effectively functioning as a \"parachute\" that makes the leap into entrepreneurship less risky.",
+      "note": null,
+      "figure": "papers_web/figures/figure1_main_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3557279",
+        "nber": "https://www.nber.org/papers/w27183",
+        "pdf": null,
+        "page": "papers_web/paper_gig_economy.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": true
+    },
+    {
+      "id": "informing-entrepreneurs",
+      "title": "Initial Public Offering and New Business Formation: The Role of Public Firm Disclosures",
+      "authors": [
+        "Jung Ho Choi",
+        "Yael V. Hochberg",
+        "Jinhwan Kim",
+        "Miao Liu"
+      ],
+      "year": 2026,
+      "status": "forthcoming",
+      "venue": "Journal of Accounting Research",
+      "themes": [
+        "entrepreneurship"
+      ],
+      "abstract": "We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the vital role of IPOs in conveying crucial information, whether through signaling potential success or providing direct information.\n\nMoreover, our research indicates that these effects extend beyond mere \"signaling of success\" and are largely driven by the valuable information transmitted by the IPO itself. Specifically, new business registrations are significantly influenced by the extent of EDGAR downloads related to the IPO firm's public disclosures and the informational content within the IPO firm's S-1 disclosure. A comprehensive field survey further supports these conclusions, affirming the presence of information spillovers from local IPOs that positively impact new business formation.",
+      "note": "Journal of Accounting Research (Accepted)",
+      "figure": "papers_web/figures/informing_entrepreneurs_mechanism.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_informing_entrepreneurs.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "hustling-home",
+      "title": "Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry",
+      "authors": [
+        "Yael V. Hochberg",
+        "Livia Hanyi Yi"
+      ],
+      "year": 2024,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "entrepreneurship",
+        "labor"
+      ],
+      "abstract": "We study how the expansion of work-from-home (WFH) affects entrepreneurial entry using the COVID-19 pandemic as a natural experiment. Widespread adoption of WFH increased overall entrepreneurial entry but generated a clear substitution effect: areas with higher ex ante telework potential experienced notably smaller increases in new business registrations.\n\nWe propose and test a conceptual framework that emphasizes the substitution between employer-provided flexibility and entrepreneurship's traditional advantage in offering autonomy and flexibility. When traditional employment offers comparable flexibility through remote work, the incentive to leave for entrepreneurship in search of those non-pecuniary benefits falls. We find empirical evidence consistent with the model. Effects are larger for those primarily motivated by flexibility, such as women. Survey evidence further confirms that employer-provided flexibility reduces entrepreneurial intent. The analysis uses zip-code-level data on new business registrations from the Startup Cartography Project and measures of pre-pandemic telework potential (Dingel and Neiman 2020; Gupta et al. 2022).",
+      "note": null,
+      "figure": "papers_web/figures/hustling_home_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032374",
+        "nber": "https://www.nber.org/papers/w33237",
+        "pdf": null,
+        "page": "papers_web/paper_hustling_home.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "civic-capital",
+      "title": "Civic Capital and Social Distancing during the COVID-19 Pandemic",
+      "authors": [
+        "Efraim Benmelech",
+        "Yael V. Hochberg",
+        "Paola Sapienza",
+        "Luigi Zingales"
+      ],
+      "year": 2021,
+      "status": "published",
+      "venue": "Journal of Public Economics",
+      "volume": "193",
+      "themes": [
+        "political-economy"
+      ],
+      "abstract": "We study the role of civic capital in facilitating collective action during the early stages of the COVID-19 pandemic. Using real-time cellphone location data and variation in social distancing recommendations across U.S. counties, we examine whether areas with higher civic capital exhibited greater compliance with social distancing guidelines when formal enforcement was limited.\n\nWe find that counties with higher civic capital\u2014measured by voter turnout, census response rates, and participation in community organizations\u2014experienced significantly larger reductions in mobility and greater social distancing compliance following public health recommendations. A one-standard-deviation increase in civic capital is associated with a 10-15% greater reduction in movement. These effects are largest in the early weeks of the pandemic, before the widespread adoption of formal restrictions, suggesting that civic capital enables communities to coordinate on socially beneficial behaviors even without enforcement.",
+      "note": null,
+      "figure": "papers_web/figures/civic_capital_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3613417",
+        "nber": "https://www.nber.org/papers/w27320",
+        "pdf": null,
+        "page": "papers_web/paper_civic_capital.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": true
+    },
+    {
+      "id": "risk-politics",
+      "title": "Risk Perceptions and Politics: Evidence from the COVID-19 Pandemic",
+      "authors": [
+        "Yael V. Hochberg"
+      ],
+      "year": 2021,
+      "status": "published",
+      "venue": "Journal of Financial Economics",
+      "volume": "142(2)",
+      "themes": [
+        "political-economy"
+      ],
+      "abstract": "We examine how political partisanship shaped perceptions of COVID-19 health risks and influenced compliance with public health recommendations during the early stages of the pandemic. Using individual-level mobility data, survey responses, and county-level political affiliation, we document stark partisan differences in risk perceptions and behavior that emerged early and persisted throughout the pandemic's first wave.\n\nWe find that Republican-leaning counties showed significantly lower reductions in mobility and social distancing compared to Democratic-leaning counties, even after controlling for local COVID-19 case counts, demographic factors, and economic conditions. These behavioral differences align with survey evidence showing Republicans consistently perceived lower personal health risks from the virus. The partisan gap in both risk perceptions and behaviors widened following polarizing political messaging and media coverage.",
+      "note": null,
+      "figure": "papers_web/figures/figure1_behavioral_divergence.svg",
+      "links": {
+        "ssrn": null,
+        "nber": "https://www.nber.org/papers/w27008",
+        "pdf": null,
+        "page": "papers_web/paper_risk_politics.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": "10.1016/j.jfineco.2021.05.008",
+      "featured": false
+    },
+    {
+      "id": "mandated-transparency",
+      "title": "Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy",
+      "authors": [
+        "Roman Chychyla"
+      ],
+      "year": 2026,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "political-economy",
+        "reporting"
+      ],
+      "abstract": "We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January 1, 2015, the Journal of Accounting Research ( JAR ) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.\n\nConsistent with disclosure disciplining authors, post-mandate JAR abstracts are about one Gunning\u2013Fog grade more readable\u2014roughly one-third of a standard deviation\u2014and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, JAR shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.",
+      "note": "New working paper \u2014 preliminary draft",
+      "figure": "papers_web/figures/mandated-transparency-eventstudy.png",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7114158",
+        "nber": null,
+        "pdf": "papers/2026-barrios-mandated-transparency.pdf",
+        "page": "papers_web/paper_mandated_transparency.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": true
+    },
+    {
+      "id": "conflict-discount",
+      "title": "The Conflict-of-Interest Discount in the Marketplace of Ideas",
+      "authors": [
+        "Filippo Lancieri",
+        "Joshua Levy",
+        "Shashank Singh",
+        "Tommaso Valletti",
+        "Luigi Zingales"
+      ],
+      "year": 2025,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "political-economy"
+      ],
+      "abstract": "We examine how conflicts of interest (CoI)\u2014financial, professional, or ideological stakes held by authors\u2014affect the perceived credibility of economics research. Using a randomized survey of economists and the US public, we investigate how audiences react to research findings when the author is revealed to have interests in the outcome.\n\nOur findings reveal a significant \"conflict-of-interest discount\" in the marketplace of ideas: disclosure of conflicts reduces trust in research findings by 28%, with substantial variation by conflict type. We model the \"CoI Discount,\" estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.",
+      "note": null,
+      "figure": "papers_web/figures/conflict_discount_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4979205",
+        "nber": "https://www.nber.org/papers/w33645",
+        "pdf": null,
+        "page": "papers_web/paper_conflict_discount.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "boards-feather",
+      "title": "Boards of a Feather: Homophily in Foreign Director Appointments Around the World",
+      "authors": [
+        "Pietro Bianchi",
+        "Helena Isidro",
+        "Dhananjay Nanda"
+      ],
+      "year": 2022,
+      "status": "published",
+      "venue": "Journal of Accounting Research",
+      "volume": "60(4)",
+      "themes": [
+        "governance"
+      ],
+      "abstract": "We examine patterns of homophily\u2014the tendency to associate with similar others\u2014in foreign director appointments across 38 countries. Using a comprehensive dataset of international board appointments, we investigate whether firms preferentially appoint foreign directors from culturally similar countries and explore the implications of this homophily for board effectiveness and firm outcomes.\n\nOur findings reveal strong homophily patterns: firms are significantly more likely to appoint foreign directors from countries that share linguistic, religious, or colonial ties. This cultural matching is economically meaningful, with cultural proximity increasing appointment probability by 40-60%. We find that culturally similar foreign directors are associated with greater board attendance, more active committee participation, and improved firm performance, suggesting that cultural fit facilitates effective cross-border governance.",
+      "note": null,
+      "figure": "papers_web/figures/boards_feather_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241195",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_boards_feather.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "ai-disclosures",
+      "title": "Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures",
+      "authors": [
+        "John Campbell",
+        "Ryan Grant Johnson",
+        "Christine Liu"
+      ],
+      "year": 2025,
+      "status": "rr",
+      "venue": null,
+      "themes": [
+        "governance",
+        "reporting"
+      ],
+      "abstract": "We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.\n\nOur findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation\u2014these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation\u2014these \"smoke\" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.",
+      "note": "Under Review (2nd round): Review of Accounting Studies",
+      "figure": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_ai_disclosures.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "tax-planning",
+      "title": "Tax Planning Knowledge Diffusion via the Labor Market",
+      "authors": [
+        "John Gallemore"
+      ],
+      "year": 2022,
+      "status": "published",
+      "venue": "Management Science",
+      "themes": [
+        "taxation",
+        "labor"
+      ],
+      "abstract": "We examine how tax planning knowledge diffuses across firms through the labor market. Using comprehensive data on executive movements and tax planning outcomes, we investigate whether firms learn tax strategies from competitors by hiring employees who previously worked at firms with superior tax planning practices.\n\nOur evidence suggests that worker mobility is an important channel for knowledge transfer in tax planning. Firms that hire executives from highly effective tax planning firms subsequently adopt more sophisticated tax strategies and achieve better tax outcomes. This effect is strongest when the hiring firm operates in the same industry as the origin firm, suggesting that industry-specific tax knowledge transfers most effectively through labor market channels.",
+      "note": null,
+      "figure": "papers_web/figures/tax_planning_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3837396",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_tax_planning.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "regulatory-spillovers",
+      "title": "Spillovers from Regulatory Fragmentation: Evidence from Corporate Tax Burdens",
+      "authors": [
+        "John Gallemore",
+        "Yongzhou Lin"
+      ],
+      "year": 2024,
+      "status": "rr",
+      "venue": null,
+      "themes": [
+        "taxation"
+      ],
+      "abstract": "We examine how regulatory fragmentation across multiple tax jurisdictions creates spillover effects on corporate tax burdens. Using variation in tax policy adoption across states and countries, we study how firms operating in multiple jurisdictions face cumulative compliance costs and coordinated taxation that often results in higher overall tax burdens than would occur under harmonized systems.\n\nOur findings reveal significant spillover effects: firms operating in more regulatory fragmented environments face substantially higher effective tax rates and compliance costs. These effects are particularly pronounced for smaller firms with less sophisticated tax planning capacity. Additionally, we document that jurisdictions often fail to coordinate tax policies, leading to double-taxation and compliance burden spillovers that systematically disadvantage multi-jurisdictional operations.",
+      "note": "Under Review (2nd round): The Accounting Review",
+      "figure": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4950361",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_regulatory_spillovers.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "regulation-consensus",
+      "title": "More Constraints, More Consensus? How Regulation Shapes Investor Information Asymmetry",
+      "authors": [
+        "Zachary Kaplan",
+        "Yongzhou Lin"
+      ],
+      "year": 2024,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "taxation",
+        "reporting"
+      ],
+      "abstract": "We examine how regulatory constraints affect investor information asymmetry. Using variation in regulatory stringency across industries and regions, we investigate whether more stringent regulation reduces divergence in investor beliefs about firm value by constraining managerial discretion and harmonizing information disclosure.\n\nOur findings reveal a non-monotonic relationship: moderate regulatory constraints reduce information asymmetry by limiting managerial discretion and improving disclosure standardization. However, extremely stringent regulation can increase asymmetry by creating complexity and compliance costs that limit information flow to smaller investors. The relationship is strongest in industries where regulatory constraints directly affect core business operations and decision-making.",
+      "note": null,
+      "figure": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4932162",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_regulation_consensus.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "taxation-venture-capital",
+      "title": "Taxation in Venture Capital",
+      "authors": [],
+      "year": 2025,
+      "status": "published",
+      "venue": "The Palgrave Encyclopedia of Private Equity",
+      "type": "chapter",
+      "themes": [
+        "taxation",
+        "entrepreneurship"
+      ],
+      "abstract": null,
+      "note": null,
+      "figure": null,
+      "links": {
+        "ssrn": null,
+        "nber": null,
+        "pdf": null,
+        "page": null,
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "licensing-reform",
+      "title": "Balancing Flexibility and Integrity: Reforming Licensing in Accounting and Financial Advising",
+      "authors": [],
+      "year": 2024,
+      "status": "published",
+      "venue": "Reforming Occupational Licensing in the US",
+      "publisher": "Springer Nature Switzerland",
+      "type": "chapter",
+      "themes": [
+        "taxation",
+        "labor"
+      ],
+      "abstract": null,
+      "note": null,
+      "figure": null,
+      "links": {
+        "ssrn": null,
+        "nber": null,
+        "pdf": null,
+        "page": null,
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "measurement-matters",
+      "title": "Measurement Matters: Financial Reporting and Productivity",
+      "authors": [
+        "Brian C. Fujiy",
+        "Petro Lisowsky",
+        "Michael Minnis"
+      ],
+      "year": 2025,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "reporting"
+      ],
+      "abstract": "We examine how differences in financial reporting practices shape firm productivity. Using comprehensive data from the U.S. Census Bureau, tax return data from the Internal Revenue Service (IRS), and detailed financial records from Sageworks, we find that variation in reporting quality explains 10-20 percent of intra-industry total factor productivity dispersion. Leveraging new audit questions in the U.S. Census Bureau's 2021 Management and Organizational Practices Survey (MOPS), we find evidence of complementarity between the effects of financial audits and management practices to drive firm productivity.\n\nWe then examine the underlying mechanisms. First, audits function as a managerial technology, improving the precision of internal information and raising efficiency, with stronger effects in competitive, low-margin industries and among younger firms. Second, exploiting cross-state variation in tax incentives, we show that audits constrain underreporting and mitigate the downward bias in measured productivity. Together, these results highlight the underrated importance of financial reporting quality driving firm productivity.",
+      "note": null,
+      "figure": "papers_web/figures/figure_1_key_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147",
+        "nber": "https://www.nber.org/papers/w34536",
+        "pdf": null,
+        "page": "papers_web/paper_measurement_matters.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "accounting-pressure",
+      "title": "Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises",
+      "authors": [
+        "Andreas Neuhierl",
+        "Linda Schilling"
+      ],
+      "year": 2025,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "reporting"
+      ],
+      "abstract": "We develop a theoretical model and provide empirical evidence on how accounting rules affect firm behavior during financial crises. Specifically, we examine how firms' accounting choices\u2014particularly conservatism versus flexibility\u2014influence bond pricing, which in turn affects corporate investment decisions and real economic outcomes.\n\nOur theoretical analysis shows that during crises, conservative accounting that forces recognition of losses improves creditor information and reduces bond yield spreads, but may temporarily reduce firm willingness to invest. Flexible accounting that defers loss recognition may temporarily maintain favorable bond pricing but creates information risk that eventually manifests in higher yields and reduced investment. Our empirical evidence from multiple financial crises supports these predictions, suggesting that accounting rules have important consequences for credit markets and investment decisions beyond their immediate disclosure effects.",
+      "note": null,
+      "figure": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_accounting_pressure.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "staggered-did",
+      "title": "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers",
+      "authors": [],
+      "year": 2021,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "reporting"
+      ],
+      "abstract": "Staggered difference-in-differences (DiD) designs\u2014where different units receive treatment at different times\u2014are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.\n\nWe provide a comprehensive primer for accounting researchers on staggered DiD designs. We explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. Our goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.",
+      "figure": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_staggered_did.html",
+        "slides": null,
+        "code": "code.html"
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "midnight-mergers",
+      "title": "A New Era of Midnight Mergers: Antitrust Risk and Investor Disclosures",
+      "authors": [
+        "Thomas G. Wollmann"
+      ],
+      "year": 2024,
+      "status": "published",
+      "venue": "American Economic Journal: Microeconomics",
+      "volume": "16(4)",
+      "themes": [
+        "antitrust"
+      ],
+      "abstract": "We examine how firms disclose information about merger risks in an era of increasing antitrust scrutiny. Using a comprehensive dataset of merger announcements and regulatory outcomes, we analyze whether firms strategically time merger announcements and how they disclosure potential antitrust challenges to markets.\n\nOur findings reveal that firms strategically manage merger disclosures based on expected antitrust scrutiny. Firms facing higher antitrust risk are more likely to provide detailed antitrust risk disclosures and make their announcements during periods of lower market attention. These disclosures significantly affect investor assessments of merger success probability and deal returns, suggesting that disclosure quality plays an important role in merger outcomes.",
+      "note": null,
+      "figure": "papers_web/figures/figure1_key_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4076302",
+        "nber": "https://www.nber.org/papers/w29655",
+        "pdf": null,
+        "page": "papers_web/paper_midnight_mergers.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": true
+    },
+    {
+      "id": "misaligned-control",
+      "title": "Misaligned Measures of Control: Private Equity's Antitrust Loophole",
+      "authors": [
+        "Aslihan Asil",
+        "Thomas G. Wollmann"
+      ],
+      "year": 2023,
+      "status": "published",
+      "venue": "Virginia Law & Business Review",
+      "themes": [
+        "antitrust"
+      ],
+      "abstract": "We examine how private equity (PE) firms exploit divergences between accounting and economic measures of control to avoid triggering antitrust scrutiny. When PE firms acquire multiple competitors within the same industry, they often structure transactions to maintain formally separate operating units while exercising significant economic control over pricing and strategic decisions.\n\nOur analysis reveals that accounting-based control measures\u2014which focus on voting rights and formal ownership structures\u2014systematically underestimate the economic control that PE firms exercise over portfolio companies. This measurement divergence creates an antitrust loophole: PE firms can coordinate substantially competitive behavior across portfolio companies while technically maintaining separate entities that escape consolidation-based competition metrics.",
+      "note": null,
+      "figure": "papers_web/figures/misaligned_control_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4400139",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_misaligned_control.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "ridehailing",
+      "title": "The Cost of Convenience: Ridehailing and Traffic Fatalities",
+      "authors": [
+        "Yael V. Hochberg",
+        "Livia Hanyi Yi"
+      ],
+      "year": 2022,
+      "status": "published",
+      "venue": "Journal of Operations Management",
+      "volume": "69(5)",
+      "themes": [
+        "antitrust",
+        "political-economy"
+      ],
+      "abstract": "We examine the impact of ridehailing services (Uber and Lyft) on traffic fatalities using variation in the timing of ridehailing entry across U.S. cities. While proponents argue that ridehailing reduces drunk driving by providing convenient alternatives to driving under the influence, the net effect on traffic safety depends on how ridehailing affects overall vehicle miles traveled (VMT) and traffic congestion.\n\nUsing difference-in-differences analysis exploiting staggered entry timing, we find that ridehailing entry is associated with approximately 3% increase in total traffic fatalities and fatal accidents (2-4% range). This increase is driven primarily by higher fatality rates in cities with greater ridehailing penetration and during peak usage hours. The evidence suggests that increased VMT and congestion from ridehailing services offset any reduction in drunk-driving incidents, resulting in a net increase in traffic deaths. Back-of-the-envelope estimates suggest an annual cost of approximately $5.33 billion to $13.24 billion in human lives.",
+      "note": null,
+      "figure": "papers_web/figures/ridehailing_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3361227",
+        "nber": "https://www.nber.org/papers/w26783",
+        "pdf": null,
+        "page": "papers_web/paper_ridehailing.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "ethics-illusions",
+      "title": "Ethics and Illusions: How Ethical Declarations Shape Market Behavior",
+      "authors": [
+        "Jeremy Bertomeu",
+        "Radhika Lunawat",
+        "Ibrahima Sall"
+      ],
+      "year": 2024,
+      "status": "rr",
+      "venue": null,
+      "themes": [
+        "ethics"
+      ],
+      "abstract": "We study how ethical declarations shape market behavior in a laboratory setting. A privately informed seller observes an asset value and issues a report before a first-price auction. Bidders see the report and submit bids. Misreporting is costly to the seller (quadratic in the bias). In one treatment, sellers must sign an ethical statement that the report is truthful before trading; refusal ends the round with no trade. The design is pre-registered; roles rotate and matching is random.\n\nSigning an ethical statement does not meaningfully reduce sellers\u2019 misreporting. It shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when the ethical statement is present, learn more slowly about the seller\u2019s strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. We introduce \"ethical noise\": shifts in beliefs without corresponding shifts in behavior that distort market outcomes.",
+      "note": "Revision Requested: Accounting, Organizations and Society",
+      "figure": "papers_web/figures/ethics_illusions_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4801695",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_ethics_illusions.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "fraud-distance",
+      "title": "Fraud at a Distance? How Remote Work Shapes Financial Misconduct",
+      "authors": [
+        "Jessie Jianwen Guo",
+        "Yanping Zhu"
+      ],
+      "year": 2026,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "ethics",
+        "labor"
+      ],
+      "abstract": "Financial misconduct is usually a team activity. It depends on coordination among insiders\u2014face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.\n\nFirms that could operate more remotely experienced large post-2020 declines in misconduct. The result holds for Rule 10b-5 class actions, fraudulent restatements, and discretionary accruals; we measure misconduct in the year committed, not detected. The decline is consistent with remote work disrupting the \u201ctechnology of collusion\u201d: physical separation raises coordination costs, moves communication onto auditable channels, and weakens the informal glue that sustains illicit cooperation. Cross-sectional tests support this mechanism\u2014stronger declines in teamwork-intensive firms, firms with effective internal controls (where fraud typically requires collusion to override safeguards), and firms with weaker pre-COVID employee perceptions of culture and leadership. Detection lags also fell for high-WFH firms, and we find no evidence that monitoring of financial reporting weakened. Overall, financial misconduct is sensitive to organizational structure; remote work made collusion harder and misconduct fell.",
+      "note": null,
+      "figure": "papers_web/figures/fraud_distance_results.svg",
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040",
+        "nber": null,
+        "pdf": null,
+        "page": "papers_web/paper_fraud_distance.html",
+        "slides": null,
+        "code": null
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "imitation-innovation",
+      "title": "Imitation or Innovation? Strategic Mimicry in Corporate Earnings Calls",
+      "authors": [
+        "Khrystyna Bochkay",
+        "Roman Chychyla",
+        "Sundaresh Ramnath"
+      ],
+      "year": 2025,
+      "status": "rr",
+      "venue": null,
+      "note": "Revision Requested: Journal of Accounting and Economics",
+      "themes": [
+        "reporting"
+      ],
+      "abstract": null,
+      "links": {},
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "better-in-person",
+      "title": "Better in Person? Does In-Person Screening Affect Who Gets Hired?",
+      "authors": [
+        "Laura Giuliano",
+        "Andrew Leone"
+      ],
+      "year": 2021,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "labor"
+      ],
+      "abstract": null,
+      "links": {},
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "labor-information-environment",
+      "title": "Labor and the Corporate Information Environment",
+      "authors": [
+        "Jung Ho Choi",
+        "Carolyn Deller",
+        "Joseph Pacelli",
+        "Heidi A. Packard"
+      ],
+      "year": 2026,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "labor",
+        "reporting"
+      ],
+      "abstract": null,
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6390718"
+      },
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "stemming-tide",
+      "title": "STEMming the Tide: The Impact of STEM Designation on Accounting Education and the Labor Market",
+      "authors": [
+        "Ping Gong",
+        "Enshuai Yu"
+      ],
+      "year": 2026,
+      "status": "working",
+      "venue": null,
+      "note": "Registered Report Proposal",
+      "themes": [
+        "labor"
+      ],
+      "abstract": null,
+      "links": {},
+      "doi": null,
+      "featured": false
+    },
+    {
+      "id": "stablecoins",
+      "title": "One Asset, Two Financial Systems: Stablecoins and the Transmission of Runs between Decentralized and Traditional Finance",
+      "authors": [
+        "Christoph Bertsch",
+        "Linda M. Schilling"
+      ],
+      "year": 2026,
+      "status": "working",
+      "venue": null,
+      "themes": [
+        "reporting"
+      ],
+      "abstract": null,
+      "links": {},
+      "doi": null,
+      "featured": false
+    }
+  ]
+}

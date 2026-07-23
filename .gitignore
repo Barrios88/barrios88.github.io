@@ -1,9 +1,18 @@
+# local working files — never publish
 .DS_Store
 .claude/
-graphify-out/
+node_modules/
+memory-bank/
+CLAUDE.md
 papers_text/
-research_backup.html
+figures/
 research copy.html
-CV_John_2026_May.pdf
-CV_John_2026_Version_Improved.pdf
-/figures/
+research_backup.html
+/CV_John_*.pdf
+photos/_DSC5475.jpg
+photos/20150908_JohnBarrios_30-ALT.jpg
+device_files.txt
+*.png
+!photos/*.png
+!papers_web/figures/*.png
+_to_delete/

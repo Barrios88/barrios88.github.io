@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+  <!-- faint collegiate arches, light on white -->
+  <g stroke="#00356b" stroke-width="1.2">
+    <path d="M420 700 a260 260 0 0 1 520 0" opacity="0.07"/>
+    <path d="M460 700 a220 220 0 0 1 440 0" opacity="0.06"/>
+    <path d="M500 700 a180 180 0 0 1 360 0" opacity="0.05"/>
+    <path d="M540 700 a140 140 0 0 1 280 0" opacity="0.04"/>
+  </g>
+  <g stroke="#00356b" opacity="0.05" stroke-width="1">
+    <path d="M0 175 H900 M0 350 H900 M0 525 H900"/>
+    <path d="M225 0 V700 M450 0 V700 M675 0 V700"/>
+  </g>
+  <g fill="#00356b">
+    <circle cx="700" cy="240" r="2.5" opacity="0.12"/>
+    <circle cx="520" cy="330" r="2" opacity="0.09"/>
+    <circle cx="820" cy="400" r="2.2" opacity="0.1"/>
+  </g>
+</svg>
