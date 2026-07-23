@@ -960,3 +960,23 @@ a.cite-badge:hover { color: var(--blue); border-bottom-color: var(--blue); }
 }
 .download-row .dl-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; }
 .download-row .dl-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* ── Timeline instant tooltip ── */
+.tl-tip {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 200;
+  max-width: 340px;
+  padding: 0.4rem 0.65rem;
+  background: var(--yale);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(15,17,21,0.18);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.08s ease;
+}
+.tl-tip.show { opacity: 1; }

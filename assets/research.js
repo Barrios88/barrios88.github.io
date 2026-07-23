@@ -106,3 +106,28 @@
   apply(false);
   if (sort !== 'year') doSort();
 })();
+
+/* ── Instant timeline tooltips (native <title> is ~1s slow) ── */
+(() => {
+  const books = document.querySelectorAll('.tl-dot');
+  if (!books.length) return;
+  const tip = document.createElement('div');
+  tip.className = 'tl-tip';
+  document.body.appendChild(tip);
+  books.forEach(b => {
+    const t = b.querySelector('title');
+    if (!t) return;
+    const text = t.textContent;
+    b.setAttribute('aria-label', text);
+    t.remove(); // suppress the slow native tooltip
+    b.addEventListener('mouseenter', () => { tip.textContent = text; tip.classList.add('show'); });
+    b.addEventListener('mousemove', (e) => {
+      const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+      let x = e.clientX + pad, y = e.clientY - h - 10;
+      if (x + w > innerWidth - 8) x = e.clientX - w - pad;
+      if (y < 8) y = e.clientY + pad;
+      tip.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    b.addEventListener('mouseleave', () => tip.classList.remove('show'));
+  });
+})();
