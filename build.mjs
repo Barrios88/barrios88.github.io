@@ -159,23 +159,35 @@ function timeline(sorted) {
   // published/unpublished distinction (working papers are current work,
   // not old papers that failed to publish)
   for (const p of sorted) byYear.get(p.year).push(p);
-  const colW = 42, gap = 15, r = 5, top = 8, labelH = 20;
+  // each paper is a small book lying on the pile: deterministic width/offset/
+  // shade from the paper id so builds are reproducible
+  const hash = (str) => [...str].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
+  const SHADES = ['#00356b', '#1a4f8a', '#2c5f96', '#00294f'];
+  const colW = 48, bh = 9, vgap = 2.5, top = 10, labelH = 22;
   const maxStack = Math.max(...[...byYear.values()].map(a => a.length));
-  const W = (maxY - minY + 1) * colW, H = top + maxStack * gap + labelH;
-  const baseline = top + maxStack * gap - gap / 2;
+  const W = (maxY - minY + 1) * colW, H = top + maxStack * (bh + vgap) + labelH;
+  const shelfY = top + maxStack * (bh + vgap) + 1;
   let dots = '', labels = '';
   let i = 0;
   for (let y = minY; y <= maxY; y++, i++) {
     const cx = i * colW + colW / 2;
     byYear.get(y).forEach((p, j) => {
-      const cy = baseline - j * gap;
-      const shape = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#00356b"/>`;
-      dots += `<a href="#${esc(p.id)}" class="tl-dot" data-paper="${esc(p.id)}">${shape}<title>${esc(p.title)} (${p.year})</title></a>`;
+      const h = hash(p.id);
+      const bw = 26 + (h % 9);                    // 26-34px wide
+      const dx = ((h >> 3) % 7) - 3;              // -3..+3 lateral shift
+      const x = cx - bw / 2 + dx;
+      const yTop = shelfY - (j + 1) * (bh + vgap) + vgap;
+      const fill = SHADES[h % SHADES.length];
+      const shape =
+        `<rect x="${x - 2}" y="${yTop - 1.5}" width="${bw + 4}" height="${bh + 3}" fill="transparent"/>` +
+        `<rect x="${x}" y="${yTop}" width="${bw}" height="${bh}" rx="1.5" fill="${fill}"/>` +
+        `<rect x="${x + bw - 3.5}" y="${yTop + 1.5}" width="2" height="${bh - 3}" rx="1" fill="#ffffff" opacity="0.55"/>`;
+      dots += `<a href="#${esc(p.id)}" class="tl-dot" data-paper="${esc(p.id)}"><title>${esc(p.title)} (${p.year})</title>${shape}</a>`;
     });
     labels += `<text x="${cx}" y="${H - 5}" text-anchor="middle" class="tl-year">${y}</text>`;
   }
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Papers per year, ${minY} to ${maxY}" preserveAspectRatio="xMaxYMid meet">` +
-    `<line x1="0" y1="${baseline + gap / 2 + 2}" x2="${W}" y2="${baseline + gap / 2 + 2}" stroke="#e7e9ec" stroke-width="1"/>` +
+    `<line x1="0" y1="${shelfY + 1}" x2="${W}" y2="${shelfY + 1}" stroke="#cfd3d9" stroke-width="1.5"/>` +
     dots + labels + `</svg>`;
 }
 
