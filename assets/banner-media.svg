@@ -12,29 +12,28 @@
     <path d="M0 105 H1600 M0 210 H1600 M0 315 H1600"/>
     <path d="M200 0 V420 M400 0 V420 M600 0 V420 M800 0 V420 M1000 0 V420 M1200 0 V420 M1400 0 V420"/>
   </g>
-  <!-- broadcast waves from bottom-right corner -->
+  <!-- rose window, cropped at the top-right corner -->
   <g fill="none" stroke="#6f9cc9">
-    <path d="M1600 420 m -70 0 a 70 70 0 0 1 70 -70" stroke-width="1.4" opacity="0.42"/>
-    <path d="M1600 420 m -140 0 a 140 140 0 0 1 140 -140" stroke-width="1.3" opacity="0.34"/>
-    <path d="M1600 420 m -215 0 a 215 215 0 0 1 215 -215" stroke-width="1.2" opacity="0.26"/>
-    <path d="M1600 420 m -295 0 a 295 295 0 0 1 295 -295" stroke-width="1.1" opacity="0.2"/>
-    <path d="M1600 420 m -380 0 a 380 380 0 0 1 380 -380" stroke-width="1" opacity="0.14"/>
-    <path d="M1600 420 m -470 0 a 470 470 0 0 1 470 -470" stroke-width="1" opacity="0.09"/>
+    <circle cx="1450" cy="70" r="90" stroke-width="1.3" opacity="0.4"/>
+    <circle cx="1450" cy="70" r="150" stroke-width="1.2" opacity="0.3"/>
+    <circle cx="1450" cy="70" r="215" stroke-width="1.1" opacity="0.22"/>
+    <circle cx="1450" cy="70" r="285" stroke-width="1" opacity="0.15"/>
+    <circle cx="1450" cy="70" r="360" stroke-width="1" opacity="0.09"/>
   </g>
-  <circle cx="1600" cy="420" r="16" fill="#8fb4d9" opacity="0.3"/>
-  <!-- answering waves, upper-left, fainter -->
-  <g fill="none" stroke="#6f9cc9">
-    <path d="M0 0 m 60 0 a 60 60 0 0 1 -60 60" stroke-width="1.2" opacity="0.22"/>
-    <path d="M0 0 m 125 0 a 125 125 0 0 1 -125 125" stroke-width="1.1" opacity="0.16"/>
-    <path d="M0 0 m 195 0 a 195 195 0 0 1 -195 195" stroke-width="1" opacity="0.11"/>
-    <path d="M0 0 m 270 0 a 270 270 0 0 1 -270 270" stroke-width="1" opacity="0.07"/>
+  <!-- rosette spokes -->
+  <g stroke="#6f9cc9" stroke-width="1" opacity="0.26">
+    <path d="M1450 70 L 1450 430 M1450 70 L 1272 382 M1450 70 L 1138 250 M1450 70 L 1090 70 M1450 70 L 1138 -110 M1450 70 L 1810 70 M1450 70 L 1628 382"/>
   </g>
-  <!-- signal dots travelling between them -->
-  <g fill="#8fb4d9">
-    <circle cx="1210" cy="180" r="2.8" opacity="0.55"/>
-    <circle cx="1040" cy="250" r="2.2" opacity="0.4"/>
-    <circle cx="850" cy="320" r="2" opacity="0.3"/>
-    <circle cx="420" cy="160" r="2.2" opacity="0.35"/>
-    <circle cx="620" cy="120" r="2" opacity="0.28"/>
+  <!-- inner rosette ring with petal arcs -->
+  <g fill="none" stroke="#8fb4d9" stroke-width="1" opacity="0.32">
+    <circle cx="1450" cy="70" r="38"/>
+    <path d="M1450 32 a38 38 0 0 1 33 19 M1450 32 a38 38 0 0 0 -33 19 M1417 51 a38 38 0 0 0 0 38 M1483 51 a38 38 0 0 1 0 38 M1417 89 a38 38 0 0 0 33 19 M1483 89 a38 38 0 0 1 -33 19"/>
+  </g>
+  <circle cx="1450" cy="70" r="5" fill="#8fb4d9" opacity="0.5"/>
+  <!-- faint small arches, bottom left -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="1.1">
+    <path d="M40 420 V 350 a55 55 0 0 1 110 0 V 420" opacity="0.16"/>
+    <path d="M210 420 V 350 a55 55 0 0 1 110 0 V 420" opacity="0.12"/>
+    <path d="M380 420 V 350 a55 55 0 0 1 110 0 V 420" opacity="0.08"/>
   </g>
 </svg>

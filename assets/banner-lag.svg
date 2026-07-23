@@ -12,30 +12,26 @@
     <path d="M0 105 H1600 M0 210 H1600 M0 315 H1600"/>
     <path d="M200 0 V420 M400 0 V420 M600 0 V420 M800 0 V420 M1000 0 V420 M1200 0 V420 M1400 0 V420"/>
   </g>
-  <!-- network edges -->
-  <g stroke="#6f9cc9" stroke-width="1.1" fill="none">
-    <path d="M1130 140 L 1310 96 M1130 140 L 1250 240 M1310 96 L 1470 170 M1250 240 L 1470 170 M1250 240 L 1400 330 M1470 170 L 1400 330 M1130 140 L 990 220 M990 220 L 1250 240" opacity="0.3"/>
-    <path d="M1310 96 L 1440 40 M1400 330 L 1560 380 M990 220 L 860 320 M860 320 L 1050 380 M1050 380 L 1250 240" opacity="0.18"/>
-    <path d="M240 330 L 400 260 M400 260 L 560 320 M240 330 L 380 390 M380 390 L 560 320 M400 260 L 300 170" opacity="0.2"/>
+  <!-- colonnade: repeating arches, weight rising to the right -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="1.2">
+    <path d="M60 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.1"/>
+    <path d="M280 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.14"/>
+    <path d="M500 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.18"/>
+    <path d="M720 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.24"/>
+    <path d="M940 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.3"/>
+    <path d="M1160 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.38"/>
+    <path d="M1380 420 V 320 a70 70 0 0 1 140 0 V 420" opacity="0.45"/>
   </g>
-  <!-- nodes -->
+  <!-- architrave line above the colonnade -->
+  <path d="M0 236 H1600" stroke="#6f9cc9" stroke-width="1" opacity="0.16"/>
+  <!-- community: linked dots between the columns -->
+  <path d="M350 372 L 570 366 L 790 372 L 1010 366 L 1230 372 L 1450 366" stroke="#8fb4d9" stroke-width="1" fill="none" opacity="0.22"/>
   <g fill="#8fb4d9">
-    <circle cx="1130" cy="140" r="5" opacity="0.55"/>
-    <circle cx="1310" cy="96" r="3.6" opacity="0.45"/>
-    <circle cx="1250" cy="240" r="6" opacity="0.6"/>
-    <circle cx="1470" cy="170" r="4" opacity="0.5"/>
-    <circle cx="1400" cy="330" r="3.4" opacity="0.4"/>
-    <circle cx="990" cy="220" r="3.6" opacity="0.42"/>
-    <circle cx="1440" cy="40" r="2.6" opacity="0.3"/>
-    <circle cx="1560" cy="380" r="2.6" opacity="0.28"/>
-    <circle cx="860" cy="320" r="2.8" opacity="0.3"/>
-    <circle cx="1050" cy="380" r="2.6" opacity="0.28"/>
-    <circle cx="400" cy="260" r="4" opacity="0.4"/>
-    <circle cx="240" cy="330" r="3" opacity="0.32"/>
-    <circle cx="560" cy="320" r="3.2" opacity="0.32"/>
-    <circle cx="380" cy="390" r="2.6" opacity="0.26"/>
-    <circle cx="300" cy="170" r="2.6" opacity="0.28"/>
+    <circle cx="350" cy="372" r="2.2" opacity="0.4"/>
+    <circle cx="570" cy="366" r="2.6" opacity="0.5"/>
+    <circle cx="790" cy="372" r="2.4" opacity="0.45"/>
+    <circle cx="1010" cy="366" r="3" opacity="0.6"/>
+    <circle cx="1230" cy="372" r="2.6" opacity="0.55"/>
+    <circle cx="1450" cy="366" r="2.8" opacity="0.6"/>
   </g>
-  <!-- halo on the hub node -->
-  <circle cx="1250" cy="240" r="14" fill="none" stroke="#6f9cc9" stroke-width="1" opacity="0.25"/>
 </svg>

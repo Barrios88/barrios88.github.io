@@ -17,21 +17,32 @@
     <path d="M0 105 H1600 M0 210 H1600 M0 315 H1600"/>
     <path d="M200 0 V420 M400 0 V420 M600 0 V420 M800 0 V420 M1000 0 V420 M1200 0 V420 M1400 0 V420"/>
   </g>
-  <!-- single quiet timeline -->
-  <path d="M0 300 H1600" stroke="url(#beam)" stroke-width="1.5"/>
+  <!-- concentric arches, right cluster -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="1.3">
+    <path d="M1070 420 a240 240 0 0 1 480 0" opacity="0.4"/>
+    <path d="M1105 420 a205 205 0 0 1 410 0" opacity="0.3"/>
+    <path d="M1140 420 a170 170 0 0 1 340 0" opacity="0.22"/>
+    <path d="M1175 420 a135 135 0 0 1 270 0" opacity="0.15"/>
+  </g>
+  <!-- faint left arch -->
+  <g fill="none" stroke="#6f9cc9" stroke-width="1.1">
+    <path d="M-120 420 a220 220 0 0 1 440 0" opacity="0.14"/>
+    <path d="M-80 420 a180 180 0 0 1 360 0" opacity="0.08"/>
+  </g>
+  <!-- single quiet timeline through the arches -->
+  <path d="M0 312 H1600" stroke="url(#beam)" stroke-width="1.5"/>
   <g stroke="#6f9cc9" stroke-width="1" opacity="0.3">
-    <path d="M330 300 v -12 M620 300 v -12 M880 300 v -12 M1120 300 v -12 M1360 300 v -12"/>
+    <path d="M340 312 v -12 M630 312 v -12 M890 312 v -12 M1130 312 v -12 M1370 312 v -12"/>
   </g>
   <g fill="#8fb4d9">
-    <circle cx="330" cy="300" r="3" opacity="0.5"/>
-    <circle cx="620" cy="300" r="3.4" opacity="0.6"/>
-    <circle cx="880" cy="300" r="3" opacity="0.5"/>
-    <circle cx="1120" cy="300" r="3.8" opacity="0.68"/>
-    <circle cx="1360" cy="300" r="3" opacity="0.5"/>
+    <circle cx="340" cy="312" r="3" opacity="0.5"/>
+    <circle cx="630" cy="312" r="3.4" opacity="0.6"/>
+    <circle cx="890" cy="312" r="3" opacity="0.5"/>
+    <circle cx="1130" cy="312" r="3.8" opacity="0.68"/>
+    <circle cx="1370" cy="312" r="3" opacity="0.5"/>
   </g>
-  <!-- faint milestone halos -->
   <g fill="none" stroke="#6f9cc9" stroke-width="1">
-    <circle cx="1120" cy="300" r="11" opacity="0.22"/>
-    <circle cx="620" cy="300" r="9" opacity="0.16"/>
+    <circle cx="1130" cy="312" r="11" opacity="0.24"/>
+    <circle cx="630" cy="312" r="9" opacity="0.16"/>
   </g>
 </svg>
