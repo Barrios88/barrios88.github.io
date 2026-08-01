@@ -834,6 +834,9 @@ a.cite-badge:hover { color: var(--blue); border-bottom-color: var(--blue); }
   align-items: start;
 }
 
+/* Author `display` on .has-thumb overrides the UA [hidden] rule; keep filters working. */
+.paper[hidden] { display: none !important; }
+
 .paper-thumb {
   display: block;
   border: 1px solid var(--rule);
