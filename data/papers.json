@@ -288,15 +288,15 @@
         "Ryan Grant Johnson",
         "Christine Liu"
       ],
-      "year": 2025,
-      "status": "rr",
-      "venue": null,
+      "year": 2026,
+      "status": "forthcoming",
+      "venue": "Review of Accounting Studies",
       "themes": [
         "governance",
         "reporting"
       ],
       "abstract": "We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.\n\nOur findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation—these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation—these \"smoke\" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.",
-      "note": "Under Review (2nd round): Review of Accounting Studies",
+      "note": "Review of Accounting Studies (Conditionally Accepted)",
       "figure": "papers_web/figures/ai-disclosures-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107",
