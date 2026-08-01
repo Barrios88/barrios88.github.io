@@ -32,7 +32,11 @@
       const ok = (!s.q || p.dataset.search.includes(s.q))
         && (!s.themes.length || s.themes.some(t => p.dataset.themes.split(' ').includes(t)))
         && (!s.status.length || s.status.includes(p.dataset.status));
+      // Inline display beats author CSS (e.g. .paper.has-thumb { display: grid })
+      // that otherwise overrides the UA [hidden] rule.
       p.hidden = !ok;
+      if (ok) p.style.removeProperty('display');
+      else p.style.display = 'none';
       if (ok) { shown++; vis.add(p.id); }
     }
     for (const d of dots) d.classList.toggle('dim', !vis.has(d.dataset.paper));
@@ -87,8 +91,15 @@
     if (push) writeHash(state());
   }
 
-  [...themeChips, ...statusChips].forEach(c =>
+  // Themes: multi-select. Status: exclusive tabs (click active again to clear).
+  themeChips.forEach(c =>
     c.addEventListener('click', () => { c.classList.toggle('on'); apply(); }));
+  statusChips.forEach(c =>
+    c.addEventListener('click', () => {
+      const turningOn = !c.classList.contains('on');
+      statusChips.forEach(x => x.classList.toggle('on', turningOn && x === c));
+      apply();
+    }));
   search.addEventListener('input', () => apply());
   sortBtns.forEach(b => b.addEventListener('click', () => setSort(b.dataset.sort)));
 
