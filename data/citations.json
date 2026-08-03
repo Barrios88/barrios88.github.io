@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23",
+  "updated": "2026-08-03",
   "counts": {
     "licensing": 50,
     "pe-accounting": 0,
@@ -8,10 +8,11 @@
     "hustling-home": 3,
     "civic-capital": 287,
     "risk-politics": 423,
+    "mandated-transparency": 0,
     "conflict-discount": 0,
     "boards-feather": 25,
     "ai-disclosures": 6,
-    "tax-planning": 33,
+    "tax-planning": 34,
     "regulatory-spillovers": 1,
     "regulation-consensus": 0,
     "taxation-venture-capital": 0,
@@ -22,6 +23,8 @@
     "midnight-mergers": 4,
     "ridehailing": 54,
     "ethics-illusions": 0,
-    "fraud-distance": 0
+    "fraud-distance": 0,
+    "labor-information-environment": 0,
+    "stablecoins": 0
   }
 }
