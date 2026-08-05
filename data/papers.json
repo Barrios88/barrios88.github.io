@@ -503,13 +503,13 @@
       "id": "staggered-did",
       "title": "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers",
       "authors": [],
-      "year": 2021,
+      "year": 2026,
       "status": "working",
       "venue": null,
       "themes": [
         "reporting"
       ],
-      "abstract": "Staggered difference-in-differences (DiD) designs—where different units receive treatment at different times—are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.\n\nI provide a comprehensive primer for accounting researchers on staggered DiD designs. I explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. My goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.",
+      "abstract": "I present the staggered difference-in-differences (DiD) method in accessible language to a broad accounting audience from an applied researcher's perspective. I begin by synthesizing recent advances in the econometrics of DiD designs in which multiple units receive treatment at different points in time. Using the Goodman-Bacon decomposition, I illustrate how heterogeneous treatment effects can bias the treatment effect estimate in a staggered DiD estimated with a two-way fixed effects regression. Using the staggered adoption of the 150-hour Rule as an example, I demonstrate several diagnostics and corrections that the econometrics literature has put forward. I close by reviewing what has changed in this literature since its first wave and translating the guidance into a step-by-step checklist that researchers, reviewers, and editors can use to evaluate staggered DiD designs.",
       "figure": "papers_web/figures/staggered-did-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859",

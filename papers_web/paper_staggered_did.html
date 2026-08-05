@@ -58,13 +58,13 @@
             color: var(--yale-blue);
         }
 
-        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav ul { list-style: none; display: flex; gap: 1.4rem; flex-wrap: wrap; }
         nav a {
             color: #63605b;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
         }
         nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
 
@@ -91,10 +91,7 @@
             z-index: 0;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
+        .header-content { position: relative; z-index: 1; }
 
         .header-content h1 {
             font-size: 2rem;
@@ -160,9 +157,7 @@
 
         .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
 
-        .section {
-            margin: 2.5rem 0;
-        }
+        .section { margin: 2.5rem 0; }
 
         .section-heading {
             font-size: 1.3rem;
@@ -178,6 +173,29 @@
             text-align: justify;
         }
 
+        .figure-block {
+            margin: 1.5rem 0 2rem;
+            text-align: center;
+        }
+
+        .figure-block img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--yale-rule);
+            border-radius: 3px;
+            background: white;
+        }
+
+        .figure-block figcaption {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.6rem;
+            text-align: left;
+            line-height: 1.55;
+        }
+
+        .figure-block figcaption strong { color: var(--text-body); }
+
         .key-finding {
             background: var(--yale-cream);
             padding: 1.25rem 1.5rem;
@@ -186,16 +204,9 @@
             border-radius: 2px;
         }
 
-        .key-finding h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
+        .key-finding h3 { font-size: 1rem; margin-bottom: 0.5rem; }
 
-        .key-finding p {
-            margin: 0;
-            font-size: 0.92rem;
-            text-align: left;
-        }
+        .key-finding p { margin: 0; font-size: 0.92rem; text-align: left; }
 
         .citation-box {
             background: var(--yale-cream);
@@ -231,7 +242,11 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../cv.html">CV</a></li>
                     <li><a href="../research.html" class="active">Research</a></li>
+                    <li><a href="../teaching.html">Teaching</a></li>
+                    <li><a href="../ai-research.html">AI &amp; Research</a></li>
+                    <li><a href="../labor-accounting.html">Labor &amp; Accounting</a></li>
                     <li><a href="../code.html">Code</a></li>
+                    <li><a href="../media.html">Media</a></li>
                 </ul>
             </nav>
         </div>
@@ -240,59 +255,45 @@
     <div class="visual-header">
         <div class="network-container">
             <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Timeline with staggered treatment -->
-                <!-- Time axis -->
                 <line x1="50" y1="100" x2="750" y2="100" stroke="#00356b" stroke-width="2"/>
-
-                <!-- Pre-treatment period -->
                 <rect x="50" y="85" width="100" height="30" fill="none" stroke="#00356b" stroke-width="1.5" stroke-dasharray="3,3"/>
                 <text x="100" y="120" text-anchor="middle" font-size="10" fill="#00356b">Pre-period</text>
-
-                <!-- First treatment at t1 -->
                 <line x1="180" y1="90" x2="180" y2="110" stroke="#00356b" stroke-width="2"/>
                 <circle cx="180" cy="100" r="8" fill="#00356b"/>
                 <text x="180" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₁</text>
-
-                <!-- Group 1 treated -->
                 <rect x="190" y="60" width="80" height="20" fill="#00356b" opacity="0.3" rx="2"/>
                 <text x="230" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 1</text>
-
-                <!-- Second treatment at t2 -->
                 <line x1="370" y1="90" x2="370" y2="110" stroke="#00356b" stroke-width="2"/>
                 <circle cx="370" cy="100" r="8" fill="#00356b"/>
                 <text x="370" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₂</text>
-
-                <!-- Group 2 treated -->
                 <rect x="380" y="60" width="80" height="20" fill="#00356b" opacity="0.5" rx="2"/>
                 <text x="420" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 2</text>
-
-                <!-- Third treatment at t3 -->
                 <line x1="560" y1="90" x2="560" y2="110" stroke="#00356b" stroke-width="2"/>
                 <circle cx="560" cy="100" r="8" fill="#00356b"/>
                 <text x="560" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₃</text>
-
-                <!-- Group 3 treated -->
                 <rect x="570" y="60" width="80" height="20" fill="#00356b" opacity="0.7" rx="2"/>
                 <text x="610" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 3</text>
-
-                <!-- Parallel trends assumption issue -->
                 <path d="M 190 140 Q 280 130 370 140" stroke="#bd5319" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
                 <text x="280" y="160" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Contamination Risk</text>
             </svg>
             <div class="header-content">
                 <h1>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</h1>
-                <p class="tagline">Understanding methodological challenges in difference-in-differences designs</p>
+                <p class="tagline">Why TWFE estimates of staggered designs can be badly biased, even wrong-signed, and what to do about it</p>
             </div>
         </div>
     </div>
 
     <main class="content">
         <div class="paper-meta">
-            <p><strong>Published in:</strong> <em>Journal of Financial Reporting</em> (Revision Requested)</p>
-            <p><strong>Research Area:</strong> Financial Reporting & Measurement</p>
+            <p><strong>Status:</strong> Working paper — current draft August 2026</p>
+            <p><strong>Research Area:</strong> Financial Reporting &amp; Measurement · Research Design</p>
+            <p><strong>Running example:</strong> The staggered state-by-state adoption of the 150-hour CPA licensing rule (Barrios 2022, <em>JAR</em>)</p>
         </div>
 
         <div class="action-buttons">
+            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-file-pdf"></i> Download Paper (Aug 2026)
+            </a>
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
                 <i class="fa-solid fa-file-lines"></i> View on SSRN
             </a>
@@ -307,60 +308,360 @@
         <section class="section">
             <h2 class="section-heading">Abstract</h2>
             <p>
-                Staggered difference-in-differences (DiD) designs—where different units receive treatment at different times—are increasingly common in accounting research. However, recent econometric advances have revealed fundamental challenges with standard two-way fixed effects (TWFE) estimation in staggered settings, potentially biasing results in many accounting studies that rely on this methodology.
-            </p>
-            <p>
-                I provide a comprehensive primer for accounting researchers on staggered DiD designs. I explain the sources of bias in TWFE estimation when treatment timing is staggered, demonstrate how these biases manifest in typical accounting applications, and review alternative estimation strategies that address these issues. My goal is to help researchers understand when standard approaches are appropriate and when alternative methods are necessary.
+                I present the staggered difference-in-differences (DiD) method in accessible language to a broad accounting audience from an applied researcher's perspective. I begin by synthesizing recent advances in the econometrics of DiD designs in which multiple units receive treatment at different points in time. Using the Goodman-Bacon decomposition, I illustrate how heterogeneous treatment effects can bias the treatment effect estimate in a staggered DiD estimated with a two-way fixed effects regression. Using the staggered adoption of the 150-hour Rule as an example, I demonstrate several diagnostics and corrections that the econometrics literature has put forward. I close by reviewing what has changed in this literature since its first wave and translating the guidance into a step-by-step checklist that researchers, reviewers, and editors can use to evaluate staggered DiD designs.
             </p>
         </section>
 
         <section class="section">
-            <h2 class="section-heading">Key Findings</h2>
-
-            <div class="key-finding">
-                <h3><i class="fa-solid fa-triangle-exclamation"></i> TWFE Bias in Staggered Settings</h3>
-                <p>Standard two-way fixed effects estimation can produce biased and inconsistent estimates when treatment timing varies across units, a problem often ignored in accounting applications.</p>
-            </div>
-
-            <div class="key-finding">
-                <h3><i class="fa-solid fa-diagram-project"></i> Negative Weights Problem</h3>
-                <p>TWFE estimation in staggered designs creates negative weights on treatment effects for some groups, implicitly comparing treated and control units in ways that violate researcher intent.</p>
-            </div>
-
-            <div class="key-finding">
-                <h3><i class="fa-solid fa-lightbulb"></i> Alternative Approaches</h3>
-                <p>Newer methodologies like local treatment effects, heterogeneity-robust estimators, and event-study approaches provide valid alternatives to TWFE in staggered settings.</p>
-            </div>
-
-            <div class="key-finding">
-                <h3><i class="fa-solid fa-book"></i> Practical Guidance</h3>
-                <p>I provide empirical examples demonstrating how different estimation approaches yield different results, and offer practical guidance for researchers on method selection.</p>
-            </div>
+            <h2 class="section-heading">Staggered DiD in Accounting Research</h2>
+            <p>
+                Between 2011 and 2025, more than 1,100 articles in five leading accounting journals mention a DiD design, and roughly 30 percent of DiD papers in the 2011&ndash;2020 window used staggered treatment timing. Standard setters phase in accounting standards, courts hand down rulings in different periods, and states adopt licensing rules year by year, so the staggered case is the common case. When treatment timing is staggered and effects differ across cohorts or over time, the coefficient from the usual two-way fixed effects regression is not an interpretable average treatment effect.
+            </p>
+            <figure class="figure-block">
+                <img src="figures/staggered_did_Figure1.png" alt="DiD papers in top accounting journals, 2011-2025">
+                <figcaption><strong>DiD prevalence in accounting journals.</strong> Papers in TAR, JAR, JAE, CAR, and RAS containing a difference-in-differences keyword, 2011&ndash;2025 (N&nbsp;=&nbsp;1,112).</figcaption>
+            </figure>
         </section>
 
         <section class="section">
-            <h2 class="section-heading">Research Contribution</h2>
+            <h2 class="section-heading">What the Simulations Show</h2>
             <p>
-                This primer addresses a critical methodological issue facing accounting research. As staggered DiD designs become more prevalent in studying regulatory changes, tax reforms, and other policy variations, understanding their statistical properties is essential for drawing valid inferences.
+                The paper's simulations show how bad it can get. With staggered timing, no never-treated units, and treatment effects that grow over time, every one of 1,000 simulated TWFE estimates is negative even though every underlying treatment effect is positive by construction: the mean estimate is &minus;0.236 against a true effect of +0.570. The mechanism is that already-treated cohorts, whose outcomes are still rising from their own treatment, serve as controls for later cohorts. Nothing about the data is pathological; the weighting does it.
             </p>
+            <figure class="figure-block">
+                <img src="figures/staggered_did_Figure4.png" alt="Monte Carlo distributions of TWFE estimates under four data-generating processes">
+                <figcaption><strong>Monte Carlo distributions of the TWFE estimate.</strong> Panel A: with constant homogeneous effects, TWFE recovers the truth. Panels B&ndash;C: cross-cohort heterogeneity biases the estimate in either direction without flipping its sign. Panel D: effects that accumulate over time flip the sign: 100% of estimates are negative while every true effect is positive. Red line: true effect; dashed: mean TWFE estimate.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">The 150-Hour Application</h2>
             <p>
-                This paper is not primarily a methodological contribution, but rather a comprehensive introduction to important econometric challenges that many accounting researchers may not be aware of. By raising awareness of these issues and providing practical guidance on alternative approaches, I aim to improve the methodological rigor of future accounting research using staggered designs.
+                The paper works through a single application: the effect of the 150-hour Rule on CPA exam candidates, across 53 licensing jurisdictions and 36 semi-annual exam sittings. The pooled TWFE estimate is &minus;1.08 log points, roughly a two-thirds reduction in candidates. The event study also shows a 21 percent spike in the year before adoption, candidates rushing to sit the exam before the requirement bound. That anticipation turns out to be the estimate's real vulnerability, and no estimator fixes it, because it is a mistimed treatment date rather than a weighting problem.
+            </p>
+            <figure class="figure-block">
+                <img src="figures/staggered_did_Figure5.png" alt="Event study of the 150-hour rule on CPA exam candidates">
+                <figcaption><strong>Event study, 150-hour Rule.</strong> Candidates show no clear pre-trend except the year before adoption (+0.188, about a 21% rise), then fall steadily with no recovery through year five.</figcaption>
+            </figure>
+            <p>
+                The Goodman-Bacon decomposition shows where the estimate comes from: timing-only comparisons carry 53 percent of the weight, never-adopters 43 percent, and the one pre-1990 adopter 4 percent. Re-running the decomposition with ordered timing terms splits the timing weight into 39 percent clean earlier-versus-later comparisons and 11 percent &ldquo;forbidden&rdquo; later-versus-earlier ones, and the two groups deliver nearly the same average, which is why the high timing weight does not overturn the result here.
+            </p>
+            <figure class="figure-block">
+                <img src="figures/staggered_did_Figure6.png" alt="Goodman-Bacon decomposition of the TWFE estimate">
+                <figcaption><strong>Goodman-Bacon decomposition.</strong> Each 2&times;2 DiD estimate plotted against its weight. The TWFE coefficient (&minus;1.08) is the weighted average of these points.</figcaption>
+            </figure>
+            <p>
+                Applying the three first-wave corrections to the same outcome: Callaway&ndash;Sant'Anna gives &minus;1.40 (SE 0.24), Sun&ndash;Abraham gives &minus;1.12 (SE 0.22), and stacked regression gives &minus;1.63 (SE 0.21), against TWFE's &minus;1.08 (SE 0.15). The estimates span half a log point, though no two are statistically distinguishable, and much of the spread traces to which pre-period each estimator measures from, a consequential choice when the year before adoption is contaminated by anticipation.
+            </p>
+            <figure class="figure-block">
+                <img src="figures/staggered_did_Figure7.png" alt="Heterogeneity-robust estimators applied to the 150-hour rule">
+                <figcaption><strong>Three corrections, one outcome.</strong> Event-study profiles from Callaway&ndash;Sant'Anna, Sun&ndash;Abraham, and stacked regression, each against the TWFE benchmark (dashed red line).</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">Key Takeaways</h2>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-scale-unbalanced"></i> The bias is arithmetic</h3>
+                <p>TWFE is a weighted average of all pairwise 2&times;2 comparisons, including ones where already-treated units serve as controls. The Goodman-Bacon decomposition makes the weights visible.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-equals"></i> Agreement among robust estimators is not validation</h3>
+                <p>The correction methods fix the same defect, the weights, and every one still assumes parallel trends and no anticipation. Running five estimators answers one threat five times. Method should follow from a stated theory of what could go wrong.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-clock"></i> Anticipation is economics, not a nuisance</h3>
+                <p>In the 150-hour setting, the pre-adoption spike is a real behavioral response and the binding threat to the estimate. No reweighting repairs a mistimed treatment date; the remedy is design, moving the event date or dropping the window.</p>
+            </div>
+
+            <div class="key-finding">
+                <h3><i class="fa-solid fa-list-check"></i> A checklist and a replication package</h3>
+                <p><a href="#checklist-app">Appendix A collects the guidance into a design&ndash;estimation&ndash;inference&ndash;robustness&ndash;reporting checklist</a> for authors, reviewers, and editors; the interactive version is below. A replication package reproduces every estimate in the paper.</p>
+            </div>
+        </section>
+
+        <section class="section" id="checklist-app">
+            <h2 class="section-heading">Explore the Checklist</h2>
+            <p>
+                Appendix A collects the paper's guidance into a checklist ordered the way a project unfolds: design, estimation, inference, robustness, and reporting. Authors can walk through it before submission; reviewers and editors can use it to structure their evaluation of a staggered DiD study. Each item opens to show what to do and how it applies in the 150-hour setting. The copy button produces a plain-text version of the list.
+            </p>
+
+            <style>
+                #checklist-app .cl-toolbar {
+                    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+                    margin: 1.25rem 0 0.75rem;
+                }
+                #checklist-app .cl-progress-wrap { flex: 1; min-width: 220px; }
+                #checklist-app .cl-progress-label {
+                    font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.25rem;
+                    display: flex; justify-content: space-between;
+                }
+                #checklist-app .cl-progress-bar {
+                    height: 8px; background: #e8e4dd; border-radius: 4px; overflow: hidden;
+                }
+                #checklist-app .cl-progress-fill {
+                    height: 100%; width: 0%; background: var(--yale-blue);
+                    border-radius: 4px; transition: width 0.35s ease, background 0.35s ease;
+                }
+                #checklist-app .cl-progress-fill.done { background: #2e7d32; }
+                #checklist-app .cl-btn {
+                    font-size: 0.78rem; font-weight: 500; cursor: pointer;
+                    border: 1px solid var(--yale-blue); color: var(--yale-blue);
+                    background: white; border-radius: 3px; padding: 0.45rem 0.85rem;
+                    font-family: 'Inter', sans-serif; transition: all 0.15s;
+                    display: inline-flex; align-items: center; gap: 0.4rem;
+                }
+                #checklist-app .cl-btn:hover { background: rgba(0,53,107,0.06); }
+                #checklist-app .cl-tabs {
+                    display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 1rem 0 1.25rem;
+                }
+                #checklist-app .cl-tab {
+                    font-size: 0.8rem; font-weight: 500; cursor: pointer;
+                    border: 1px solid var(--yale-rule); background: white; color: var(--text-light);
+                    border-radius: 999px; padding: 0.4rem 0.95rem;
+                    font-family: 'Inter', sans-serif; transition: all 0.15s;
+                }
+                #checklist-app .cl-tab:hover { border-color: var(--yale-blue); color: var(--yale-blue); }
+                #checklist-app .cl-tab.active {
+                    background: var(--yale-blue); border-color: var(--yale-blue); color: white;
+                }
+                #checklist-app .cl-tab .cl-count {
+                    font-size: 0.72rem; opacity: 0.75; margin-left: 0.3rem;
+                }
+                #checklist-app .cl-item {
+                    border: 1px solid var(--yale-rule); border-radius: 4px;
+                    margin: 0.6rem 0; background: white; overflow: hidden;
+                    transition: border-color 0.15s;
+                }
+                #checklist-app .cl-item.checked { border-color: #a5c8a7; background: #f6faf6; }
+                #checklist-app .cl-item-head {
+                    display: flex; align-items: center; gap: 0.8rem;
+                    padding: 0.85rem 1rem; cursor: pointer; user-select: none;
+                }
+                #checklist-app .cl-check {
+                    width: 21px; height: 21px; min-width: 21px; border-radius: 50%;
+                    border: 2px solid var(--yale-rule); background: white; cursor: pointer;
+                    display: inline-flex; align-items: center; justify-content: center;
+                    color: white; font-size: 0.7rem; transition: all 0.15s; padding: 0;
+                }
+                #checklist-app .cl-item.checked .cl-check { background: #2e7d32; border-color: #2e7d32; }
+                #checklist-app .cl-id {
+                    font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--yale-accent);
+                    font-size: 0.95rem; min-width: 2rem;
+                }
+                #checklist-app .cl-q {
+                    flex: 1; font-size: 0.95rem; font-weight: 500; color: var(--text-body);
+                }
+                #checklist-app .cl-item.checked .cl-q { color: #6d8f6f; }
+                #checklist-app .cl-chevron {
+                    color: var(--text-light); font-size: 0.8rem; transition: transform 0.2s;
+                }
+                #checklist-app .cl-item.open .cl-chevron { transform: rotate(180deg); }
+                #checklist-app .cl-body {
+                    display: none; padding: 0 1rem 1rem 3.9rem; font-size: 0.9rem;
+                }
+                #checklist-app .cl-item.open .cl-body { display: block; }
+                #checklist-app .cl-do { margin-bottom: 0.75rem; line-height: 1.65; }
+                #checklist-app .cl-do strong, #checklist-app .cl-ex strong {
+                    display: block; font-size: 0.72rem; text-transform: uppercase;
+                    letter-spacing: 0.08em; color: var(--yale-blue); margin-bottom: 0.25rem;
+                }
+                #checklist-app .cl-ex {
+                    background: var(--yale-cream); border-left: 3px solid var(--yale-accent);
+                    padding: 0.75rem 1rem; border-radius: 2px; line-height: 1.6;
+                }
+                #checklist-app .cl-ex strong { color: var(--yale-accent); }
+                #checklist-app .cl-footer-note {
+                    font-size: 0.8rem; color: var(--text-light); margin-top: 1rem; text-align: left;
+                }
+                @media (max-width: 640px) {
+                    #checklist-app .cl-body { padding-left: 1rem; }
+                }
+            </style>
+
+            <div class="cl-toolbar">
+                <div class="cl-progress-wrap">
+                    <div class="cl-progress-label">
+                        <span id="cl-progress-text">0 of 17 items checked</span>
+                        <span id="cl-progress-msg"></span>
+                    </div>
+                    <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-progress-fill"></div></div>
+                </div>
+                <button class="cl-btn" id="cl-copy"><i class="fa-regular fa-copy"></i> Copy as notes</button>
+                <button class="cl-btn" id="cl-reset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            </div>
+
+            <div class="cl-tabs" id="cl-tabs"></div>
+            <div id="cl-list"></div>
+
+            <script>
+            (function () {
+                const STAGES = ["Design", "Estimation", "Inference", "Robustness", "Reporting"];
+                const ITEMS = [
+                    { id: "D1", stage: "Design", q: "When does each unit get treated?",
+                      todo: "Tabulate adoption dates and cohort sizes before running anything. Note very early adopters, singleton cohorts, and cohorts near the middle of the panel, which OLS overweights.",
+                      ex: "Table 1: one pre-1990 adopter, cohorts of 1–16 jurisdictions from 1993–2003; the 16-jurisdiction 2000 cohort dominates the TWFE weights through size, despite a treatment share of only 0.21." },
+                    { id: "D2", stage: "Design", q: "Do clean comparison units exist?",
+                      todo: "Identify never-treated units or, failing that, not-yet-treated units, including the last-treated cohort (Sun and Abraham 2021). If treatment is universal and simultaneous, no staggered-DiD estimator applies.",
+                      ex: "Ten jurisdictions never adopt during the 1985–2003 sample; they anchor the Sun–Abraham and stacked estimates, while the Callaway–Sant'Anna implementation uses not-yet-treated controls." },
+                    { id: "D3", stage: "Design", q: "Is treatment absorbing, binary, and dated correctly?",
+                      todo: "Verify treatment does not switch off and that adoption dates are measured at the level and timing at which the rule binds. Non-absorbing or continuous treatments need dedicated estimators (de Chaisemartin and D'Haultfœuille 2026; Callaway, Goodman-Bacon, and Sant'Anna 2023).",
+                      ex: "No state repealed the Rule; effective dates come from state statutes." },
+                    { id: "D4", stage: "Design", q: "Can units anticipate treatment?",
+                      todo: "Ask whether agents can shift behavior before the official date; if so, redefine the event date or exclude the anticipation window.",
+                      ex: "Candidates rushed to sit the exam before the Rule bound, producing a spike in the year before adoption (Barrios 2022)." },
+                    { id: "D5", stage: "Design", q: "Are covariates needed for parallel trends?",
+                      todo: "If early and late adopters differ systematically, condition on covariates measured before treatment; avoid contemporaneous controls that may respond to treatment (Sant'Anna and Zhao 2020; Caetano and Callaway 2024).",
+                      ex: "Adoption timing varies with state political economy; pre-treatment state characteristics, not contemporaneous accounting-sector employment, are the admissible controls." },
+                    { id: "E1", stage: "Estimation", q: "What is the TWFE estimate made of?",
+                      todo: "Estimate the TWFE baseline, then run the Goodman-Bacon (2021) decomposition (derived for a balanced panel): plot each 2×2 against its weight and sum the weight on timing-based comparisons.",
+                      ex: "Figure 6: 53% of the TWFE estimate of −1.08 comes from timing comparisons; timing-only estimates average −1.04, close to the never-adopter average of −1.15, though see E2: the robust estimators still move the estimate." },
+                    { id: "E2", stage: "Estimation", q: "Which heterogeneity-robust estimator fits the data?",
+                      todo: "Match the estimator to the setting: Callaway–Sant'Anna (2021) with never- or not-yet-treated controls and covariates; Sun–Abraham (2021) for event studies; stacking with corrective weights (Cengiz et al. 2019; Wing, Freedman, and Hollingsworth 2024); imputation for efficiency (Borusyak, Jaravel, and Spiess 2024; Gardner 2022; Wooldridge 2025); Wooldridge (2023) for nonlinear outcomes.",
+                      ex: "Section V implements Callaway–Sant'Anna, Sun–Abraham, and stacking; estimates range from −1.12 to −1.63 around the TWFE value of −1.08, and much of that range reflects differing reference periods (Figure 7)." },
+                    { id: "E3", stage: "Estimation", q: "What do the dynamics look like?",
+                      todo: "Plot the event study from a heterogeneity-robust estimator, not only from TWFE, with a clear reference period and confidence bands.",
+                      ex: "Figures 5 and 7: flat pre-period except the anticipation year; effects deepen after adoption." },
+                    { id: "E4", stage: "Estimation", q: "What is the estimand?",
+                      todo: "State the target parameter (overall ATT, cohort ATTs, event-time profile) and the aggregation weights before comparing estimates across methods.",
+                      ex: "This paper's Callaway–Sant'Anna estimate averages event-time effects over the post-window; OLS's variance weights answer a different question, rarely the one posed." },
+                    { id: "I1", stage: "Inference", q: "At what level is treatment assigned?",
+                      todo: "Justify the clustering level from the assignment and sampling design (Bertrand, Duflo, and Mullainathan 2004; Abadie, Athey, Imbens, and Wooldridge 2023), rather than by convention.",
+                      ex: "Treatment varies at the jurisdiction level, so cluster by jurisdiction even though outcomes are semi-annual." },
+                    { id: "I2", stage: "Inference", q: "How many clusters, and how many treated clusters?",
+                      todo: "With few clusters, or few treated clusters, use the wild cluster bootstrap or design-based alternatives and say so (Cameron, Gelbach, and Miller 2008; Canay, Santos, and Shaikh 2021; MacKinnon, Nielsen, and Webb 2023).",
+                      ex: "The 53 jurisdiction clusters support conventional inference for the aggregate estimate, but singleton adoption cohorts in Table 1 cannot support cohort-level clustered inference." },
+                    { id: "R1", stage: "Robustness", q: "Do alternative estimators agree?",
+                      todo: "Report at least one heterogeneity-robust estimator beside TWFE, and say what agreement establishes: these differ in weighting, not in requiring parallel trends.",
+                      ex: "All three give a large negative estimate but range from −1.12 to −1.63; much of that range tracks the reference period each uses rather than its weights. None addresses anticipation." },
+                    { id: "R2", stage: "Robustness", q: "How fragile is parallel trends?",
+                      todo: "Do not rely on a passed pre-trends test (Roth 2022). Report HonestDiD bounds (Rambachan and Roth 2023): how large a violation would overturn the result?",
+                      ex: "The anticipation spike contaminates t = −1, so the bounds apply only after the event date is moved to the spike year." },
+                    { id: "R3", stage: "Robustness", q: "Is the estimate stable across samples?",
+                      todo: "Re-estimate without never-treated units to see how much identification rests on them; a large move is informative and stability is not reassurance (Figure 4, Panel D). Sample-window changes move the weights, so some movement is expected.",
+                      ex: "Table 2: the coefficient moves little without the never-adopters or the pre-1990 adopter, and with trends and pre-trend adjustments: limited dependence on clean controls here, not a validated design." },
+                    { id: "P1", stage: "Reporting", q: "Can the reader reconstruct the comparison?",
+                      todo: "State the estimator, the comparison group, the estimand, and the aggregation weights in the text, not only in a table note.",
+                      ex: "“Group-time ATTs relative to not-yet-treated jurisdictions, averaged over post-treatment event times” is one line." },
+                    { id: "P2", stage: "Reporting", q: "Are the diagnostics visible?",
+                      todo: "Show the decomposition plot and the robust event study in the paper or appendix; report the weight on timing comparisons.",
+                      ex: "Figures 6 and 7 serve this role." },
+                    { id: "P3", stage: "Reporting", q: "Can others replicate it?",
+                      todo: "Name the packages and versions, post code, and state data availability, consistent with journal policy.",
+                      ex: "Simulation and replication code are available from the author's website." }
+                ];
+
+                const KEY = "barrios-did-checklist-v1";
+                let state = {};
+                try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { state = {}; }
+                let activeStage = "All";
+
+                const tabsEl = document.getElementById("cl-tabs");
+                const listEl = document.getElementById("cl-list");
+
+                function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+                function stageItems(s) { return s === "All" ? ITEMS : ITEMS.filter(i => i.stage === s); }
+                function checkedCount(s) { return stageItems(s).filter(i => state[i.id]).length; }
+
+                function renderTabs() {
+                    const stages = ["All"].concat(STAGES);
+                    tabsEl.innerHTML = stages.map(s => {
+                        const n = stageItems(s).length, c = checkedCount(s);
+                        return '<button class="cl-tab' + (activeStage === s ? " active" : "") + '" data-stage="' + s + '">'
+                            + s + '<span class="cl-count">' + c + "/" + n + "</span></button>";
+                    }).join("");
+                    tabsEl.querySelectorAll(".cl-tab").forEach(b =>
+                        b.addEventListener("click", () => { activeStage = b.dataset.stage; render(); }));
+                }
+
+                function renderProgress() {
+                    const total = ITEMS.length, done = checkedCount("All");
+                    const fill = document.getElementById("cl-progress-fill");
+                    fill.style.width = (100 * done / total) + "%";
+                    fill.classList.toggle("done", done === total);
+                    document.getElementById("cl-progress-text").textContent = done + " of " + total + " items checked";
+                    document.getElementById("cl-progress-msg").textContent = "";
+                }
+
+                function renderList() {
+                    listEl.innerHTML = stageItems(activeStage).map(i => {
+                        const chk = !!state[i.id];
+                        return '<div class="cl-item' + (chk ? " checked" : "") + '" data-id="' + i.id + '">'
+                            + '<div class="cl-item-head">'
+                            + '<button class="cl-check" aria-label="Mark ' + i.id + ' done" title="Mark done">'
+                            + (chk ? '<i class="fa-solid fa-check"></i>' : "") + "</button>"
+                            + '<span class="cl-id">' + i.id + "</span>"
+                            + '<span class="cl-q">' + i.q + "</span>"
+                            + '<span class="cl-chevron"><i class="fa-solid fa-chevron-down"></i></span>'
+                            + "</div>"
+                            + '<div class="cl-body">'
+                            + '<div class="cl-do"><strong>What to do</strong>' + i.todo + "</div>"
+                            + '<div class="cl-ex"><strong>In the 150-hour application</strong>' + i.ex + "</div>"
+                            + "</div></div>";
+                    }).join("");
+                    listEl.querySelectorAll(".cl-item").forEach(el => {
+                        const id = el.dataset.id;
+                        el.querySelector(".cl-check").addEventListener("click", ev => {
+                            ev.stopPropagation();
+                            state[id] = !state[id];
+                            save(); render();
+                        });
+                        el.querySelector(".cl-item-head").addEventListener("click", () =>
+                            el.classList.toggle("open"));
+                    });
+                }
+
+                function render() { renderTabs(); renderProgress(); renderList(); }
+
+                document.getElementById("cl-reset").addEventListener("click", () => {
+                    state = {}; save(); render();
+                });
+
+                document.getElementById("cl-copy").addEventListener("click", () => {
+                    const lines = ["Staggered DiD checklist (Barrios, “Staggeringly Problematic”, Appendix A)", ""];
+                    STAGES.forEach(s => {
+                        lines.push("## " + s);
+                        ITEMS.filter(i => i.stage === s).forEach(i =>
+                            lines.push("- [" + (state[i.id] ? "x" : " ") + "] " + i.id + ": " + i.q));
+                        lines.push("");
+                    });
+                    lines.push("Source: johnmbarrios.com/papers_web/paper_staggered_did.html");
+                    navigator.clipboard.writeText(lines.join("\n")).then(() => {
+                        const btn = document.getElementById("cl-copy");
+                        const old = btn.innerHTML;
+                        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+                        setTimeout(() => { btn.innerHTML = old; }, 1600);
+                    });
+                });
+
+                render();
+            })();
+            </script>
+        </section>
+
+        <section class="section">
+            <h2 class="section-heading">What's New in the August 2026 Draft</h2>
+            <p>
+                This version adds a review of what has changed since the first wave of the econometrics, including imputation estimators and the extended TWFE, covariates as a design choice, honest pre-trends, inference with few treated clusters, and corrected stacking. It also adds coverage notes on triple differences, spillovers, and functional form, positions the paper against the recent econometrics guides, and ships a replication package that reproduces every estimate in the paper.
             </p>
         </section>
 
         <section class="section">
             <h2 class="section-heading">Citation</h2>
             <div class="citation-box">
-Barrios, John Manuel. "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers." <em>Journal of Financial Reporting</em> (Revision Requested).
+Barrios, John M. 2026. "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers." Working paper, Yale School of Management.
             </div>
         </section>
 
         <div class="action-buttons">
+            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" class="btn">
+                <i class="fa-solid fa-file-pdf"></i> Download Paper (Aug 2026)
+            </a>
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
                 <i class="fa-solid fa-file-lines"></i> View on SSRN
-            </a>
-            <a href="../code.html" class="btn">
-                <i class="fa-solid fa-code"></i> Code &amp; Slides
             </a>
             <a href="../research.html" class="btn-secondary btn">
                 <i class="fa-solid fa-arrow-left"></i> Back to Research
