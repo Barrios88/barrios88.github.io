@@ -759,7 +759,9 @@
         "reporting"
       ],
       "abstract": null,
-      "links": {},
+      "links": {
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6963621"
+      },
       "doi": null,
       "featured": false,
       "figure": "papers_web/figures/stablecoins-summary.svg"
