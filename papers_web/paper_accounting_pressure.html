@@ -214,6 +214,23 @@
             font-size: 0.78rem;
             color: #b0ada7;
         }
+
+        /* ── Result figures ── */
+        .figure-block { margin: 1.75rem 0 2.25rem; text-align: center; }
+        .figure-block svg, .figure-block img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .figure-block figcaption {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.7rem;
+            text-align: left;
+            line-height: 1.55;
+        }
+        .figure-block figcaption strong { color: var(--text-body); }
     </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4VZDV0HRZ"></script>
@@ -333,20 +350,150 @@
                 <p>Whether a bond cascades into a fire sale or dissipates benignly depends on the accounting rule the marginal holder follows. Historical-cost (HCA) insurers can carry an impaired bond at amortized cost and hold through the shock; mark-to-market (MTM) insurers must book the loss, and when it binds their regulatory capital, they are forced to sell.</p>
             </div>
 
+            <figure class="figure-block">
+                <svg viewBox="0 0 720 360" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', system-ui, sans-serif">
+                    <title>How the recognition rule splits insurer behavior in a crisis</title>
+                    <desc>The same shock hits a bond. A historical-cost insurer carries it at amortized cost, its reported capital is unaffected, and it holds through the shock, so the price is supported. A mark-to-market insurer must book the loss immediately, its regulatory capital binds, it is forced to sell, and the price falls further.</desc>
+                    <defs>
+                        <marker id="apA-blue" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#00356b"/></marker>
+                        <marker id="apA-orange" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#bd5319"/></marker>
+                        <marker id="apA-gray" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8a857e"/></marker>
+                    </defs>
+                    <rect x="252" y="12" width="216" height="42" rx="6" fill="#00294f"/>
+                    <text x="360" y="38" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="600">Same shock hits the bond</text>
+                    <path d="M360,54 V70 H180 V80" fill="none" stroke="#8a857e" stroke-width="1.6" marker-end="url(#apA-gray)"/>
+                    <path d="M360,54 V70 H540 V80" fill="none" stroke="#8a857e" stroke-width="1.6" marker-end="url(#apA-gray)"/>
+
+                    <rect x="60" y="84" width="240" height="32" rx="6" fill="#00356b"/>
+                    <text x="180" y="105" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">HCA insurer &#183; historical cost</text>
+                    <line x1="180" y1="116" x2="180" y2="130" stroke="#00356b" stroke-width="1.6" marker-end="url(#apA-blue)"/>
+                    <rect x="60" y="132" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="60" y="132" width="3.5" height="38" fill="#00356b"/>
+                    <text x="182" y="156" text-anchor="middle" fill="#3a3632" font-size="12.5">Carry the bond at amortized cost</text>
+                    <line x1="180" y1="170" x2="180" y2="182" stroke="#00356b" stroke-width="1.6" marker-end="url(#apA-blue)"/>
+                    <rect x="60" y="184" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="60" y="184" width="3.5" height="38" fill="#00356b"/>
+                    <text x="182" y="208" text-anchor="middle" fill="#3a3632" font-size="12.5">Reported capital is unaffected</text>
+                    <line x1="180" y1="222" x2="180" y2="234" stroke="#00356b" stroke-width="1.6" marker-end="url(#apA-blue)"/>
+                    <rect x="60" y="236" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="60" y="236" width="3.5" height="38" fill="#00356b"/>
+                    <text x="182" y="260" text-anchor="middle" fill="#3a3632" font-size="12.5">Hold through the shock</text>
+                    <line x1="180" y1="274" x2="180" y2="286" stroke="#00356b" stroke-width="1.6" marker-end="url(#apA-blue)"/>
+                    <rect x="60" y="288" width="240" height="46" rx="6" fill="#e9eff5" stroke="#00356b" stroke-width="1.4"/>
+                    <text x="180" y="316" text-anchor="middle" fill="#00356b" font-size="14.5" font-weight="700">Price is supported</text>
+
+                    <rect x="420" y="84" width="240" height="32" rx="6" fill="#bd5319"/>
+                    <text x="540" y="105" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">MTM insurer &#183; mark to market</text>
+                    <line x1="540" y1="116" x2="540" y2="130" stroke="#bd5319" stroke-width="1.6" marker-end="url(#apA-orange)"/>
+                    <rect x="420" y="132" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="420" y="132" width="3.5" height="38" fill="#bd5319"/>
+                    <text x="542" y="156" text-anchor="middle" fill="#3a3632" font-size="12.5">Book the loss immediately</text>
+                    <line x1="540" y1="170" x2="540" y2="182" stroke="#bd5319" stroke-width="1.6" marker-end="url(#apA-orange)"/>
+                    <rect x="420" y="184" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="420" y="184" width="3.5" height="38" fill="#bd5319"/>
+                    <text x="542" y="208" text-anchor="middle" fill="#3a3632" font-size="12.5">Regulatory capital binds</text>
+                    <line x1="540" y1="222" x2="540" y2="234" stroke="#bd5319" stroke-width="1.6" marker-end="url(#apA-orange)"/>
+                    <rect x="420" y="236" width="240" height="38" rx="5" fill="#f9f7f4" stroke="#d4d0c8"/><rect x="420" y="236" width="3.5" height="38" fill="#bd5319"/>
+                    <text x="542" y="260" text-anchor="middle" fill="#3a3632" font-size="12.5">Forced to sell into the decline</text>
+                    <line x1="540" y1="274" x2="540" y2="286" stroke="#bd5319" stroke-width="1.6" marker-end="url(#apA-orange)"/>
+                    <rect x="420" y="288" width="240" height="46" rx="6" fill="#f7ece4" stroke="#bd5319" stroke-width="1.4"/>
+                    <text x="540" y="316" text-anchor="middle" fill="#bd5319" font-size="14.5" font-weight="700">Price falls further</text>
+                </svg>
+                <figcaption><strong>One shock, two responses.</strong> The recognition rule the marginal holder follows &mdash; not its liability profile &mdash; decides whether a distressed bond is held or sold. A historical-cost insurer&rsquo;s reported capital does not move with a temporary price drop, so it can hold; a mark-to-market insurer must book the loss, and once that binds its regulatory capital it is forced to sell, driving the price down further.</figcaption>
+            </figure>
+
             <div class="key-finding">
                 <h3><i class="fa-solid fa-code-branch"></i> A Within-Group Natural Experiment</h3>
                 <p>Life and P&amp;C subsidiaries in the same insurance group hold the same bond in the same quarter but face different statutory rules once the bond is downgraded into speculative grade (NAIC 3–5). A P&amp;C subsidiary is roughly 7 percent more likely than its Life affiliate to sell such a bond — a gap that vanishes when their accounting treatments coincide.</p>
             </div>
 
+            <figure class="figure-block">
+                <svg viewBox="0 0 620 372" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', system-ui, sans-serif">
+                    <title>P&amp;C minus Life probability of selling a jointly held bond, by rating region</title>
+                    <desc>Within the same insurance group and quarter, the gap between a P&amp;C subsidiary and its Life affiliate in the probability of selling a jointly held bond is essentially zero at investment grade, where both use the same accounting, and about 7 percent at speculative grade, past the NAIC 2/3 threshold, where only the P&amp;C subsidiary must mark the bond down.</desc>
+                    <g stroke="#ecece8" stroke-width="1">
+                        <line x1="150" y1="240" x2="560" y2="240"/>
+                        <line x1="150" y1="180" x2="560" y2="180"/>
+                        <line x1="150" y1="120" x2="560" y2="120"/>
+                        <line x1="150" y1="60" x2="560" y2="60"/>
+                    </g>
+                    <line x1="150" y1="56" x2="150" y2="300" stroke="#d4d0c8" stroke-width="1.4"/>
+                    <g fill="#6b6560" font-size="11.5" text-anchor="end">
+                        <text x="140" y="304">0</text>
+                        <text x="140" y="244">2%</text>
+                        <text x="140" y="184">4%</text>
+                        <text x="140" y="124">6%</text>
+                        <text x="140" y="64">8%</text>
+                    </g>
+                    <text transform="rotate(-90 42 180)" x="42" y="180" text-anchor="middle" fill="#6b6560" font-size="12">P&amp;C &#8722; Life probability of selling</text>
+                    <line x1="150" y1="300" x2="560" y2="300" stroke="#3a3632" stroke-width="1.4"/>
+                    <line x1="355" y1="50" x2="355" y2="300" stroke="#8a857e" stroke-width="1.3" stroke-dasharray="5,4"/>
+                    <text x="355" y="42" text-anchor="middle" fill="#6b6560" font-size="11.5" font-weight="600">NAIC 2/3 threshold</text>
+                    <rect x="210" y="296" width="110" height="4" rx="2" fill="#9aa7b4"/>
+                    <text x="265" y="286" text-anchor="middle" fill="#5b6672" font-size="12.5" font-weight="600">&#8776; 0</text>
+                    <rect x="410" y="90" width="110" height="210" rx="4" fill="#bd5319"/>
+                    <text x="465" y="80" text-anchor="middle" fill="#bd5319" font-size="15" font-weight="700">+7%</text>
+                    <g text-anchor="middle" font-size="12">
+                        <text x="265" y="322" fill="#3a3632" font-weight="600">Investment grade</text>
+                        <text x="265" y="338" fill="#6b6560">NAIC 1&#8211;2 &#183; rules aligned</text>
+                        <text x="465" y="322" fill="#3a3632" font-weight="600">Speculative grade</text>
+                        <text x="465" y="338" fill="#6b6560">NAIC 3&#8211;5 &#183; rules diverge</text>
+                    </g>
+                </svg>
+                <figcaption><strong>The same bond, the same quarter, two rulebooks.</strong> The gap between a P&amp;C subsidiary and its Life affiliate in the probability of selling a jointly held bond, within one insurance group. At investment grade both carry the bond the same way and the gap is essentially zero; once the bond crosses the NAIC 2/3 threshold into speculative grade &mdash; where only the P&amp;C arm must mark it down &mdash; the P&amp;C subsidiary is about 7 percent more likely to sell.</figcaption>
+            </figure>
+
             <div class="key-finding">
                 <h3><i class="fa-solid fa-chart-line"></i> Insurer Ownership Stabilizes Prices</h3>
-                <p>Bonds with more insurer ownership fall substantially less in crises. A one-standard-deviation increase in insurer ownership cuts crisis-period drawdowns by about 0.3 percentage points (≈3 percent of the average crisis decline), with a larger effect under a shift-share instrument. Mutual-fund ownership shows no such stabilizing effect.</p>
+                <p>Bonds with more insurer ownership fall less in crises. A one-standard-deviation increase in insurer ownership cuts crisis-period drawdowns by about 0.3 percentage points (≈3 percent of the average crisis decline), with a larger effect under a shift-share instrument. Mutual-fund ownership shows no such stabilizing effect.</p>
             </div>
+
+            <figure class="figure-block">
+                <svg viewBox="0 0 620 250" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', system-ui, sans-serif">
+                    <title>Reduction in crisis drawdown per one-standard-deviation increase in ownership</title>
+                    <desc>A one-standard-deviation increase in insurer ownership reduces a bond&#8217;s crisis-period drawdown by about 0.3 percentage points, roughly 3 percent of the average crisis decline. Mutual-fund ownership shows no comparable effect.</desc>
+                    <g stroke="#ecece8" stroke-width="1">
+                        <line x1="310" y1="45" x2="310" y2="190"/>
+                        <line x1="410" y1="45" x2="410" y2="190"/>
+                        <line x1="510" y1="45" x2="510" y2="190"/>
+                    </g>
+                    <line x1="210" y1="45" x2="210" y2="196" stroke="#d4d0c8" stroke-width="1.4"/>
+                    <text x="200" y="82" text-anchor="end" fill="#3a3632" font-size="13" font-weight="600">Insurer ownership</text>
+                    <rect x="210" y="60" width="300" height="34" rx="4" fill="#00356b"/>
+                    <text x="520" y="82" fill="#00356b" font-size="14" font-weight="700">0.3 pp</text>
+                    <text x="216" y="112" fill="#6b6560" font-size="11.5" font-style="italic">&#8776; 3% of the average crisis decline</text>
+                    <text x="200" y="146" text-anchor="end" fill="#3a3632" font-size="13" font-weight="600">Mutual-fund ownership</text>
+                    <rect x="210" y="126" width="3" height="34" rx="1.5" fill="#9aa7b4"/>
+                    <text x="224" y="146" fill="#5b6672" font-size="13" font-weight="600">&#8776; 0</text>
+                    <line x1="210" y1="196" x2="540" y2="196" stroke="#3a3632" stroke-width="1.2"/>
+                    <g fill="#6b6560" font-size="11.5" text-anchor="middle">
+                        <text x="210" y="212">0</text>
+                        <text x="310" y="212">0.1</text>
+                        <text x="410" y="212">0.2</text>
+                        <text x="510" y="212">0.3</text>
+                    </g>
+                    <text x="375" y="236" text-anchor="middle" fill="#6b6560" font-size="12">Reduction in crisis drawdown per +1 SD of ownership (pp)</text>
+                </svg>
+                <figcaption><strong>Stabilization is specific to insurers, not to institutional ownership as such.</strong> Reduction in a bond&rsquo;s crisis-period drawdown for a one-standard-deviation increase in ownership. Insurer ownership cushions the drawdown by about 0.3 percentage points &mdash; roughly 3 percent of the average crisis decline, and larger under a shift-share instrument &mdash; while mutual-fund ownership, marked to market by rule, shows no such effect.</figcaption>
+            </figure>
 
             <div class="key-finding">
                 <h3><i class="fa-solid fa-industry"></i> Real Investment Consequences</h3>
                 <p>The pricing effect flows through to the issuing firm: for the average firm in the sample, a 10-percentage-point increase in insurer ownership corresponds to roughly $165 million more in annual post-crisis investment.</p>
             </div>
+
+            <figure class="figure-block">
+                <svg viewBox="0 0 620 180" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Inter', system-ui, sans-serif">
+                    <title>Ten percentage points more insurer ownership maps to about 165 million dollars more annual post-crisis investment</title>
+                    <desc>For the average firm in the sample, a 10-percentage-point increase in insurer ownership corresponds to roughly 165 million dollars more in annual investment in the years after a crisis.</desc>
+                    <defs>
+                        <marker id="apD-arrow" markerWidth="12" markerHeight="12" refX="5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#bd5319"/></marker>
+                    </defs>
+                    <rect x="46" y="52" width="196" height="76" rx="8" fill="#f9f7f4" stroke="#00356b" stroke-width="1.4"/>
+                    <text x="144" y="93" text-anchor="middle" fill="#00356b" font-size="26" font-weight="700" font-family="'Crimson Pro', Georgia, serif">+10 pp</text>
+                    <text x="144" y="114" text-anchor="middle" fill="#6b6560" font-size="12.5">insurer ownership</text>
+                    <line x1="256" y1="90" x2="316" y2="90" stroke="#bd5319" stroke-width="3" marker-end="url(#apD-arrow)"/>
+                    <text x="470" y="98" text-anchor="middle" fill="#00356b" font-size="50" font-weight="700" font-family="'Crimson Pro', Georgia, serif">&#8776; $165M</text>
+                    <text x="470" y="128" text-anchor="middle" fill="#3a3632" font-size="13">more in annual post-crisis investment</text>
+                    <text x="470" y="147" text-anchor="middle" fill="#6b6560" font-size="12.5">for the average firm in the sample</text>
+                </svg>
+                <figcaption><strong>From bond prices to real investment.</strong> The pricing effect passes through to the issuer: for the average firm in the sample, a 10-percentage-point increase in insurer ownership corresponds to roughly $165 million more in annual investment in the years following a crisis.</figcaption>
+            </figure>
         </section>
 
         <section class="section">
