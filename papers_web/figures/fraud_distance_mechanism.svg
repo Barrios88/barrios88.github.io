@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+<svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
   <defs>
     <style>
       .title-text { font-size: 18px; font-weight: 700; fill: #00356b; }
@@ -18,107 +18,79 @@
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="480" fill="#fafaf9"/>
+  <rect width="1000" height="560" fill="#fafaf9"/>
 
   <!-- Title -->
-  <text x="450" y="35" text-anchor="middle" class="title-text">
-    Mechanism: How Remote Work Disrupts Collusion
-  </text>
+  <text x="500" y="38" text-anchor="middle" class="title-text">Mechanism: How Remote Work Disrupts Collusion</text>
 
-  <!-- ===== COLUMN 1: IN-PERSON BASELINE ===== -->
-  <!-- Box 1A: In-Person Office -->
-  <rect x="30" y="80" width="180" height="100" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
-  <text x="120" y="105" text-anchor="middle" class="heading-text">In-Person Office</text>
-  <text x="40" y="130" class="body-text">• Face-to-face</text>
-  <text x="40" y="150" class="body-text">• Informal channels</text>
-  <text x="40" y="170" class="body-text">• Shared norms</text>
+  <!-- ===== STAGE 1: IN-PERSON BASELINE ===== -->
+  <rect x="30" y="80" width="180" height="112" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+  <text x="120" y="108" text-anchor="middle" class="heading-text">In-Person Office</text>
+  <text x="45" y="134" class="body-text">• Face-to-face</text>
+  <text x="45" y="156" class="body-text">• Informal channels</text>
+  <text x="45" y="178" class="body-text">• Shared norms</text>
 
-  <!-- Box 1B: Collusion Technology -->
-  <rect x="30" y="210" width="180" height="90" fill="#e8e1d9" stroke="#63605b" stroke-width="2" rx="4"/>
-  <text x="120" y="235" text-anchor="middle" class="heading-text">Collusion Cost</text>
-  <text x="40" y="260" class="body-text">• Easy coordination</text>
-  <text x="40" y="280" class="body-text">• Low detection risk</text>
+  <path class="arrow-line" d="M 120 192 L 120 220"/>
 
-  <!-- Arrow 1 -->
-  <path class="arrow-line" d="M 120 180 L 120 210"/>
+  <rect x="30" y="222" width="180" height="86" fill="#e8e1d9" stroke="#63605b" stroke-width="2" rx="4"/>
+  <text x="120" y="250" text-anchor="middle" class="heading-text">Collusion Cost</text>
+  <text x="45" y="276" class="body-text">• Easy coordination</text>
+  <text x="45" y="298" class="body-text">• Low detection risk</text>
 
-  <!-- ===== COLUMN 2: REMOTE WORK SHOCK ===== -->
-  <!-- Box 2: COVID-19 Remote Work Shift -->
-  <rect x="260" y="80" width="180" height="100" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
-  <text x="350" y="105" text-anchor="middle" class="heading-text">Remote Work Shock</text>
-  <text x="270" y="130" class="body-text">• Work from home</text>
-  <text x="270" y="150" class="body-text">• Digital only</text>
-  <text x="270" y="170" class="body-text">• No spontaneous</text>
-  <text x="270" y="185" class="body-text">  interaction</text>
+  <!-- ===== STAGE 2: REMOTE WORK SHOCK ===== -->
+  <rect x="260" y="80" width="180" height="112" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+  <text x="350" y="108" text-anchor="middle" class="heading-text">Remote Work Shock</text>
+  <text x="275" y="134" class="body-text">• Work from home</text>
+  <text x="275" y="156" class="body-text">• Digital-only</text>
+  <text x="275" y="178" class="body-text">• No spontaneous contact</text>
 
-  <!-- Arrow 2 -->
-  <path class="arrow-line" d="M 210 130 L 260 130"/>
+  <path class="arrow-line" d="M 210 136 L 260 136"/>
 
-  <!-- ===== COLUMN 3: MECHANISMS ===== -->
+  <!-- ===== STAGE 3: MECHANISMS ===== -->
+  <rect x="490" y="80" width="180" height="86" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
+  <text x="580" y="106" text-anchor="middle" class="heading-text" style="fill:#bd5319">Coordination Costs ↑</text>
+  <text x="505" y="132" class="body-text">• Scheduling calls</text>
+  <text x="505" y="154" class="body-text">• Fewer touchpoints</text>
 
-  <!-- Box 3A: Coordination Costs ↑ -->
-  <rect x="490" y="80" width="170" height="85" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="575" y="105" text-anchor="middle" class="heading-text" fill="#bd5319">Coordination Costs ↑</text>
-  <text x="500" y="130" class="body-text">• Scheduling calls</text>
-  <text x="500" y="150" class="body-text">• Fewer informal</text>
-  <text x="500" y="165" class="body-text">  touchpoints</text>
+  <rect x="490" y="188" width="180" height="104" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
+  <text x="580" y="214" text-anchor="middle" class="heading-text" style="fill:#bd5319">Auditable Channels ↑</text>
+  <text x="505" y="240" class="body-text">• Email/Slack trails</text>
+  <text x="505" y="262" class="body-text">• Recorded meetings</text>
+  <text x="505" y="284" class="body-text">• Digital footprint</text>
 
-  <!-- Box 3B: Auditable Channels ↑ -->
-  <rect x="490" y="190" width="170" height="85" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="575" y="215" text-anchor="middle" class="heading-text" fill="#bd5319">Auditable Channels</text>
-  <text x="500" y="240" class="body-text">• Email/Slack trails</text>
-  <text x="500" y="260" class="body-text">• Recorded meetings</text>
-  <text x="500" y="275" class="body-text">• Digital footprint</text>
+  <rect x="490" y="314" width="180" height="86" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
+  <text x="580" y="340" text-anchor="middle" class="heading-text" style="fill:#bd5319">Informal Trust ↓</text>
+  <text x="505" y="366" class="body-text">• Less shared identity</text>
+  <text x="505" y="388" class="body-text">• Weaker enforcement</text>
 
-  <!-- Box 3C: Weakened Trust ↓ -->
-  <rect x="490" y="300" width="170" height="85" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="575" y="325" text-anchor="middle" class="heading-text" fill="#bd5319">Informal Trust ↓</text>
-  <text x="500" y="350" class="body-text">• Less shared identity</text>
-  <text x="500" y="370" class="body-text">• Weaker informal</text>
-  <text x="500" y="385" class="body-text">  enforcement</text>
+  <!-- Arrows from Remote Work Shock to the three mechanisms -->
+  <path class="arrow-dashed" d="M 440 120 L 488 123"/>
+  <path class="arrow-dashed" d="M 440 140 L 488 238"/>
+  <path class="arrow-dashed" d="M 440 160 L 488 355"/>
 
-  <!-- Arrows from Box 2 to Mechanisms -->
-  <path class="arrow-dashed" d="M 440 100 L 490 115"/>
-  <path class="arrow-dashed" d="M 440 130 L 490 232"/>
-  <path class="arrow-dashed" d="M 440 160 L 490 342"/>
+  <!-- ===== STAGE 4: COLLUSION HARDER ===== -->
+  <rect x="700" y="185" width="150" height="110" fill="#d4e8f7" stroke="#00356b" stroke-width="3" rx="5"/>
+  <text x="775" y="222" text-anchor="middle" class="heading-text">Collusion</text>
+  <text x="775" y="244" text-anchor="middle" class="heading-text">HARDER</text>
+  <text x="712" y="270" class="body-text">• Risk too high</text>
+  <text x="712" y="288" class="body-text">• Costs too large</text>
 
-  <!-- ===== COLUMN 4: COLLUSION DISRUPTION ===== -->
+  <!-- Arrows from the three mechanisms into Collusion Harder -->
+  <path class="arrow-dashed" d="M 670 123 L 700 215"/>
+  <path class="arrow-dashed" d="M 670 240 L 700 240"/>
+  <path class="arrow-dashed" d="M 670 357 L 700 265"/>
 
-  <!-- Central Box: Collusion Disrupted -->
-  <rect x="710" y="160" width="160" height="110" fill="#d4e8f7" stroke="#00356b" stroke-width="3" rx="5"/>
-  <text x="790" y="190" text-anchor="middle" class="heading-text">Collusion</text>
-  <text x="790" y="210" text-anchor="middle" class="heading-text">HARDER</text>
-  <text x="720" y="240" class="body-text">• Risk too high</text>
-  <text x="720" y="258" class="body-text">• Costs too large</text>
+  <!-- ===== STAGE 5: OUTCOME ===== -->
+  <path class="arrow-line" d="M 850 240 L 874 240" stroke-width="3"/>
+  <circle cx="925" cy="240" r="48" fill="#00356b" stroke="#bd5319" stroke-width="2.5"/>
+  <text x="925" y="235" text-anchor="middle" class="heading-text" style="fill:#ffffff">Misconduct</text>
+  <text x="925" y="257" text-anchor="middle" class="heading-text" style="fill:#ffffff">↓ 2pp</text>
 
-  <!-- Arrows to central disruption box -->
-  <path class="arrow-dashed" d="M 660 120 L 710 180"/>
-  <path class="arrow-dashed" d="M 660 232 L 710 215"/>
-  <path class="arrow-dashed" d="M 660 343 L 710 250"/>
-
-  <!-- ===== COLUMN 5: OUTCOME ===== -->
-
-  <!-- Arrow to outcome -->
-  <path class="arrow-line" d="M 870 215 L 910 215" stroke="#1a4f8a" stroke-width="3"/>
-
-  <!-- Outcome box (positioned to right, but we'll note it below) -->
-  <circle cx="880" cy="280" r="45" fill="#00356b" stroke="#bd5319" stroke-width="2.5"/>
-  <text x="880" y="275" text-anchor="middle" class="heading-text" fill="white">Misconduct</text>
-  <text x="880" y="295" text-anchor="middle" class="heading-text" fill="white">↓ 2pp</text>
-
-  <!-- ===== SUPPORTING EVIDENCE BOX ===== -->
-  <rect x="30" y="360" width="840" height="100" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5" rx="3"/>
-
-  <text x="50" y="385" class="heading-text">Supporting Evidence:</text>
-
-  <text x="50" y="410" class="body-text">
-    <tspan>→ Effect is 2× larger in high-teamwork firms (where collusion is hardest)</tspan>
-  </text>
-  <text x="50" y="430" class="body-text">
-    <tspan>→ Stronger in firms with effective internal controls (where fraud requires coordination to override)</tspan>
-  </text>
-  <text x="50" y="450" class="body-text">
-    <tspan>→ Larger decline where employee culture/leadership was weak (most reliant on in-person informal norms)</tspan>
-  </text>
+  <!-- ===== SUPPORTING EVIDENCE ===== -->
+  <rect x="30" y="440" width="940" height="100" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5" rx="3"/>
+  <text x="50" y="468" class="heading-text">Supporting Evidence:</text>
+  <text x="50" y="492" class="body-text">→ Effect is 2× larger in high-teamwork firms (where collusion is hardest)</text>
+  <text x="50" y="513" class="body-text">→ Stronger in firms with effective internal controls (where fraud requires coordination to override)</text>
+  <text x="50" y="534" class="body-text">→ Larger decline where employee culture/leadership was weak (most reliant on in-person informal norms)</text>
 
 </svg>
