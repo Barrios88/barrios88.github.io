@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+<svg viewBox="0 0 900 530" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
   <!-- White background -->
-  <rect width="900" height="500" fill="#ffffff"/>
+  <rect width="900" height="530" fill="#ffffff"/>
 
   <!-- Title -->
   <text x="450" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#00356b">
@@ -135,15 +135,15 @@
 
   <!-- Bottom mechanism explanation -->
   <g>
-    <rect x="50" y="430" width="800" height="55" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+    <rect x="50" y="428" width="800" height="86" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
 
     <text x="60" y="450" font-size="12" font-weight="bold" fill="#00356b">
       How The Loophole Works:
     </text>
-    <text x="60" y="470" font-size="11" fill="#3a3632">
+    <text x="60" y="475" font-size="11" fill="#3a3632">
       <tspan>1) PE firm uses multiple investment vehicles (separate legal entities) → Each falls below HSR thresholds</tspan>
     </text>
-    <text x="60" y="485" font-size="11" fill="#3a3632">
+    <text x="60" y="498" font-size="11" fill="#3a3632">
       <tspan>2) But same PE firm manages all vehicles → Exercise coordinated economic control over competing portfolio companies</tspan>
     </text>
   </g>
