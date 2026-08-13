@@ -474,24 +474,24 @@
     },
     {
       "id": "accounting-pressure",
-      "title": "Accounting Under Pressure: Theory and Evidence on How Accounting Rules Shape Bond Prices and Firm Investment Post Crises",
+      "title": "Accounting Under Pressure: Recognition Rules, Insurer Bond Sales, and Real Investment",
       "authors": [
         "Andreas Neuhierl",
         "Linda Schilling"
       ],
-      "year": 2025,
+      "year": 2026,
       "status": "working",
       "venue": null,
       "themes": [
         "reporting"
       ],
-      "abstract": "We develop a theoretical model and provide empirical evidence on how accounting rules affect firm behavior during financial crises. Specifically, we examine how firms' accounting choices—particularly conservatism versus flexibility—influence bond pricing, which in turn affects corporate investment decisions and real economic outcomes.\n\nOur theoretical analysis shows that during crises, conservative accounting that forces recognition of losses improves creditor information and reduces bond yield spreads, but may temporarily reduce firm willingness to invest. Flexible accounting that defers loss recognition may temporarily maintain favorable bond pricing but creates information risk that eventually manifests in higher yields and reduced investment. Our empirical evidence from multiple financial crises supports these predictions, suggesting that accounting rules have important consequences for credit markets and investment decisions beyond their immediate disclosure effects.",
+      "abstract": "We study whether corporate bonds held by insurers suffer smaller price drops in crises because of the accounting rules applied to these bonds or because of the intrinsic characteristics of the holding institutions. In a three-period model, historical-cost (HCA) insurers can continue to report an impaired bond at amortized cost. In contrast, mark-to-market (MTM) insurers must immediately book the loss. Since only realized losses reduce regulatory capital and can trigger asset sales, insurers' selling decisions, and the prices they help sustain, differ precisely where their statutory accounting treatments diverge.\n\nUsing bond-level holdings data, we find that a one-standard-deviation increase in insurer ownership reduces crisis-period drawdowns by 0.3 percentage points, about 3 percent of the average crisis decline. Even within the same insurance group, a P&C subsidiary is roughly 7 percent more likely than its Life affiliate to sell a speculative-grade bond they both hold. This gap vanishes when their accounting rules are aligned. Moreover, for the average firm in our sample, a 10-percentage point increase in insurer ownership corresponds to roughly $165 million more in annual post-crisis investment. These results indicate that during a crisis, the recognition rules applied to bondholders determine which investors are forced to sell into declining markets and which are able to hold, with significant implications for the firms whose bonds they hold.",
       "note": null,
       "figure": "papers_web/figures/accounting-pressure-summary.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337889",
         "nber": null,
-        "pdf": null,
+        "pdf": "papers/2026-barrios-accounting-pressure.pdf",
         "page": "papers_web/paper_accounting_pressure.html",
         "slides": null,
         "code": null
