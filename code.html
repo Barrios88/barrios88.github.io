@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code &amp; Slides — John Manuel Barrios</title>
-    <meta name="description" content="Code toolkit and discussion slides for Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers.">
+    <title>Data &amp; Code — John Manuel Barrios</title>
+    <meta name="description" content="Replication packages, software toolkits, and slides from John Manuel Barrios's research: the staggered-DiD toolkit, the Midnight Mergers replication package, and the barrios-skills AI toolkit.">
     <link rel="canonical" href="https://johnmbarrios.com/code.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Code &amp; Slides — John Manuel Barrios">
-    <meta property="og:description" content="Stata replication toolkit and presentation slides for the staggered DiD primer.">
+    <meta property="og:title" content="Data &amp; Code — John Manuel Barrios">
+    <meta property="og:description" content="Replication packages, software toolkits, and slides from John Manuel Barrios's research.">
     <meta property="og:url" content="https://johnmbarrios.com/code.html">
     <link rel="preload" href="assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -43,10 +43,10 @@
     <section class="page-hero ph-code">
         <div class="wrap">
             <div class="eyebrow">Materials</div>
-            <h1>Code &amp; Slides</h1>
+            <h1>Data &amp; Code</h1>
             <p class="lede">
-                Replication toolkit and presentation materials for
-                <em>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</em>.
+                Replication packages, software toolkits, and presentation slides from my research.
+                Journal replication packages are linked where public; more are added over time.
             </p>
         </div>
     </section>
@@ -54,21 +54,12 @@
     <main id="main" tabindex="-1" class="main">
         <div class="wrap">
 
-            <div class="entry">
-                <div class="entry-kicker">Working Paper</div>
-                <h3>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</h3>
-                <p>John Manuel Barrios</p>
-                <div class="entry-links">
-                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" rel="noopener">View on SSRN</a>
-                    <a href="papers_web/paper_staggered_did.html">Paper Page</a>
-                </div>
-            </div>
+            <div class="block">
+                <h2 class="section-label">Replication Packages &amp; Toolkits</h2>
 
-            <div class="block" style="margin-top:3rem;">
-                <h2 class="section-label">Code</h2>
                 <div class="entry">
-                    <div class="entry-kicker">Staggered DiD Toolkit</div>
-                    <h3>Barrios_Stag_DiD_Toolkit</h3>
+                    <div class="entry-kicker">Staggeringly Problematic &middot; Working Paper</div>
+                    <h3>Staggered DiD Toolkit</h3>
                     <p>
                         Stata code and sample data implementing the procedures in the primer:
                         event-study designs, Goodman&ndash;Bacon decomposition, Callaway &amp; Sant&rsquo;Anna,
@@ -77,6 +68,36 @@
                     <div class="entry-links">
                         <a class="pill-primary" href="code/Barrios_Stag_DiD_Toolkit.zip" download>Download zip</a>
                         <a href="code/Barrios_Stag_DiD_Toolkit_Readme.pdf" target="_blank" rel="noopener">Readme PDF</a>
+                        <a href="papers_web/paper_staggered_did.html">Paper Page</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-kicker">A New Era of Midnight Mergers &middot; AEJ: Microeconomics, 2024</div>
+                    <h3>Replication Package (Data &amp; Code)</h3>
+                    <p>
+                        Data and code replicating the analysis in &ldquo;A New Era of Midnight Mergers:
+                        Antitrust Risk and Investor Disclosures&rdquo; (with Thomas G. Wollmann), hosted in the
+                        AEA Data and Code Repository (openICPSR).
+                    </p>
+                    <div class="entry-links">
+                        <a class="pill-primary" href="https://doi.org/10.3886/E193241V1" target="_blank" rel="noopener">AEA replication package</a>
+                        <a href="papers_web/paper_midnight_mergers.html">Paper Page</a>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-kicker">Open-Source Software</div>
+                    <h3>barrios-skills &mdash; AI Agent Skills for Economists &amp; Accountants</h3>
+                    <p>
+                        A curated open-source toolkit of AI agent skills and MCP servers &mdash; including a
+                        WRDS connector &mdash; for empirical research workflows: data pulls, cleaning,
+                        replication, and drafting.
+                    </p>
+                    <div class="entry-links">
+                        <a class="pill-primary" href="https://github.com/Barrios88/barrios-skills" target="_blank" rel="noopener">GitHub repo</a>
+                        <a href="https://barrios88.github.io/barrios-skills/" target="_blank" rel="noopener">Explore the toolkit</a>
+                        <a href="ai-research.html">AI &amp; Research</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +130,7 @@
             </div>
 
             <aside class="callout">
-                <strong>Requirements for the toolkit.</strong>
+                <strong>Running the staggered-DiD toolkit.</strong>
                 All project tasks run through Stata (with shell scripts). Some estimators call R from Stata,
                 so both Stata and R should be installed. Start with <code>code/i_master.do</code> after unpacking the zip.
                 <ul>
