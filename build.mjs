@@ -288,6 +288,52 @@ function injectPaperJsonld() {
   return n;
 }
 
+/* ── Atom feed (feed.xml) ── deterministic dates so builds are reproducible */
+const MONTHS = { january: '01', february: '02', march: '03', april: '04', may: '05', june: '06', july: '07', august: '08', september: '09', october: '10', november: '11', december: '12' };
+function atomDate(p) {
+  if (p.draft) {
+    const m = p.draft.trim().toLowerCase().match(/^([a-z]+)\s+(\d{4})$/);
+    if (m && MONTHS[m[1]]) return `${m[2]}-${MONTHS[m[1]]}-01T00:00:00Z`;
+  }
+  return `${p.year}-01-01T00:00:00Z`;
+}
+function feedLink(p) {
+  return p.links?.page ? SITE + p.links.page
+    : (p.links?.ssrn || p.links?.nber || (p.doi ? `https://doi.org/${p.doi}` : SITE + 'research.html#' + p.id));
+}
+function feedSummary(p) {
+  const venue = p.type === 'chapter' ? `In ${p.venue}`
+    : p.status === 'published' ? `${p.venue || ''}${p.volume ? ' ' + p.volume : ''} · ${p.year}`
+    : p.status === 'forthcoming' ? `Forthcoming · ${p.venue || ''}`
+    : p.status === 'rr' ? `R&R${p.note ? ' · ' + p.note.replace(/^Revision Requested:\s*/i, '') : ''}`
+    : `Working paper${p.draft ? ' · ' + p.draft : ''}`;
+  const authors = p.authors.length ? 'with ' + p.authors.join(', ') : '';
+  return [venue.trim(), authors, p.abstract].filter(Boolean).join(' — ');
+}
+function feedXml() {
+  const ordered = [...papers].sort((a, b) => atomDate(b).localeCompare(atomDate(a)) || a.title.localeCompare(b.title));
+  const updated = ordered.length ? atomDate(ordered[0]) : '2026-01-01T00:00:00Z';
+  const entries = ordered.map(p => `  <entry>
+    <title>${esc(p.title)}</title>
+    <link href="${esc(feedLink(p))}"/>
+    <id>${esc(feedLink(p))}</id>
+    <updated>${atomDate(p)}</updated>
+    <summary>${esc(feedSummary(p))}</summary>
+  </entry>`).join('\n');
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>John Manuel Barrios — Research</title>
+  <subtitle>Publications and working papers</subtitle>
+  <link href="${SITE}research.html"/>
+  <link rel="self" href="${SITE}feed.xml"/>
+  <id>${SITE}research.html</id>
+  <updated>${updated}</updated>
+  <author><name>John Manuel Barrios</name></author>
+${entries}
+</feed>
+`;
+}
+
 /* ── Assemble ── */
 const sorted = [...papers].sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 const { theme, status, statusCounts } = chips();
@@ -330,6 +376,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n` +
   paperPages.map(p => urlEntry(p, '0.5')).join('\n') + '\n</urlset>\n';
 writeFileSync(join(ROOT, 'sitemap.xml'), sitemap);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
+writeFileSync(join(ROOT, 'feed.xml'), feedXml());
 
 const nLD = injectPaperJsonld();
 

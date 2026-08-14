@@ -29,9 +29,9 @@ jobs:
       - name: Fail if generated files are stale
         run: |
           # sitemap.xml is intentionally excluded — its <lastmod> is today's date.
-          if ! git diff --quiet -- research.html barrios.bib robots.txt papers_web/; then
-            echo "::error::Generated files are out of date. Run 'node build.mjs' and commit the result (research.html, barrios.bib, robots.txt, papers_web/ JSON-LD)."
-            git --no-pager diff --stat -- research.html barrios.bib robots.txt papers_web/
+          if ! git diff --quiet -- research.html barrios.bib robots.txt feed.xml papers_web/; then
+            echo "::error::Generated files are out of date. Run 'node build.mjs' and commit the result (research.html, barrios.bib, robots.txt, feed.xml, papers_web/ JSON-LD)."
+            git --no-pager diff --stat -- research.html barrios.bib robots.txt feed.xml papers_web/
             exit 1
           fi
           echo "Generated files are up to date."
