@@ -16,3 +16,6 @@ device_files.txt
 !photos/*.png
 !papers_web/figures/*.png
 _to_delete/
+.playwright-cli/
+cv/CV_John_*.pdf
+yale-desktop-tailscale-subnet-router-plan.md
