@@ -4,105 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staggeringly Problematic — John Manuel Barrios</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description" content="Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers — John Manuel Barrios. Working paper, 2026.">
+    <link rel="canonical" href="https://johnmbarrios.com/papers_web/paper_staggered_did.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/site.css">
+    <link rel="stylesheet" href="../assets/paper.css">
     <style>
         :root {
             --yale-blue: #00356b;
-            --yale-accent: #bd5319;
-            --yale-cream: #f9f7f4;
-            --yale-rule: #d4d0c8;
-            --text-body: #3a3632;
-            --text-light: #6b6560;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-body);
-            line-height: 1.65;
-            font-size: 15px;
-        }
-
-        h1, h2, h3 { font-family: 'Crimson Pro', serif; font-weight: 600; color: var(--yale-blue); }
-        a { color: var(--yale-blue); text-decoration: none; transition: color 0.15s; }
-        a:hover { color: var(--yale-accent); }
-
-        .topbar { background: var(--yale-blue); height: 4px; }
-
-        header {
-            border-bottom: 1px solid var(--yale-rule);
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-inner {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 56px;
-        }
-
-        .site-name {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--yale-blue);
-        }
-
-        nav ul { list-style: none; display: flex; gap: 1.4rem; flex-wrap: wrap; }
-        nav a {
-            color: #63605b;
-            font-size: 0.78rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-        nav a.active { color: var(--yale-blue); border-bottom: 1.5px solid var(--yale-blue); }
-
-        .visual-header {
-            background: var(--yale-cream);
-            padding: 3rem 2rem;
-            position: relative;
-            border-bottom: 3px solid var(--yale-blue);
-        }
-
-        .network-container {
-            max-width: 960px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .network-svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .header-content { position: relative; z-index: 1; }
-
-        .header-content h1 {
-            font-size: 2rem;
-            color: var(--yale-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .header-content .tagline {
-            font-size: 1rem;
-            color: var(--text-light);
-            font-style: italic;
+            --yale-accent: #1d63d8;
+            --yale-cream: #f8f9fa;
+            --yale-rule: #e7e9ec;
+            --text-body: #3f4650;
+            --text-light: #6b7280;
         }
 
         .content {
@@ -127,39 +41,12 @@
 
         .paper-meta strong { color: var(--text-body); font-weight: 600; }
 
-        .action-buttons {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: white;
-            background: var(--yale-blue);
-            padding: 0.6rem 1.2rem;
-            border-radius: 3px;
-            transition: all 0.15s;
-        }
-
-        .btn:hover { background: #002244; color: white; }
-
-        .btn-secondary {
-            background: white;
-            color: var(--yale-blue);
-            border: 1px solid var(--yale-blue);
-        }
-
-        .btn-secondary:hover { background: rgba(0,53,107,0.05); color: var(--yale-blue); }
-
         .section { margin: 2.5rem 0; }
 
         .section-heading {
+            font-family: var(--serif);
+            font-weight: 600;
+            color: var(--yale-blue);
             font-size: 1.3rem;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
@@ -204,7 +91,13 @@
             border-radius: 2px;
         }
 
-        .key-finding h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .key-finding h3 {
+            font-family: var(--serif);
+            font-weight: 600;
+            color: var(--yale-blue);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
 
         .key-finding p { margin: 0; font-size: 0.92rem; text-align: left; }
 
@@ -217,14 +110,6 @@
             line-height: 1.6;
             margin: 1rem 0;
         }
-
-        footer {
-            border-top: 1px solid var(--yale-rule);
-            text-align: center;
-            padding: 1.5rem 2rem;
-            font-size: 0.78rem;
-            color: #b0ada7;
-        }
     </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4VZDV0HRZ"></script>
@@ -232,56 +117,29 @@
 </head>
 <body>
 
-    <div class="topbar"></div>
-
-    <header>
-        <div class="header-inner">
-            <div class="site-name"><a href="../index.html">John Manuel Barrios</a></div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../cv.html">CV</a></li>
-                    <li><a href="../research.html" class="active">Research</a></li>
-                    <li><a href="../teaching.html">Teaching</a></li>
-                    <li><a href="../ai-research.html">AI &amp; Research</a></li>
-                    <li><a href="../labor-accounting.html">Labor &amp; Accounting</a></li>
-                    <li><a href="../code.html">Code</a></li>
-                    <li><a href="../media.html">Media</a></li>
-                </ul>
+    <header class="site-header">
+        <div class="wrap">
+            <div class="wordmark"><a href="../index.html">John Manuel Barrios</a></div>
+            <nav class="site-nav">
+                <a href="../index.html">Home</a>
+                <a href="../cv.html">CV</a>
+                <a href="../research.html" class="active">Research</a>
+                <a href="../teaching.html">Teaching</a>
+                <a href="../ai-research.html">AI &amp; Research</a>
+                <a href="../labor-accounting.html">Labor &amp; Accounting</a>
+                <a href="../code.html">Code</a>
+                <a href="../media.html">Media</a>
             </nav>
         </div>
     </header>
 
-    <div class="visual-header">
-        <div class="network-container">
-            <svg class="network-svg" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-                <line x1="50" y1="100" x2="750" y2="100" stroke="#00356b" stroke-width="2"/>
-                <rect x="50" y="85" width="100" height="30" fill="none" stroke="#00356b" stroke-width="1.5" stroke-dasharray="3,3"/>
-                <text x="100" y="120" text-anchor="middle" font-size="10" fill="#00356b">Pre-period</text>
-                <line x1="180" y1="90" x2="180" y2="110" stroke="#00356b" stroke-width="2"/>
-                <circle cx="180" cy="100" r="8" fill="#00356b"/>
-                <text x="180" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₁</text>
-                <rect x="190" y="60" width="80" height="20" fill="#00356b" opacity="0.3" rx="2"/>
-                <text x="230" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 1</text>
-                <line x1="370" y1="90" x2="370" y2="110" stroke="#00356b" stroke-width="2"/>
-                <circle cx="370" cy="100" r="8" fill="#00356b"/>
-                <text x="370" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₂</text>
-                <rect x="380" y="60" width="80" height="20" fill="#00356b" opacity="0.5" rx="2"/>
-                <text x="420" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 2</text>
-                <line x1="560" y1="90" x2="560" y2="110" stroke="#00356b" stroke-width="2"/>
-                <circle cx="560" cy="100" r="8" fill="#00356b"/>
-                <text x="560" y="130" text-anchor="middle" font-size="10" fill="#00356b" font-weight="600">t₃</text>
-                <rect x="570" y="60" width="80" height="20" fill="#00356b" opacity="0.7" rx="2"/>
-                <text x="610" y="74" text-anchor="middle" font-size="9" fill="#00356b">Group 3</text>
-                <path d="M 190 140 Q 280 130 370 140" stroke="#bd5319" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
-                <text x="280" y="160" text-anchor="middle" font-size="9" fill="#bd5319" font-weight="600">Contamination Risk</text>
-            </svg>
-            <div class="header-content">
-                <h1>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</h1>
-                <p class="tagline">Why TWFE estimates of staggered designs can be badly biased, even wrong-signed, and what to do about it</p>
-            </div>
+    <section class="page-hero">
+        <div class="wrap">
+            <div class="eyebrow">Working Paper &middot; 2026</div>
+            <h1>Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers</h1>
+            <p class="lede">John Manuel Barrios</p>
         </div>
-    </div>
+    </section>
 
     <main class="content">
         <div class="paper-meta">
@@ -290,19 +148,11 @@
             <p><strong>Running example:</strong> The staggered state-by-state adoption of the 150-hour CPA licensing rule (Barrios 2022, <em>JAR</em>)</p>
         </div>
 
-        <div class="action-buttons">
-            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" class="btn">
-                <i class="fa-solid fa-file-pdf"></i> Download Paper (Aug 2026)
-            </a>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
-                <i class="fa-solid fa-file-lines"></i> View on SSRN
-            </a>
-            <a href="../code.html" class="btn">
-                <i class="fa-solid fa-code"></i> Code &amp; Slides
-            </a>
-            <a href="../research.html" class="btn-secondary btn">
-                <i class="fa-solid fa-arrow-left"></i> Back to Research
-            </a>
+        <div class="entry-links paper-actions">
+            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" rel="noopener" class="pill-primary">Download Paper (Aug 2026)</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" rel="noopener">View on SSRN</a>
+            <a href="../code.html">Code &amp; Slides</a>
+            <a href="../research.html" class="pill-back">&larr; Back to Research</a>
         </div>
 
         <section class="section">
@@ -344,7 +194,7 @@
                 <figcaption><strong>Event study, 150-hour Rule.</strong> Candidates show no clear pre-trend except the year before adoption (+0.188, about a 21% rise), then fall steadily with no recovery through year five.</figcaption>
             </figure>
             <p>
-                The Goodman-Bacon decomposition shows where the estimate comes from: timing-only comparisons carry 53 percent of the weight, never-adopters 43 percent, and the one pre-1990 adopter 4 percent. Re-running the decomposition with ordered timing terms splits the timing weight into 39 percent clean earlier-versus-later comparisons and 11 percent &ldquo;forbidden&rdquo; later-versus-earlier ones, and the two groups deliver nearly the same average, which is why the high timing weight does not overturn the result here.
+                The Goodman-Bacon decomposition shows where the estimate comes from: timing-only comparisons carry 53 percent of the weight, never-adopters 43 percent, and the one pre-1990 adopter 4 percent. Re-running the decomposition with ordered timing terms (on the balanced sub-panel) splits the timing weight into 39 percent clean earlier-versus-later comparisons and 11 percent &ldquo;forbidden&rdquo; later-versus-earlier ones, and the two groups deliver nearly the same average, which is why the high timing weight does not overturn the result here.
             </p>
             <figure class="figure-block">
                 <img src="figures/staggered_did_Figure6.png" alt="Goodman-Bacon decomposition of the TWFE estimate">
@@ -400,13 +250,13 @@
                     display: flex; justify-content: space-between;
                 }
                 #checklist-app .cl-progress-bar {
-                    height: 8px; background: #e8e4dd; border-radius: 4px; overflow: hidden;
+                    height: 8px; background: #e7e9ec; border-radius: 4px; overflow: hidden;
                 }
                 #checklist-app .cl-progress-fill {
                     height: 100%; width: 0%; background: var(--yale-blue);
                     border-radius: 4px; transition: width 0.35s ease, background 0.35s ease;
                 }
-                #checklist-app .cl-progress-fill.done { background: #2e7d32; }
+                #checklist-app .cl-progress-fill.done { background: #1d63d8; }
                 #checklist-app .cl-btn {
                     font-size: 0.78rem; font-weight: 500; cursor: pointer;
                     border: 1px solid var(--yale-blue); color: var(--yale-blue);
@@ -436,7 +286,7 @@
                     margin: 0.6rem 0; background: white; overflow: hidden;
                     transition: border-color 0.15s;
                 }
-                #checklist-app .cl-item.checked { border-color: #a5c8a7; background: #f6faf6; }
+                #checklist-app .cl-item.checked { border-color: #6f9bcc; background: #eaf1fb; }
                 #checklist-app .cl-item-head {
                     display: flex; align-items: center; gap: 0.8rem;
                     padding: 0.85rem 1rem; cursor: pointer; user-select: none;
@@ -447,7 +297,7 @@
                     display: inline-flex; align-items: center; justify-content: center;
                     color: white; font-size: 0.7rem; transition: all 0.15s; padding: 0;
                 }
-                #checklist-app .cl-item.checked .cl-check { background: #2e7d32; border-color: #2e7d32; }
+                #checklist-app .cl-item.checked .cl-check { background: #1d63d8; border-color: #1d63d8; }
                 #checklist-app .cl-id {
                     font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--yale-accent);
                     font-size: 0.95rem; min-width: 2rem;
@@ -455,7 +305,7 @@
                 #checklist-app .cl-q {
                     flex: 1; font-size: 0.95rem; font-weight: 500; color: var(--text-body);
                 }
-                #checklist-app .cl-item.checked .cl-q { color: #6d8f6f; }
+                #checklist-app .cl-item.checked .cl-q { color: #6b7280; }
                 #checklist-app .cl-chevron {
                     color: var(--text-light); font-size: 0.8rem; transition: transform 0.2s;
                 }
@@ -656,21 +506,18 @@ Barrios, John M. 2026. "Staggeringly Problematic: A Primer on Staggered DiD for 
             </div>
         </section>
 
-        <div class="action-buttons">
-            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" class="btn">
-                <i class="fa-solid fa-file-pdf"></i> Download Paper (Aug 2026)
-            </a>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" class="btn">
-                <i class="fa-solid fa-file-lines"></i> View on SSRN
-            </a>
-            <a href="../research.html" class="btn-secondary btn">
-                <i class="fa-solid fa-arrow-left"></i> Back to Research
-            </a>
+        <div class="entry-links paper-actions">
+            <a href="../papers/2026-barrios-staggered-did.pdf" target="_blank" rel="noopener" class="pill-primary">Download Paper (Aug 2026)</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794859" target="_blank" rel="noopener">View on SSRN</a>
+            <a href="../research.html" class="pill-back">&larr; Back to Research</a>
         </div>
     </main>
 
-    <footer>
-        &copy; 2026 John Manuel Barrios · Yale School of Management
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>&copy; 2026 John Manuel Barrios</span>
+            <span>Yale School of Management &middot; <a href="mailto:john.m.barrios@yale.edu">john.m.barrios@yale.edu</a></span>
+        </div>
     </footer>
 
 </body>

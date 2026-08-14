@@ -4,27 +4,27 @@
     <style>
       .title-text { font-size: 18px; font-weight: 700; fill: #00356b; }
       .heading-text { font-size: 14px; font-weight: 600; fill: #00356b; }
-      .body-text { font-size: 12px; font-weight: 400; fill: #3a3632; }
-      .label-text { font-size: 11px; font-weight: 500; fill: #63605b; }
+      .body-text { font-size: 12px; font-weight: 400; fill: #3f4650; }
+      .label-text { font-size: 11px; font-weight: 500; fill: #6b7280; }
       .arrow-line { stroke: #1a4f8a; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
-      .arrow-dashed { stroke: #bd5319; stroke-width: 2.5; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-accent); }
+      .arrow-dashed { stroke: #1d63d8; stroke-width: 2.5; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-accent); }
     </style>
     <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
       <polygon points="0 0, 12 6, 0 12" fill="#1a4f8a" />
     </marker>
     <marker id="arrowhead-accent" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <polygon points="0 0, 12 6, 0 12" fill="#bd5319" />
+      <polygon points="0 0, 12 6, 0 12" fill="#1d63d8" />
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="1000" height="560" fill="#fafaf9"/>
+  <rect width="1000" height="560" fill="#ffffff"/>
 
   <!-- Title -->
   <text x="500" y="38" text-anchor="middle" class="title-text">Mechanism: How Remote Work Disrupts Collusion</text>
 
   <!-- ===== STAGE 1: IN-PERSON BASELINE ===== -->
-  <rect x="30" y="80" width="180" height="112" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+  <rect x="30" y="80" width="180" height="112" fill="#ffffff" stroke="#00356b" stroke-width="2" rx="4"/>
   <text x="120" y="108" text-anchor="middle" class="heading-text">In-Person Office</text>
   <text x="45" y="134" class="body-text">• Face-to-face</text>
   <text x="45" y="156" class="body-text">• Informal channels</text>
@@ -32,13 +32,13 @@
 
   <path class="arrow-line" d="M 120 192 L 120 220"/>
 
-  <rect x="30" y="222" width="180" height="86" fill="#e8e1d9" stroke="#63605b" stroke-width="2" rx="4"/>
+  <rect x="30" y="222" width="180" height="86" fill="#f8f9fa" stroke="#6b7280" stroke-width="2" rx="4"/>
   <text x="120" y="250" text-anchor="middle" class="heading-text">Collusion Cost</text>
   <text x="45" y="276" class="body-text">• Easy coordination</text>
   <text x="45" y="298" class="body-text">• Low detection risk</text>
 
   <!-- ===== STAGE 2: REMOTE WORK SHOCK ===== -->
-  <rect x="260" y="80" width="180" height="112" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+  <rect x="260" y="80" width="180" height="112" fill="#ffffff" stroke="#00356b" stroke-width="2" rx="4"/>
   <text x="350" y="108" text-anchor="middle" class="heading-text">Remote Work Shock</text>
   <text x="275" y="134" class="body-text">• Work from home</text>
   <text x="275" y="156" class="body-text">• Digital-only</text>
@@ -47,19 +47,19 @@
   <path class="arrow-line" d="M 210 136 L 260 136"/>
 
   <!-- ===== STAGE 3: MECHANISMS ===== -->
-  <rect x="490" y="80" width="180" height="86" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="580" y="106" text-anchor="middle" class="heading-text" style="fill:#bd5319">Coordination Costs ↑</text>
+  <rect x="490" y="80" width="180" height="86" fill="#ffffff" stroke="#1d63d8" stroke-width="2" rx="4"/>
+  <text x="580" y="106" text-anchor="middle" class="heading-text" style="fill:#1d63d8">Coordination Costs ↑</text>
   <text x="505" y="132" class="body-text">• Scheduling calls</text>
   <text x="505" y="154" class="body-text">• Fewer touchpoints</text>
 
-  <rect x="490" y="188" width="180" height="104" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="580" y="214" text-anchor="middle" class="heading-text" style="fill:#bd5319">Auditable Channels ↑</text>
+  <rect x="490" y="188" width="180" height="104" fill="#ffffff" stroke="#1d63d8" stroke-width="2" rx="4"/>
+  <text x="580" y="214" text-anchor="middle" class="heading-text" style="fill:#1d63d8">Auditable Channels ↑</text>
   <text x="505" y="240" class="body-text">• Email/Slack trails</text>
   <text x="505" y="262" class="body-text">• Recorded meetings</text>
   <text x="505" y="284" class="body-text">• Digital footprint</text>
 
-  <rect x="490" y="314" width="180" height="86" fill="#fef5ed" stroke="#bd5319" stroke-width="2" rx="4"/>
-  <text x="580" y="340" text-anchor="middle" class="heading-text" style="fill:#bd5319">Informal Trust ↓</text>
+  <rect x="490" y="314" width="180" height="86" fill="#ffffff" stroke="#1d63d8" stroke-width="2" rx="4"/>
+  <text x="580" y="340" text-anchor="middle" class="heading-text" style="fill:#1d63d8">Informal Trust ↓</text>
   <text x="505" y="366" class="body-text">• Less shared identity</text>
   <text x="505" y="388" class="body-text">• Weaker enforcement</text>
 
@@ -82,12 +82,12 @@
 
   <!-- ===== STAGE 5: OUTCOME ===== -->
   <path class="arrow-line" d="M 850 240 L 874 240" stroke-width="3"/>
-  <circle cx="925" cy="240" r="48" fill="#00356b" stroke="#bd5319" stroke-width="2.5"/>
+  <circle cx="925" cy="240" r="48" fill="#00356b" stroke="#1d63d8" stroke-width="2.5"/>
   <text x="925" y="235" text-anchor="middle" class="heading-text" style="fill:#ffffff">Misconduct</text>
   <text x="925" y="257" text-anchor="middle" class="heading-text" style="fill:#ffffff">↓ 2pp</text>
 
   <!-- ===== SUPPORTING EVIDENCE ===== -->
-  <rect x="30" y="440" width="940" height="100" fill="#f9f7f4" stroke="#00356b" stroke-width="1.5" rx="3"/>
+  <rect x="30" y="440" width="940" height="100" fill="#f8f9fa" stroke="#00356b" stroke-width="1.5" rx="3"/>
   <text x="50" y="468" class="heading-text">Supporting Evidence:</text>
   <text x="50" y="492" class="body-text">→ Effect is 2× larger in high-teamwork firms (where collusion is hardest)</text>
   <text x="50" y="513" class="body-text">→ Stronger in firms with effective internal controls (where fraud requires coordination to override)</text>

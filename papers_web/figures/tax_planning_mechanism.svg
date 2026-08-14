@@ -1,20 +1,20 @@
-<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
   <defs>
     <style>
       .title { font-size: 20px; font-weight: bold; fill: #00356b; }
       .box-title { font-size: 13px; font-weight: 600; fill: #00356b; }
-      .box-text { font-size: 11px; fill: #3a3632; }
-      .label { font-size: 11px; font-weight: 500; fill: #63605b; }
-      .arrow-label { font-size: 10px; fill: #bd5319; font-weight: 600; }
-      .box-fill { fill: #f9f7f4; stroke: #00356b; stroke-width: 2; }
+      .box-text { font-size: 11px; fill: #3f4650; }
+      .label { font-size: 11px; font-weight: 500; fill: #6b7280; }
+      .arrow-label { font-size: 10px; fill: #1d63d8; font-weight: 600; }
+      .box-fill { fill: #ffffff; stroke: #00356b; stroke-width: 2; }
       .process-box { fill: #ffffff; stroke: #1a4f8a; stroke-width: 2; }
-      .outcome-box { fill: #ffffff; stroke: #bd5319; stroke-width: 2; }
+      .outcome-box { fill: #ffffff; stroke: #1d63d8; stroke-width: 2; }
     </style>
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <polygon points="0 0, 10 3, 0 6" fill="#00356b" />
     </marker>
     <marker id="arrowhead-accent" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+      <polygon points="0 0, 10 3, 0 6" fill="#1d63d8" />
     </marker>
   </defs>
 
@@ -71,15 +71,15 @@
   <!-- ===== STAGE 4: OUTCOMES ===== -->
 
   <!-- Outcome Arrow -->
-  <path d="M 735 125 L 800 190" stroke="#bd5319" stroke-width="3" fill="none" marker-end="url(#arrowhead-accent)"/>
+  <path d="M 735 125 L 800 190" stroke="#1d63d8" stroke-width="3" fill="none" marker-end="url(#arrowhead-accent)"/>
 
   <!-- Outcome Box -->
   <rect x="750" y="200" width="130" height="95" class="outcome-box" rx="4"/>
-  <text x="815" y="218" class="box-title" text-anchor="middle" fill="#bd5319">Tax Outcomes</text>
-  <text x="815" y="235" class="box-text" text-anchor="middle">• Lower ETR</text>
-  <text x="815" y="250" class="box-text" text-anchor="middle">(-2 to -3.7%)</text>
-  <text x="815" y="265" class="box-text" text-anchor="middle">• Better tax</text>
-  <text x="815" y="280" class="box-text" text-anchor="middle">planning</text>
+  <text x="815" y="218" class="box-title" text-anchor="middle" fill="#1d63d8">Tax Outcomes</text>
+  <text x="815" y="235" class="box-text" text-anchor="middle">• Lower cash ETR</text>
+  <text x="815" y="250" class="box-text" text-anchor="middle">~1.8&#8211;3.4 pp</text>
+  <text x="815" y="265" class="box-text" text-anchor="middle">(&#8776;2.0 panel,</text>
+  <text x="815" y="280" class="box-text" text-anchor="middle">2.7 movements)</text>
 
   <!-- ===== MODERATORS AND CONSTRAINTS ===== -->
 
@@ -91,7 +91,7 @@
   <text x="110" y="297" class="box-text" text-anchor="middle">• Context-specific</text>
 
   <!-- Connecting line from Industry to Employee -->
-  <path d="M 110 230 L 380 175" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 110 230 L 380 175" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
   <text x="230" y="200" class="label">Moderator</text>
 
   <!-- Employee Experience Box (Moderator) -->
@@ -102,18 +102,18 @@
   <text x="380" y="297" class="box-text" text-anchor="middle">• Stronger effect</text>
 
   <!-- Connecting line from Employee Char to Destination -->
-  <path d="M 380 230 L 650 175" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 380 230 L 650 175" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
   <text x="500" y="200" class="label">Moderator</text>
 
   <!-- Timeline Box (Bottom) -->
   <rect x="570" y="230" width="160" height="80" class="box-fill" rx="4"/>
   <text x="650" y="250" class="box-title" text-anchor="middle">Effect Timeline</text>
-  <text x="650" y="267" class="box-text" text-anchor="middle">• Effect emerges</text>
-  <text x="650" y="282" class="box-text" text-anchor="middle">in year 1-3</text>
-  <text x="650" y="297" class="box-text" text-anchor="middle">• Persistent effect</text>
+  <text x="650" y="267" class="box-text" text-anchor="middle">• Emerges after</text>
+  <text x="650" y="282" class="box-text" text-anchor="middle">the hire</text>
+  <text x="650" y="297" class="box-text" text-anchor="middle">• Persists in event time</text>
 
   <!-- Connecting line from Timeline to Outcomes -->
-  <path d="M 730 270 L 750 265" stroke="#63605b" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 730 270 L 750 265" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,4" fill="none"/>
   <text x="735" y="288" class="label">Timing</text>
 
   <!-- ===== BOTTOM: KEY EVIDENCE ===== -->
@@ -122,7 +122,7 @@
   <rect x="30" y="360" width="270" height="100" class="box-fill" rx="4"/>
   <text x="165" y="380" class="box-title" text-anchor="middle">Key Empirical Findings</text>
   <text x="40" y="400" class="box-text">• Hiring from tax-aggressive firm reduces</text>
-  <text x="40" y="415" class="box-text">destination ETR by 2-3.7 percentage points</text>
+  <text x="40" y="415" class="box-text">destination cash ETR by ~1.8&#8211;3.4 pp</text>
   <text x="40" y="430" class="box-text">• Effect robust across specifications &amp;</text>
   <text x="40" y="445" class="box-text">definitions of tax-aggressive status</text>
 
@@ -130,16 +130,16 @@
   <rect x="320" y="360" width="270" height="100" class="box-fill" rx="4"/>
   <text x="455" y="380" class="box-title" text-anchor="middle">Mechanism Evidence</text>
   <text x="330" y="400" class="box-text">• No pre-hiring trends in destination firm</text>
-  <text x="330" y="415" class="box-text">• Industry-specific knowledge (industry</text>
-  <text x="330" y="430" class="box-text">match increases effect by ~1%)</text>
+  <text x="330" y="415" class="box-text">• Sector-specific knowledge: effect is</text>
+  <text x="330" y="430" class="box-text">~1.5 pp larger within the same sector</text>
   <text x="330" y="445" class="box-text">• Effect stronger for senior employees</text>
 
   <!-- Evidence Box 3 -->
   <rect x="610" y="360" width="260" height="100" class="box-fill" rx="4"/>
   <text x="740" y="380" class="box-title" text-anchor="middle">Sample &amp; Methods</text>
-  <text x="620" y="400" class="box-text">• Data: S&amp;P 1500 firms (1995–2018)</text>
-  <text x="620" y="415" class="box-text">• Tax employee movements tracked</text>
-  <text x="620" y="430" class="box-text">• Event study design</text>
-  <text x="620" y="445" class="box-text">• Stacked regression approach</text>
+  <text x="620" y="400" class="box-text">• S&amp;P 1500 tax departments</text>
+  <text x="620" y="415" class="box-text">• 1,083 moves, 1998&#8211;2015</text>
+  <text x="620" y="430" class="box-text">• Firm-year panel 1995&#8211;2018</text>
+  <text x="620" y="445" class="box-text">• DiD + stacked design</text>
 
 </svg>

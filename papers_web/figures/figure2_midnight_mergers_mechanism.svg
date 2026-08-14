@@ -5,13 +5,13 @@
 
   <defs>
     <style>
-      .title { font-size: 24px; font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
-      .subtitle { font-size: 14px; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #63605b; font-style: italic; }
-      .section-label { font-size: 13px; font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
-      .box-title { font-size: 12px; font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
-      .box-text { font-size: 11px; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #3a3632; line-height: 1.4; }
-      .box-text-small { font-size: 10px; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #63605b; }
-      .arrow-label { font-size: 11px; font-family: 'Helvetica Neue', Arial, sans-serif; fill: #1a4f8a; font-weight: 600; }
+      .title { font-size: 24px; font-weight: 700; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
+      .subtitle { font-size: 14px; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #6b7280; font-style: italic; }
+      .section-label { font-size: 13px; font-weight: 700; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
+      .box-title { font-size: 12px; font-weight: 700; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #00356b; }
+      .box-text { font-size: 11px; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #3f4650; line-height: 1.4; }
+      .box-text-small { font-size: 10px; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #6b7280; }
+      .arrow-label { font-size: 11px; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; fill: #1a4f8a; font-weight: 600; }
     </style>
 
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
@@ -19,7 +19,7 @@
     </marker>
 
     <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#bd5319" />
+      <polygon points="0 0, 10 3, 0 6" fill="#1d63d8" />
     </marker>
 
     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -28,7 +28,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="920" height="700" fill="#f9f7f4" />
+  <rect width="920" height="700" fill="#ffffff" />
 
   <!-- Title and Subtitle -->
   <text x="460" y="35" text-anchor="middle" class="title">Strategic Disclosure Mechanism</text>
@@ -36,7 +36,7 @@
 
   <!-- LEVEL 1: MERGER TYPE ASSESSMENT -->
   <g id="level1">
-    <rect x="30" y="85" width="860" height="2" fill="#d4d0c8" />
+    <rect x="30" y="85" width="860" height="2" fill="#e7e9ec" />
     <text x="30" y="75" class="section-label" font-size="10">LEVEL 1: MERGER ASSESSMENT</text>
 
     <!-- Low-risk mergers -->
@@ -54,15 +54,15 @@
     <text x="290" y="156" text-anchor="middle" class="box-text">overlap</text>
 
     <!-- High-risk horizontal mergers -->
-    <rect x="400" y="95" width="140" height="70" rx="5" fill="#ffffff" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="470" y="115" text-anchor="middle" class="box-title" fill="#bd5319">High Antitrust Risk</text>
+    <rect x="400" y="95" width="140" height="70" rx="5" fill="#ffffff" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="470" y="115" text-anchor="middle" class="box-title" fill="#1d63d8">High Antitrust Risk</text>
     <text x="470" y="130" text-anchor="middle" class="box-text">Horizontal mergers</text>
     <text x="470" y="143" text-anchor="middle" class="box-text">with significant</text>
     <text x="470" y="156" text-anchor="middle" class="box-text">overlap</text>
 
     <!-- 10% threshold -->
-    <rect x="580" y="95" width="140" height="70" rx="5" fill="#fef3e6" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="650" y="115" text-anchor="middle" class="box-title" fill="#bd5319">Size Threshold</text>
+    <rect x="580" y="95" width="140" height="70" rx="5" fill="#e8f0f7" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="650" y="115" text-anchor="middle" class="box-title" fill="#1d63d8">Size Threshold</text>
     <text x="650" y="130" text-anchor="middle" class="box-text" font-weight="700">≥10% assets</text>
     <text x="650" y="143" text-anchor="middle" class="box-text">triggers Item 2</text>
     <text x="650" y="156" text-anchor="middle" class="box-text">mandatory filing</text>
@@ -76,15 +76,15 @@
   </g>
 
   <!-- Arrows from Level 1 to Level 2 -->
-  <line x1="110" y1="165" x2="110" y2="195" stroke="#63605b" stroke-width="1.5" />
-  <line x1="290" y1="165" x2="290" y2="195" stroke="#63605b" stroke-width="1.5" />
-  <line x1="470" y1="165" x2="470" y2="195" stroke="#bd5319" stroke-width="2" />
-  <line x1="650" y1="165" x2="650" y2="195" stroke="#bd5319" stroke-width="2" />
-  <line x1="830" y1="165" x2="830" y2="195" stroke="#63605b" stroke-width="1.5" />
+  <line x1="110" y1="165" x2="110" y2="195" stroke="#6b7280" stroke-width="1.5" />
+  <line x1="290" y1="165" x2="290" y2="195" stroke="#6b7280" stroke-width="1.5" />
+  <line x1="470" y1="165" x2="470" y2="195" stroke="#1d63d8" stroke-width="2" />
+  <line x1="650" y1="165" x2="650" y2="195" stroke="#1d63d8" stroke-width="2" />
+  <line x1="830" y1="165" x2="830" y2="195" stroke="#6b7280" stroke-width="1.5" />
 
   <!-- LEVEL 2: DISCLOSURE DECISION -->
   <g id="level2">
-    <rect x="30" y="200" width="860" height="2" fill="#d4d0c8" />
+    <rect x="30" y="200" width="860" height="2" fill="#e7e9ec" />
     <text x="30" y="190" class="section-label" font-size="10">LEVEL 2: DISCLOSURE CHOICE</text>
 
     <!-- No disclosure option -->
@@ -115,8 +115,8 @@
     <text x="437.5" y="296" text-anchor="middle" class="box-text-small">Mandatory</text>
 
     <!-- HSR premerger notification -->
-    <rect x="535" y="210" width="135" height="95" rx="5" fill="#fef3e6" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="602.5" y="233" text-anchor="middle" class="box-title" fill="#bd5319">HSR Filing</text>
+    <rect x="535" y="210" width="135" height="95" rx="5" fill="#e8f0f7" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="602.5" y="233" text-anchor="middle" class="box-title" fill="#1d63d8">HSR Filing</text>
     <text x="602.5" y="248" text-anchor="middle" class="box-text-small">Mandatory</text>
     <text x="602.5" y="260" text-anchor="middle" class="box-text-small">antitrust filing</text>
     <text x="602.5" y="272" text-anchor="middle" class="box-text-small">Most detailed</text>
@@ -134,12 +134,12 @@
   </g>
 
   <!-- Arrow from Level 2 to Level 3 -->
-  <line x1="460" y1="305" x2="460" y2="335" stroke="#63605b" stroke-width="1.5" />
+  <line x1="460" y1="305" x2="460" y2="335" stroke="#6b7280" stroke-width="1.5" />
   <text x="475" y="323" class="arrow-label" font-size="10">Regulatory scrutiny</text>
 
   <!-- LEVEL 3: REGULATORY MECHANISM -->
   <g id="level3">
-    <rect x="30" y="340" width="860" height="2" fill="#d4d0c8" />
+    <rect x="30" y="340" width="860" height="2" fill="#e7e9ec" />
     <text x="30" y="330" class="section-label" font-size="10">LEVEL 3: REGULATORY MECHANISM</text>
 
     <!-- Detection -->
@@ -179,8 +179,8 @@
     <line x1="650" y1="392" x2="695" y2="392" stroke="#1a4f8a" stroke-width="2" marker-end="url(#arrowhead)" />
 
     <!-- Firm response -->
-    <rect x="695" y="350" width="175" height="85" rx="5" fill="#fef3e6" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="782.5" y="372" text-anchor="middle" class="box-title" fill="#bd5319">Firm Incentives</text>
+    <rect x="695" y="350" width="175" height="85" rx="5" fill="#e8f0f7" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="782.5" y="372" text-anchor="middle" class="box-title" fill="#1d63d8">Firm Incentives</text>
     <text x="782.5" y="388" text-anchor="middle" class="box-text-small">Disclosure quality</text>
     <text x="782.5" y="400" text-anchor="middle" class="box-text-small">affects detection</text>
     <text x="782.5" y="412" text-anchor="middle" class="box-text-small">probability; firms</text>
@@ -189,17 +189,17 @@
   </g>
 
   <!-- Arrow from Level 3 to Level 4 -->
-  <line x1="460" y1="435" x2="460" y2="465" stroke="#63605b" stroke-width="1.5" />
+  <line x1="460" y1="435" x2="460" y2="465" stroke="#6b7280" stroke-width="1.5" />
   <text x="475" y="453" class="arrow-label" font-size="10">Deterrence effect</text>
 
   <!-- LEVEL 4: OUTCOME -->
   <g id="level4">
-    <rect x="30" y="470" width="860" height="2" fill="#d4d0c8" />
+    <rect x="30" y="470" width="860" height="2" fill="#e7e9ec" />
     <text x="30" y="460" class="section-label" font-size="10">LEVEL 4: OUTCOME</text>
 
     <!-- Undisclosed/silent mergers -->
-    <rect x="50" y="480" width="160" height="90" rx="5" fill="#ffffff" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="130" y="505" text-anchor="middle" class="box-title" fill="#bd5319">Undisclosed Deals</text>
+    <rect x="50" y="480" width="160" height="90" rx="5" fill="#ffffff" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="130" y="505" text-anchor="middle" class="box-title" fill="#1d63d8">Undisclosed Deals</text>
     <text x="130" y="521" text-anchor="middle" class="box-text-small">~$1.85 trillion</text>
     <text x="130" y="533" text-anchor="middle" class="box-text-small">(2002-2016)</text>
     <text x="130" y="545" text-anchor="middle" class="box-text-small">38% of all mergers</text>
@@ -207,8 +207,8 @@
     <text x="130" y="569" text-anchor="middle" class="box-text-small">horizontal</text>
 
     <!-- Deterred mergers (negative outcome) -->
-    <rect x="240" y="480" width="160" height="90" rx="5" fill="#fef3e6" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="320" y="505" text-anchor="middle" class="box-title" fill="#bd5319">Deterred Deals</text>
+    <rect x="240" y="480" width="160" height="90" rx="5" fill="#e8f0f7" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="320" y="505" text-anchor="middle" class="box-title" fill="#1d63d8">Deterred Deals</text>
     <text x="320" y="521" text-anchor="middle" class="box-text-small">Anticompetitive</text>
     <text x="320" y="533" text-anchor="middle" class="box-text-small">mergers not</text>
     <text x="320" y="545" text-anchor="middle" class="box-text-small">attempted due to</text>
@@ -234,8 +234,8 @@
     <text x="700" y="569" text-anchor="middle" class="box-text-small">reduce overall</text>
 
     <!-- Policy implications -->
-    <rect x="810" y="480" width="100" height="90" rx="5" fill="#fef3e6" stroke="#bd5319" stroke-width="2" filter="url(#shadow)" />
-    <text x="860" y="505" text-anchor="middle" class="box-title" fill="#bd5319">Policy Tension</text>
+    <rect x="810" y="480" width="100" height="90" rx="5" fill="#e8f0f7" stroke="#1d63d8" stroke-width="2" filter="url(#shadow)" />
+    <text x="860" y="505" text-anchor="middle" class="box-title" fill="#1d63d8">Policy Tension</text>
     <text x="860" y="521" text-anchor="middle" class="box-text-small">SEC vs. FTC/DOJ</text>
     <text x="860" y="533" text-anchor="middle" class="box-text-small">incentives</text>
     <text x="860" y="545" text-anchor="middle" class="box-text-small">diverge on</text>
@@ -244,7 +244,7 @@
   </g>
 
   <!-- Key insight box at bottom -->
-  <rect x="30" y="600" width="860" height="80" rx="5" fill="#f9f7f4" stroke="#00356b" stroke-width="2" filter="url(#shadow)" />
+  <rect x="30" y="600" width="860" height="80" rx="5" fill="#f5f7fa" stroke="#00356b" stroke-width="2" filter="url(#shadow)" />
   <text x="50" y="625" class="box-title" font-size="12">Key Mechanism Insight:</text>
   <text x="50" y="643" class="box-text">Mandatory SEC disclosure requirements create a strategic disclosure mechanism. When firms must publicly disclose</text>
   <text x="50" y="658" class="box-text">merger details, antitrust authorities gain information to detect and challenge anticompetitive deals. This causes firms to</text>

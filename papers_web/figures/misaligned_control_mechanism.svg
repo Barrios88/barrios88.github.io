@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 900 530" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+<svg viewBox="0 0 900 530" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
   <!-- White background -->
   <rect width="900" height="530" fill="#ffffff"/>
 
@@ -7,7 +7,7 @@
   <text x="450" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#00356b">
     The Antitrust Loophole Mechanism
   </text>
-  <text x="450" y="60" font-size="14" text-anchor="middle" fill="#63605b" font-style="italic">
+  <text x="450" y="60" font-size="14" text-anchor="middle" fill="#6b7280" font-style="italic">
     Divergence Between Accounting and Economic Control Definitions
   </text>
 
@@ -21,7 +21,7 @@
   </text>
 
   <!-- Left main box -->
-  <rect x="25" y="130" width="230" height="280" fill="#f9f7f4" stroke="#00356b" stroke-width="3" rx="4"/>
+  <rect x="25" y="130" width="230" height="280" fill="#f8f9fa" stroke="#00356b" stroke-width="3" rx="4"/>
 
   <!-- Content inside left box -->
   <text x="40" y="160" font-size="13" font-weight="bold" fill="#00356b">
@@ -30,32 +30,32 @@
 
   <!-- Bullet points -->
   <circle cx="50" cy="185" r="3" fill="#00356b"/>
-  <text x="65" y="190" font-size="11" fill="#3a3632">
+  <text x="65" y="190" font-size="11" fill="#3f4650">
     <tspan>Voting Rights</tspan>
     <tspan x="65" dy="18">(50%+ ownership)</tspan>
   </text>
 
   <circle cx="50" cy="225" r="3" fill="#00356b"/>
-  <text x="65" y="230" font-size="11" fill="#3a3632">
+  <text x="65" y="230" font-size="11" fill="#3f4650">
     <tspan>Ownership Interest</tspan>
     <tspan x="65" dy="18">in Legal Entity</tspan>
   </text>
 
   <circle cx="50" cy="270" r="3" fill="#00356b"/>
-  <text x="65" y="275" font-size="11" fill="#3a3632">
+  <text x="65" y="275" font-size="11" fill="#3f4650">
     <tspan>Formal Consolidation</tspan>
     <tspan x="65" dy="18">of Balance Sheets</tspan>
   </text>
 
   <circle cx="50" cy="315" r="3" fill="#00356b"/>
-  <text x="65" y="320" font-size="11" fill="#3a3632">
+  <text x="65" y="320" font-size="11" fill="#3f4650">
     <tspan>Separate Legal</tspan>
     <tspan x="65" dy="18">Entities = Separate</tspan>
     <tspan x="65" dy="18">Reporting</tspan>
   </text>
 
   <!-- Result box -->
-  <rect x="35" y="380" width="210" height="20" fill="#bd5319" rx="2"/>
+  <rect x="35" y="380" width="210" height="20" fill="#1d63d8" rx="2"/>
   <text x="140" y="395" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
     Result: Underestimates Control
   </text>
@@ -70,7 +70,7 @@
   </text>
 
   <!-- Right main box -->
-  <rect x="645" y="130" width="230" height="280" fill="#f9f7f4" stroke="#00356b" stroke-width="3" rx="4"/>
+  <rect x="645" y="130" width="230" height="280" fill="#f8f9fa" stroke="#00356b" stroke-width="3" rx="4"/>
 
   <!-- Content inside right box -->
   <text x="660" y="160" font-size="13" font-weight="bold" fill="#00356b">
@@ -79,31 +79,31 @@
 
   <!-- Bullet points -->
   <circle cx="670" cy="185" r="3" fill="#00356b"/>
-  <text x="685" y="190" font-size="11" fill="#3a3632">
+  <text x="685" y="190" font-size="11" fill="#3f4650">
     <tspan>Board Representation</tspan>
     <tspan x="685" dy="18">&amp; Management Rights</tspan>
   </text>
 
   <circle cx="670" cy="225" r="3" fill="#00356b"/>
-  <text x="685" y="230" font-size="11" fill="#3a3632">
+  <text x="685" y="230" font-size="11" fill="#3f4650">
     <tspan>Strategic Decision Making</tspan>
     <tspan x="685" dy="18">Power (Pricing, M&amp;A)</tspan>
   </text>
 
   <circle cx="670" cy="270" r="3" fill="#00356b"/>
-  <text x="685" y="275" font-size="11" fill="#3a3632">
+  <text x="685" y="275" font-size="11" fill="#3f4650">
     <tspan>Management Compensation</tspan>
     <tspan x="685" dy="18">Alignment &amp; Incentives</tspan>
   </text>
 
   <circle cx="670" cy="315" r="3" fill="#00356b"/>
-  <text x="685" y="320" font-size="11" fill="#3a3632">
+  <text x="685" y="320" font-size="11" fill="#3f4650">
     <tspan>Operational Coordination</tspan>
     <tspan x="685" dy="18">Across Competing Firms</tspan>
   </text>
 
   <!-- Result box -->
-  <rect x="655" y="380" width="210" height="20" fill="#bd5319" rx="2"/>
+  <rect x="655" y="380" width="210" height="20" fill="#1d63d8" rx="2"/>
   <text x="760" y="395" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
     Result: Captures True Control
   </text>
@@ -112,38 +112,38 @@
   <!-- Arrow showing divergence -->
   <defs>
     <marker id="arrowhead-right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#bd5319"/>
+      <polygon points="0 0, 10 3, 0 6" fill="#1d63d8"/>
     </marker>
     <marker id="arrowhead-left" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="10 0, 0 3, 10 6" fill="#bd5319"/>
+      <polygon points="10 0, 0 3, 10 6" fill="#1d63d8"/>
     </marker>
   </defs>
 
   <!-- Curved divergence arrows -->
-  <path d="M 260 280 Q 450 180 645 280" stroke="#bd5319" stroke-width="3" fill="none" marker-end="url(#arrowhead-right)"/>
-  <path d="M 645 320 Q 450 400 260 320" stroke="#bd5319" stroke-width="3" fill="none" marker-end="url(#arrowhead-left)"/>
+  <path d="M 260 280 Q 450 180 645 280" stroke="#1d63d8" stroke-width="3" fill="none" marker-end="url(#arrowhead-right)"/>
+  <path d="M 645 320 Q 450 400 260 320" stroke="#1d63d8" stroke-width="3" fill="none" marker-end="url(#arrowhead-left)"/>
 
   <!-- Center label -->
-  <rect x="340" y="285" width="220" height="60" fill="white" stroke="#bd5319" stroke-width="2" rx="3"/>
-  <text x="450" y="308" font-size="12" font-weight="bold" text-anchor="middle" fill="#bd5319">
+  <rect x="340" y="285" width="220" height="60" fill="white" stroke="#1d63d8" stroke-width="2" rx="3"/>
+  <text x="450" y="308" font-size="12" font-weight="bold" text-anchor="middle" fill="#1d63d8">
     THE LOOPHOLE
   </text>
-  <text x="450" y="328" font-size="10" text-anchor="middle" fill="#3a3632">
+  <text x="450" y="328" font-size="10" text-anchor="middle" fill="#3f4650">
     <tspan>PE uses legal separateness</tspan>
     <tspan x="450" dy="15">to hide economic coordination</tspan>
   </text>
 
   <!-- Bottom mechanism explanation -->
   <g>
-    <rect x="50" y="428" width="800" height="86" fill="#f9f7f4" stroke="#00356b" stroke-width="2" rx="4"/>
+    <rect x="50" y="428" width="800" height="86" fill="#f8f9fa" stroke="#00356b" stroke-width="2" rx="4"/>
 
     <text x="60" y="450" font-size="12" font-weight="bold" fill="#00356b">
       How The Loophole Works:
     </text>
-    <text x="60" y="475" font-size="11" fill="#3a3632">
+    <text x="60" y="475" font-size="11" fill="#3f4650">
       <tspan>1) PE firm uses multiple investment vehicles (separate legal entities) → Each falls below HSR thresholds</tspan>
     </text>
-    <text x="60" y="498" font-size="11" fill="#3a3632">
+    <text x="60" y="498" font-size="11" fill="#3f4650">
       <tspan>2) But same PE firm manages all vehicles → Exercise coordinated economic control over competing portfolio companies</tspan>
     </text>
   </g>
