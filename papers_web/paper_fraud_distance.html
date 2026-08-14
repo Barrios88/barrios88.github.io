@@ -19,11 +19,12 @@
     <script src="../assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="../index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="../index.html">Home</a>
                 <a href="../cv.html">CV</a>
                 <a href="../research.html" class="active">Research</a>
@@ -44,7 +45,7 @@
         </div>
     </section>
 
-    <main class="paper-main">
+    <main id="main" tabindex="-1" class="paper-main">
         <div class="entry-links paper-actions">
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5539040" target="_blank" rel="noopener" class="pill-primary">View on SSRN</a>
             <a href="../papers/2026-barrios-fraud-distance.pdf" target="_blank">Download PDF</a>
@@ -52,7 +53,7 @@
         </div>
 
         <section class="paper-section">
-            <div class="section-label">Abstract</div>
+            <h2 class="section-label">Abstract</h2>
             <div class="prose">
                 <p>
                     Financial misconduct is usually a team activity. It depends on coordination among insiders&mdash;face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.
@@ -64,7 +65,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Key Findings</div>
+            <h2 class="section-label">Key Findings</h2>
             <div class="finding-grid">
                 <div class="finding">
                     <h3>Declines in Misconduct</h3>
@@ -86,7 +87,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Figures</div>
+            <h2 class="section-label">Figures</h2>
 
             <figure class="paper-figure">
                 <div class="fig-title">Figure 1: Key Empirical Results</div>
@@ -106,7 +107,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Research Contribution</div>
+            <h2 class="section-label">Research Contribution</h2>
             <div class="prose">
                 <p>
                     We show that financial misconduct is sensitive to how the firm is organized. Fraud is often collusive; remote work raises the cost of that collusion. The result is new evidence that the organizational setting&mdash;not only incentives and governance&mdash;has first-order effects on fraud, and that the feasibility of coordination shapes the incidence of misreporting.
@@ -118,7 +119,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Citation</div>
+            <h2 class="section-label">Citation</h2>
             <div class="citation-box">
                 Barrios, John Manuel, Jessie Jianwen Guo, and Yanping Zhu. &ldquo;Fraud at a Distance? How Remote Work Shapes Financial Misconduct.&rdquo; <em>Working Paper</em>, 2026.
             </div>

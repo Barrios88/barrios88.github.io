@@ -22,11 +22,12 @@
     <script src="assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="cv.html">CV</a>
                 <a href="research.html">Research</a>
@@ -50,7 +51,7 @@
         </div>
     </section>
 
-    <main class="main">
+    <main id="main" tabindex="-1" class="main">
         <div class="wrap">
 
             <!-- To activate a link: replace <span class="soon">…</span> with

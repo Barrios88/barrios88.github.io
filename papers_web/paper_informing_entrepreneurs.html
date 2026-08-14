@@ -19,11 +19,12 @@
     <script src="../assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="../index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="../index.html">Home</a>
                 <a href="../cv.html">CV</a>
                 <a href="../research.html" class="active">Research</a>
@@ -44,14 +45,14 @@
         </div>
     </section>
 
-    <main class="paper-main">
+    <main id="main" tabindex="-1" class="paper-main">
         <div class="entry-links paper-actions">
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736" target="_blank" rel="noopener" class="pill-primary">View on SSRN</a>
             <a href="../research.html" class="pill-back">&larr; Back to Research</a>
         </div>
 
         <section class="paper-section">
-            <div class="section-label">Abstract</div>
+            <h2 class="section-label">Abstract</h2>
             <div class="prose">
                 <p>
                     We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the role of IPOs in conveying information, whether through signaling potential success or providing direct information.
@@ -63,7 +64,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Key Findings</div>
+            <h2 class="section-label">Key Findings</h2>
             <div class="finding-grid">
                 <div class="finding">
                     <h3>IPOs Spur Local Entrepreneurship</h3>
@@ -85,7 +86,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Figures</div>
+            <h2 class="section-label">Figures</h2>
 
             <figure class="paper-figure">
                 <div class="fig-title">Figure 1: Key Results — IPOs and New Business Formation</div>
@@ -105,7 +106,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Research Contribution</div>
+            <h2 class="section-label">Research Contribution</h2>
             <div class="prose">
                 <p>
                     This study makes several contributions to the literature. First, it provides new, causal evidence on the effects of IPOs on local entrepreneurial activity, and the importance of information spillovers in driving these effects. While prior work has studied IPO spillovers on established firms&rsquo; investment decisions, this paper examines the extensive margin of new business formation&mdash;showing that public firm information disclosures have positive externalities that also affect firm entry.
@@ -120,7 +121,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Identification Strategy</div>
+            <h2 class="section-label">Identification Strategy</h2>
             <div class="prose">
                 <p>
                     The paper addresses the endogeneity of IPO activity using an instrumental variable approach motivated by Bernstein (2015). The instrument leverages returns on the NASDAQ index during the book-building phase immediately following a firm&rsquo;s IPO filing. Market fluctuations during this phase affect the likelihood of IPO completion but are unlikely to have a lasting impact on the long-term economic activities of the county where the IPO occurs. Using the instrumented IPOs, the authors continue to observe a positive relationship between IPOs and new business registrations. Entropy balancing matching provides additional robustness.
@@ -129,7 +130,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Citation</div>
+            <h2 class="section-label">Citation</h2>
             <div class="citation-box">
                 Barrios, John M., Jung Ho Choi, Yael V. Hochberg, Jinhwan Kim, and Miao Liu. &ldquo;Informing Entrepreneurs? Initial Public Offerings and New Business Formation.&rdquo; <em>Journal of Accounting Research</em>, forthcoming. Available at SSRN: https://ssrn.com/abstract=3640736.
             </div>

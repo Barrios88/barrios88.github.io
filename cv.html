@@ -22,11 +22,12 @@
     <script src="assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="cv.html" class="active">CV</a>
                 <a href="research.html">Research</a>
@@ -49,7 +50,7 @@
         </div>
     </section>
 
-    <main class="main">
+    <main id="main" tabindex="-1" class="main">
         <div class="wrap">
 
             <div class="download-row">
@@ -69,13 +70,12 @@
                 title="John Manuel Barrios - Curriculum Vitae">
             </iframe>
 
-            <noscript>
-                <div class="callout">
-                    <strong>PDF viewer not available.</strong>
-                    If the PDF does not display here —
-                    <a href="cv/CV_latest.pdf" download>download the CV (PDF)</a> instead.
-                </div>
-            </noscript>
+            <div class="callout">
+                <strong>Trouble viewing the PDF here?</strong>
+                Some browsers (notably iOS Safari) don&rsquo;t render inline PDFs &mdash;
+                <a href="cv/CV_latest.pdf" download>download the CV (PDF)</a> or
+                <a href="cv/CV_latest.pdf" target="_blank" rel="noopener">open it in a new tab</a>.
+            </div>
 
         </div>
     </main>

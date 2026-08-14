@@ -25,11 +25,12 @@
     <script src="assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="cv.html">CV</a>
                 <a href="research.html" class="active">Research</a>
@@ -94,8 +95,9 @@
         </div>
     </div>
 
-    <main class="main research-main">
+    <main id="main" tabindex="-1" class="main research-main">
         <div class="wrap">
+            <h2 class="visually-hidden">Papers</h2>
             <div id="paper-list">
 {{PAPERS}}
             </div>

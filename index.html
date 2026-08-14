@@ -45,11 +45,12 @@
     <script src="assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html" class="active">Home</a>
                 <a href="cv.html">CV</a>
                 <a href="research.html">Research</a>
@@ -151,11 +152,11 @@
         </div>
     </div>
 
-    <main class="main">
+    <main id="main" tabindex="-1" class="main">
         <div class="wrap cols">
             <div>
                 <div class="block prose">
-                    <div class="section-label">About</div>
+                    <h2 class="section-label">About</h2>
                     <p>
                         I am an Associate Professor of Accounting at the <a href="https://som.yale.edu/" target="_blank" rel="noopener">Yale School of Management</a> and a Faculty Research Fellow at the <a href="https://www.nber.org/" target="_blank" rel="noopener">National Bureau of Economic Research</a> in the Political Economy and the Productivity, Innovation, and Entrepreneurship groups.
                     </p>
@@ -174,7 +175,7 @@
                 </div>
 
                 <div class="block">
-                    <div class="section-label">Education</div>
+                    <h2 class="section-label">Education</h2>
                     <ul class="row-list">
                         <li>
                             <div class="primary">Ph.D., Business Administration</div>

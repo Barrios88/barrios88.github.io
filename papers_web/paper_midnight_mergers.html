@@ -19,11 +19,12 @@
     <script src="../assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="../index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="../index.html">Home</a>
                 <a href="../cv.html">CV</a>
                 <a href="../research.html" class="active">Research</a>
@@ -44,7 +45,7 @@
         </div>
     </section>
 
-    <main class="paper-main">
+    <main id="main" tabindex="-1" class="paper-main">
         <div class="entry-links paper-actions">
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4076302" target="_blank" rel="noopener" class="pill-primary">View on SSRN</a>
             <a href="https://www.nber.org/papers/w29655" target="_blank" rel="noopener">View on NBER</a>
@@ -53,7 +54,7 @@
         </div>
 
         <section class="paper-section">
-            <div class="section-label">Abstract</div>
+            <h2 class="section-label">Abstract</h2>
             <div class="prose">
                 <p>
                     Antitrust authorities discover anticompetitive mergers largely by searching public documents, so the same disclosures investors rely on can alert regulators to deals that would otherwise go unnoticed. That gives managers a reason to keep some transactions quiet. We study this behavior in publicly traded U.S. firms.
@@ -65,7 +66,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Key Findings</div>
+            <h2 class="section-label">Key Findings</h2>
             <div class="finding-grid">
                 <div class="finding">
                     <h3>Disclosure Poses Antitrust Risk</h3>
@@ -87,7 +88,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Figures</div>
+            <h2 class="section-label">Figures</h2>
 
             <figure class="paper-figure">
                 <div class="fig-title">Figure 1: Regression-Discontinuity Results</div>
@@ -107,7 +108,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Data &amp; Design</div>
+            <h2 class="section-label">Data &amp; Design</h2>
             <div class="prose">
                 <p>
                     We study publicly traded U.S. firms. A merger whose transaction value reaches 10% of the acquirer's assets triggers a mandatory Item 2 filing, and we use a regression-discontinuity design around that cutoff to estimate the effect of disclosure. Separately, we build a measure of undisclosed mergers from firms' financial-accounting reporting requirements, which lets us count deals that never appear in standard merger data.
@@ -116,7 +117,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Citation</div>
+            <h2 class="section-label">Citation</h2>
             <div class="citation-box">
                 Barrios, John Manuel, and Thomas G. Wollmann. &ldquo;A New Era of Midnight Mergers: Antitrust Risk and Investor Disclosures.&rdquo; <em>American Economic Journal: Microeconomics</em> 16, no. 4 (2024).
             </div>

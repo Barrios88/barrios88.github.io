@@ -22,11 +22,12 @@
     <script src="assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="cv.html">CV</a>
                 <a href="research.html">Research</a>
@@ -50,7 +51,7 @@
         </div>
     </section>
 
-    <main class="main">
+    <main id="main" tabindex="-1" class="main">
         <div class="wrap">
 
             <div class="entry">
@@ -64,7 +65,7 @@
             </div>
 
             <div class="block" style="margin-top:3rem;">
-                <div class="section-label">Code</div>
+                <h2 class="section-label">Code</h2>
                 <div class="entry">
                     <div class="entry-kicker">Staggered DiD Toolkit</div>
                     <h3>Barrios_Stag_DiD_Toolkit</h3>
@@ -81,7 +82,7 @@
             </div>
 
             <div class="block">
-                <div class="section-label">Slides</div>
+                <h2 class="section-label">Slides</h2>
                 <div class="entry">
                     <div class="entry-kicker">Panel Discussion</div>
                     <h3>AAA Audit Midyear Meeting, 2023</h3>

@@ -19,11 +19,12 @@
     <script src="../assets/analytics.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="wrap">
             <div class="wordmark"><a href="../index.html">John Manuel Barrios</a></div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="../index.html">Home</a>
                 <a href="../cv.html">CV</a>
                 <a href="../research.html" class="active">Research</a>
@@ -44,7 +45,7 @@
         </div>
     </section>
 
-    <main class="paper-main">
+    <main id="main" tabindex="-1" class="paper-main">
         <div class="entry-links paper-actions">
             <a href="https://doi.org/10.1016/j.jfineco.2021.05.039" target="_blank" rel="noopener" class="pill-primary">View in Journal</a>
             <a href="https://www.nber.org/papers/w27008" target="_blank" rel="noopener">View on NBER</a>
@@ -53,7 +54,7 @@
         </div>
 
         <section class="paper-section">
-            <div class="section-label">Abstract</div>
+            <h2 class="section-label">Abstract</h2>
             <div class="prose">
                 <p>
                     We study how political beliefs shaped risk perceptions and behavior early in the COVID-19 pandemic. We combine county-level mobility data (Unacast), each county's 2016 Trump vote share, and Google Health Trends search activity as a proxy for perceived health risk.
@@ -65,7 +66,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Key Findings</div>
+            <h2 class="section-label">Key Findings</h2>
             <div class="finding-grid">
                 <div class="finding">
                     <h3>Politics Colors Risk</h3>
@@ -87,7 +88,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Figures</div>
+            <h2 class="section-label">Figures</h2>
 
             <figure class="paper-figure">
                 <div class="fig-title">Figure 1: Partisan Differences in the Distancing Response</div>
@@ -107,7 +108,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Data &amp; Design</div>
+            <h2 class="section-label">Data &amp; Design</h2>
             <div class="prose">
                 <p>
                     We combine county-level mobility from Unacast, each county's 2016 Trump vote share, and Google Health Trends search activity as a proxy for perceived health risk. Regressions control for local case and death counts, demographics, telework share, and population density, and we use Nielsen media markets to test whether local media coverage widens the partisan gap in behavior.
@@ -116,7 +117,7 @@
         </section>
 
         <section class="paper-section">
-            <div class="section-label">Citation</div>
+            <h2 class="section-label">Citation</h2>
             <div class="citation-box">
                 Barrios, John Manuel, and Yael V. Hochberg. &ldquo;Risk Perceptions and Politics: Evidence from the COVID-19 Pandemic.&rdquo; <em>Journal of Financial Economics</em> 142, no. 2 (2021): 862&ndash;879.
             </div>
