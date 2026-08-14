@@ -90,7 +90,7 @@ function kicker(p) {
   if (p.type === 'chapter') return `In ${p.venue}${p.publisher ? ', ' + p.publisher : ''} · ${p.year}`;
   if (p.status === 'published') return `${p.venue}${p.volume ? ' ' + p.volume : ''} · ${p.year}`;
   if (p.status === 'forthcoming') return p.venue; // the status pill already says "Forthcoming"
-  return String(p.year); // the status pill already says "Working Paper" / "R&R"
+  return p.draft ? `Draft · ${p.draft}` : String(p.year); // status pill says "Working Paper" / "R&R"
 }
 
 function linkPills(p) {

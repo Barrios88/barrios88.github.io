@@ -135,7 +135,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "January 2026"
     },
     {
       "id": "civic-capital",
@@ -219,7 +220,8 @@
         "code": null
       },
       "doi": null,
-      "featured": true
+      "featured": true,
+      "draft": "July 2026"
     },
     {
       "id": "conflict-discount",
@@ -249,7 +251,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "January 2026"
     },
     {
       "id": "boards-feather",
@@ -390,7 +393,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "June 2026"
     },
     {
       "id": "taxation-venture-capital",
@@ -471,7 +475,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "October 2025"
     },
     {
       "id": "accounting-pressure",
@@ -498,7 +503,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "August 2026"
     },
     {
       "id": "staggered-did",
@@ -521,7 +527,8 @@
         "code": "code.html"
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "August 2026"
     },
     {
       "id": "midnight-mergers",
@@ -659,7 +666,8 @@
         "code": null
       },
       "doi": null,
-      "featured": false
+      "featured": false,
+      "draft": "February 2026"
     },
     {
       "id": "imitation-innovation",
@@ -699,7 +707,8 @@
       "links": {},
       "doi": null,
       "featured": false,
-      "figure": "papers_web/figures/better-in-person-summary.svg"
+      "figure": "papers_web/figures/better-in-person-summary.svg",
+      "draft": "November 2023"
     },
     {
       "id": "labor-information-environment",
@@ -723,7 +732,8 @@
       },
       "doi": null,
       "featured": false,
-      "figure": "papers_web/figures/labor-information-environment-summary.svg"
+      "figure": "papers_web/figures/labor-information-environment-summary.svg",
+      "draft": "July 2026"
     },
     {
       "id": "stemming-tide",
@@ -764,7 +774,8 @@
       },
       "doi": null,
       "featured": false,
-      "figure": "papers_web/figures/stablecoins-summary.svg"
+      "figure": "papers_web/figures/stablecoins-summary.svg",
+      "draft": "July 2026"
     }
   ]
 }
