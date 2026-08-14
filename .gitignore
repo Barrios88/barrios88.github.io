@@ -15,6 +15,7 @@ device_files.txt
 *.png
 !photos/*.png
 !papers_web/figures/*.png
+!assets/og-card.png
 _to_delete/
 .playwright-cli/
 cv/CV_John_*.pdf
