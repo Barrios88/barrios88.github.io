@@ -23,7 +23,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1111/1475-679X.12408",
       "featured": true
     },
     {
@@ -38,7 +38,7 @@
       "themes": [
         "labor"
       ],
-      "abstract": "Private equity has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. This paper studies these issues using accounting-industry data from 1999–2024 that links more than 3,000 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power.",
+      "abstract": "Private equity (PE) has expanded rapidly into professional services, raising questions about competition, labor markets, and professional independence in traditionally licensed, reputation-based, and partnership-controlled sectors. We study these issues in accounting using data from 1999–2024 that link more than 3,600 PE transactions to firm organization, labor-market outcomes, and audit pricing. PE investment increases sharply after 2020 and extends to both CPA-licensed audit firms and non-CPA advisory practices, with activity concentrated in large mid-tier firms. After PE entry, firms grow faster: non-audit revenues rise, employment expands, and cross-state mergers and acquisitions accelerate, consistent with platform building and consolidation. These organizational changes have market-level implications. PE investment increases labor-market concentration in key accounting occupations and raises audit fees in ERISA engagements, a highly standardized setting where regulation fixes scope and effort, isolating price effects consistent with increased market power. Our results show that in professions, private equity does not simply reorganize firms, it relaxes constraints on scale in ways that directly reshape competition and professional independence.",
       "note": "Revision Requested: Journal of Financial Economics",
       "figure": "papers_web/figures/pe_accounting_results.svg",
       "links": {
@@ -54,19 +54,19 @@
     },
     {
       "id": "gig-economy",
-      "title": "Launching with a Parachute: The Gig Economy and Entrepreneurial Entry",
+      "title": "Launching with a Parachute: The Gig Economy and New Business Formation",
       "authors": [
         "Yael V. Hochberg",
-        "Livia Hanyi Yi"
+        "Hanyi Livia Yi"
       ],
-      "year": 2021,
+      "year": 2022,
       "status": "published",
       "venue": "Journal of Financial Economics",
       "volume": "144(1)",
       "themes": [
         "entrepreneurship"
       ],
-      "abstract": "We examine how the rise of the gig economy affects entrepreneurial entry by providing aspiring entrepreneurs with a flexible \"safety net\" during the risky early stages of new venture creation. Using the staggered entry of Uber across U.S. cities as a natural experiment, we find that gig economy platforms significantly increase entrepreneurship rates, particularly among individuals who face high opportunity costs and income uncertainty.\n\nOur identification strategy exploits variation in Uber's entry timing across 195 U.S. cities between 2009 and 2016. We find that Uber's entry increases new business registrations by 3-5%, with larger effects in cities with higher pre-existing entrepreneurship rates. The mechanism operates through reduced downside risk: gig work provides a flexible income source that entrepreneurs can use to smooth consumption while building their businesses, effectively functioning as a \"parachute\" that makes the leap into entrepreneurship less risky.",
+      "abstract": "We utilize the staggered arrival of Uber and Lyft—large sources of on-demand, platform-enabled gig opportunities—in U.S. cities to examine the effect of the arrival of flexible gig work opportunities on new business formation. The introduction of gig opportunities is associated with an increase of ~5% in the number of new business registrations in the local area, and a correspondingly-sized increase in small business lending to newly registered businesses. Internet searches for entrepreneurship-related keywords increase ~7%. These effects are strongest in locations where proxies for ex ante economic uncertainty regarding the viability of new businesses are larger. Our findings suggest that the introduction of the gig economy creates fallback opportunities for would-be entrepreneurs that reduce risk and encourage new business formation.",
       "note": null,
       "figure": "papers_web/figures/figure1_main_results.svg",
       "links": {
@@ -77,12 +77,12 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1016/j.jfineco.2021.12.011",
       "featured": true
     },
     {
       "id": "informing-entrepreneurs",
-      "title": "Initial Public Offering and New Business Formation: The Role of Public Firm Disclosures",
+      "title": "Informing Entrepreneurs? Initial Public Offerings and New Business Formation",
       "authors": [
         "Jung Ho Choi",
         "Yael V. Hochberg",
@@ -95,7 +95,7 @@
       "themes": [
         "entrepreneurship"
       ],
-      "abstract": "We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the vital role of IPOs in conveying crucial information, whether through signaling potential success or providing direct information.\n\nMoreover, our research indicates that these effects extend beyond mere \"signaling of success\" and are largely driven by the valuable information transmitted by the IPO itself. Specifically, new business registrations are significantly influenced by the extent of EDGAR downloads related to the IPO firm's public disclosures and the informational content within the IPO firm's S-1 disclosure. A comprehensive field survey further supports these conclusions, affirming the presence of information spillovers from local IPOs that positively impact new business formation.",
+      "abstract": "We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the vital role of IPOs in conveying crucial information, whether through signaling potential success or providing direct information. Moreover, our research indicates that these effects extend beyond mere \"signaling of success\" and are largely driven by the valuable information transmitted by the IPO itself. Specifically, new business registrations are significantly influenced by the extent of Edgar downloads related to the IPO firm's public disclosures and the informational content within the IPO firm's S-1 disclosure. A comprehensive field survey further supports these conclusions, affirming the presence of information spillovers from local IPOs that positively impact new business formation.",
       "note": "Journal of Accounting Research (Accepted)",
       "figure": "papers_web/figures/informing_entrepreneurs_mechanism.svg",
       "links": {
@@ -114,7 +114,7 @@
       "title": "Hustling from Home? Work from Home Flexibility and Entrepreneurial Entry",
       "authors": [
         "Yael V. Hochberg",
-        "Livia Hanyi Yi"
+        "Hanyi Livia Yi"
       ],
       "year": 2024,
       "status": "working",
@@ -123,7 +123,7 @@
         "entrepreneurship",
         "labor"
       ],
-      "abstract": "We study how the expansion of work-from-home (WFH) affects entrepreneurial entry using the COVID-19 pandemic as a natural experiment. Widespread adoption of WFH increased overall entrepreneurial entry but generated a clear substitution effect: areas with higher ex ante telework potential experienced notably smaller increases in new business registrations.\n\nWe propose and test a conceptual framework that emphasizes the substitution between employer-provided flexibility and entrepreneurship's traditional advantage in offering autonomy and flexibility. When traditional employment offers comparable flexibility through remote work, the incentive to leave for entrepreneurship in search of those non-pecuniary benefits falls. We find empirical evidence consistent with the model. Effects are larger for those primarily motivated by flexibility, such as women. Survey evidence further confirms that employer-provided flexibility reduces entrepreneurial intent. The analysis uses zip-code-level data on new business registrations from the Startup Cartography Project and measures of pre-pandemic telework potential (Dingel and Neiman 2020; Gupta et al. 2022).",
+      "abstract": "We study how the expansion of work-from-home (WFH) affects entrepreneurial entry using the COVID-19 pandemic as a natural experiment. Widespread adoption of WFH increases overall entrepreneurial entry but generates a clear substitution effect: areas with higher ex ante telework potential experienced notably smaller increases in new businesses. We propose and test a conceptual framework that emphasizes the substitution between employer-provided flexibility and entrepreneurship's traditional advantage in offering autonomy and flexibility. We find empirical evidence consistent with the model, with effects larger for those primarily motivated by flexibility, such as women. Survey evidence further confirms that employer-provided flexibility reduces entrepreneurial intent.",
       "note": null,
       "figure": "papers_web/figures/hustling_home_results.svg",
       "links": {
@@ -153,7 +153,7 @@
       "themes": [
         "political-economy"
       ],
-      "abstract": "We study the role of civic capital in facilitating collective action during the early stages of the COVID-19 pandemic. Using real-time cellphone location data and variation in social distancing recommendations across U.S. counties, we examine whether areas with higher civic capital exhibited greater compliance with social distancing guidelines when formal enforcement was limited.\n\nWe find that counties with higher civic capital—measured by voter turnout, census response rates, and participation in community organizations—experienced significantly larger reductions in mobility and greater social distancing compliance following public health recommendations. A one-standard-deviation increase in civic capital is associated with a 10-15% greater reduction in movement. These effects are largest in the early weeks of the pandemic, before the widespread adoption of formal restrictions, suggesting that civic capital enables communities to coordinate on socially beneficial behaviors even without enforcement.",
+      "abstract": "Using mobile phone and survey data, we show that during the early phases of COVID-19, voluntary social distancing was greater in areas with higher civic capital and amongst individuals exhibiting a higher sense of civic duty. This effect is robust to including controls for political ideology, income, age, education, and other local-level characteristics. This result is present for U.S. individuals and U.S. counties as well as European regions. Moreover, we show that after U.S. states began re-opening, high civic capital counties maintained a more sustained level of social distancing, while low civic capital counties did not. Finally, we show that U.S. individuals report a higher tendency to use protective face masks in high civic capital counties. Our evidence points to the importance of considering the level of civic capital in designing public policies not only in response to pandemics, but also more generally.",
       "note": null,
       "figure": "papers_web/figures/civic_capital_results.svg",
       "links": {
@@ -164,7 +164,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1016/j.jpubeco.2020.104310",
       "featured": true
     },
     {
@@ -180,7 +180,7 @@
       "themes": [
         "political-economy"
       ],
-      "abstract": "We examine how political partisanship shaped perceptions of COVID-19 health risks and influenced compliance with public health recommendations during the early stages of the pandemic. Using individual-level mobility data, survey responses, and county-level political affiliation, we document stark partisan differences in risk perceptions and behavior that emerged early and persisted throughout the pandemic's first wave.\n\nWe find that Republican-leaning counties showed significantly lower reductions in mobility and social distancing compared to Democratic-leaning counties, even after controlling for local COVID-19 case counts, demographic factors, and economic conditions. These behavioral differences align with survey evidence showing Republicans consistently perceived lower personal health risks from the virus. The partisan gap in both risk perceptions and behaviors widened following polarizing political messaging and media coverage.",
+      "abstract": "Politics may color interpretations of facts, and thus perceptions of risk. We find that a higher share of Trump voters in a county is associated with lower perceptions of risk during the COVID-19 pandemic. Controlling for COVID-19 case counts and deaths, as Trump's vote share rises in the local area, individuals search less for information on the virus and its potential economic impacts, and engage in fewer visits to non-essential businesses. Our results suggest that politics and the media may play an important role in determining the formation of risk perceptions, and may therefore affect both economic and health-related reactions to unanticipated health crises.",
       "note": null,
       "figure": "papers_web/figures/figure1_behavioral_divergence.svg",
       "links": {
@@ -191,7 +191,7 @@
         "slides": null,
         "code": null
       },
-      "doi": "10.1016/j.jfineco.2021.05.008",
+      "doi": "10.1016/j.jfineco.2021.05.039",
       "featured": false
     },
     {
@@ -237,7 +237,7 @@
       "themes": [
         "political-economy"
       ],
-      "abstract": "We examine how conflicts of interest (CoI)—financial, professional, or ideological stakes held by authors—affect the perceived credibility of economics research. Using a randomized survey of economists and the US public, we investigate how audiences react to research findings when the author is revealed to have interests in the outcome.\n\nOur findings reveal a significant \"conflict-of-interest discount\" in the marketplace of ideas: disclosure of conflicts reduces trust in research findings by 28%, with substantial variation by conflict type. We model the \"CoI Discount,\" estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.",
+      "abstract": "We examine how conflicts of interest (CoI)—financial, professional, or ideological stakes held by authors—affect the perceived credibility of economics research. A randomized survey of economists and the US public shows that CoI reduces trust in findings by 28%, with variation by conflict type. We model the \"CoI Discount,\" estimating that conflicted papers are worth 39% less than non-conflicted ones. These findings are validated through disclosure and citation analysis, a medical meta-analysis, and large-language model simulations. Our results highlight a credibility gap in economics research that is not eliminated by current disclosure practices.",
       "note": null,
       "figure": "papers_web/figures/conflict_discount_results.svg",
       "links": {
@@ -266,7 +266,7 @@
       "themes": [
         "governance"
       ],
-      "abstract": "We examine patterns of homophily—the tendency to associate with similar others—in foreign director appointments across 38 countries. Using a comprehensive dataset of international board appointments, we investigate whether firms preferentially appoint foreign directors from culturally similar countries and explore the implications of this homophily for board effectiveness and firm outcomes.\n\nOur findings reveal strong homophily patterns: firms are significantly more likely to appoint foreign directors from countries that share linguistic, religious, or colonial ties. This cultural matching is economically meaningful, with cultural proximity increasing appointment probability by 40-60%. We find that culturally similar foreign directors are associated with greater board attendance, more active committee participation, and improved firm performance, suggesting that cultural fit facilitates effective cross-border governance.",
+      "abstract": "We examine how similarity in institutional, legal, and social characteristics between a firm's and its directors' home countries, that is, country-pair homophily, affects foreign director appointments. We estimate a gravity model that includes economic and geographic proximity and find that country-pair homophily is a significant determinant of foreign director appointments to corporate boards. We also find that country-pair homophily limits the appointments of foreign directors from high-quality governance countries to firms located in low-quality governance countries, which may reduce the role of board internationalization in promoting the global convergence of governance practices. We analyze changes in foreign director appointments around the international adoption of IFRS and Norway's gender-quota rule and find a higher appointment likelihood for directors originating from countries that are institutionally and culturally similar to that of the firm. Our findings point to the critical role that country-pair homophily plays in matching directors to boards, with implications for the diffusion of governance practices globally.",
       "note": null,
       "figure": "papers_web/figures/boards_feather_results.svg",
       "links": {
@@ -277,7 +277,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1111/1475-679X.12416",
       "featured": false
     },
     {
@@ -295,7 +295,7 @@
         "governance",
         "reporting"
       ],
-      "abstract": "We examine corporate artificial intelligence (AI) disclosures to determine whether they reflect genuine operational AI implementation or represent empty marketing narratives. Using a comprehensive dataset of AI-related corporate disclosures from SEC filings and earnings calls, we analyze the determinants of AI disclosure intensity and test whether these disclosures are informationally valuable to investors.\n\nOur findings reveal two distinct patterns. Some firms make substantive AI disclosures aligned with actual implementation—these disclosures are associated with increased R&D spending, technology hiring, and measurable operational investments in AI capabilities. Other firms make generic, boilerplate AI disclosures with minimal substantive content or implementation—these \"smoke\" disclosures are primarily marketing-focused. We find that markets do not fully distinguish between signals and smoke, at least in the short term, suggesting potential mispricing of AI initiatives.",
+      "abstract": "Artificial Intelligence (AI) has emerged as a General Purpose Technology (GPT), yet significant uncertainty around firms’ AI investment remains because the complementary investments required to realize its returns are largely intangible and difficult to verify. We examine the characteristics of firms that disclose AI activities, and whether these disclosures provide credible signals of firms’ underlying AI investments and their future economic outcomes. We document several key findings. First, firms that disclose AI activities are generally innovative, operate in AI-intensive industries, and face greater investor scrutiny. Second, AI disclosures are positively associated with subsequent operational efficiency and AI patent filings, even after accounting for firms’ investment in AI human capital. This indicates that disclosure not only provides a signal about a firm’s AI investment levels, but also about managers’ confidence in the expected returns of the investment. In cross-sectional tests, we find that AI disclosure appears to provide stronger signals when disclosure is about the use of AI in a firm’s products and services and when firms operate in industries that are less expected to use AI, and weaker signals when firms appear to be outsourcing their AI capabilities. Overall, our findings suggest that AI disclosures are informative about firms’ underlying AI investments and managers’ confidence in their payoffs, and that financial statement users could benefit from AI human capital disclosure.",
       "note": "Review of Accounting Studies (Conditionally Accepted)",
       "figure": "papers_web/figures/ai-disclosures-summary.svg",
       "links": {
@@ -315,14 +315,14 @@
       "authors": [
         "John Gallemore"
       ],
-      "year": 2022,
+      "year": 2024,
       "status": "published",
       "venue": "Management Science",
       "themes": [
         "taxation",
         "labor"
       ],
-      "abstract": "We examine how tax planning knowledge diffuses across firms through the labor market. Using comprehensive data on executive movements and tax planning outcomes, we investigate whether firms learn tax strategies from competitors by hiring employees who previously worked at firms with superior tax planning practices.\n\nOur evidence suggests that worker mobility is an important channel for knowledge transfer in tax planning. Firms that hire executives from highly effective tax planning firms subsequently adopt more sophisticated tax strategies and achieve better tax outcomes. This effect is strongest when the hiring firm operates in the same industry as the origin firm, suggesting that industry-specific tax knowledge transfers most effectively through labor market channels.",
+      "abstract": "We examine the extent to which the labor market facilitates the diffusion of tax-planning knowledge across firms. Using a novel data set of tax department employee movements between S&P 1500 firms, we find that firms experience an increase in their tax planning after hiring a tax employee from a tax-aggressive firm. This finding is robust to various research designs and specifications. Consistent with tax-planning knowledge driving the result, we find that the tax-planning benefits are more substantial when the employee is involved in a director-level role and has more experience. Further tests suggest that tax-planning knowledge is highly specific in nature: the increase in tax avoidance is larger when the hiring and former firms are similar (i.e., operating in the same sector or having similar foreign operations), and firms are more likely to hire tax department employees from firms with similar characteristics. Finally, we do not find that the prior firm's tax planning changes after the employee leaves the firm, suggesting that the tax-planning knowledge simply spreads to the hiring firm and does not leave the prior firm. Our study documents the first order role of the labor market in the diffusion of tax-planning knowledge across firms, and our findings suggest that tax department human capital is a central determinant of tax-planning outcomes.",
       "note": null,
       "figure": "papers_web/figures/tax_planning_results.svg",
       "links": {
@@ -333,8 +333,9 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
-      "featured": false
+      "doi": "10.1287/mnsc.2023.4741",
+      "featured": false,
+      "volume": "70(2)"
     },
     {
       "id": "regulatory-spillovers",
@@ -349,7 +350,7 @@
       "themes": [
         "taxation"
       ],
-      "abstract": "We examine how regulatory fragmentation across multiple tax jurisdictions creates spillover effects on corporate tax burdens. Using variation in tax policy adoption across states and countries, we study how firms operating in multiple jurisdictions face cumulative compliance costs and coordinated taxation that often results in higher overall tax burdens than would occur under harmonized systems.\n\nOur findings reveal significant spillover effects: firms operating in more regulatory fragmented environments face substantially higher effective tax rates and compliance costs. These effects are particularly pronounced for smaller firms with less sophisticated tax planning capacity. Additionally, we document that jurisdictions often fail to coordinate tax policies, leading to double-taxation and compliance burden spillovers that systematically disadvantage multi-jurisdictional operations.",
+      "abstract": "Increased corporation regulation in recent decades has raised the likelihood of regulatory oversight spillovers—the extent to which one agency's interactions with a regulated firm affects firm behaviors under the purview of another agency. We study how such spillovers can affect the mission of a specific regulator—the tax authority—using a measure of firm-specific exposure to fragmented regulation. Using a sample of publicly-traded U.S. firms, we document that regulatory fragmentation is associated with higher effective tax rates, indicating that non-IRS oversight constrains tax planning, which is the purview of the tax authority. This relation is increasing in the overall amount of regulation the firm faces and in the relative absence of alternative (e.g., capital market) monitors. Additionally, we observe that regulatory fragmentation is associated with lower IRS scrutiny and less variation in tax burdens within industries, suggesting that fragmented oversight impacts IRS monitoring efforts as well as industry competitive dynamics.",
       "note": "Under Review (2nd round): The Accounting Review",
       "figure": "papers_web/figures/regulatory-spillovers-summary.svg",
       "links": {
@@ -377,7 +378,7 @@
         "taxation",
         "reporting"
       ],
-      "abstract": "We examine how regulatory constraints affect investor information asymmetry. Using variation in regulatory stringency across industries and regions, we investigate whether more stringent regulation reduces divergence in investor beliefs about firm value by constraining managerial discretion and harmonizing information disclosure.\n\nOur findings reveal a non-monotonic relationship: moderate regulatory constraints reduce information asymmetry by limiting managerial discretion and improving disclosure standardization. However, extremely stringent regulation can increase asymmetry by creating complexity and compliance costs that limit information flow to smaller investors. The relationship is strongest in industries where regulatory constraints directly affect core business operations and decision-making.",
+      "abstract": "We examine how firms' aggregate regulatory exposure affects investor information asymmetry. Using a text-based measure of firm-specific exposure to federal regulations, we find that greater regulatory exposure reduces information asymmetry, as evidenced by narrower bid-ask spreads and decreased insider trading. This reduction arises because regulations constrain managerial discretion and stabilize firm operations, decreasing earnings volatility. However, these benefits weaken during periods of elevated policy uncertainty, under lax enforcement, and for politically active firms. Greater regulatory exposure also diminishes voluntary disclosures, suggesting regulatory constraints substitute for managerial transparency. Our findings highlight that the very regulations that raise firms' operating costs also make their markets more liquid, narrowing spreads by leaving investors less to disagree about.",
       "note": null,
       "figure": "papers_web/figures/regulation-consensus-summary.svg",
       "links": {
@@ -458,7 +459,7 @@
       "themes": [
         "reporting"
       ],
-      "abstract": "We examine how differences in financial reporting practices shape firm productivity. Using comprehensive data from the U.S. Census Bureau, tax return data from the Internal Revenue Service (IRS), and detailed financial records from Sageworks, we find that variation in reporting quality explains 10-20 percent of intra-industry total factor productivity dispersion. Leveraging new audit questions in the U.S. Census Bureau's 2021 Management and Organizational Practices Survey (MOPS), we find evidence of complementarity between the effects of financial audits and management practices to drive firm productivity.\n\nWe then examine the underlying mechanisms. First, audits function as a managerial technology, improving the precision of internal information and raising efficiency, with stronger effects in competitive, low-margin industries and among younger firms. Second, exploiting cross-state variation in tax incentives, we show that audits constrain underreporting and mitigate the downward bias in measured productivity. Together, these results highlight the underrated importance of financial reporting quality driving firm productivity.",
+      "abstract": "We examine how differences in financial reporting practices shape firm productivity. Using comprehensive data from the U.S. Census Bureau, tax return data from the Internal Revenue Service (IRS) and detailed financial records from Sageworks, we find that variation in reporting quality explains 10–20 percent of intra-industry total factor productivity dispersion. Leveraging new audit questions in the U.S. Census Bureau's 2021 Management and Organizational Practices Survey (MOPS), we find evidence of complementarity between the effects of financial audits and management practices to drive firm productivity. We then examine the underlying mechanisms. First, audits function as a managerial technology, improving the precision of internal information and raising efficiency, with stronger effects in competitive, low-margin industries and among younger firms. Second, exploiting cross-state variation in tax incentives, we show that audits constrain underreporting and mitigate the downward bias in measured productivity. Together, these results highlight the underrated importance of financial reporting quality driving firm productivity.",
       "note": null,
       "figure": "papers_web/figures/figure_1_key_results.svg",
       "links": {
@@ -535,7 +536,7 @@
       "themes": [
         "antitrust"
       ],
-      "abstract": "We examine how firms disclose information about merger risks in an era of increasing antitrust scrutiny. Using a comprehensive dataset of merger announcements and regulatory outcomes, we analyze whether firms strategically time merger announcements and how they disclosure potential antitrust challenges to markets.\n\nOur findings reveal that firms strategically manage merger disclosures based on expected antitrust scrutiny. Firms facing higher antitrust risk are more likely to provide detailed antitrust risk disclosures and make their announcements during periods of lower market attention. These disclosures significantly affect investor assessments of merger success probability and deal returns, suggesting that disclosure quality plays an important role in merger outcomes.",
+      "abstract": "Antitrust authorities search public documents to discover anticompetitive mergers. Thus, investor disclosures may alert them to deals that would otherwise go undetected, creating disincentives for managers to divulge certain transactions. We study this behavior in publicly traded US companies. First, we employ a regression discontinuity approach to estimate the effect of mandatory disclosures. We find that releasing information to investors poses antitrust risk. Second, we introduce a method for measuring undisclosed mergers that relies on financial accounting reporting requirements. We find that undisclosed mergers total $1.85 trillion between 2002 and 2016.",
       "note": null,
       "figure": "papers_web/figures/figure1_key_results.svg",
       "links": {
@@ -546,7 +547,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1257/mic.20220064",
       "featured": true
     },
     {
@@ -562,7 +563,7 @@
       "themes": [
         "antitrust"
       ],
-      "abstract": "We examine how private equity (PE) firms exploit divergences between accounting and economic measures of control to avoid triggering antitrust scrutiny. When PE firms acquire multiple competitors within the same industry, they often structure transactions to maintain formally separate operating units while exercising significant economic control over pricing and strategic decisions.\n\nOur analysis reveals that accounting-based control measures—which focus on voting rights and formal ownership structures—systematically underestimate the economic control that PE firms exercise over portfolio companies. This measurement divergence creates an antitrust loophole: PE firms can coordinate substantially competitive behavior across portfolio companies while technically maintaining separate entities that escape consolidation-based competition metrics.",
+      "abstract": "Agencies and legislators have raised concerns that acquisitions backed by private equity (PE) threaten competition, but few, if any, have offered explanations as to why they pose a unique threat. In this article, we argue that many PE-backed acquisitions may avoid antitrust enforcement because they escape detection. Under the Hart-Scott-Rodino Antitrust Improvements Act, parties intending to merge must notify federal authorities and wait for clearance. However, various exemptions exist based on the size of the transaction, parties involved, and proportion of control conferred by the merger. Recent work demonstrates that to police mergers effectively, agencies must be informed about transactions in their incipiency, meaning that in many economically important industries, the contours of the premerger notification program under the Act are, in practice, the same as the contours of the substantive legal standard. We show that when the Act's exemptions are applied to PE's standard investment structure, which use an array of intermediate special purpose vehicles to minimize taxes, share risks, and distribute fees, PE-backed acquisitions that would otherwise be reportable may be exempt. We support our argument with merger and filing data.",
       "note": null,
       "figure": "papers_web/figures/misaligned_control_results.svg",
       "links": {
@@ -581,9 +582,9 @@
       "title": "The Cost of Convenience: Ridehailing and Traffic Fatalities",
       "authors": [
         "Yael V. Hochberg",
-        "Livia Hanyi Yi"
+        "Hanyi Livia Yi"
       ],
-      "year": 2022,
+      "year": 2023,
       "status": "published",
       "venue": "Journal of Operations Management",
       "volume": "69(5)",
@@ -591,7 +592,7 @@
         "antitrust",
         "political-economy"
       ],
-      "abstract": "We examine the impact of ridehailing services (Uber and Lyft) on traffic fatalities using variation in the timing of ridehailing entry across U.S. cities. While proponents argue that ridehailing reduces drunk driving by providing convenient alternatives to driving under the influence, the net effect on traffic safety depends on how ridehailing affects overall vehicle miles traveled (VMT) and traffic congestion.\n\nUsing difference-in-differences analysis exploiting staggered entry timing, we find that ridehailing entry is associated with approximately 3% increase in total traffic fatalities and fatal accidents (2-4% range). This increase is driven primarily by higher fatality rates in cities with greater ridehailing penetration and during peak usage hours. The evidence suggests that increased VMT and congestion from ridehailing services offset any reduction in drunk-driving incidents, resulting in a net increase in traffic deaths. Back-of-the-envelope estimates suggest an annual cost of approximately $5.33 billion to $13.24 billion in human lives.",
+      "abstract": "We examine the effect of the introduction of ridehailing in US cities on fatal traffic accidents. The arrival of ridehailing is associated with an approximately 3% increase in the number of fatal accidents, for both vehicle occupants and pedestrians. Consistent with ridehailing increasing road usage, we find that its introduction is associated with increases in proxies for traffic congestion and with new car registrations. Consistent with a driver quality channel, accident increases are concentrated in ridehailing-eligible vehicles and those with passenger configurations suggestive of ridehailing. Back-of-the-envelope estimates of the annual cost in human lives range from $5.33B to $13.24B. We propose various operational and policy prescriptions for the regulation of ridehailing operations that may help limit such externalities.",
       "note": null,
       "figure": "papers_web/figures/ridehailing_results.svg",
       "links": {
@@ -602,7 +603,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1002/joom.1221",
       "featured": false
     },
     {
@@ -619,7 +620,7 @@
       "themes": [
         "ethics"
       ],
-      "abstract": "We study how ethical declarations shape market behavior in a laboratory setting. A privately informed seller observes an asset value and issues a report before a first-price auction. Bidders see the report and submit bids. Misreporting is costly to the seller (quadratic in the bias). In one treatment, sellers must sign an ethical statement that the report is truthful before trading; refusal ends the round with no trade. The design is pre-registered; roles rotate and matching is random.\n\nSigning an ethical statement does not meaningfully reduce sellers’ misreporting. It shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when the ethical statement is present, learn more slowly about the seller’s strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. Disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. We introduce \"ethical noise\": shifts in beliefs without corresponding shifts in behavior that distort market outcomes.",
+      "abstract": "We study how ethical declarations shape market behavior using a laboratory setting where privately informed sellers issue reports before a first-price auction. Signing an ethical statement does not meaningfully reduce sellers' misreporting. Instead, it shifts beliefs: bidders place more weight on reports and bid more aggressively, moving surplus toward sellers. Bidders do not fully undo reporting bias and, when an ethical statement is present, learn more slowly about the seller's strategic behavior. Using a structural model of heterogeneous lying costs, we show that markets would be more price-efficient if bidders rationally internalized the distribution of lying costs. However, disclosure interventions aimed at enhancing ethical conduct need not reduce bias and can disadvantage bidders. Instead, they introduce 'ethical noise': shifts in beliefs without corresponding shifts in behavior that distort market outcomes.",
       "note": "Revision Requested: Accounting, Organizations and Society",
       "figure": "papers_web/figures/ethics_illusions_results.svg",
       "links": {
@@ -647,7 +648,7 @@
         "ethics",
         "labor"
       ],
-      "abstract": "Financial misconduct is usually a team activity. It depends on coordination among insiders—face-to-face interaction, informal trust, repeated contact. We use the sudden shift to remote work during COVID-19 to test how workplace organization affects collusion and fraud. We build a firm-level measure of work-from-home feasibility (from job postings and workforce data, mapped to O*NET teleworkability by occupation) and run a difference-in-differences design around 2020.\n\nFirms that could operate more remotely experienced large post-2020 declines in misconduct. The result holds for Rule 10b-5 class actions, fraudulent restatements, and discretionary accruals; we measure misconduct in the year committed, not detected. The decline is consistent with remote work disrupting the “technology of collusion”: physical separation raises coordination costs, moves communication onto auditable channels, and weakens the informal glue that sustains illicit cooperation. Cross-sectional tests support this mechanism—stronger declines in teamwork-intensive firms, firms with effective internal controls (where fraud typically requires collusion to override safeguards), and firms with weaker pre-COVID employee perceptions of culture and leadership. Detection lags also fell for high-WFH firms, and we find no evidence that monitoring of financial reporting weakened. Overall, financial misconduct is sensitive to organizational structure; remote work made collusion harder and misconduct fell.",
+      "abstract": "Financial misconduct is often a team activity, facilitated by face-to-face interactions, shared norms, and trust. We exploit the sudden shift to remote work during COVID-19 to examine how workplace organization shapes collusion and financial misconduct. Using a novel firm-level measure of work-from-home feasibility, we find that firms that are more able to operate remotely experienced large post-2020 declines in misconduct. This decline is found across multiple misreporting proxies and is robust to various alternative measures of remote work. Cross-sectional tests indicate stronger declines in teamwork-intensive firms, firms with effective internal controls, and firms with weaker pre-COVID employee perceptions of culture and leadership, consistent with environments more reliant on dense in-person relational coordination. Overall, our findings reflect that financial misconduct is a team activity, sensitive to the organizational structure of the firm, with important implications for governance and organizational design.",
       "note": null,
       "figure": "papers_web/figures/fraud_distance_results.svg",
       "links": {
@@ -663,7 +664,7 @@
     },
     {
       "id": "imitation-innovation",
-      "title": "Imitation or Innovation? Strategic Mimicry in Corporate Earnings Calls",
+      "title": "Imitation or Information? Strategic Mimicry in Earnings Conference Calls",
       "authors": [
         "Khrystyna Bochkay",
         "Roman Chychyla",
@@ -676,7 +677,7 @@
       "themes": [
         "reporting"
       ],
-      "abstract": null,
+      "abstract": "We examine whether and how firms mimic peers' disclosures in earnings calls, integrating theories of informational cascades, herding behavior, and institutional isomorphism within a Bayesian disclosure framework. We develop a state-of-the-art semantic similarity measure based on large language models to capture subtle similarities in earnings call language. Exploiting the staggered timing of earnings calls, we find that firms adopt disclosure language resembling that of peers whose earlier calls elicited positive investor reactions, particularly in portions of the discussion that are more qualitative (less numbers-heavy), that exhibit a more positive tone, and that discuss performance. While this mimicry yields immediate benefits, generating more positive short-term market responses around the mimicking firms' own earnings calls, it is associated with weaker subsequent operating performance and has no association with capital investments. Our findings highlight an underappreciated strategic dimension of corporate communication: firms can monitor competitors' successful narratives and actively update their disclosure strategies to influence short-term investor perceptions.",
       "links": {},
       "doi": null,
       "featured": false,
@@ -684,18 +685,18 @@
     },
     {
       "id": "better-in-person",
-      "title": "Better in Person? Does In-Person Screening Affect Who Gets Hired?",
+      "title": "Better in Person? The Effects of In-Person Screening on Hiring Outcomes",
       "authors": [
         "Laura Giuliano",
         "Andrew Leone"
       ],
-      "year": 2021,
+      "year": 2023,
       "status": "working",
       "venue": null,
       "themes": [
         "labor"
       ],
-      "abstract": null,
+      "abstract": "How are hiring decisions affected by a reduction in the cost of in-person job screening? In theory, this innovation could improve both efficiency and equity by reducing employers' use of stereotypes and imperfect quality signals (e.g., educational pedigree). But since greater weight might be placed on attributes like speech, appearance, or social skills, biases could be introduced or magnified. We examine the introduction of a labor-market intermediary, the Accounting Rookie Camp (\"ARC\"), that greatly facilitated in-person screening in the academic market for PhD accountants. Using 11 years of data on the supply, demand, and market outcomes for new PhDs, we estimate models that leverage variation in the timing of ARC adoption across both recruiting and degree-granting institutions. We find that ARC adoption reduced the importance of degree-school rank and adviser connections for obtaining a high-quality job, without lowering the bar for research productivity. However, ARC's equalizing effect occurred only within the predominant demographic group: males with English-sounding names. Between groups, ARC penalized candidates with non-English names and exacerbated placement gaps by gender. It also created a premium to physical attractiveness.",
       "links": {},
       "doi": null,
       "featured": false,
@@ -717,7 +718,7 @@
         "labor",
         "reporting"
       ],
-      "abstract": null,
+      "abstract": "This survey analyzes literature at the intersection of corporate disclosure and labor economics. While accounting research has long studied how executives and directors influence corporate reporting, recent work has started to explore lower-level employees, e.g., the “rank-and-file,” as both producers and users of corporate information. We introduce a Labor Life Cycle (LLC) framework to organize employment relationships into four stages: Human Capital Development, Search and Matching, Employment and Productivity, and Turnover and Retirement. At each stage, we outline the principal economic theories, map them to the accounting research, and then identify open questions. Three themes emerge from our review. First, rank-and-file labor shapes the corporate information environment: workforce quality, compensation, and stability are first-order determinants of reporting and audit outcomes. Second, financial reporting affects the labor market, influencing job search, wage bargaining, and mobility. Third, the feedback loop between reporting and labor decisions (i.e., when disclosure affects employment and employment affects disclosure) remains a central open question. The LLC framework provides accounting researchers with a structured introduction to the economic theories that underpin work on rank-and-file employees as well as identifies findings and open questions where accounting researchers are well-positioned to contribute.",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6390718"
       },
