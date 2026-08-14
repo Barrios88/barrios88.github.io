@@ -1,0 +1,51 @@
+name: Link check
+
+# Weekly crawl of all page links (DOIs, SSRN/NBER, journal replication packages,
+# media coverage, internal pages) to catch link rot. Runs on a schedule and on
+# demand; opens/updates a tracking issue if broken links are found (never blocks).
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Mondays 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Resolve root-relative/internal links against the live site; accept
+          # bot-blocking / rate-limit statuses. Exclude hosts that reject crawlers
+          # or sit behind auth/paywalls (they 403 for bots but work for humans).
+          args: >-
+            --no-progress
+            --base-url https://johnmbarrios.com/
+            --accept 200,206,429,403
+            --exclude ssrn\.com
+            --exclude openicpsr\.org
+            --exclude services\.informs\.org
+            --exclude wsj\.com
+            --exclude economist\.com
+            --exclude linkedin\.com
+            --exclude twitter\.com
+            --exclude x\.com
+            "*.html"
+            "papers_web/*.html"
+          fail: false
+
+      - name: Open an issue if links are broken
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links found on the site
+          content-filepath: ./lychee/out.md
+          labels: link-rot, automated

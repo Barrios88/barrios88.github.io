@@ -1,0 +1,37 @@
+name: Build check
+
+# Fails if the generated files (research.html, barrios.bib, robots.txt, and the
+# per-paper JSON-LD in papers_web/) are out of date with data/papers.json —
+# i.e. someone edited the data or template but forgot to run `node build.mjs`.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate from data/papers.json
+        run: node build.mjs
+
+      - name: Fail if generated files are stale
+        run: |
+          # sitemap.xml is intentionally excluded — its <lastmod> is today's date.
+          if ! git diff --quiet -- research.html barrios.bib robots.txt papers_web/; then
+            echo "::error::Generated files are out of date. Run 'node build.mjs' and commit the result (research.html, barrios.bib, robots.txt, papers_web/ JSON-LD)."
+            git --no-pager diff --stat -- research.html barrios.bib robots.txt papers_web/
+            exit 1
+          fi
+          echo "Generated files are up to date."
