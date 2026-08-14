@@ -133,13 +133,20 @@ function card(p) {
                 <script type="text/x-bibtex" id="bib-${esc(p.id)}">
 ${bibtex(p)}
                 </script>`;
-  // any paper with a figure gets a thumbnail column (desktop only)
+  // any paper with a figure gets a thumbnail column (desktop only).
+  // Link the (decorative) thumb only when there is a paper page to open;
+  // otherwise render a non-interactive figure so it never opens a raw SVG.
   const hasThumb = !!p.figure;
-  const inner = hasThumb
-    ? `                <div class="paper-body">\n${body}\n                </div>
-                <a class="paper-thumb" href="${esc(p.links?.page || p.figure)}" tabindex="-1" aria-hidden="true">
-                    <img src="${esc(p.figure)}" alt="${esc(p.title)} — key figure" loading="lazy">
+  const thumbImg = `<img src="${esc(p.figure)}" alt="${esc(p.title)} — key figure" loading="lazy">`;
+  const thumb = p.links?.page
+    ? `                <a class="paper-thumb" href="${esc(p.links.page)}" tabindex="-1" aria-hidden="true">
+                    ${thumbImg}
                 </a>`
+    : `                <div class="paper-thumb" aria-hidden="true">
+                    ${thumbImg}
+                </div>`;
+  const inner = hasThumb
+    ? `                <div class="paper-body">\n${body}\n                </div>\n${thumb}`
     : body;
   return `            <article class="paper${hasThumb ? ' has-thumb' : ''}" id="${esc(p.id)}" style="view-transition-name:p-${esc(p.id)}"
                 data-year="${p.year}" data-status="${esc(p.status)}"${cites}

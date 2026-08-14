@@ -877,7 +877,7 @@ a.cite-badge:hover { color: var(--blue); border-bottom-color: var(--blue); }
   transition: border-color .15s ease, box-shadow .15s ease;
 }
 
-.paper-thumb:hover {
+a.paper-thumb:hover {
   border-color: var(--blue);
   box-shadow: 0 2px 10px rgba(15,17,21,0.07);
 }
