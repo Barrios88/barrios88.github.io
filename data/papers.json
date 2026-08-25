@@ -90,13 +90,13 @@
         "Miao Liu"
       ],
       "year": 2026,
-      "status": "forthcoming",
+      "status": "published",
       "venue": "Journal of Accounting Research",
       "themes": [
         "entrepreneurship"
       ],
-      "abstract": "We examine the spillover effects of local initial public offerings (IPOs) on new business formation. Our findings reveal a substantial 1% to 4% increase in new business registrations following the introduction of new IPOs. These effects are particularly pronounced in counties facing higher economic uncertainty, highlighting the vital role of IPOs in conveying crucial information, whether through signaling potential success or providing direct information. Moreover, our research indicates that these effects extend beyond mere \"signaling of success\" and are largely driven by the valuable information transmitted by the IPO itself. Specifically, new business registrations are significantly influenced by the extent of Edgar downloads related to the IPO firm's public disclosures and the informational content within the IPO firm's S-1 disclosure. A comprehensive field survey further supports these conclusions, affirming the presence of information spillovers from local IPOs that positively impact new business formation.",
-      "note": "Journal of Accounting Research (Accepted)",
+      "abstract": "We examine the spillover effects of local initial public offerings (IPOs) on new business formation. An IPO in a local area is associated with a 1%–4% increase in new business registrations, and this effect is particularly pronounced in counties facing higher economic uncertainty. New business registrations are significantly influenced by the extent of EDGAR downloads related to the IPO firm's public disclosures and the information in the IPO firm's S-1 disclosure. The findings highlight the role of IPOs in conveying crucial information through signaling of potential success prospects and additional provision of information through disclosures. A field survey of 503 entrepreneurs further supports these conclusions.",
+      "note": null,
       "figure": "papers_web/figures/informing_entrepreneurs_mechanism.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3640736",
@@ -106,7 +106,7 @@
         "slides": null,
         "code": null
       },
-      "doi": null,
+      "doi": "10.1111/1475-679X.70082",
       "featured": false
     },
     {
