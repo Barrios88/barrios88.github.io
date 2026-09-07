@@ -208,7 +208,7 @@
         "political-economy",
         "reporting"
       ],
-      "abstract": "We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January 1, 2015, the Journal of Accounting Research ( JAR ) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.\n\nConsistent with disclosure disciplining authors, post-mandate JAR abstracts are about one Gunning–Fog grade more readable—roughly one-third of a standard deviation—and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, JAR shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.",
+      "abstract": "We examine how research changes when a journal requires authors to document their data and provide the code used to build their samples. The Journal of Accounting Research (JAR) introduced this requirement for all empirical submissions in January 2015, while its closest rivals did not. We study roughly 4,600 articles from six journals around the policy change.\n\nConsistent with disclosure limiting authors' discretion, JAR papers published after the mandate are easier to read, rely less on hedging language, and report results more comprehensively. The reduction in hedging is largest for studies with the weakest headline results. Consistent with the policy changing who submits, JAR moves toward more novel work from scholars at top research universities; its articles receive fewer citations overall, but from more prominent outlets. The writing effects are absent from exempt theory articles and reappear when another journal adopts a comparable requirement. In sum, increasing the openness of the research process influences not only what can be checked and reproduced, but also what gets written and who ultimately publishes in which outlets.",
       "note": "New working paper — preliminary draft",
       "figure": "papers_web/figures/mandated-transparency-eventstudy.png",
       "links": {
@@ -221,7 +221,7 @@
       },
       "doi": null,
       "featured": true,
-      "draft": "July 2026"
+      "draft": "September 2026"
     },
     {
       "id": "conflict-discount",

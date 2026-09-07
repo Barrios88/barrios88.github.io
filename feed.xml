@@ -5,8 +5,17 @@
   <link href="https://johnmbarrios.com/research.html"/>
   <link rel="self" href="https://johnmbarrios.com/feed.xml"/>
   <id>https://johnmbarrios.com/research.html</id>
-  <updated>2026-08-01T00:00:00Z</updated>
+  <updated>2026-09-01T00:00:00Z</updated>
   <author><name>John Manuel Barrios</name></author>
+  <entry>
+    <title>Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy</title>
+    <link href="https://johnmbarrios.com/papers_web/paper_mandated_transparency.html"/>
+    <id>https://johnmbarrios.com/papers_web/paper_mandated_transparency.html</id>
+    <updated>2026-09-01T00:00:00Z</updated>
+    <summary>Working paper · September 2026 — with Roman Chychyla — We examine how research changes when a journal requires authors to document their data and provide the code used to build their samples. The Journal of Accounting Research (JAR) introduced this requirement for all empirical submissions in January 2015, while its closest rivals did not. We study roughly 4,600 articles from six journals around the policy change.
+
+Consistent with disclosure limiting authors&#39; discretion, JAR papers published after the mandate are easier to read, rely less on hedging language, and report results more comprehensively. The reduction in hedging is largest for studies with the weakest headline results. Consistent with the policy changing who submits, JAR moves toward more novel work from scholars at top research universities; its articles receive fewer citations overall, but from more prominent outlets. The writing effects are absent from exempt theory articles and reappear when another journal adopts a comparable requirement. In sum, increasing the openness of the research process influences not only what can be checked and reproduced, but also what gets written and who ultimately publishes in which outlets.</summary>
+  </entry>
   <entry>
     <title>Accounting Under Pressure: Recognition Rules, Insurer Bond Sales, and Real Investment</title>
     <link href="https://johnmbarrios.com/papers_web/paper_accounting_pressure.html"/>
@@ -29,15 +38,6 @@ Using bond-level holdings data, we find that a one-standard-deviation increase i
     <id>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6390718</id>
     <updated>2026-07-01T00:00:00Z</updated>
     <summary>Working paper · July 2026 — with Jung Ho Choi, Carolyn Deller, Joseph Pacelli, Heidi A. Packard — This survey analyzes literature at the intersection of corporate disclosure and labor economics. While accounting research has long studied how executives and directors influence corporate reporting, recent work has started to explore lower-level employees, e.g., the “rank-and-file,” as both producers and users of corporate information. We introduce a Labor Life Cycle (LLC) framework to organize employment relationships into four stages: Human Capital Development, Search and Matching, Employment and Productivity, and Turnover and Retirement. At each stage, we outline the principal economic theories, map them to the accounting research, and then identify open questions. Three themes emerge from our review. First, rank-and-file labor shapes the corporate information environment: workforce quality, compensation, and stability are first-order determinants of reporting and audit outcomes. Second, financial reporting affects the labor market, influencing job search, wage bargaining, and mobility. Third, the feedback loop between reporting and labor decisions (i.e., when disclosure affects employment and employment affects disclosure) remains a central open question. The LLC framework provides accounting researchers with a structured introduction to the economic theories that underpin work on rank-and-file employees as well as identifies findings and open questions where accounting researchers are well-positioned to contribute.</summary>
-  </entry>
-  <entry>
-    <title>Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy</title>
-    <link href="https://johnmbarrios.com/papers_web/paper_mandated_transparency.html"/>
-    <id>https://johnmbarrios.com/papers_web/paper_mandated_transparency.html</id>
-    <updated>2026-07-01T00:00:00Z</updated>
-    <summary>Working paper · July 2026 — with Roman Chychyla — We examine what happens to research when a journal requires authors to document their data and share the code that builds their samples. Beginning January 1, 2015, the Journal of Accounting Research ( JAR ) imposed such a rule on all empirical submissions while its closest competitors did not. We compare roughly 4,600 articles across six journals before and after the mandate.
-
-Consistent with disclosure disciplining authors, post-mandate JAR abstracts are about one Gunning–Fog grade more readable—roughly one-third of a standard deviation—and papers stake fewer hedged claims and report more completely. The hedging decline is concentrated in contribution language among papers with the weakest headline evidence. Consistent with the mandate re-sorting who submits, JAR shifts toward more novel work by a more elite author pool, and its papers are cited less in raw counts but by more prominent outlets. The writing effects are absent from exempt theory papers and reappear when a second journal adopts its own mandate. Overall, opening the research pipeline changes not just what can be checked and replicated, but what gets written and who publishes where.</summary>
   </entry>
   <entry>
     <title>One Asset, Two Financial Systems: Stablecoins and the Transmission of Runs between Decentralized and Traditional Finance</title>
