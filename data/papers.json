@@ -511,8 +511,8 @@
       "title": "Staggeringly Problematic: A Primer on Staggered DiD for Accounting Researchers",
       "authors": [],
       "year": 2026,
-      "status": "working",
-      "venue": null,
+      "status": "forthcoming",
+      "venue": "Accounting Horizons",
       "themes": [
         "reporting"
       ],
@@ -526,9 +526,9 @@
         "slides": null,
         "code": "code.html"
       },
+      "note": "Accounting Horizons (Conditionally Accepted)",
       "doi": null,
-      "featured": false,
-      "draft": "August 2026"
+      "featured": false
     },
     {
       "id": "midnight-mergers",
