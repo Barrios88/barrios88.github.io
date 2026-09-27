@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI &amp; Research — John Manuel Barrios</title>
-    <meta name="description" content="Using AI responsibly in accounting research: John Manuel Barrios's PhD seminar on Claude Code and the open-source Barrios Skills toolkit for empirical researchers.">
+    <meta name="description" content="John Manuel Barrios on artificial intelligence and the research process: talks, research, doctoral teaching, and open-source tools for rigorous empirical work.">
     <link rel="canonical" href="https://johnmbarrios.com/ai-research.html">
     <meta property="og:title" content="AI &amp; Research — John Manuel Barrios">
-    <meta property="og:description" content="Using AI responsibly in accounting research: doctoral teaching and an open-source toolkit of 46 agent skills plus a WRDS connector.">
+    <meta property="og:description" content="Talks, research, teaching, and open-source tools focused on using artificial intelligence without giving up verification, judgment, or researcher ownership.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://johnmbarrios.com/ai-research.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -53,10 +53,10 @@
     <section class="page-hero ph-ai">
         <div class="wrap">
             <div class="eyebrow">AI &amp; Research</div>
-            <h1>Using AI Responsibly in Accounting Research</h1>
+            <h1>AI and the Research Process</h1>
             <p class="lede">
-                Agentic AI tools are changing how empirical research gets done. This page collects my
-                work on using them well: doctoral teaching, and an open-source toolkit for researchers.
+                Talks, research, teaching, and tools focused on using artificial intelligence without
+                giving up verification, judgment, or researcher ownership.
             </p>
         </div>
     </section>
@@ -64,17 +64,73 @@
     <main id="main" tabindex="-1" class="main">
         <div class="wrap">
 
-            <div class="block prose">
-                <h2 class="section-label">Approach</h2>
+            <nav class="ai-jump" aria-label="On this page">
+                <a href="#ideas">Ideas</a>
+                <a href="#talks">Talks &amp; Slides</a>
+                <a href="#research">Research &amp; Writing</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#tools">Tools &amp; Experiments</a>
+            </nav>
+
+            <div class="block prose" id="ideas">
+                <h2 class="section-label">Ideas and Approach</h2>
                 <p>
-                    AI agents can compress the mechanical parts of empirical work — literature reviews,
-                    data pipelines, replication, drafting — but they do not lower the bar for what counts
-                    as evidence. The standards are the same as they have always been: every number
-                    verified, every step reproducible, every claim owned by the researcher. My teaching
-                    and tools focus on workflows that get the speed without giving up the rigor.
+                    AI is rapidly lowering the cost of producing analysis, code, and prose. It is not
+                    lowering the standard for evidence. As plausible outputs become easier to produce,
+                    verification, judgment, and claim ownership become more important—and often more
+                    costly. Researchers still have to decide which questions are worth pursuing, which
+                    evidence is credible, and which claims they are willing to put their names behind.
+                </p>
+                <p>
+                    My work in this area examines both sides of that change: how AI affects the production
+                    and communication of knowledge, and how researchers can use agentic tools while
+                    preserving transparent, reproducible workflows. The objective is not automation for
+                    its own sake. It is to use the technology where it expands careful inquiry while
+                    retaining human responsibility for the result.
                 </p>
             </div>
 
+            <section class="block" id="talks">
+                <h2 class="section-label">Talks and Slides</h2>
+                <article class="ai-feature">
+                    <div class="entry-kicker">Featured Keynote &middot; University of Georgia &middot; September 2026</div>
+                    <h3>Trust, but Verify: Accounting and Finance Research in the Age of AI</h3>
+                    <p>
+                        AI expands the set of ideas, analyses, and claims that researchers can produce.
+                        The resulting constraint is increasingly the capacity to verify those outputs,
+                        exercise judgment over them, and take ownership of the claims that survive. This
+                        talk develops that argument and considers its implications for research design,
+                        doctoral training, collaboration, and the marketplace of ideas.
+                    </p>
+                    <div class="ai-feature-meta">
+                        Keynote slides &middot; 27 pages &middot; PDF
+                    </div>
+                    <div class="entry-links">
+                        <a class="primary-link" href="slides/UGA_Keynote_Trust_but_Verify_2026.pdf" target="_blank" rel="noopener">View slides &#8594;</a>
+                        <a href="slides/UGA_Keynote_Trust_but_Verify_2026.pdf" download>Download PDF</a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="block" id="research">
+                <h2 class="section-label">Research and Writing</h2>
+                <div class="entry">
+                    <div class="entry-kicker">Forthcoming &middot; Review of Accounting Studies</div>
+                    <h3><a href="papers_web/paper_ai_disclosures.html">Signals or Smoke? The Determinants and Informativeness of Corporate Artificial Intelligence (AI) Disclosures</a></h3>
+                    <p>
+                        With John Campbell, Ryan Grant Johnson, and Christine Liu. We examine whether
+                        corporate AI disclosures provide credible information about firms' underlying AI
+                        investments and future economic outcomes, or primarily reflect inexpensive claims.
+                    </p>
+                    <div class="entry-links">
+                        <a href="papers_web/paper_ai_disclosures.html">Paper page &#8594;</a>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5133107" target="_blank" rel="noopener">SSRN</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block" id="teaching">
+                <h2 class="section-label">Teaching</h2>
             <div class="entry">
                 <div class="entry-kicker">Yale SOM &middot; PhD Intensive</div>
                 <h3>Claude Code for Accounting Research</h3>
@@ -97,7 +153,10 @@
                     <a href="https://johnmbarrios.com/claude-code-accounting/">Course site &#8594;</a>
                 </div>
             </div>
+            </section>
 
+            <section class="block" id="tools">
+                <h2 class="section-label">Tools and Experiments</h2>
             <div class="entry">
                 <div class="entry-kicker">Open Source &middot; Toolkit</div>
                 <h3>Barrios Skills: An AI Agent Toolkit for Research</h3>
@@ -112,6 +171,7 @@
                     <a href="https://barrios88.github.io/barrios-skills/" target="_blank" rel="noopener">Explore the Toolkit</a>
                 </div>
             </div>
+            </section>
 
         </div>
     </main>

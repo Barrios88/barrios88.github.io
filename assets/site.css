@@ -513,6 +513,81 @@ a { color: var(--yale); text-decoration: none; }
   cursor: default;
 }
 
+/* ── AI & Research page ── */
+.ai-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.ai-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 0.38rem 0.78rem;
+  border: 1px solid var(--rule-dark);
+  border-radius: 999px;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.ai-jump a:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  background: rgba(29,99,216,0.04);
+}
+
+.ai-feature {
+  position: relative;
+  padding: 2.25rem;
+  border: 1px solid var(--rule-dark);
+  border-top: 3px solid var(--yale);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,53,107,0.06);
+}
+
+.ai-feature h3 {
+  max-width: 24em;
+  margin-bottom: 0.75rem;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.ai-feature p {
+  max-width: 49em;
+  margin-bottom: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.ai-feature-meta {
+  margin-bottom: 1.1rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.entry-links a.primary-link {
+  color: #ffffff;
+  background: var(--yale);
+  border-color: var(--yale);
+}
+
+.entry-links a.primary-link:hover {
+  color: #ffffff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
 /* ── Footer ── */
 .site-footer {
   background: var(--yale);
@@ -550,6 +625,7 @@ a { color: var(--yale); text-decoration: none; }
   .site-header .wrap { height: auto; padding-top: 0.9rem; padding-bottom: 0.9rem; }
   .site-nav { gap: 0.5rem 1.1rem; width: 100%; flex-wrap: wrap; overflow: visible; }
   .main { padding: 3rem 0 3.5rem; }
+  .ai-feature { padding: 1.5rem; }
 }
 
 /* ─────────────────────────────────────────────────────────
