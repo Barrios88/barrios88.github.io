@@ -1,9 +1,10 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-26",
   "counts": {
     "licensing": 104,
     "pe-accounting": 0,
-    "gig-economy": 98,
+    "gig-economy": 100,
+    "informing-entrepreneurs": 16,
     "hustling-home": 4,
     "civic-capital": 275,
     "risk-politics": 401,
@@ -17,7 +18,7 @@
     "taxation-venture-capital": 0,
     "licensing-reform": 0,
     "accounting-pressure": 0,
-    "staggered-did": 230,
+    "staggered-did": 231,
     "midnight-mergers": 4,
     "ridehailing": 54,
     "ethics-illusions": 0,
