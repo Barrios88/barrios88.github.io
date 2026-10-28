@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer"><title>Private</title>
+<style>
+:root{--bg:#f5f4f0;--surface:#fff;--ink:#1c2128;--muted:#5d6670;--line:#dcd9d1;--accent:#2a4f7a;--err:#8d3527;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#14171b;--surface:#1c2026;--ink:#e4e6e9;--muted:#9aa3ad;--line:#2f353d;--accent:#86b0dc;--err:#e59585;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;display:grid;place-items:center;min-height:100vh;padding-inline:16px}
+body.txt{display:block;padding-block:20px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;max-width:100ch;margin:0 auto}
+form{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px;width:min(360px,100%)}
+h1{font-size:18px;margin:0}p{margin:0;color:var(--muted);font-size:14px}
+input,button{font:inherit;padding:9px 11px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+button{background:var(--accent);color:var(--bg);border-color:var(--accent);cursor:pointer;font-weight:600}
+.e{color:var(--err);font-size:14px;min-height:1.2em}
+</style></head><body>
+<form id="f"><h1>Private page</h1><p>Enter the password you were given.</p>
+<input id="pw" type="password" autocomplete="current-password" aria-label="Password" autofocus><button>Open</button><div class="e" id="e"></div></form>
+<script>
+const P={"salt": "oA53Qei1q4OfeL2l0xW8eg==", "iv": "6ImwWkuUQXZx09fE", "iter": 600000, "mode": "text", "ct": "Vpr3AcH/fOel+JvO5vSj/yLwxA0bf17s+PNSQG70lD5ydttx6W67usyr7Jy/+oK/GxwJC8y1X2kfvbs+kla+r8RwhaXgTLWuKnguOkFM4TNGGpkkkMBuKGS/qcVdceppUjcRQ05fmlEz3iXft/nkh9Lg+3BZObbLv6nkCyd2mhhlh7k4w/soiNNylw6P9ZHkFQiUW0FK093IGpF8FTg8khH92u0Z3S8WLew6kvml1vNhIVV8rvKcsJtLDD1JqCvZyCZf+hWCRTfLgGCnYzpO1uEEWgrbT3UWUYTAFVa+R10xyhmzhv4s/9Q3EyhajDI87oyAVXyWxQllmKkyH0STVwrBxabUNNNTpf0AfbFkYqlTbXaDHEbX5OiTyvOlxUoL6ZH1u1BQYlQDpaHeTNwpQYZqHzTdzQ+GJIui6dQzXauMpWnH9CArpx0MlwSn5I3pMlspD0xfu2JW9OJsbvDy/LgDYzArzpEkDZlVs68KQXljTlKgnnzAynixHCwzaW6eMJcjm1vIaRRvNs3QmVc8LJTYn62lBXjShyJT0qBsKW+Rkk9Ka7qaAosNXhZqpdX9gFQwq0eAlPuUXNoCcVxtNLqZpgs6DTgR+HrdkbNUmNqKn92n4zjQoM+7gZBtHYbjfX5g373Z8mYVnk7ePN+pHRYSSOrStI8YXZ0yJk1pSHlVi1hucjgCKD1NnYBngBan1EjMe297XTdJm58DdgKXxoAoS4ijiNAj+qezzIdk8JvCtvmn0LzlJtLM38vqQe7XRSonBQWZnrvw6rHv9doSmCM0H4S3TScrR41xLZd8OTNEtI6QT6H26c4fcCA29x9krroq3I/DvZW0tqjbsyRcrDyPPIGp8AbGa8goCHz7ow4nXfBJ+w3dSJVbumT5AUBLCXL1pcMhlranSQYIoATelH8zuN+W3NjFMnRKrwBXhwcPqwqliF+YRGQGE7aIqr/UoQp8FY0qUfgGPaYtNKCwSLK5nIV/YPerB1vgmXZP/TtsBkpkfRXCKKRXKnH/CaVzKD45feDvE2f2tCRXldjXr6AnG/gzpZ0JpHgYE6prr6db+nQnR0gkhWacHz2Hu9R979IdL1611uJohcdf8aZSKU2I9Itn5SklYq3ct+pY+jU0rtDBwMZdWYJqm4KuazVoroiXWF572sRgiuyMNl4R5yVSVyniAtDNLvj2ksbPXYi81hYMNc/TXWvFa8w0dLbEXF4MuHsXX7wPDfHNRo2+HFIcYQ5Trq//MpLhxM1OhdP3EWMr2Sc7nOKK7St/JLg9ZMu0ZsUcF0nFpuCXpLR9P5s8ruDfjykxBe1DnB1gTXx6a4qB8FVHbqoZHd9yKJo38GeyP7cG9ICBhFPl+IIht6YTNNeh4T/lqQi/B0NIuPPKL4C6EeoXBGTHgMB7fTBVKAlhJMsq0rI07bn0RUXu26FToRyN/zF+0mjbxUZ/ou797LA9QDhTfGcdx16dgIwohV2ZonKNa29Kp5XN2OJmiRSEfWAejT6dsf5KFGTdwa73UiONhvHSfpcw6O5Z8Bmw8pojAkXPN6880N5cHpyDMFwEuN6JODCWA8cDaqe5D/UidmYvW1+0P5z+oOOYTmaAiZubS0/qnFaeKSu1LY8Br4v+gP/OPuNm6PQGKG49gXtrJ/RpioI7mZ5W+QrYzA5CIrxNPQTwsjyYp6pwXJ6emco1/xHYJVTKIbO/L1BUOulyVaGNG0ddTASouLBFV6P8/k9pnFk27/pbXEo33bP2l++SD8DkyqyVrjUD5sLo2dNK03ku5nL+9xcDDQH+z80uit0oA5y3VsJcCdfR0PDY6hOWp0AP7c7VPeV97Z0e0v/bDr/TQyRT5HXVl6PaQRU0+aSFSA03qraFqY1CLkCDUIO+jOHGB+CkwiAobiiVrcDCrMRUl69AW4kpQhqmw8YY51tPGtbJFgk="};
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function open_(pw){
+  const k=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveKey"]);
+  const key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(P.salt),iterations:P.iter,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const t=new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(P.iv)},key,b64(P.ct)));
+  try{sessionStorage.setItem("coi_pw",pw)}catch(_){}
+  if(P.mode==="text"){document.getElementById("f").remove();document.body.className="txt";const pre=document.createElement("pre");pre.textContent=t;document.body.appendChild(pre);return}
+  document.open();document.write(t);document.close();
+}
+const f=document.getElementById("f"),e=document.getElementById("e");
+f.addEventListener("submit",async ev=>{ev.preventDefault();e.textContent="Opening…";try{await open_(document.getElementById("pw").value)}catch(_){e.textContent="Wrong password."}});
+let s=null;try{s=sessionStorage.getItem("coi_pw")}catch(_){}
+if(s)open_(s).catch(()=>{try{sessionStorage.removeItem("coi_pw")}catch(_){}});
+</script></body></html>

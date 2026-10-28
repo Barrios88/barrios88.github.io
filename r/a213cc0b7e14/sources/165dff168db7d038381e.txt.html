@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer"><title>Private</title>
+<style>
+:root{--bg:#f5f4f0;--surface:#fff;--ink:#1c2128;--muted:#5d6670;--line:#dcd9d1;--accent:#2a4f7a;--err:#8d3527;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#14171b;--surface:#1c2026;--ink:#e4e6e9;--muted:#9aa3ad;--line:#2f353d;--accent:#86b0dc;--err:#e59585;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;display:grid;place-items:center;min-height:100vh;padding-inline:16px}
+body.txt{display:block;padding-block:20px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;max-width:100ch;margin:0 auto}
+form{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px;width:min(360px,100%)}
+h1{font-size:18px;margin:0}p{margin:0;color:var(--muted);font-size:14px}
+input,button{font:inherit;padding:9px 11px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+button{background:var(--accent);color:var(--bg);border-color:var(--accent);cursor:pointer;font-weight:600}
+.e{color:var(--err);font-size:14px;min-height:1.2em}
+</style></head><body>
+<form id="f"><h1>Private page</h1><p>Enter the password you were given.</p>
+<input id="pw" type="password" autocomplete="current-password" aria-label="Password" autofocus><button>Open</button><div class="e" id="e"></div></form>
+<script>
+const P={"salt": "oA53Qei1q4OfeL2l0xW8eg==", "iv": "dGdNyvHyerPIcjjc", "iter": 600000, "mode": "text", "ct": "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"};
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function open_(pw){
+  const k=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveKey"]);
+  const key=await crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(P.salt),iterations:P.iter,hash:"SHA-256"},k,{name:"AES-GCM",length:256},false,["decrypt"]);
+  const t=new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(P.iv)},key,b64(P.ct)));
+  try{sessionStorage.setItem("coi_pw",pw)}catch(_){}
+  if(P.mode==="text"){document.getElementById("f").remove();document.body.className="txt";const pre=document.createElement("pre");pre.textContent=t;document.body.appendChild(pre);return}
+  document.open();document.write(t);document.close();
+}
+const f=document.getElementById("f"),e=document.getElementById("e");
+f.addEventListener("submit",async ev=>{ev.preventDefault();e.textContent="Opening…";try{await open_(document.getElementById("pw").value)}catch(_){e.textContent="Wrong password."}});
+let s=null;try{s=sessionStorage.getItem("coi_pw")}catch(_){}
+if(s)open_(s).catch(()=>{try{sessionStorage.removeItem("coi_pw")}catch(_){}});
+</script></body></html>
