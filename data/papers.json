@@ -464,7 +464,7 @@
         "reporting"
       ],
       "abstract": "We examine how differences in financial reporting practices shape firm productivity. Using comprehensive data from the U.S. Census Bureau, tax return data from the Internal Revenue Service (IRS) and detailed financial records from Sageworks, we find that variation in reporting quality explains 10–20 percent of intra-industry total factor productivity dispersion. Leveraging new audit questions in the U.S. Census Bureau's 2021 Management and Organizational Practices Survey (MOPS), we find evidence of complementarity between the effects of financial audits and management practices to drive firm productivity. We then examine the underlying mechanisms. First, audits function as a managerial technology, improving the precision of internal information and raising efficiency, with stronger effects in competitive, low-margin industries and among younger firms. Second, exploiting cross-state variation in tax incentives, we show that audits constrain underreporting and mitigate the downward bias in measured productivity. Together, these results highlight the underrated importance of financial reporting quality driving firm productivity.",
-      "note": null,
+      "note": "Reject and Resubmit: Review of Economic Studies",
       "figure": "papers_web/figures/figure_1_key_results.svg",
       "links": {
         "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5883147",

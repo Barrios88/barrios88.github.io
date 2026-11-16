@@ -77,7 +77,11 @@ function bibtex(p) {
     }
     if (p.status === 'forthcoming') lines.push(`  note = {Forthcoming}`);
   } else {
-    lines.push(`  note = {Working paper${p.note && /Revision Requested/i.test(p.note) ? '; ' + p.note.replace(/Revision Requested:\s*/i, 'revision requested at ') : ''}}`);
+    const decision = !p.note ? ''
+      : /Revision Requested/i.test(p.note) ? '; ' + p.note.replace(/Revision Requested:\s*/i, 'revision requested at ')
+      : /Reject and Resubmit/i.test(p.note) ? '; ' + p.note.replace(/Reject and Resubmit:\s*/i, 'reject and resubmit at ')
+      : '';
+    lines.push(`  note = {Working paper${decision}}`);
   }
   if (p.doi) lines.push(`  doi = {${p.doi}}`);
   const url = p.doi ? `https://doi.org/${p.doi}` : (p.links?.ssrn || p.links?.nber);
