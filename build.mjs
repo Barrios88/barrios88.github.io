@@ -379,7 +379,14 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n` +
   mainPages.map(p => urlEntry(p, p === '' ? '1.0' : p === 'research.html' ? '0.9' : '0.7')).join('\n') + '\n' +
   paperPages.map(p => urlEntry(p, '0.5')).join('\n') + '\n</urlset>\n';
 writeFileSync(join(ROOT, 'sitemap.xml'), sitemap);
-writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
+// AI crawlers are kept out of the Accounting Theory Atlas (John, 2026-11-19); search engines and everything else are allowed.
+const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai',
+  'Google-Extended', 'Applebot-Extended', 'CCBot', 'PerplexityBot', 'Perplexity-User', 'Bytespider', 'meta-externalagent',
+  'Amazonbot', 'cohere-ai', 'Diffbot', 'ImagesiftBot', 'Omgilibot', 'Timpibot'];
+const robots = `User-agent: *\nAllow: /\n\n` +
+  AI_BOTS.map(b => `User-agent: ${b}\nDisallow: /accounting-theory-graphs/\n`).join('\n') +
+  `\nSitemap: ${SITE}sitemap.xml\nSitemap: ${SITE}accounting-theory-graphs/sitemap.xml\n`;
+writeFileSync(join(ROOT, 'robots.txt'), robots);
 writeFileSync(join(ROOT, 'feed.xml'), feedXml());
 
 const nLD = injectPaperJsonld();

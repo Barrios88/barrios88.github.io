@@ -1,4 +1,65 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: OAI-SearchBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: ChatGPT-User
+Disallow: /accounting-theory-graphs/
+
+User-agent: ClaudeBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: Claude-User
+Disallow: /accounting-theory-graphs/
+
+User-agent: Claude-SearchBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: anthropic-ai
+Disallow: /accounting-theory-graphs/
+
+User-agent: Google-Extended
+Disallow: /accounting-theory-graphs/
+
+User-agent: Applebot-Extended
+Disallow: /accounting-theory-graphs/
+
+User-agent: CCBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: PerplexityBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: Perplexity-User
+Disallow: /accounting-theory-graphs/
+
+User-agent: Bytespider
+Disallow: /accounting-theory-graphs/
+
+User-agent: meta-externalagent
+Disallow: /accounting-theory-graphs/
+
+User-agent: Amazonbot
+Disallow: /accounting-theory-graphs/
+
+User-agent: cohere-ai
+Disallow: /accounting-theory-graphs/
+
+User-agent: Diffbot
+Disallow: /accounting-theory-graphs/
+
+User-agent: ImagesiftBot
+Disallow: /accounting-theory-graphs/
+
+User-agent: Omgilibot
+Disallow: /accounting-theory-graphs/
+
+User-agent: Timpibot
+Disallow: /accounting-theory-graphs/
+
 Sitemap: https://johnmbarrios.com/sitemap.xml
+Sitemap: https://johnmbarrios.com/accounting-theory-graphs/sitemap.xml
