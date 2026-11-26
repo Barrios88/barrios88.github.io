@@ -5,8 +5,15 @@
   <link href="https://johnmbarrios.com/research.html"/>
   <link rel="self" href="https://johnmbarrios.com/feed.xml"/>
   <id>https://johnmbarrios.com/research.html</id>
-  <updated>2026-09-01T00:00:00Z</updated>
+  <updated>2026-11-01T00:00:00Z</updated>
   <author><name>John Manuel Barrios</name></author>
+  <entry>
+    <title>Frontier History and the Persistence of Entrepreneurship</title>
+    <link href="https://johnmbarrios.com/research.html#frontier-entrepreneurship"/>
+    <id>https://johnmbarrios.com/research.html#frontier-entrepreneurship</id>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <summary>Working paper · November 2026 — with Yael V. Hochberg, Daniele Macciocchi — We examine the persistence and historical origins of geographic differences in entrepreneurship in the United States. County fixed effects explain 80% of the variation in per capita business registrations from 1988 to 2015. Counties with higher registration rates exhibit greater employer firm entry, but not greater high-tech employment, venture capital investment, or patenting, suggesting that persistence primarily reflects traditional rather than innovation-driven entrepreneurship. We trace these differences to nineteenth-century frontier exposure. Counties with longer frontier histories have higher contemporary business formation rates, but their new firms are less likely to be innovation-oriented. Using linked census records from 1900 to 1940, we compare brothers raised in the same household who subsequently settle in counties with different frontier histories. Within families, brothers settling in counties with greater frontier exposure are more likely to be self-employed. Moreover, individuals raised in frontier counties are less likely to be self-employed after moving away. These findings suggest that geographic differences in entrepreneurship reflect characteristics of local environments rather than portable entrepreneurial propensities. Our results highlight the distinction between policies promoting traditional business formation and those targeting innovation-driven entrepreneurship.</summary>
+  </entry>
   <entry>
     <title>Mandated Transparency and the Production of Research: Evidence from a Data- and Code-Sharing Policy</title>
     <link href="https://johnmbarrios.com/papers_web/paper_mandated_transparency.html"/>
